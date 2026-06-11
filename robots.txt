@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jeshua-coiffeur.ch/sitemap.xml
