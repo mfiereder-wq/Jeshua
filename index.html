@@ -242,6 +242,62 @@ blockquote cite{display:block;font-family:var(--body);font-style:normal;font-siz
 .svc-price em{font-family:var(--accent);font-style:italic;font-size:1rem;color:var(--red)}
 .svc-cta{text-align:center;margin-top:48px}
 
+/* ---------- Monatliche Barber-Abos ---------- */
+.abos{border-bottom:1px solid var(--line)}
+.abos-claim{display:flex;flex-wrap:wrap;align-items:center;gap:8px 20px}
+.abos-claim span{
+  font-family:var(--display);
+  font-size:clamp(1.15rem,2.4vw,1.75rem);
+  letter-spacing:.05em;text-transform:uppercase;color:var(--white);
+}
+.abos-claim i{color:var(--red);font-style:normal;font-size:1rem}
+.abos-lead{margin-top:16px}
+.abo-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+  background:var(--line);margin-top:56px;border:1px solid var(--line);
+}
+.abo{
+  background:var(--black);padding:44px 34px;position:relative;overflow:hidden;
+  display:flex;flex-direction:column;transition:transform .35s;
+}
+.abo::before{
+  content:'';position:absolute;left:0;top:0;width:100%;height:4px;
+  background:repeating-linear-gradient(135deg,var(--red) 0 10px,var(--white) 10px 20px);
+  transform:scaleX(0);transform-origin:left;
+  transition:transform .5s cubic-bezier(.2,.7,.2,1);
+}
+.abo:hover{transform:translateY(-8px)}
+.abo:hover::before{transform:scaleX(1)}
+.abo h3{
+  font-family:var(--display);font-size:1.5rem;text-transform:uppercase;
+  letter-spacing:.04em;margin:10px 0 14px;
+}
+.abo p{color:var(--grey);font-size:.93rem;min-height:76px}
+.abo-prices{margin-top:auto;padding-top:22px}
+.abo-row{
+  display:flex;justify-content:space-between;align-items:baseline;gap:14px;
+  padding:12px 0 0;border-top:1px solid var(--line);margin-top:12px;
+}
+.abo-row:first-child{border-top:0;margin-top:0;padding-top:0}
+.abo-row .freq{
+  font-size:.74rem;font-weight:800;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--grey);
+}
+.abo-row .amt{
+  font-family:var(--display);font-size:2rem;letter-spacing:.02em;
+  white-space:nowrap;color:var(--white);
+}
+.abo-row .amt em{
+  font-family:var(--accent);font-style:italic;font-size:.95rem;
+  color:var(--red);margin-right:7px;
+}
+.abo-cta{background:var(--coal)}
+.abo-cta .btn{margin-top:auto;align-self:flex-start}
+.abos-note{
+  margin-top:20px;font-size:.75rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--grey);
+}
+
 /* ---------- Sebastian / Partner ---------- */
 .partner{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center}
 .partner-card{
@@ -438,6 +494,7 @@ footer a:hover{color:var(--red)}
   .nav-links{display:none}
   .about,.partner,.hours,.contact{grid-template-columns:1fr;gap:48px}
   .svc-grid{grid-template-columns:1fr}
+  .abo-grid{grid-template-columns:1fr}
   .rev-grid{grid-template-columns:1fr}
   .video-grid{grid-template-columns:1fr;max-width:440px;margin-left:auto;margin-right:auto}
   section{padding:90px 6vw}
@@ -530,6 +587,7 @@ footer a:hover{color:var(--red)}
   <div class="nav-links">
     <a href="#about">Über Uns</a>
     <a href="#services">Preise</a>
+    <a href="#abos">Abos</a>
     <a href="#impressionen">Impressionen</a>
     <a href="#reviews">Stimmen</a>
     <a href="#kontakt">Kontakt</a>
@@ -610,6 +668,79 @@ footer a:hover{color:var(--red)}
       </article>
     </div>
     <div class="svc-cta rv"><a class="btn btn-ghost" href="https://koalendar.com/e/termin-buchung-jeshua" target="_blank" rel="noopener">Ganze Preisliste ansehen</a></div>
+  </div>
+</section>
+
+<!-- Monatliche Barber-Abos -->
+<section id="abos" class="abos">
+  <div class="wrap">
+    <p class="eyebrow rv">Abos</p>
+    <h2 class="rv d1">Monatliche <span class="accent">Barber-Abos</span></h2>
+    <div class="abos-claim rv d1">
+      <span>Regelmässig gepflegt.</span><i>★</i>
+      <span>Monatlich sparen.</span><i>★</i>
+      <span>Immer fresh.</span>
+    </div>
+    <p class="lead abos-lead rv d2">Fünf Abos, feste Preise, fester Rhythmus – wählen Sie Ihren Takt und gehen Sie Woche für Woche frisch aus dem Salon.</p>
+
+    <div class="abo-grid">
+      <article class="abo rv d1">
+        <span class="svc-num">I.</span>
+        <h3>Fade Abo</h3>
+        <p>Der klassische Fade im festen Rhythmus – saubere Übergänge, Woche für Woche perfekt sitzend.</p>
+        <div class="abo-prices">
+          <div class="abo-row"><span class="freq">2× im Monat</span><span class="amt"><em>CHF</em><span class="count" data-target="85">0</span></span></div>
+          <div class="abo-row"><span class="freq">4× im Monat</span><span class="amt"><em>CHF</em><span class="count" data-target="169">0</span></span></div>
+        </div>
+      </article>
+
+      <article class="abo rv d2">
+        <span class="svc-num">II.</span>
+        <h3>Haare &amp; Bart Abo</h3>
+        <p>Haarschnitt und Bartpflege im Paket – die komplette Pflege von Kopf bis Bart.</p>
+        <div class="abo-prices">
+          <div class="abo-row"><span class="freq">2× im Monat</span><span class="amt"><em>CHF</em><span class="count" data-target="139">0</span></span></div>
+          <div class="abo-row"><span class="freq">4× im Monat</span><span class="amt"><em>CHF</em><span class="count" data-target="277">0</span></span></div>
+        </div>
+      </article>
+
+      <article class="abo rv d3">
+        <span class="svc-num">III.</span>
+        <h3>Social EDV Abo</h3>
+        <p>Flexibel und unkompliziert: ein fester Preis pro Service, Termin nach Absprache.</p>
+        <div class="abo-prices">
+          <div class="abo-row"><span class="freq">Pro Service</span><span class="amt"><em>CHF</em><span class="count" data-target="32">0</span></span></div>
+        </div>
+      </article>
+
+      <article class="abo rv d1">
+        <span class="svc-num">IV.</span>
+        <h3>Maschinen-Schnitt Abo</h3>
+        <p>Maschinenschnitt mit sauberen Übergängen – schnell, günstig und immer gut sitzend.</p>
+        <div class="abo-prices">
+          <div class="abo-row"><span class="freq">2× im Monat</span><span class="amt"><em>CHF</em><span class="count" data-target="62">0</span></span></div>
+          <div class="abo-row"><span class="freq">4× im Monat</span><span class="amt"><em>CHF</em><span class="count" data-target="122">0</span></span></div>
+        </div>
+      </article>
+
+      <article class="abo rv d2">
+        <span class="svc-num">V.</span>
+        <h3>Fade + Wellness Abo</h3>
+        <p>Full Service als Abo: Fade plus Wellness-Behandlung – die Auszeit vom Alltag.</p>
+        <div class="abo-prices">
+          <div class="abo-row"><span class="freq">2× im Monat</span><span class="amt"><em>CHF</em><span class="count" data-target="126">0</span></span></div>
+          <div class="abo-row"><span class="freq">4× im Monat</span><span class="amt"><em>CHF</em><span class="count" data-target="249">0</span></span></div>
+        </div>
+      </article>
+
+      <div class="abo abo-cta rv d3">
+        <span class="svc-num">★</span>
+        <h3>Abo starten</h3>
+        <p>Rhythmus wählen und loslegen – online buchen oder <a href="https://wa.me/41779563870" target="_blank" rel="noopener" style="color:var(--red)">per WhatsApp</a> abklären.</p>
+        <a class="btn" href="https://koalendar.com/e/termin-buchung-jeshua" target="_blank" rel="noopener">Abo Buchen</a>
+      </div>
+    </div>
+    <p class="abos-note rv">Alle Preise pro Monat in CHF · Das Social EDV Abo wird pro Service berechnet</p>
   </div>
 </section>
 
