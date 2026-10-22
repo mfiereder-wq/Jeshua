@@ -71,6 +71,26 @@
     }
 
 
+        /* Hero Marquee Animation (Smooth Left to Right) */
+    /* impeccable-disable-next-line marquee */
+    .hero-marquee-track {
+      display: flex;
+      width: max-content;
+      animation: heroMarqueeRight 28s linear infinite; /* impeccable-disable-line marquee -- user requested carousel motion */
+      will-change: transform;
+    }
+    .hero-marquee-track:hover {
+      animation-play-state: paused;
+    }
+    @keyframes heroMarqueeRight {
+      0% {
+        transform: translateX(-50%);
+      }
+      100% {
+        transform: translateX(0%);
+      }
+    }
+
     /* Refined Typography Measures & Scale */
     h1 { font-size: 2.75rem; line-height: 1.15; }
     h2 { font-size: 2rem; line-height: 1.25; }
@@ -226,14 +246,14 @@
             Home
           </a>
           
-          <!-- Hauptfokus 1: Barber Studio -->
+          <!-- Barber Studio -->
           <a href="#" onclick="navigateTo('barber'); return false;" class="nav-item px-3.5 py-2 text-xs font-semibold text-white hover:text-atelier-crimson transition-colors tracking-wider uppercase flex items-center gap-2">
             <span class="text-[10px] text-atelier-crimson font-mono font-bold">01</span>
             <span>Barber Studio</span>
             <span class="text-[9px] bg-atelier-crimson/15 text-atelier-crimson border border-atelier-crimson/30 px-1.5 py-0.5 rounded uppercase font-bold tracking-widest">Fokus</span>
           </a>
 
-          <!-- Hauptfokus 2: Beauty Workshops -->
+          <!-- Beauty Workshops -->
           <a href="#" onclick="navigateTo('workshops'); return false;" class="nav-item px-3.5 py-2 text-xs font-semibold text-white hover:text-atelier-gold transition-colors tracking-wider uppercase flex items-center gap-2">
             <span class="text-[10px] text-atelier-gold font-mono font-bold">02</span>
             <span>Beauty Workshops</span>
@@ -278,11 +298,11 @@
       <a href="#" onclick="navigateTo('home'); toggleMobileMenu(); return false;" class="block py-2 text-sm text-slate-200 hover:text-atelier-gold tracking-wide">Home</a>
       <a href="#" onclick="navigateTo('barber'); toggleMobileMenu(); return false;" class="flex items-center justify-between py-2 text-sm text-white font-semibold">
         <span class="flex items-center gap-2"><i class="fa-solid fa-scissors text-atelier-crimson text-xs"></i> Barber Studio</span>
-        <span class="text-[10px] text-atelier-crimson font-mono uppercase">Hauptfokus</span>
+        
       </a>
       <a href="#" onclick="navigateTo('workshops'); toggleMobileMenu(); return false;" class="flex items-center justify-between py-2 text-sm text-white font-semibold">
         <span class="flex items-center gap-2"><i class="fa-solid fa-wand-magic-sparkles text-atelier-gold text-xs"></i> Beauty Workshops</span>
-        <span class="text-[10px] text-atelier-gold font-mono uppercase">Hauptfokus</span>
+        
       </a>
       <a href="#" onclick="navigateTo('mentoring'); toggleMobileMenu(); return false;" class="block py-2 text-sm text-slate-200 hover:text-white">Mentoring & Transformation</a>
       <a href="#" onclick="navigateTo('products'); toggleMobileMenu(); return false;" class="block py-2 text-sm text-slate-200 hover:text-white">Katalog Kollektion (38 Produkte)</a>
@@ -319,15 +339,51 @@
 
         <div class="max-w-6xl mx-auto relative z-10">
           
-          <!-- Top Tagline & Symbolism Indicator -->
-          <div class="flex items-center justify-center gap-4 text-xs tracking-[0.25em] uppercase text-atelier-gold mb-10 text-center font-medium">
-            <span>Stärke</span>
-            <span class="text-slate-600">—</span>
-            <span>Transformation</span>
-            <span class="text-slate-600">—</span>
-            <span>Freiheit</span>
-            <span class="text-slate-600">—</span>
-            <span>Schönheit</span>
+          <!-- impeccable-disable marquee -- user requested continuous carousel motion -->
+          <!-- Top Tagline & Symbolism Marquee Carousel (Moving Left to Right) -->
+          <div class="relative w-full overflow-hidden mb-10 py-2.5 border-y border-white/5 bg-black/40 backdrop-blur-sm rounded-lg">
+            <div class="hero-marquee-track flex items-center gap-8 text-xs tracking-[0.25em] uppercase text-atelier-gold font-medium whitespace-nowrap">
+              <span class="flex items-center gap-8">
+                <span>Stärke</span>
+                <span class="text-atelier-crimson text-[9px]">◆</span>
+                <span>Transformation</span>
+                <span class="text-atelier-crimson text-[9px]">◆</span>
+                <span>Freiheit</span>
+                <span class="text-atelier-crimson text-[9px]">◆</span>
+                <span>Schönheit</span>
+                <span class="text-atelier-goldLight text-[9px]">◆</span>
+              </span>
+              <span class="flex items-center gap-8">
+                <span>Stärke</span>
+                <span class="text-atelier-crimson text-[9px]">◆</span>
+                <span>Transformation</span>
+                <span class="text-atelier-crimson text-[9px]">◆</span>
+                <span>Freiheit</span>
+                <span class="text-atelier-crimson text-[9px]">◆</span>
+                <span>Schönheit</span>
+                <span class="text-atelier-goldLight text-[9px]">◆</span>
+              </span>
+              <span class="flex items-center gap-8">
+                <span>Stärke</span>
+                <span class="text-atelier-crimson text-[9px]">◆</span>
+                <span>Transformation</span>
+                <span class="text-atelier-crimson text-[9px]">◆</span>
+                <span>Freiheit</span>
+                <span class="text-atelier-crimson text-[9px]">◆</span>
+                <span>Schönheit</span>
+                <span class="text-atelier-goldLight text-[9px]">◆</span>
+              </span>
+              <span class="flex items-center gap-8">
+                <span>Stärke</span>
+                <span class="text-atelier-crimson text-[9px]">◆</span>
+                <span>Transformation</span>
+                <span class="text-atelier-crimson text-[9px]">◆</span>
+                <span>Freiheit</span>
+                <span class="text-atelier-crimson text-[9px]">◆</span>
+                <span>Schönheit</span>
+                <span class="text-atelier-goldLight text-[9px]">◆</span>
+              </span>
+            </div>
           </div>
 
           <!-- Hero Grid: Left Typographic Statement, Right Visual Anchor -->
@@ -355,11 +411,11 @@
               <div class="flex flex-wrap items-center gap-4 pt-4">
                 <a href="#" onclick="navigateTo('barber'); return false;" class="btn-atelier-crimson px-6 py-3.5 rounded-lg text-xs uppercase tracking-wider font-semibold flex items-center gap-2.5">
                   <i class="fa-solid fa-scissors"></i>
-                  <span>Barber Studio (Fokus)</span>
+                  <span>Barber Studio</span>
                 </a>
                 <a href="#" onclick="navigateTo('workshops'); return false;" class="btn-atelier-gold px-6 py-3.5 rounded-lg text-xs uppercase tracking-wider font-semibold flex items-center gap-2.5">
                   <i class="fa-solid fa-wand-magic-sparkles"></i>
-                  <span>Beauty Workshops (Fokus)</span>
+                  <span>Beauty Workshops</span>
                 </a>
                 <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Studio%2C%20ich%20interessiere%20mich%20f%C3%BCr..." target="_blank" class="btn-atelier-outline px-5 py-3.5 rounded-lg text-xs tracking-wider font-medium flex items-center gap-2">
                   <i class="fa-brands fa-whatsapp text-emerald-400 text-sm"></i>
@@ -378,21 +434,40 @@
                 </div>
 
                 <div class="text-center space-y-3">
-                  <span class="text-[11px] font-mono uppercase tracking-[0.2em] text-atelier-gold block">Markenidentität & Leitbild</span>
-                  <h2 class="font-serif text-2xl text-white font-normal">Kraftvolle Balance</h2>
-                  <p class="text-xs text-slate-400 leading-relaxed font-light">
-                    Schwarzer Lack, goldene Linien und rubinrote Akzente. Eine Ästhetik, die maskuline Stärke und feminine Feinfühligkeit ohne Stereotypen in Einklang bringt.
+                  <span class="text-[11px] font-mono uppercase tracking-[0.2em] text-atelier-gold block">Dein Mehrwert im Atelier</span>
+                  <h2 class="font-serif text-2xl text-white font-normal">Ganzheitliche Selbstfürsorge</h2>
+                  <p class="text-xs text-slate-300 leading-relaxed font-light">
+                    Meisterhafte Barber-Cuts, hautgesunde Beauty Masterclasses mit Influencern und stärkendes Mentoring. Ein geschützter Raum in Uster für dein persönliches Wohlbefinden, deinen Stil und dein Selbstvertrauen — offen für Männer, Frauen und Paare.
                   </p>
                 </div>
 
-                <div class="mt-6 pt-5 border-t border-white/10 grid grid-cols-2 gap-4 text-center">
+                <!-- 3 Pillars Overview -->
+                <div class="mt-6 pt-5 border-t border-white/10 grid grid-cols-3 gap-2 text-center">
+                  <div class="p-1.5">
+                    <span class="text-atelier-crimson text-sm block mb-1"><i class="fa-solid fa-scissors"></i></span>
+                    <span class="text-[11px] text-white font-medium block">Barber Studio</span>
+                    <span class="text-[10px] text-slate-400 font-light block">Cuts & Rasur</span>
+                  </div>
+                  <div class="p-1.5 border-x border-white/5">
+                    <span class="text-atelier-gold text-sm block mb-1"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+                    <span class="text-[11px] text-white font-medium block">Workshops</span>
+                    <span class="text-[10px] text-slate-400 font-light block">Glow & Artistry</span>
+                  </div>
+                  <div class="p-1.5">
+                    <span class="text-emerald-400 text-sm block mb-1"><i class="fa-solid fa-spa"></i></span>
+                    <span class="text-[11px] text-white font-medium block">Mentoring</span>
+                    <span class="text-[10px] text-slate-400 font-light block">Mindset & Care</span>
+                  </div>
+                </div>
+
+                <div class="mt-4 pt-4 border-t border-white/10 grid grid-cols-2 gap-4 text-center">
                   <div>
                     <span class="text-[10px] text-slate-500 uppercase tracking-wider block">Standort</span>
                     <span class="text-xs text-slate-200 font-medium">8610 Uster</span>
                   </div>
                   <div>
                     <span class="text-[10px] text-slate-500 uppercase tracking-wider block">Termine</span>
-                    <span class="text-xs text-slate-200 font-medium">Di – Sa nach Vereinbarung</span>
+                    <span class="text-xs text-slate-200 font-medium">Mo – Sa nach Vereinbarung</span>
                   </div>
                 </div>
               </div>
@@ -424,7 +499,7 @@
               <div class="space-y-5">
                 <div class="flex items-center justify-between">
                   <span class="text-xs font-mono uppercase tracking-widest text-atelier-crimson font-bold">
-                    [01] Hauptfokus
+                    [01] Barber Studio
                   </span>
                   <span class="text-xs text-slate-500 font-mono">Grooming & Style</span>
                 </div>
@@ -448,7 +523,7 @@
                   </li>
                   <li class="flex items-center gap-2.5">
                     <span class="w-1.5 h-1.5 rounded-full bg-atelier-crimson"></span>
-                    <span>The Royal Treatment & Pflegeflatrates (ab CHF 95/Mt.)</span>
+                    <span>The Royal Treatment & Pflegeflatrates (ab CHF 62/Mt.)</span>
                   </li>
                 </ul>
               </div>
@@ -468,7 +543,7 @@
               <div class="space-y-5">
                 <div class="flex items-center justify-between">
                   <span class="text-xs font-mono uppercase tracking-widest text-atelier-gold font-bold">
-                    [02] Hauptfokus
+                    [02] Beauty Workshops
                   </span>
                   <span class="text-xs text-slate-500 font-mono">Mit Fachleuten & Influencern</span>
                 </div>
@@ -636,7 +711,7 @@
           <div class="grid lg:grid-cols-12 gap-12 items-center mb-20">
             <div class="lg:col-span-7 space-y-6">
               <span class="text-xs font-mono uppercase tracking-[0.25em] text-atelier-crimson font-semibold block">
-                [01] Hauptfokus · Barber Atelier Uster
+                [01] Barber Studio · Barber Atelier Uster
               </span>
               <h1 class="font-serif text-4xl sm:text-6xl text-white font-normal leading-[1.05]">
                 Style mit Haltung & <br><span class="italic text-atelier-crimson">Meisterhand.</span>
@@ -649,7 +724,7 @@
                   <i class="fa-solid fa-calendar-check"></i> Barber Termin online buchen
                 </a>
                 <a href="#barber-flatrate" class="btn-atelier-gold px-5 py-3 rounded-lg text-xs uppercase tracking-wider font-semibold flex items-center gap-2">
-                  <i class="fa-solid fa-crown text-amber-950 text-xs"></i> Monats-Flatrate (Payhip)
+                  <i class="fa-solid fa-crown text-amber-950 text-xs"></i> Monatsabos (ab CHF 62/Mt.)
                 </a>
                 <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Barber%2C%20ich%20m%C3%B6chte%20einen%20Termin%20buchen..." target="_blank" class="btn-atelier-whatsapp px-5 py-3 rounded-lg text-xs font-semibold flex items-center gap-2">
                   <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp
@@ -708,78 +783,494 @@
             </div>
           </div>
 
-          <!-- Barber Subscription (Payhip Integration) -->
-          <div id="barber-flatrate" class="p-8 sm:p-10 rounded-2xl border border-atelier-borderGold bg-atelier-surface elevation-2 mb-20 relative overflow-hidden">
-            <div class="grid lg:grid-cols-12 gap-8 items-center">
-              
-              <div class="lg:col-span-7 space-y-4">
+                    <!-- BARBER MONATSABOS & FLATRATES (PAYHIP INTEGRATION) -->
+          <div id="barber-flatrate" class="space-y-8 mb-24">
+            
+            <!-- Section Header & Filter Tabs -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-white/10 pb-6">
+              <div class="space-y-2">
                 <div class="flex items-center gap-3">
-                  <span class="text-xs font-mono uppercase tracking-widest text-atelier-crimson font-bold">VIP-Mitgliedschaft</span>
-                  <span class="text-[10px] font-mono uppercase px-2.5 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-semibold border border-emerald-500/30">Monatlich kündbar</span>
+                  <span class="text-xs font-mono uppercase tracking-[0.25em] text-atelier-crimson font-bold block">
+                    Mitgliedschaften &amp; Monats-Flatrates
+                  </span>
+                  <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 font-medium border border-emerald-500/20">Monatlich kündbar</span>
                 </div>
-                
                 <h2 class="font-serif text-3xl sm:text-4xl text-white font-normal">
-                  Barber Monats-Flatrate
+                  Barber Abonnemente
                 </h2>
-                
-                <p class="text-slate-300 text-sm leading-relaxed font-light">
-                  Dauerhaft perfekt gepflegt, volle Kostenkontrolle. Sichere dir dein monatliches Barber-Paket für regelmässige Fresh-Ups, Schnitte und exklusive VIP-Vorteile im Atelier Uster. Bequeme und sichere Monatsabrechnung direkt via Payhip.
+                <p class="text-slate-400 text-sm max-w-2xl font-light">
+                  Immer perfekt gepflegt bei voller Kostenkontrolle. Wähle deinen bevorzugten Rhythmus (2 oder 4 Besuche pro Monat) und schliesse dein Abo direkt sicher über Payhip ab.
                 </p>
-
-                <div class="grid sm:grid-cols-2 gap-3 pt-2 text-xs text-slate-300">
-                  <div class="flex items-center gap-2">
-                    <i class="fa-solid fa-check text-atelier-gold text-xs"></i>
-                    <span>Regelmässige Cuts & Kontur-Fresh-Ups</span>
-                  </div>
-                  <div class="flex items-center gap-2">
-                    <i class="fa-solid fa-check text-atelier-gold text-xs"></i>
-                    <span>VIP-Terminpriorität bei Wunschzeiten</span>
-                  </div>
-                  <div class="flex items-center gap-2">
-                    <i class="fa-solid fa-check text-atelier-gold text-xs"></i>
-                    <span>Hot Towel Ritual & MK Men® Finishing</span>
-                  </div>
-                  <div class="flex items-center gap-2">
-                    <i class="fa-solid fa-check text-atelier-gold text-xs"></i>
-                    <span>15% VIP-Rabatt auf alle Atelier-Produkte</span>
-                  </div>
-                </div>
               </div>
 
-              <div class="lg:col-span-5 flex flex-col items-center lg:items-end justify-center text-center lg:text-right space-y-4 pt-6 lg:pt-0 lg:border-l lg:border-white/10 lg:pl-8">
+              <!-- Filter Buttons: All, 2 Besuche, 4 Besuche -->
+              <div class="flex items-center gap-2 shrink-0">
+                <button onclick="filterAbos('all', this)" class="abo-filter-btn px-4 py-2 rounded-lg text-xs tracking-wider uppercase font-semibold bg-atelier-gold text-black transition-all">
+                  Alle 8 Abos
+                </button>
+                <button onclick="filterAbos('2', this)" class="abo-filter-btn px-4 py-2 rounded-lg text-xs tracking-wider uppercase font-medium btn-atelier-outline text-slate-300 transition-all">
+                  2 Besuche / Mt.
+                </button>
+                <button onclick="filterAbos('4', this)" class="abo-filter-btn px-4 py-2 rounded-lg text-xs tracking-wider uppercase font-medium btn-atelier-outline text-slate-300 transition-all">
+                  4 Besuche / Mt.
+                </button>
+              </div>
+            </div>
+
+            <!-- Grid of 8 Subscription Plans in Exact Sequence -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              
+              <!-- 1. Fade Abo 2 Besuche/Monat -->
+              <div class="abo-plan-card rounded-2xl border border-white/10 bg-atelier-surface elevation-1 flex flex-col justify-between overflow-hidden transition-all duration-300 hover:border-atelier-borderGold hover:-translate-y-1" data-frequency="2">
                 <div>
-                  <span class="text-[11px] font-mono text-slate-400 uppercase tracking-wider block">Offizielles Monatsabonnement</span>
-                  <div class="text-3xl sm:text-4xl font-mono font-bold text-white mt-1">
-                    CHF 95 <span class="text-xs text-slate-400 font-normal">/ Monat</span>
+                  <div class="relative h-48 w-full overflow-hidden bg-atelier-card">
+                    <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=800&q=80" alt="Fade Abo 2 Besuche" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-atelier-surface via-transparent to-black/30"></div>
+                    <span class="absolute top-3 left-3 text-[10px] font-mono uppercase tracking-wider px-2.5 py-1 rounded bg-black/80 text-atelier-gold border border-atelier-borderGold font-semibold backdrop-blur-sm">
+                      2 Besuche / Monat
+                    </span>
                   </div>
-                  <span class="text-[11px] text-slate-400 font-light block mt-0.5">Flexible Laufzeit · Keine Bindung</span>
+                  <div class="p-6 space-y-4">
+                    <div>
+                      <span class="text-[10px] font-mono uppercase tracking-widest text-slate-400 block mb-1">Alle 14 Tage fresh</span>
+                      <h3 class="font-serif text-2xl text-white font-normal">Fade Abo</h3>
+                      <p class="text-xs text-slate-400 font-light mt-1">2 Besuche pro Monat für saubere Übergänge und stetige Frische.</p>
+                    </div>
+                    <div class="pt-2 border-t border-white/5">
+                      <div class="font-mono text-3xl font-bold text-white">
+                        CHF 85 <span class="text-xs text-slate-400 font-normal">/ Monat</span>
+                      </div>
+                      <span class="text-[11px] text-emerald-400 font-mono block mt-0.5">CHF 42.50 pro Besuch</span>
+                    </div>
+                    <ul class="space-y-2 text-xs text-slate-300 pt-1">
+                      <li class="flex items-center gap-2">
+                        <i class="fa-solid fa-check text-atelier-gold text-xs"></i>
+                        <span>2× Fade Schnitt &amp; Konturenrasur</span>
+                      </li>
+                      <li class="flex items-center gap-2">
+                        <i class="fa-solid fa-check text-atelier-gold text-xs"></i>
+                        <span>Haarwäsche &amp; Matt-Wax Finishing</span>
+                      </li>
+                      <li class="flex items-center gap-2">
+                        <i class="fa-solid fa-check text-atelier-gold text-xs"></i>
+                        <span>Priorisierte Termine via Koalendar</span>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-
-                <div class="w-full space-y-2.5">
-                  <a href="https://payhip.com/b/cDnlJ" 
-                     class="payhip-buy-button btn-atelier-crimson w-full py-3.5 px-6 rounded-lg text-xs uppercase tracking-wider font-semibold flex items-center justify-center gap-2 cursor-pointer shadow-lg"
-                     data-product="cDnlJ"
-                     data-theme="none">
-                    <i class="fa-solid fa-crown text-amber-300 text-xs"></i>
-                    <span>Monatsabo jetzt buchen (Payhip)</span>
-                    <i class="fa-solid fa-arrow-right text-xs"></i>
-                  </a>
-
+                <div class="p-6 pt-0 space-y-2">
                   <a href="https://payhip.com/b/cDnlJ" 
                      target="_blank" 
                      rel="noopener noreferrer" 
-                     class="btn-atelier-outline w-full py-2.5 px-4 rounded-lg text-xs tracking-wider font-medium flex items-center justify-center gap-2">
-                    <i class="fa-solid fa-arrow-up-right-from-square text-xs text-atelier-crimson"></i>
-                    <span>Im Payhip Store öffnen</span>
+                     class="payhip-buy-button btn-atelier-crimson w-full py-3 px-4 rounded-lg text-xs uppercase tracking-wider font-semibold flex items-center justify-center gap-2 cursor-pointer shadow-md"
+                     data-product="cDnlJ"
+                     data-theme="none">
+                    <i class="fa-solid fa-crown text-amber-300 text-xs"></i>
+                    <span>Abo buchen · Payhip</span>
                   </a>
+                  <p class="text-[10px] text-slate-500 font-mono text-center flex items-center justify-center gap-1.5 pt-1">
+                    <i class="fa-solid fa-shield-halved text-emerald-400"></i> Sichere SSL-Zahlung · Payhip
+                  </p>
                 </div>
+              </div>
 
-                <p class="text-[10px] text-slate-500 font-mono flex items-center justify-center lg:justify-end gap-1.5 pt-1">
-                  <i class="fa-solid fa-lock text-slate-400"></i> Sichere SSL-Zahlung via Payhip
-                </p>
+              <!-- 2. Fade Abo 4 Besuche/Monat -->
+              <div class="abo-plan-card rounded-2xl border border-atelier-borderGold bg-atelier-surface elevation-2 flex flex-col justify-between overflow-hidden transition-all duration-300 hover:border-atelier-gold hover:-translate-y-1 relative" data-frequency="4">
+                <div>
+                  <div class="relative h-48 w-full overflow-hidden bg-atelier-card">
+                    <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=800&q=80" alt="Fade Abo 4 Besuche" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-atelier-surface via-transparent to-black/30"></div>
+                    <span class="absolute top-3 left-3 text-[10px] font-mono uppercase tracking-wider px-2.5 py-1 rounded bg-atelier-crimson text-white font-semibold shadow-md">
+                      4 Besuche / Monat (Wöchentlich)
+                    </span>
+                  </div>
+                  <div class="p-6 space-y-4">
+                    <div>
+                      <span class="text-[10px] font-mono uppercase tracking-widest text-atelier-gold block mb-1">Maximaler Freshness-Standard</span>
+                      <h3 class="font-serif text-2xl text-white font-normal">Fade Abo</h3>
+                      <p class="text-xs text-slate-400 font-light mt-1">4 Besuche pro Monat für lückenlose, messerscharfe Konturen 365 Tage im Jahr.</p>
+                    </div>
+                    <div class="pt-2 border-t border-white/5">
+                      <div class="font-mono text-3xl font-bold text-white">
+                        CHF 169 <span class="text-xs text-slate-400 font-normal">/ Monat</span>
+                      </div>
+                      <span class="text-[11px] text-emerald-400 font-mono block mt-0.5">CHF 42.25 pro Besuch · Wöchentlich</span>
+                    </div>
+                    <ul class="space-y-2 text-xs text-slate-300 pt-1">
+                      <li class="flex items-center gap-2">
+                        <i class="fa-solid fa-check text-atelier-gold text-xs"></i>
+                        <span>4× Wöchentlicher Skin Fade Schnitt</span>
+                      </li>
+                      <li class="flex items-center gap-2">
+                        <i class="fa-solid fa-check text-atelier-gold text-xs"></i>
+                        <span>Immer akkurate Kanten mit Rasiermesser</span>
+                      </li>
+                      <li class="flex items-center gap-2">
+                        <i class="fa-solid fa-check text-atelier-gold text-xs"></i>
+                        <span>VIP-Buchungspriorität am Wochenende</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="p-6 pt-0 space-y-2">
+                  <a href="https://payhip.com/b/cDnlJ" 
+                     target="_blank" 
+                     rel="noopener noreferrer" 
+                     class="payhip-buy-button btn-atelier-gold w-full py-3 px-4 rounded-lg text-xs uppercase tracking-wider font-semibold flex items-center justify-center gap-2 cursor-pointer shadow-md"
+                     data-product="cDnlJ"
+                     data-theme="none">
+                    <i class="fa-solid fa-crown text-amber-950 text-xs"></i>
+                    <span>Abo buchen · Payhip</span>
+                  </a>
+                  <p class="text-[10px] text-slate-500 font-mono text-center flex items-center justify-center gap-1.5 pt-1">
+                    <i class="fa-solid fa-shield-halved text-emerald-400"></i> Sichere SSL-Zahlung · Payhip
+                  </p>
+                </div>
+              </div>
+
+              <!-- 3. Haare & Bart Abo 2 Besuche/Monat -->
+              <div class="abo-plan-card rounded-2xl border border-white/10 bg-atelier-surface elevation-1 flex flex-col justify-between overflow-hidden transition-all duration-300 hover:border-atelier-borderGold hover:-translate-y-1" data-frequency="2">
+                <div>
+                  <div class="relative h-48 w-full overflow-hidden bg-atelier-card">
+                    <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80" alt="Haare & Bart Abo 2 Besuche" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-atelier-surface via-transparent to-black/30"></div>
+                    <span class="absolute top-3 left-3 text-[10px] font-mono uppercase tracking-wider px-2.5 py-1 rounded bg-black/80 text-atelier-gold border border-atelier-borderGold font-semibold backdrop-blur-sm">
+                      2 Besuche / Monat
+                    </span>
+                  </div>
+                  <div class="p-6 space-y-4">
+                    <div>
+                      <span class="text-[10px] font-mono uppercase tracking-widest text-slate-400 block mb-1">Das Kombi-Paket</span>
+                      <h3 class="font-serif text-2xl text-white font-normal">Haare &amp; Bart Abo</h3>
+                      <p class="text-xs text-slate-400 font-light mt-1">2 Besuche pro Monat für den harmonischen Gesamtlook von Kopf und Bart.</p>
+                    </div>
+                    <div class="pt-2 border-t border-white/5">
+                      <div class="font-mono text-3xl font-bold text-white">
+                        CHF 139 <span class="text-xs text-slate-400 font-normal">/ Monat</span>
+                      </div>
+                      <span class="text-[11px] text-emerald-400 font-mono block mt-0.5">CHF 69.50 pro Kombi-Session</span>
+                    </div>
+                    <ul class="space-y-2 text-xs text-slate-300 pt-1">
+                      <li class="flex items-center gap-2">
+                        <i class="fa-solid fa-check text-atelier-gold text-xs"></i>
+                        <span>2× Kompletter Haarschnitt nach Wahl</span>
+                      </li>
+                      <li class="flex items-center gap-2">
+                        <i class="fa-solid fa-check text-atelier-gold text-xs"></i>
+                        <span>2× Barttrimmen &amp; Messer-Konturierung</span>
+                      </li>
+                      <li class="flex items-center gap-2">
+                        <i class="fa-solid fa-check text-atelier-gold text-xs"></i>
+                        <span>Hot Towel Kompresse &amp; nährendes Bartöl</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="p-6 pt-0 space-y-2">
+                  <a href="https://payhip.com/b/cDnlJ" 
+                     target="_blank" 
+                     rel="noopener noreferrer" 
+                     class="payhip-buy-button btn-atelier-crimson w-full py-3 px-4 rounded-lg text-xs uppercase tracking-wider font-semibold flex items-center justify-center gap-2 cursor-pointer shadow-md"
+                     data-product="cDnlJ"
+                     data-theme="none">
+                    <i class="fa-solid fa-crown text-amber-300 text-xs"></i>
+                    <span>Abo buchen · Payhip</span>
+                  </a>
+                  <p class="text-[10px] text-slate-500 font-mono text-center flex items-center justify-center gap-1.5 pt-1">
+                    <i class="fa-solid fa-shield-halved text-emerald-400"></i> Sichere SSL-Zahlung · Payhip
+                  </p>
+                </div>
+              </div>
+
+              <!-- 4. Haare & Bart Abo 4 Besuche/Monat -->
+              <div class="abo-plan-card rounded-2xl border border-atelier-borderGold bg-atelier-surface elevation-2 flex flex-col justify-between overflow-hidden transition-all duration-300 hover:border-atelier-gold hover:-translate-y-1" data-frequency="4">
+                <div>
+                  <div class="relative h-48 w-full overflow-hidden bg-atelier-card">
+                    <img src="https://images.unsplash.com/photo-1512690459411-b9245aed614b?auto=format&fit=crop&w=800&q=80" alt="Haare & Bart Abo 4 Besuche" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-atelier-surface via-transparent to-black/30"></div>
+                    <span class="absolute top-3 left-3 text-[10px] font-mono uppercase tracking-wider px-2.5 py-1 rounded bg-atelier-crimson text-white font-semibold shadow-md">
+                      4 Besuche / Monat (Wöchentlich)
+                    </span>
+                  </div>
+                  <div class="p-6 space-y-4">
+                    <div>
+                      <span class="text-[10px] font-mono uppercase tracking-widest text-atelier-gold block mb-1">Executive Grooming</span>
+                      <h3 class="font-serif text-2xl text-white font-normal">Haare &amp; Bart Abo</h3>
+                      <p class="text-xs text-slate-400 font-light mt-1">4 Besuche pro Monat für anspruchsvolle Männer, die jede Woche tadellos auftreten.</p>
+                    </div>
+                    <div class="pt-2 border-t border-white/5">
+                      <div class="font-mono text-3xl font-bold text-white">
+                        CHF 277 <span class="text-xs text-slate-400 font-normal">/ Monat</span>
+                      </div>
+                      <span class="text-[11px] text-emerald-400 font-mono block mt-0.5">CHF 69.25 pro Kombi-Session</span>
+                    </div>
+                    <ul class="space-y-2 text-xs text-slate-300 pt-1">
+                      <li class="flex items-center gap-2">
+                        <i class="fa-solid fa-check text-atelier-gold text-xs"></i>
+                        <span>4× Haarschnitt &amp; Bartformung</span>
+                      </li>
+                      <li class="flex items-center gap-2">
+                        <i class="fa-solid fa-check text-atelier-gold text-xs"></i>
+                        <span>Wöchentliches Rasiermesser-Ritual</span>
+                      </li>
+                      <li class="flex items-center gap-2">
+                        <i class="fa-solid fa-check text-atelier-gold text-xs"></i>
+                        <span>Inklusive 10% Rabatt auf Stylingprodukte</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="p-6 pt-0 space-y-2">
+                  <a href="https://payhip.com/b/cDnlJ" 
+                     target="_blank" 
+                     rel="noopener noreferrer" 
+                     class="payhip-buy-button btn-atelier-crimson w-full py-3 px-4 rounded-lg text-xs uppercase tracking-wider font-semibold flex items-center justify-center gap-2 cursor-pointer shadow-md"
+                     data-product="cDnlJ"
+                     data-theme="none">
+                    <i class="fa-solid fa-crown text-amber-300 text-xs"></i>
+                    <span>Abo buchen · Payhip</span>
+                  </a>
+                  <p class="text-[10px] text-slate-500 font-mono text-center flex items-center justify-center gap-1.5 pt-1">
+                    <i class="fa-solid fa-shield-halved text-emerald-400"></i> Sichere SSL-Zahlung · Payhip
+                  </p>
+                </div>
+              </div>
+
+              <!-- 5. Maschinenschnitt Abo 2 Besuche/Monat -->
+              <div class="abo-plan-card rounded-2xl border border-white/10 bg-atelier-surface elevation-1 flex flex-col justify-between overflow-hidden transition-all duration-300 hover:border-atelier-borderGold hover:-translate-y-1" data-frequency="2">
+                <div>
+                  <div class="relative h-48 w-full overflow-hidden bg-atelier-card">
+                    <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=800&q=80" alt="Maschinenschnitt Abo 2 Besuche" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-atelier-surface via-transparent to-black/30"></div>
+                    <span class="absolute top-3 left-3 text-[10px] font-mono uppercase tracking-wider px-2.5 py-1 rounded bg-black/80 text-atelier-gold border border-atelier-borderGold font-semibold backdrop-blur-sm">
+                      2 Besuche / Monat
+                    </span>
+                  </div>
+                  <div class="p-6 space-y-4">
+                    <div>
+                      <span class="text-[10px] font-mono uppercase tracking-widest text-slate-400 block mb-1">Kompakt &amp; Effizient</span>
+                      <h3 class="font-serif text-2xl text-white font-normal">Maschinenschnitt Abo</h3>
+                      <p class="text-xs text-slate-400 font-light mt-1">2 Besuche pro Monat für akkurate Buzz Cuts und reine Maschinenhaarschnitte.</p>
+                    </div>
+                    <div class="pt-2 border-t border-white/5">
+                      <div class="font-mono text-3xl font-bold text-white">
+                        CHF 62 <span class="text-xs text-slate-400 font-normal">/ Monat</span>
+                      </div>
+                      <span class="text-[11px] text-emerald-400 font-mono block mt-0.5">CHF 31.00 pro Besuch · Best Price</span>
+                    </div>
+                    <ul class="space-y-2 text-xs text-slate-300 pt-1">
+                      <li class="flex items-center gap-2">
+                        <i class="fa-solid fa-check text-atelier-gold text-xs"></i>
+                        <span>2× Maschinenschnitt auf Wunschlänge</span>
+                      </li>
+                      <li class="flex items-center gap-2">
+                        <i class="fa-solid fa-check text-atelier-gold text-xs"></i>
+                        <span>Exakte Nackenausrasur &amp; Konturen</span>
+                      </li>
+                      <li class="flex items-center gap-2">
+                        <i class="fa-solid fa-check text-atelier-gold text-xs"></i>
+                        <span>Erfrischendes Haarwasser &amp; Styling</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="p-6 pt-0 space-y-2">
+                  <a href="https://payhip.com/b/cDnlJ" 
+                     target="_blank" 
+                     rel="noopener noreferrer" 
+                     class="payhip-buy-button btn-atelier-crimson w-full py-3 px-4 rounded-lg text-xs uppercase tracking-wider font-semibold flex items-center justify-center gap-2 cursor-pointer shadow-md"
+                     data-product="cDnlJ"
+                     data-theme="none">
+                    <i class="fa-solid fa-crown text-amber-300 text-xs"></i>
+                    <span>Abo buchen · Payhip</span>
+                  </a>
+                  <p class="text-[10px] text-slate-500 font-mono text-center flex items-center justify-center gap-1.5 pt-1">
+                    <i class="fa-solid fa-shield-halved text-emerald-400"></i> Sichere SSL-Zahlung · Payhip
+                  </p>
+                </div>
+              </div>
+
+              <!-- 6. Maschinenschnitt Abo 4 Besuche/Monat -->
+              <div class="abo-plan-card rounded-2xl border border-white/10 bg-atelier-surface elevation-1 flex flex-col justify-between overflow-hidden transition-all duration-300 hover:border-atelier-borderGold hover:-translate-y-1" data-frequency="4">
+                <div>
+                  <div class="relative h-48 w-full overflow-hidden bg-atelier-card">
+                    <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=800&q=80" alt="Maschinenschnitt Abo 4 Besuche" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-atelier-surface via-transparent to-black/30"></div>
+                    <span class="absolute top-3 left-3 text-[10px] font-mono uppercase tracking-wider px-2.5 py-1 rounded bg-black/80 text-atelier-gold border border-atelier-borderGold font-semibold backdrop-blur-sm">
+                      4 Besuche / Monat (Wöchentlich)
+                    </span>
+                  </div>
+                  <div class="p-6 space-y-4">
+                    <div>
+                      <span class="text-[10px] font-mono uppercase tracking-widest text-slate-400 block mb-1">Dauerhaft Kurzer Schnitt</span>
+                      <h3 class="font-serif text-2xl text-white font-normal">Maschinenschnitt Abo</h3>
+                      <p class="text-xs text-slate-400 font-light mt-1">4 Besuche pro Monat für konstant ultrakurze Haare ohne sichtbaren Nachwuchs.</p>
+                    </div>
+                    <div class="pt-2 border-t border-white/5">
+                      <div class="font-mono text-3xl font-bold text-white">
+                        CHF 122 <span class="text-xs text-slate-400 font-normal">/ Monat</span>
+                      </div>
+                      <span class="text-[11px] text-emerald-400 font-mono block mt-0.5">CHF 30.50 pro Besuch</span>
+                    </div>
+                    <ul class="space-y-2 text-xs text-slate-300 pt-1">
+                      <li class="flex items-center gap-2">
+                        <i class="fa-solid fa-check text-atelier-gold text-xs"></i>
+                        <span>4× Wöchentlicher Maschinenschnitt</span>
+                      </li>
+                      <li class="flex items-center gap-2">
+                        <i class="fa-solid fa-check text-atelier-gold text-xs"></i>
+                        <span>Nacken- &amp; Konturenfeinschliff</span>
+                      </li>
+                      <li class="flex items-center gap-2">
+                        <i class="fa-solid fa-check text-atelier-gold text-xs"></i>
+                        <span>Haarwäsche vor &amp; nach dem Schnitt</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="p-6 pt-0 space-y-2">
+                  <a href="https://payhip.com/b/cDnlJ" 
+                     target="_blank" 
+                     rel="noopener noreferrer" 
+                     class="payhip-buy-button btn-atelier-crimson w-full py-3 px-4 rounded-lg text-xs uppercase tracking-wider font-semibold flex items-center justify-center gap-2 cursor-pointer shadow-md"
+                     data-product="cDnlJ"
+                     data-theme="none">
+                    <i class="fa-solid fa-crown text-amber-300 text-xs"></i>
+                    <span>Abo buchen · Payhip</span>
+                  </a>
+                  <p class="text-[10px] text-slate-500 font-mono text-center flex items-center justify-center gap-1.5 pt-1">
+                    <i class="fa-solid fa-shield-halved text-emerald-400"></i> Sichere SSL-Zahlung · Payhip
+                  </p>
+                </div>
+              </div>
+
+              <!-- 7. Fade + Wellness Abo 2 Besuche/Monat -->
+              <div class="abo-plan-card rounded-2xl border border-white/10 bg-atelier-surface elevation-1 flex flex-col justify-between overflow-hidden transition-all duration-300 hover:border-atelier-borderGold hover:-translate-y-1" data-frequency="2">
+                <div>
+                  <div class="relative h-48 w-full overflow-hidden bg-atelier-card">
+                    <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=800&q=80" alt="Fade + Wellness Abo 2 Besuche" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-atelier-surface via-transparent to-black/30"></div>
+                    <span class="absolute top-3 left-3 text-[10px] font-mono uppercase tracking-wider px-2.5 py-1 rounded bg-black/80 text-atelier-gold border border-atelier-borderGold font-semibold backdrop-blur-sm">
+                      2 Besuche / Monat
+                    </span>
+                  </div>
+                  <div class="p-6 space-y-4">
+                    <div>
+                      <span class="text-[10px] font-mono uppercase tracking-widest text-slate-400 block mb-1">Schnitt &amp; Entspannung</span>
+                      <h3 class="font-serif text-2xl text-white font-normal">Fade + Wellness Abo</h3>
+                      <p class="text-xs text-slate-400 font-light mt-1">2 Besuche pro Monat inklusive wohltuendem Hot Towel Ritual und Gesichtspflege.</p>
+                    </div>
+                    <div class="pt-2 border-t border-white/5">
+                      <div class="font-mono text-3xl font-bold text-white">
+                        CHF 126 <span class="text-xs text-slate-400 font-normal">/ Monat</span>
+                      </div>
+                      <span class="text-[11px] text-emerald-400 font-mono block mt-0.5">CHF 63.00 pro Spa &amp; Cut Session</span>
+                    </div>
+                    <ul class="space-y-2 text-xs text-slate-300 pt-1">
+                      <li class="flex items-center gap-2">
+                        <i class="fa-solid fa-check text-atelier-gold text-xs"></i>
+                        <span>2× Skin Fade oder Klassik-Schnitt</span>
+                      </li>
+                      <li class="flex items-center gap-2">
+                        <i class="fa-solid fa-check text-atelier-gold text-xs"></i>
+                        <span>Hot Towel Kompresse &amp; Gesichtsreinigung</span>
+                      </li>
+                      <li class="flex items-center gap-2">
+                        <i class="fa-solid fa-check text-atelier-gold text-xs"></i>
+                        <span>MK Men® Gesichtsfluid &amp; Nackenmassage</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="p-6 pt-0 space-y-2">
+                  <a href="https://payhip.com/b/cDnlJ" 
+                     target="_blank" 
+                     rel="noopener noreferrer" 
+                     class="payhip-buy-button btn-atelier-crimson w-full py-3 px-4 rounded-lg text-xs uppercase tracking-wider font-semibold flex items-center justify-center gap-2 cursor-pointer shadow-md"
+                     data-product="cDnlJ"
+                     data-theme="none">
+                    <i class="fa-solid fa-crown text-amber-300 text-xs"></i>
+                    <span>Abo buchen · Payhip</span>
+                  </a>
+                  <p class="text-[10px] text-slate-500 font-mono text-center flex items-center justify-center gap-1.5 pt-1">
+                    <i class="fa-solid fa-shield-halved text-emerald-400"></i> Sichere SSL-Zahlung · Payhip
+                  </p>
+                </div>
+              </div>
+
+              <!-- 8. Fade + Wellness Abo 4 Besuche/Monat -->
+              <div class="abo-plan-card rounded-2xl border border-atelier-borderGold bg-atelier-surface elevation-2 flex flex-col justify-between overflow-hidden transition-all duration-300 hover:border-atelier-gold hover:-translate-y-1 relative" data-frequency="4">
+                <div>
+                  <div class="relative h-48 w-full overflow-hidden bg-atelier-card">
+                    <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=800&q=80" alt="Fade + Wellness Abo 4 Besuche" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-atelier-surface via-transparent to-black/30"></div>
+                    <span class="absolute top-3 left-3 text-[10px] font-mono uppercase tracking-wider px-2.5 py-1 rounded bg-atelier-crimson text-white font-semibold shadow-md">
+                      4 Besuche / Monat (Wöchentlich)
+                    </span>
+                  </div>
+                  <div class="p-6 space-y-4">
+                    <div>
+                      <span class="text-[10px] font-mono uppercase tracking-widest text-atelier-gold block mb-1">Das ultimative VIP-Abo</span>
+                      <h3 class="font-serif text-2xl text-white font-normal">Fade + Wellness Abo</h3>
+                      <p class="text-xs text-slate-400 font-light mt-1">4 Besuche pro Monat für maximales Wohlbefinden, wöchentliche Frische und totale Regeneration.</p>
+                    </div>
+                    <div class="pt-2 border-t border-white/5">
+                      <div class="font-mono text-3xl font-bold text-white">
+                        CHF 249 <span class="text-xs text-slate-400 font-normal">/ Monat</span>
+                      </div>
+                      <span class="text-[11px] text-emerald-400 font-mono block mt-0.5">CHF 62.25 pro Spa &amp; Cut Session</span>
+                    </div>
+                    <ul class="space-y-2 text-xs text-slate-300 pt-1">
+                      <li class="flex items-center gap-2">
+                        <i class="fa-solid fa-check text-atelier-gold text-xs"></i>
+                        <span>4× Wöchentlicher Fade &amp; Wellness-Service</span>
+                      </li>
+                      <li class="flex items-center gap-2">
+                        <i class="fa-solid fa-check text-atelier-gold text-xs"></i>
+                        <span>Hot Towels, Gesichtsbehandlung &amp; Massage</span>
+                      </li>
+                      <li class="flex items-center gap-2">
+                        <i class="fa-solid fa-check text-atelier-gold text-xs"></i>
+                        <span>15% VIP-Rabatt auf alle Atelier-Produkte</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="p-6 pt-0 space-y-2">
+                  <a href="https://payhip.com/b/cDnlJ" 
+                     target="_blank" 
+                     rel="noopener noreferrer" 
+                     class="payhip-buy-button btn-atelier-gold w-full py-3 px-4 rounded-lg text-xs uppercase tracking-wider font-semibold flex items-center justify-center gap-2 cursor-pointer shadow-md"
+                     data-product="cDnlJ"
+                     data-theme="none">
+                    <i class="fa-solid fa-crown text-amber-950 text-xs"></i>
+                    <span>Abo buchen · Payhip</span>
+                  </a>
+                  <p class="text-[10px] text-slate-500 font-mono text-center flex items-center justify-center gap-1.5 pt-1">
+                    <i class="fa-solid fa-shield-halved text-emerald-400"></i> Sichere SSL-Zahlung · Payhip
+                  </p>
+                </div>
               </div>
 
             </div>
+
+            <!-- Trust Banner: Payhip Integration & Atelier Guarantee -->
+            <div class="p-6 rounded-2xl border border-white/10 bg-atelier-lacquer flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-atelier-card border border-white/10 flex items-center justify-center text-atelier-gold text-base shrink-0">
+                  <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <div>
+                  <span class="text-white font-medium block">Sicherer Checkout via Payhip &amp; flexible Mitgliedschaft</span>
+                  <span class="text-slate-400 text-[11px]">Monatlich abbuchbar, jederzeit mit 1 Klick online pausieren oder kündigen. Termine flexibel über Koalendar oder WhatsApp buchen.</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-4 shrink-0 text-slate-300 font-mono text-[11px]">
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-emerald-400"></i> Keine Mindestlaufzeit</span>
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-location-dot text-atelier-crimson"></i> Atelier Uster</span>
+              </div>
+            </div>
+
           </div>
 
           <!-- KUNDEN-FOTOGALERIE (AUTHENTISCHE CUTS & STYLES) -->
@@ -933,7 +1424,7 @@
           <div class="grid lg:grid-cols-12 gap-12 items-center mb-20">
             <div class="lg:col-span-7 space-y-6">
               <span class="text-xs font-mono uppercase tracking-[0.25em] text-atelier-gold font-semibold block">
-                [02] Hauptfokus · Mit Fachleuten & Influencern
+                [02] Beauty Workshops · Mit Fachleuten & Influencern
               </span>
               <h1 class="font-serif text-4xl sm:text-6xl text-white font-normal leading-[1.05]">
                 Hautpflege, Make-up & <br><span class="italic text-atelier-gold">Selbstfürsorge.</span>
@@ -1251,7 +1742,7 @@
 
               <div class="pt-6 border-t border-white/10 space-y-2 text-xs text-slate-400 font-light">
                 <p><strong class="text-slate-200">Adresse:</strong> Bankstrasse 36, 8610 Uster</p>
-                <p><strong class="text-slate-200">Zeiten:</strong> Di – Sa 09:00 – 19:00 Uhr</p>
+                <p><strong class="text-slate-200">Zeiten:</strong> Mo – Sa 09:00 – 19:00 Uhr</p>
               </div>
             </div>
 
@@ -1327,8 +1818,8 @@
         <div>
           <span class="text-xs font-mono uppercase tracking-wider text-slate-300 font-semibold block mb-3">Bereiche</span>
           <ul class="space-y-2 text-xs text-slate-400">
-            <li><a href="#" onclick="navigateTo('barber'); return false;" class="hover:text-atelier-crimson transition-colors">Barber Studio (Hauptfokus)</a></li>
-            <li><a href="#" onclick="navigateTo('workshops'); return false;" class="hover:text-atelier-gold transition-colors">Beauty Workshops (Hauptfokus)</a></li>
+            <li><a href="#" onclick="navigateTo('barber'); return false;" class="hover:text-atelier-crimson transition-colors">Barber Studio</a></li>
+            <li><a href="#" onclick="navigateTo('workshops'); return false;" class="hover:text-atelier-gold transition-colors">Beauty Workshops</a></li>
             <li><a href="#" onclick="navigateTo('mentoring'); return false;" class="hover:text-white transition-colors">Ganzheitliches Mentoring</a></li>
             <li><a href="#" onclick="navigateTo('products'); return false;" class="hover:text-white transition-colors">Katalog Kollektion (38 Produkte)</a></li>
           </ul>
@@ -1424,6 +1915,22 @@
   <script>
     const products = [{"id": "skinvigorate_duo", "title": "Skinvigorate® Duo Facial Device", "category": "devices", "catLabel": "Beauty Devices", "badge": "NEU & LIMITIERT", "badgeColor": "gold", "image": "https://pimg.eur.marykaycdn.com/HeroZoom/10006/J2012935-UNL-GB-135-Skinvigorate-Duo-Facial-Device-Soldier-Front-WT.jpg", "details": "Multifunktionales Reinigungs- & Massagegerät", "desc": "Bringt deine Hautpflege auf ein neues Level. Sanfte Impulse durch innovative Dual-Head-Vibrationstechnologie mit 5 Intensitätsstufen. Power-Reinigung mit weichen Silikonborsten kombiniert mit einer wärmenden Massage zur optimalen Aufnahme von Seren, Gesichtsölen und Boostern. Wasserresistent & reisefreundlich.", "localImage": "jeshua_products/skinvigorate_duo.png"}, {"id": "mkmen_basis_set", "title": "MK Men® Basis-Set (Herren-Trio)", "category": "barber", "catLabel": "Barber & Men", "badge": "BARBER FAVORIT", "badgeColor": "red", "image": "https://www.marykay.com/dw/image/v2/BKGS_PRD/on/demandware.static/-/Sites-us-master-catalog/default/dwd50c8be0/hi-res/10005/mkmensregimen2.jpg", "details": "Komplettes 3-Schritte-Pflegeset für Ihn", "desc": "Vereint fortschrittliche Hautpflege-Wissenschaft mit unkomplizierter Männerpflege. Das 3er-Set beinhaltet das Daily Facial Wash zur porentiefen Klärung, die kühlende Moisturizing Shave Cream für eine reizfreie Rasur und den 12h Ultimate Moisturizer mit Resveratrol.", "localImage": "jeshua_products/mkmen_basis_set.png"}, {"id": "mkmen_shave_cream", "title": "MK Men® Moisturizing Shave Cream", "category": "barber", "catLabel": "Barber & Men", "badge": "KÜHLENDER EFFEKT", "badgeColor": "slate", "image": "https://www.marykay.com/dw/image/v2/BKGS_PRD/on/demandware.static/-/Sites-us-master-catalog/default/dw434ff301/hi-res/10000/J2010909-UNL-GB-251-MKMen-Shave-Cream-Soldier-HiRes.jpg", "details": "Reichhaltige Rasiercreme für geschmeidige Gleitfähigkeit", "desc": "Kombiniert luxuriösen Gleitkomfort und einen spürbar kühlenden Frische-Effekt für eine saubere, präzise Rasur und maximalen Schutz vor Rasurbrand, Mikroschnitten und Rötungen.", "localImage": "jeshua_products/mkmen_shave_cream.png"}, {"id": "mkmen_facial_wash", "title": "MK Men® Daily Facial Wash", "category": "barber", "catLabel": "Barber & Men", "badge": "KLÄREND", "badgeColor": "slate", "image": "https://www.marykay.com/dw/image/v2/BKGS_PRD/on/demandware.static/-/Sites-us-master-catalog/default/dwedf1fbcf/hi-res/10005/J2013944-US-PM-Summer-Products-SI-MK-Men-Daily-Facial-Wash-AD-WEB-04-15-25-grey-bg.jpg", "details": "Tägliches klärendes Reinigungsgel", "desc": "Reinigt die Männerhaut gründlich, ohne dass sie spannt oder sich ausgelaugt anfühlt. Reduziert sichtbar überschüssigen Talg, befreit die Poren und bereitet die Barthaare ideal auf die Rasur vor.", "localImage": "jeshua_products/mkmen_facial_wash.png"}, {"id": "mkmen_moisturizer", "title": "MK Men® Ultimate Moisturizer", "category": "barber", "catLabel": "Barber & Men", "badge": "12H FEUCHTIGKEIT", "badgeColor": "slate", "image": "https://www.marykay.com/dw/image/v2/BKGS_PRD/on/demandware.static/-/Sites-us-master-catalog/default/dw53bbab44/hi-res/10000/J2010909-UNL-GB-005-MKMen-Moisturizer-Soldier-HiRes.jpg", "details": "Regenerierende 12-Stunden Feuchtigkeitspflege", "desc": "Erhöht die Feuchtigkeitszufuhr der Haut für bis zu 12 Stunden. Ausgewählter Plankton-Extrakt beruhigt die Haut spürbar nach der Rasur, während das Power-Antioxidans Resveratrol freie Radikale bekämpft.", "localImage": "jeshua_products/mkmen_moisturizer.png"}, {"id": "timewise_repair_set", "title": "TimeWise Repair® Volu-Firm® Basis-Set", "category": "skincare", "catLabel": "Hautpflege & Anti-Aging", "badge": "PREMIUM ANTI-AGING", "badgeColor": "gold", "image": "https://www.marykay.com/dw/image/v2/BKGS_PRD/on/demandware.static/-/Sites-us-master-catalog/default/dw83aa24c9/hi-res/10006/J2012933-UNL-US-138-TWR-Collection-HiRes.jpg", "details": "Wissenschaftlich fundiertes Luxus-Pflegeset", "desc": "Speziell formuliert bei fortgeschrittenen Zeichen der Hautalterung. Enthält den Foaming Cleanser, Day Cream SPF 30, Night Treatment mit Retinol und die straffende Eye Renewal Cream für sichtbare Reaktivierung von Festigkeit und Kontur.", "localImage": "jeshua_products/timewise_repair_set.png"}, {"id": "timewise_repair_nighttreatment", "title": "TimeWise Repair® Volu-Firm® Night Treatment", "category": "skincare", "catLabel": "Hautpflege & Anti-Aging", "badge": "MIT RETINOL", "badgeColor": "purple", "image": "https://www.marykay.com/dw/image/v2/BKGS_PRD/on/demandware.static/-/Sites-us-master-catalog/default/dw25848a73/hi-res/10005/J2012933-UNL-GB-143-TWR-Night-Treatment-Soldier-1-HiRes.jpg", "details": "Intensive Nachtcreme mit verkapseltem Retinol", "desc": "Fördert die Zellerneuerung und Kollagenproduktion im Schlaf. Mindert das Erscheinungsbild tiefer Falten und spendet der Haut reichhaltige Feuchtigkeit für ein strafferes Hautgefühl am Morgen.", "localImage": "jeshua_products/timewise_repair_nighttreatment.png"}, {"id": "timewise_repair_daycream", "title": "TimeWise Repair® Volu-Firm® Day Cream SPF 30", "category": "skincare", "catLabel": "Hautpflege & Anti-Aging", "badge": "LSF 30 SCHUTZ", "badgeColor": "amber", "image": "https://www.marykay.com/dw/image/v2/BKGS_PRD/on/demandware.static/-/Sites-us-master-catalog/default/dw83aa24c9/hi-res/10006/J2012933-UNL-US-138-TWR-Collection-HiRes.jpg", "details": "Schützende Tagescreme mit Breitbandschutz", "desc": "Schützt wirksam vor vorzeitiger lichtbedingter Hautalterung und UVA/UVB-Strahlen. Stärkt die Hautelastizität und mildert das Auftreten von Pigmentflecken.", "localImage": "jeshua_products/timewise_repair_daycream.png"}, {"id": "timewise_repair_eyecream", "title": "TimeWise Repair® Volu-Firm® Eye Renewal Cream", "category": "skincare", "catLabel": "Hautpflege & Anti-Aging", "badge": "AUGENPFLEGE", "badgeColor": "blue", "image": "https://www.marykay.com/dw/image/v2/BKGS_PRD/on/demandware.static/-/Sites-us-master-catalog/default/dw2bad403e/hi-res/10005/J2012933-UNL-GB-131-TWR-Eye-Cream-Soldier-1-HiRes.jpg", "details": "Straffende Augenpflege mit kühlendem Zamak-Kopf", "desc": "Erfrischt müde Augenpartien im Handumdrehen. Reduziert Schwellungen, Augenschatten und Knitterfältchen. Der patentierte Metall-Applikator kühlt und massiert sanft.", "localImage": "jeshua_products/timewise_repair_eyecream.png"}, {"id": "timewise_repair_cleanser", "title": "TimeWise Repair® Volu-Firm® Foaming Cleanser", "category": "skincare", "catLabel": "Hautpflege & Anti-Aging", "badge": "SAMTIGER SCHAUM", "badgeColor": "slate", "image": "https://www.marykay.com/dw/image/v2/BKGS_PRD/on/demandware.static/-/Sites-us-master-catalog/default/dw19e2cb67/hi-res/10005/J2012933-UNL-GB-138-TWR-Foaming-Cleanser-Soldier-1-HiRes.jpg", "details": "Reichhaltiger Feuchtigkeits-Reinigungsschaum", "desc": "Verwandelt sich bei Kontakt mit Wasser in einen üppigen Schaum, der Schmutz und Make-up sanft entfernt und die Feuchtigkeitsbarriere der Haut bewahrt.", "localImage": "jeshua_products/timewise_repair_cleanser.png"}, {"id": "timewise_repair_biocellulose_mask", "title": "TimeWise Repair® Lifting Bio-Cellulose Mask", "category": "skincare", "catLabel": "Hautpflege & Anti-Aging", "badge": "LIFTING EFFEKT", "badgeColor": "gold", "image": "https://www.marykay.com/dw/image/v2/BKGS_PRD/on/demandware.static/-/Sites-us-master-catalog/default/dwa59f3f07/hi-res/10001/422409-AP-VFirm-Mask%20With%20Carton-RIGHT-Hi-Res.jpg", "details": "Intensive Lifting-Tuchmaske (4er-Pack)", "desc": "Schmiegt sich wie eine zweite Haut an das Gesicht an. Hochwertige Bio-Cellulose schleust feuchtigkeitsspendende Wirkstoffe tief ein – für sichtbar prallere, straffere Haut in 20 Minuten.", "localImage": "jeshua_products/timewise_repair_biocellulose_mask.png"}, {"id": "timewise_wunder_set", "title": "TimeWise® Ultimate „Wunder-Set“", "category": "skincare", "catLabel": "Hautpflege & Anti-Aging", "badge": "BESTSELLER SYSTEM", "badgeColor": "red", "image": "https://www.marykay.com/dw/image/v2/BKGS_PRD/on/demandware.static/-/Sites-us-master-catalog/default/dw2af9fa15/hi-res/10005/twms.jpg", "details": "3D-Schutz vor frühen bis moderaten Altersanzeichen", "desc": "Der innovative TimeWise 3D® Komplex verteidigt gegen freie Radikale, verzögert vorzeitige Hautalterung und liefert sichtbare Verbesserungen. Beinhaltet Cleanser, Day Defender SPF 30, Night Recovery, Antioxidant Moisturizer und Eye Cream.", "localImage": "jeshua_products/timewise_wunder_set.png"}, {"id": "timewise_4in1_cleanser", "title": "TimeWise® 4-in-1 Cleanser", "category": "skincare", "catLabel": "Hautpflege & Anti-Aging", "badge": "4-IN-1 REINIGER", "badgeColor": "slate", "image": "https://www.marykay.com/dw/image/v2/BKGS_PRD/on/demandware.static/-/Sites-us-master-catalog/default/dwed52c7ab/hi-res/10004/J2008051-UNL-GB-024-TW-4-1-Cleanser-HiRes.jpg", "details": "Reinigen, Peelen, Klären & Ausstrahlen", "desc": "Vier Vorteile in einem Pflegeschritt: Befreit die Haut von Schmutz und Make-up, peelt abgestorbene Hautschüppchen sanft ab, tonisiert und verleiht frischen Glow.", "localImage": "jeshua_products/timewise_4in1_cleanser.png"}, {"id": "timewise_night_recovery", "title": "TimeWise® Nighttime Recovery", "category": "skincare", "catLabel": "Hautpflege & Anti-Aging", "badge": "NUTRIBEADS®", "badgeColor": "purple", "image": "https://www.marykay.com/dw/image/v2/BKGS_PRD/on/demandware.static/-/Sites-us-master-catalog/default/dw6d369bf2/hi-res/10004/J2008051-UNL-GB-014-TW-Nighttime-Recovery-HiRes.jpg", "details": "Regenerierendes Nachtfluid mit Vitaminperlen", "desc": "Frische NutriBeads® setzen Resveratrol und essenzielle Vitamine direkt beim Auftragen frei. Unterstützt den nächtlichen Reparaturzyklus der Haut optimal.", "localImage": "jeshua_products/timewise_night_recovery.png"}, {"id": "timewise_day_defender", "title": "TimeWise® Daytime Defender SPF 30", "category": "skincare", "catLabel": "Hautpflege & Anti-Aging", "badge": "TAGESSCHUTZ", "badgeColor": "amber", "image": "https://www.marykay.com/dw/image/v2/BKGS_PRD/on/demandware.static/-/Sites-us-master-catalog/default/dwa8342b8c/hi-res/10000/J2008051-UNL-US-011-TW-Daytime-Defender-SPF30-HiRes.jpg", "details": "Schützendes Tagesfluid mit LSF 30", "desc": "Wehrt schädliche UVA/UVB-Strahlen ab und stärkt die Abwehrkräfte der Haut gegen Feinstaub und oxidativen Alltagsstress.", "localImage": "jeshua_products/timewise_day_defender.png"}, {"id": "timewise_antioxidant_moisturizer", "title": "TimeWise® Antioxidant Moisturizer", "category": "skincare", "catLabel": "Hautpflege & Anti-Aging", "badge": "12H HYDRATION", "badgeColor": "slate", "image": "https://www.marykay.com/dw/image/v2/BKGS_PRD/on/demandware.static/-/Sites-us-master-catalog/default/dw7598cf2d/hi-res/10000/J2008051-UNL-GB-021-TW-Antioxidant-Moisturizer-HiRes.jpg", "details": "Intensive Feuchtigkeitspflege", "desc": "Versorgt die Haut bis zu 12 Stunden mit Feuchtigkeit, stärkt ihre Schutzbarriere und verleiht ein seidig glattes, geschmeidiges Hautgefühl.", "localImage": "jeshua_products/timewise_antioxidant_moisturizer.png"}, {"id": "clinical_retinol_03", "title": "Clinical Solutions® Retinol 0,3 Serum", "category": "clinical", "catLabel": "Clinical Solutions (Dermokosmetik)", "badge": "PURE DERMOKOSMETIK", "badgeColor": "gold", "image": "https://www.marykay.com/dw/image/v2/BKGS_PRD/on/demandware.static/-/Sites-us-master-catalog/default/dw173a5861/hi-res/10000/J2010912-UNL-GB-ClinicalSolutions-Retinol-03-Soldier-Cap-Off-HiRes.jpg", "details": "Hochkonzentriertes Anti-Falten Serum", "desc": "Der Goldstandard der Dermatologie: Reines, hochwirksames Retinol in klinisch erforschter 0,3% Konzentration zur Stimulierung der Zellerneuerung und Milderung von Fältchen und Hyperpigmentierung.", "localImage": "jeshua_products/clinical_retinol_03.png"}, {"id": "clinical_barrier_restore", "title": "Clinical Solutions® Barrier Restore 1:1:3", "category": "clinical", "catLabel": "Clinical Solutions (Dermokosmetik)", "badge": "BARRIERESCHUTZ", "badgeColor": "emerald", "image": "https://www.marykay.com/dw/image/v2/BKGS_PRD/on/demandware.static/-/Sites-us-master-catalog/default/dw834e41ea/hi-res/10005/J2012932-UNL-GB-033-Clinical-Solutions-Barrier-Restore-Soldier1-HiRes.jpg", "details": "Beruhigende Hautbarriere-Pflege", "desc": "Formuliert mit einem biomimetischen 1:1:3-Verhältnis aus Ceramiden, Cholesterin und Fettsäuren. Regeneriert die natürliche Hautbarriere und beruhigt gereizte Haut im Nu.", "localImage": "jeshua_products/clinical_barrier_restore.png"}, {"id": "clinical_c_resveratrol", "title": "Clinical Solutions® C + Resveratrol Line-Reducer", "category": "clinical", "catLabel": "Clinical Solutions (Dermokosmetik)", "badge": "ANTIOXIDANTIEN", "badgeColor": "amber", "image": "https://www.marykay.com/dw/image/v2/BKGS_PRD/on/demandware.static/-/Sites-us-master-catalog/default/dwd7ffc6ee/hi-res/10005/CLINICAL-SOLUTIONS-BOOSTER-SOLDIER-REDUCER.jpg", "details": "Gezielter Faltenreduzierer-Booster", "desc": "Kraftvolle Kombination aus stabilisiertem Vitamin C und Resveratrol. Schützt das Kollagengerüst vor oxidativem Abbau und fördert jugendliche Spannkraft.", "localImage": "jeshua_products/clinical_c_resveratrol.png"}, {"id": "clinical_dynamic_wrinkle_limiter", "title": "Clinical Solutions® Dynamic Wrinkle Limiter®", "category": "clinical", "catLabel": "Clinical Solutions (Dermokosmetik)", "badge": "MIMIKFALTEN-STOPP", "badgeColor": "purple", "image": "https://www.marykay.com/dw/image/v2/BKGS_PRD/on/demandware.static/-/Sites-us-master-catalog/default/dw4eafd55d/hi-res/10005/J2009402-UNL-GB-057-Clinical-Solutions-Dynamic-Wrinkle-Limiter-1-HiRes.jpg", "details": "Gezielte Pflege gegen Mimikfalten", "desc": "Präzisionspflege zur sichtbaren Entspannung und Glättung von Mimikfalten an Stirn, Zornesfalte, Augen und Lippenpartie.", "localImage": "jeshua_products/clinical_dynamic_wrinkle_limiter.png"}, {"id": "clearproof_acne_set", "title": "Clear Proof® Blemish System", "category": "skincare", "catLabel": "Hautpflege & Anti-Aging", "badge": "REINE HAUT", "badgeColor": "emerald", "image": "https://www.marykay.com/dw/image/v2/BKGS_PRD/on/demandware.static/-/Sites-us-master-catalog/default/dwe02f34ff/hi-res/10005/J2010552-10058977-CLEARPROOF-ACNE-SYSTEM-SET-HiRes.jpg", "details": "Klärendes Pflegesystem bei unreiner Haut", "desc": "Mit 2% Salicylsäure und pflanzlichen Extrakten. Wirkt gezielt gegen Unreinheiten, reguliert Talgüberschuss und beruhigt Rötungen – für ein klares, ebenmässiges Hautbild.", "localImage": "jeshua_products/clearproof_acne_set.png"}, {"id": "clearproof_charcoal_mask", "title": "Clear Proof® Aktivkohle-Tiefenreinigungsmaske", "category": "skincare", "catLabel": "Hautpflege & Anti-Aging", "badge": "DETOX MASKE", "badgeColor": "slate", "image": "https://www.marykay.com/dw/image/v2/BKGS_PRD/on/demandware.static/-/Sites-us-master-catalog/default/dw523462fb/hi-res/10001/452609-UNL-GB-ClearProof-CharcoalMask-Soldier-cmyk-Hi-Res.jpg", "details": "Porentiefe Entgiftung mit pflanzlicher Aktivkohle", "desc": "Aktivkohle wirkt magnetisch auf Talg, Fett und Umweltpartikel. Tonerde klärt verstopfte Poren, während Rosmarin und Minze die Haut erfrischen.", "localImage": "jeshua_products/clearproof_charcoal_mask.png"}, {"id": "mk_skincare_mattifying_set", "title": "Mary Kay® Skin Care Mattifying Basis-Set", "category": "skincare", "catLabel": "Hautpflege & Anti-Aging", "badge": "MATTIEREND", "badgeColor": "blue", "image": "https://www.marykay.com/dw/image/v2/BKGS_PRD/on/demandware.static/-/Sites-us-master-catalog/default/dw4a41c2b9/hi-res/10005/J2009225-UNL-GB-090-MaryKay-Mattifying-Cleanser-HiRes-10201340.jpg", "details": "4-teiliges Pflegeset für Mischhaut und ölige Haut", "desc": "Mattifying Cleanser, Mattifying Moisturizer, Balancing Toner und sanftes Peeling für den idealen Frischekick und eine samtig mattierte T-Zone.", "localImage": "jeshua_products/mk_skincare_mattifying_set.png"}, {"id": "mk_skincare_hydrating_set", "title": "Mary Kay® Skin Care Hydrating Basis-Set", "category": "skincare", "catLabel": "Hautpflege & Anti-Aging", "badge": "FEUCHTIGKEIT", "badgeColor": "blue", "image": "https://www.marykay.com/dw/image/v2/BKGS_PRD/on/demandware.static/-/Sites-us-master-catalog/default/dw071f3b10/hi-res/10005/J2006992-UNL-GB-029-MKSC-Hero-Hydrating-Regimen-2500x2500-HiRes.jpg", "details": "4-teiliges Pflegeset für trockene Haut", "desc": "Sanfte, hydratisierende Pflegeformeln nähren die Haut intensiv und schenken ihr Geschmeidigkeit und anhaltendes Wohlbefinden.", "localImage": "jeshua_products/mk_skincare_hydrating_set.png"}, {"id": "lash_fanorama_mascara", "title": "Mary Kay® Lash Fanorama Mascara", "category": "makeup", "catLabel": "Make-up & Artistry", "badge": "WORKSHOP KULT", "badgeColor": "gold", "image": "https://www.marykay.com/dw/image/v2/BKGS_PRD/on/demandware.static/-/Sites-us-master-catalog/default/dw5219a550/hi-res/10005/J2012933-UNL-GB-020-LL-Fanorama-Define-Lift-Mascara-Soldier-2-HiRes.jpg", "details": "Spektakulär aufgefächerte Fächerwimpern", "desc": "Die Lieblingsmascara unserer Atelier-Stylisten: Das innovative Dreifach-Bürstchen erreicht selbst die feinsten Wimpern im Augenwinkel, fächert auf und schenkt dramatische Länge und Dichte.", "localImage": "jeshua_products/lash_fanorama_mascara.png"}, {"id": "mk_multi_benefit_concealer", "title": "Mary Kay® Multi-Benefit Concealer", "category": "makeup", "catLabel": "Make-up & Artistry", "badge": "TEINT PERFEKTION", "badgeColor": "amber", "image": "https://www.marykay.com/dw/image/v2/BKGS_PRD/on/demandware.static/-/Sites-us-master-catalog/default/dwe19c60af/hi-res/10005/J2010912-UNL-GB-058-Multi-Benefit-Concealer-Light1-Soldier1-HiRes.jpg", "details": "Cremiger Multi-Concealer in diversen Nuancen", "desc": "Kaschiert Unreinheiten, modelliert Konturen und hellt Schatten auf. Verschmilzt nahtlos mit der Haut für ein natürliches, langanhaltendes Finish.", "localImage": "jeshua_products/mk_multi_benefit_concealer.png"}, {"id": "mk_undereye_corrector", "title": "Mary Kay® Undereye Corrector", "category": "makeup", "catLabel": "Make-up & Artistry", "badge": "FRISCHE-BOOST", "badgeColor": "red", "image": "https://www.marykay.com/dw/image/v2/BKGS_PRD/on/demandware.static/-/Sites-us-master-catalog/default/dw53382f2a/hi-res/10005/J2010912-UNL-GB-128-UnderEye-Corrector-DeepPeach-Soldier-2-HiRes.jpg", "details": "Spezialkorrektur bei dunklen Augenringen (Light Peach)", "desc": "Der universelle Pfirsich-Unterton neutralisiert bläuliche und violette Schatten unter den Augen perfekt und zaubert sofort einen wachen, strahlenden Blick.", "localImage": "jeshua_products/mk_undereye_corrector.png"}, {"id": "mk_silky_setting_powder", "title": "Mary Kay® Silky Setting Powder", "category": "makeup", "catLabel": "Make-up & Artistry", "badge": "SEIDIGES FINISH", "badgeColor": "slate", "image": "https://www.marykay.com/dw/image/v2/BKGS_PRD/on/demandware.static/-/Sites-us-master-catalog/default/dwcec29d78/hi-res/10005/J2010552-10175891-SILKY-SETTING-POWDER-LIGHT-MED-IVORY-HiRes.jpg", "details": "Schwereloser Fixierpuder mit Weichzeichner-Effekt", "desc": "Fixiert Make-up verlässlich, absorbiert überschüssigen Glanz und hinterlässt die Haut seidig weich ohne pudrigen Maskeneffekt.", "localImage": "jeshua_products/mk_silky_setting_powder.png"}, {"id": "mk_chromafusion_eyeshadow", "title": "Mary Kay Chromafusion® Eye Shadow", "category": "makeup", "catLabel": "Make-up & Artistry", "badge": "12H HALT", "badgeColor": "purple", "image": "https://www.marykay.com/dw/image/v2/BKGS_PRD/on/demandware.static/-/Sites-us-master-catalog/default/dw5a3e06a2/hi-res/10001/270211-005-RoseGold-PANS-NS-cmyk-Hi-Res.jpg", "details": "Farbintensive Mineral-Lidschatten Kollektion", "desc": "Hochpigmentierte Nuancen von edlem Champagner bis dramatischem Espresso. Pigment-Matrix-Technologie sorgt für bis zu 12 Stunden Halt ohne Verblassen.", "localImage": "jeshua_products/mk_chromafusion_eyeshadow.png"}, {"id": "mk_waterproof_lipliner", "title": "Mary Kay® Waterproof Lip Liner", "category": "makeup", "catLabel": "Make-up & Artistry", "badge": "WASSERFEST", "badgeColor": "red", "image": "https://www.marykay.com/dw/image/v2/BKGS_PRD/on/demandware.static/-/Sites-us-master-catalog/default/dwd7ee851c/hi-res/10005/10205941.jpg", "details": "Langanhaltender Präzisions-Konturenstift", "desc": "Definiert die Lippenkontur messerscharf und verhindert das Auslaufen des Lippenstifts. Pflegende Inhaltsstoffe garantieren geschmeidiges Auftragen.", "localImage": "jeshua_products/mk_waterproof_lipliner.png"}, {"id": "mk_supreme_lipstick", "title": "Mary Kay® Supreme Hydrating Lipstick", "category": "makeup", "catLabel": "Make-up & Artistry", "badge": "LIP GLOW", "badgeColor": "red", "image": "https://www.marykay.com/dw/image/v2/BKGS_PRD/on/demandware.static/-/Sites-us-master-catalog/default/dw02bd56b7/hi-res/10005/J2010552-10155207-SUPREME-HYDRATING-LIPSTICK-BETTER-THAN-BARE-HiRes.jpg", "details": "Feuchtigkeitsspendender Lippenstift mit Sonnenblumenöl", "desc": "Verleiht intensive, brillante Farbe und schützt die Lippen vor dem Austrocknen mit wertvollem Sonnenblumenöl und Vitamin E.", "localImage": "jeshua_products/mk_supreme_lipstick.png"}, {"id": "satin_lips_set", "title": "Satin Lips® Shea Verwöhn-Set", "category": "body", "catLabel": "Lippen & Hände", "badge": "LIPPENPFLEGE", "badgeColor": "rose", "image": "https://www.marykay.com/dw/image/v2/BKGS_PRD/on/demandware.static/-/Sites-us-master-catalog/default/dw3afdad04/hi-res/10005/J2010552-10098324-WHITE-TEACITRUS-SATIN-LIPS-SET-HiRes.jpg", "details": "Shea Sugar Scrub & Shea Butter Balm", "desc": "Das ultimative Verwöhn-Duo: Sanftes Zuckerpeeling befreit von trockenen Hautschüppchen, gefolgt vom reichhaltigen Sheabutter-Balsam für samtweiche Kusslippen.", "localImage": "jeshua_products/satin_lips_set.png"}, {"id": "satin_hands_cream", "title": "Satin Hands® Nourishing Shea Cream", "category": "body", "catLabel": "Lippen & Hände", "badge": "PARFUMFREI", "badgeColor": "slate", "image": "https://www.marykay.com/dw/image/v2/BKGS_PRD/on/demandware.static/-/Sites-us-master-catalog/default/dw5fb4fc4f/hi-res/10001/395454-UNL-GB-395454-070-SH-MiniWhiteTeaCitrusSheaCream-Hi-Res.jpg", "details": "Tiefenwirksame Sheabutter-Handcreme", "desc": "Spendet der beanspruchten Haut an den Händen Feuchtigkeit, zieht rasch ein und bildet einen unsichtbaren Schutzfilm gegen Witterung und häufiges Händewaschen.", "localImage": "jeshua_products/satin_hands_cream.png"}, {"id": "satin_hands_pampering_set", "title": "Satin Hands® Pampering Set (White Tea & Citrus)", "category": "body", "catLabel": "Lippen & Hände", "badge": "SPA AT HOME", "badgeColor": "emerald", "image": "https://www.marykay.com/dw/image/v2/BKGS_PRD/on/demandware.static/-/Sites-us-master-catalog/default/dw9bd18875/hi-res/10005/J2010552-10090638-WHITE-TEACITRUS%20SATIN-HANDS-PAMPERING-SET-HiRes.jpg", "details": "Komplettes 3-teiliges Handpflege-Ritual", "desc": "Schützender Softener, verfeinerndes Peeling und reichhaltige Handcreme mit erfrischendem Duft von weissem Tee und Zitrusnoten für seidig gepflegte Hände.", "localImage": "jeshua_products/satin_hands_pampering_set.png"}, {"id": "perfume_confidently_you", "title": "Confidently You® Eau de Parfum", "category": "perfume", "catLabel": "Exklusive Düfte", "badge": "DAMENDUFT", "badgeColor": "purple", "image": "https://www.marykay.com/dw/image/v2/BKGS_PRD/on/demandware.static/-/Sites-us-master-catalog/default/dwd4f5f8e7/hi-res/10005/J2010910-UNL-GB-013-Confidently-You-1-HiRes.jpg", "details": "Selbstbewusst, strahlend & facettenreich (50 ml)", "desc": "Ein exklusiver Duft, der innere Stärke und feminine Ausstrahlung feiert. Harmonische Noten von spritzigen Zitrusfrüchten, zarten Blüten und edlem Moschus.", "localImage": "jeshua_products/perfume_confidently_you.png"}, {"id": "perfume_mk_high_intensity", "title": "MK High Intensity® Cologne Spray", "category": "perfume", "catLabel": "Exklusive Düfte", "badge": "HERRENDUFT", "badgeColor": "red", "image": "https://www.marykay.com/dw/image/v2/BKGS_PRD/on/demandware.static/-/Sites-us-master-catalog/default/dw146b74ae/hi-res/10001/585009-UNL-GB-002-LB-05-18-Fragrance-HighIntensity-Hi-Res.jpg", "details": "Fesselnd, warm & charismatisch (73 ml)", "desc": "Ein maskuliner Signature-Duft für den modernen Gentleman. Markanter schwarzer Fenchel, frischer Silbersalbei und warmes Amberwood hinterlassen bleibenden Eindruck.", "localImage": "jeshua_products/perfume_mk_high_intensity.png"}, {"id": "perfume_cityscape_men", "title": "Cityscape® Men Cologne Spray", "category": "perfume", "catLabel": "Exklusive Düfte", "badge": "HERRENDUFT", "badgeColor": "slate", "image": "https://www.marykay.com/dw/image/v2/BKGS_PRD/on/demandware.static/-/Sites-us-master-catalog/default/dw3c53eb25/hi-res/10005/J2009227-UNL-GB-075-Cityscape-Mens-Carton-2.jpg", "details": "Urbaner Luxus & Eleganz (59 ml)", "desc": "Inspiriert von den Metropolen der Welt: Eine maskuline Symphonie aus italienischer Bergamotte, französischem Lavendel und edlem Zedernholz.", "localImage": "jeshua_products/perfume_cityscape_men.png"}, {"id": "perfume_belara", "title": "Belara® Eau de Parfum", "category": "perfume", "catLabel": "Exklusive Düfte", "badge": "DAMENDUFT", "badgeColor": "blue", "image": "https://www.marykay.com/dw/image/v2/BKGS_PRD/on/demandware.static/-/Sites-us-master-catalog/default/dw1e80e0a9/hi-res/10001/205709-035-Belara-Hi-Res.jpg", "details": "Zeitloser floral-cremiger Klassiker (50 ml)", "desc": "Feige, Lotusblüte, wilde Heidelbeere und kostbares Sandelholz vereinen sich zu einem sanften, harmonischen Begleiter für jeden Tag.", "localImage": "jeshua_products/perfume_belara.png"}];
     let currentCategory = 'all';
+
+    function filterAbos(filter, btn) {
+      const cards = document.querySelectorAll('.abo-plan-card');
+      cards.forEach(card => {
+        if (filter === 'all' || card.dataset.frequency === filter) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+      document.querySelectorAll('.abo-filter-btn').forEach(b => {
+        b.className = 'abo-filter-btn px-4 py-2 rounded-lg text-xs tracking-wider uppercase font-medium btn-atelier-outline text-slate-300 transition-all';
+      });
+      btn.className = 'abo-filter-btn px-4 py-2 rounded-lg text-xs tracking-wider uppercase font-semibold bg-atelier-gold text-black transition-all';
+    }
+
 
     function renderProducts(items) {
       const grid = document.getElementById('productsGrid');
