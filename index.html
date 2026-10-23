@@ -91,6 +91,31 @@
       }
     }
 
+    /* Customer Gallery Strip (Smooth Right to Left) */
+    /* impeccable-disable-next-line marquee */
+    .gallery-strip-track {
+      display: flex;
+      width: max-content;
+      animation: galleryMarqueeLeft 42s linear infinite; /* impeccable-disable-line marquee */
+      will-change: transform;
+    }
+    .gallery-strip-track:hover {
+      animation-play-state: paused;
+    }
+    @keyframes galleryMarqueeLeft {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .gallery-strip-track {
+        animation: none;
+      }
+    }
+
     /* Refined Typography Measures & Scale */
     h1 { font-size: 2.75rem; line-height: 1.15; }
     h2 { font-size: 2rem; line-height: 1.25; }
@@ -475,6 +500,230 @@
 
           </div>
 
+        </div>
+      </section>
+
+      <!-- CLIENT GALLERY STRIP (Smooth Right to Left) -->
+      <!-- impeccable-disable marquee -->
+      <section class="py-8 border-b border-white/10 bg-atelier-lacquer/60 relative overflow-hidden">
+        
+        <!-- Header Bar for Gallery Strip -->
+        <div class="max-w-7xl mx-auto px-6 mb-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+          <div class="flex items-center gap-3">
+            <span class="w-2 h-2 rounded-full bg-atelier-crimson"></span>
+            <span class="text-xs font-mono uppercase tracking-[0.25em] text-atelier-gold font-semibold">
+              Kunden-Galerie &amp; Resultate
+            </span>
+            <span class="hidden sm:inline text-slate-600">|</span>
+            <span class="hidden sm:inline text-xs text-slate-400 font-light">Echte Cuts &amp; Styles direkt vom Barber Chair in Uster</span>
+          </div>
+          <div class="flex items-center gap-4 text-xs">
+            <button onclick="navigateTo('barber'); setTimeout(function(){ var el = document.getElementById('barber-gallery'); if(el) el.scrollIntoView({behavior: 'smooth'}); }, 100); return false;" class="text-slate-300 hover:text-white transition-colors flex items-center gap-1.5 font-medium cursor-pointer">
+              <span>Ganze Galerie im Barber Studio</span>
+              <i class="fa-solid fa-arrow-right text-[10px] text-atelier-crimson"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Marquee Strip Container with Gradient Fade Edges -->
+        <div class="relative overflow-hidden w-full">
+          <!-- Gradient Edge Masks -->
+          <div class="pointer-events-none absolute left-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-r from-atelier-black to-transparent z-10"></div>
+          <div class="pointer-events-none absolute right-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-l from-atelier-black to-transparent z-10"></div>
+
+          <!-- Scrolling Track: 2 sets of 10 items for seamless loop (Right to Left) -->
+          <div class="gallery-strip-track flex items-center gap-4 py-2">
+            <!-- Set 1 (10 Items) -->
+              <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-white/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260606-WA0002_ksp3zm.jpg', 'jeshua_gallery/barber_client_01.jpg', 'Taper Fade & Textured Crop', 'Fade & Texture')">
+                <div class="aspect-[3/4] overflow-hidden bg-black">
+                  <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260606-WA0002_ksp3zm.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_01.jpg'" alt="Taper Fade & Textured Crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3.5">
+                  <span class="text-[9px] font-mono uppercase tracking-widest text-atelier-crimson font-bold">Fade & Texture</span>
+                  <span class="text-xs text-white font-medium truncate">Taper Fade & Textured Crop</span>
+                </div>
+              </div>
+              <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-white/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260606-WA0003_iebsif.jpg', 'jeshua_gallery/barber_client_02.jpg', 'Precision Scissor Cut & Styling', 'Classic Style')">
+                <div class="aspect-[3/4] overflow-hidden bg-black">
+                  <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260606-WA0003_iebsif.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_02.jpg'" alt="Precision Scissor Cut & Styling" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3.5">
+                  <span class="text-[9px] font-mono uppercase tracking-widest text-atelier-crimson font-bold">Classic Style</span>
+                  <span class="text-xs text-white font-medium truncate">Precision Scissor Cut & Styling</span>
+                </div>
+              </div>
+              <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-white/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0018_itnvga.jpg', 'jeshua_gallery/barber_client_03.jpg', 'Clean Skin Fade & Razor Finish', 'Skin Fade')">
+                <div class="aspect-[3/4] overflow-hidden bg-black">
+                  <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0018_itnvga.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_03.jpg'" alt="Clean Skin Fade & Razor Finish" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3.5">
+                  <span class="text-[9px] font-mono uppercase tracking-widest text-atelier-crimson font-bold">Skin Fade</span>
+                  <span class="text-xs text-white font-medium truncate">Clean Skin Fade & Razor Finish</span>
+                </div>
+              </div>
+              <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-white/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0021_o7gd7t.jpg', 'jeshua_gallery/barber_client_04.jpg', 'Beard Sculpting & Defined Lines', 'Beard Craft')">
+                <div class="aspect-[3/4] overflow-hidden bg-black">
+                  <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0021_o7gd7t.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_04.jpg'" alt="Beard Sculpting & Defined Lines" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3.5">
+                  <span class="text-[9px] font-mono uppercase tracking-widest text-atelier-crimson font-bold">Beard Craft</span>
+                  <span class="text-xs text-white font-medium truncate">Beard Sculpting & Defined Lines</span>
+                </div>
+              </div>
+              <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-white/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0013_wprpwu.jpg', 'jeshua_gallery/barber_client_05.jpg', 'Low Drop Fade & Modern Top', 'Drop Fade')">
+                <div class="aspect-[3/4] overflow-hidden bg-black">
+                  <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0013_wprpwu.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_05.jpg'" alt="Low Drop Fade & Modern Top" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3.5">
+                  <span class="text-[9px] font-mono uppercase tracking-widest text-atelier-crimson font-bold">Drop Fade</span>
+                  <span class="text-xs text-white font-medium truncate">Low Drop Fade & Modern Top</span>
+                </div>
+              </div>
+              <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-white/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0008_kgpyqq.jpg', 'jeshua_gallery/barber_client_06.jpg', 'Hot Towel Ritual & Full Grooming', 'Full Ritual')">
+                <div class="aspect-[3/4] overflow-hidden bg-black">
+                  <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0008_kgpyqq.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_06.jpg'" alt="Hot Towel Ritual & Full Grooming" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3.5">
+                  <span class="text-[9px] font-mono uppercase tracking-widest text-atelier-crimson font-bold">Full Ritual</span>
+                  <span class="text-xs text-white font-medium truncate">Hot Towel Ritual & Full Grooming</span>
+                </div>
+              </div>
+              <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-white/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260515-WA0004_kj3rfb.jpg', 'jeshua_gallery/barber_client_07.jpg', 'Mid Fade & Natural Texture', 'Mid Fade')">
+                <div class="aspect-[3/4] overflow-hidden bg-black">
+                  <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260515-WA0004_kj3rfb.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_07.jpg'" alt="Mid Fade & Natural Texture" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3.5">
+                  <span class="text-[9px] font-mono uppercase tracking-widest text-atelier-crimson font-bold">Mid Fade</span>
+                  <span class="text-xs text-white font-medium truncate">Mid Fade & Natural Texture</span>
+                </div>
+              </div>
+              <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-white/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260425-WA0001_itytaa.jpg', 'jeshua_gallery/barber_client_08.jpg', 'Sharp Lineup & Contour Beard', 'Lineup & Beard')">
+                <div class="aspect-[3/4] overflow-hidden bg-black">
+                  <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260425-WA0001_itytaa.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_08.jpg'" alt="Sharp Lineup & Contour Beard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3.5">
+                  <span class="text-[9px] font-mono uppercase tracking-widest text-atelier-crimson font-bold">Lineup & Beard</span>
+                  <span class="text-xs text-white font-medium truncate">Sharp Lineup & Contour Beard</span>
+                </div>
+              </div>
+              <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-white/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260412-WA0000_a3aiia.jpg', 'jeshua_gallery/barber_client_09.jpg', 'High Fade & Clean Transitions', 'High Fade')">
+                <div class="aspect-[3/4] overflow-hidden bg-black">
+                  <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260412-WA0000_a3aiia.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_09.jpg'" alt="High Fade & Clean Transitions" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3.5">
+                  <span class="text-[9px] font-mono uppercase tracking-widest text-atelier-crimson font-bold">High Fade</span>
+                  <span class="text-xs text-white font-medium truncate">High Fade & Clean Transitions</span>
+                </div>
+              </div>
+              <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-white/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260328-WA0004_j43tqs.jpg', 'jeshua_gallery/barber_client_10.jpg', 'Signature Jeshua Atelier Cut', 'Signature Look')">
+                <div class="aspect-[3/4] overflow-hidden bg-black">
+                  <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260328-WA0004_j43tqs.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_10.jpg'" alt="Signature Jeshua Atelier Cut" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3.5">
+                  <span class="text-[9px] font-mono uppercase tracking-widest text-atelier-crimson font-bold">Signature Look</span>
+                  <span class="text-xs text-white font-medium truncate">Signature Jeshua Atelier Cut</span>
+                </div>
+              </div>
+            <!-- Set 2 (10 Items duplicate for seamless loop) -->
+              <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-white/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260606-WA0002_ksp3zm.jpg', 'jeshua_gallery/barber_client_01.jpg', 'Taper Fade & Textured Crop', 'Fade & Texture')">
+                <div class="aspect-[3/4] overflow-hidden bg-black">
+                  <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260606-WA0002_ksp3zm.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_01.jpg'" alt="Taper Fade & Textured Crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3.5">
+                  <span class="text-[9px] font-mono uppercase tracking-widest text-atelier-crimson font-bold">Fade & Texture</span>
+                  <span class="text-xs text-white font-medium truncate">Taper Fade & Textured Crop</span>
+                </div>
+              </div>
+              <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-white/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260606-WA0003_iebsif.jpg', 'jeshua_gallery/barber_client_02.jpg', 'Precision Scissor Cut & Styling', 'Classic Style')">
+                <div class="aspect-[3/4] overflow-hidden bg-black">
+                  <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260606-WA0003_iebsif.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_02.jpg'" alt="Precision Scissor Cut & Styling" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3.5">
+                  <span class="text-[9px] font-mono uppercase tracking-widest text-atelier-crimson font-bold">Classic Style</span>
+                  <span class="text-xs text-white font-medium truncate">Precision Scissor Cut & Styling</span>
+                </div>
+              </div>
+              <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-white/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0018_itnvga.jpg', 'jeshua_gallery/barber_client_03.jpg', 'Clean Skin Fade & Razor Finish', 'Skin Fade')">
+                <div class="aspect-[3/4] overflow-hidden bg-black">
+                  <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0018_itnvga.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_03.jpg'" alt="Clean Skin Fade & Razor Finish" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3.5">
+                  <span class="text-[9px] font-mono uppercase tracking-widest text-atelier-crimson font-bold">Skin Fade</span>
+                  <span class="text-xs text-white font-medium truncate">Clean Skin Fade & Razor Finish</span>
+                </div>
+              </div>
+              <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-white/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0021_o7gd7t.jpg', 'jeshua_gallery/barber_client_04.jpg', 'Beard Sculpting & Defined Lines', 'Beard Craft')">
+                <div class="aspect-[3/4] overflow-hidden bg-black">
+                  <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0021_o7gd7t.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_04.jpg'" alt="Beard Sculpting & Defined Lines" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3.5">
+                  <span class="text-[9px] font-mono uppercase tracking-widest text-atelier-crimson font-bold">Beard Craft</span>
+                  <span class="text-xs text-white font-medium truncate">Beard Sculpting & Defined Lines</span>
+                </div>
+              </div>
+              <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-white/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0013_wprpwu.jpg', 'jeshua_gallery/barber_client_05.jpg', 'Low Drop Fade & Modern Top', 'Drop Fade')">
+                <div class="aspect-[3/4] overflow-hidden bg-black">
+                  <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0013_wprpwu.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_05.jpg'" alt="Low Drop Fade & Modern Top" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3.5">
+                  <span class="text-[9px] font-mono uppercase tracking-widest text-atelier-crimson font-bold">Drop Fade</span>
+                  <span class="text-xs text-white font-medium truncate">Low Drop Fade & Modern Top</span>
+                </div>
+              </div>
+              <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-white/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0008_kgpyqq.jpg', 'jeshua_gallery/barber_client_06.jpg', 'Hot Towel Ritual & Full Grooming', 'Full Ritual')">
+                <div class="aspect-[3/4] overflow-hidden bg-black">
+                  <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0008_kgpyqq.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_06.jpg'" alt="Hot Towel Ritual & Full Grooming" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3.5">
+                  <span class="text-[9px] font-mono uppercase tracking-widest text-atelier-crimson font-bold">Full Ritual</span>
+                  <span class="text-xs text-white font-medium truncate">Hot Towel Ritual & Full Grooming</span>
+                </div>
+              </div>
+              <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-white/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260515-WA0004_kj3rfb.jpg', 'jeshua_gallery/barber_client_07.jpg', 'Mid Fade & Natural Texture', 'Mid Fade')">
+                <div class="aspect-[3/4] overflow-hidden bg-black">
+                  <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260515-WA0004_kj3rfb.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_07.jpg'" alt="Mid Fade & Natural Texture" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3.5">
+                  <span class="text-[9px] font-mono uppercase tracking-widest text-atelier-crimson font-bold">Mid Fade</span>
+                  <span class="text-xs text-white font-medium truncate">Mid Fade & Natural Texture</span>
+                </div>
+              </div>
+              <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-white/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260425-WA0001_itytaa.jpg', 'jeshua_gallery/barber_client_08.jpg', 'Sharp Lineup & Contour Beard', 'Lineup & Beard')">
+                <div class="aspect-[3/4] overflow-hidden bg-black">
+                  <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260425-WA0001_itytaa.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_08.jpg'" alt="Sharp Lineup & Contour Beard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3.5">
+                  <span class="text-[9px] font-mono uppercase tracking-widest text-atelier-crimson font-bold">Lineup & Beard</span>
+                  <span class="text-xs text-white font-medium truncate">Sharp Lineup & Contour Beard</span>
+                </div>
+              </div>
+              <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-white/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260412-WA0000_a3aiia.jpg', 'jeshua_gallery/barber_client_09.jpg', 'High Fade & Clean Transitions', 'High Fade')">
+                <div class="aspect-[3/4] overflow-hidden bg-black">
+                  <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260412-WA0000_a3aiia.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_09.jpg'" alt="High Fade & Clean Transitions" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3.5">
+                  <span class="text-[9px] font-mono uppercase tracking-widest text-atelier-crimson font-bold">High Fade</span>
+                  <span class="text-xs text-white font-medium truncate">High Fade & Clean Transitions</span>
+                </div>
+              </div>
+              <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-white/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260328-WA0004_j43tqs.jpg', 'jeshua_gallery/barber_client_10.jpg', 'Signature Jeshua Atelier Cut', 'Signature Look')">
+                <div class="aspect-[3/4] overflow-hidden bg-black">
+                  <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260328-WA0004_j43tqs.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_10.jpg'" alt="Signature Jeshua Atelier Cut" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3.5">
+                  <span class="text-[9px] font-mono uppercase tracking-widest text-atelier-crimson font-bold">Signature Look</span>
+                  <span class="text-xs text-white font-medium truncate">Signature Jeshua Atelier Cut</span>
+                </div>
+              </div>
+          </div>
+        </div>
+
+        <!-- Touch/Hover Hint -->
+        <div class="max-w-7xl mx-auto px-6 mt-3 flex items-center justify-between text-[11px] text-slate-500 font-mono">
+          <span class="flex items-center gap-1.5">
+            <i class="fa-solid fa-hand-pointer text-[10px] text-atelier-gold"></i> Foto anklicken zum Vergrössern · Hover pausiert den Strip
+          </span>
+          <span class="hidden md:inline">100% echte Jeshua Atelier Arbeiten</span>
         </div>
       </section>
 
@@ -2024,6 +2273,27 @@
       const modal = document.getElementById('productModal');
       modal.classList.remove('hidden');
       modal.classList.add('flex');
+    }
+
+    function openGalleryModal(url, fallback, title, tag) {
+      const modal = document.getElementById('galleryModal');
+      const img = document.getElementById('galleryModalImg');
+      const tagEl = document.getElementById('galleryModalTag');
+      const titleEl = document.getElementById('galleryModalTitle');
+      if (!modal || !img) return;
+      img.src = url;
+      img.onerror = function() { this.onerror = null; if (fallback) this.src = fallback; };
+      if (tagEl) tagEl.innerText = tag || 'Barber Style';
+      if (titleEl) titleEl.innerText = title || 'Atelier Resultat';
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeGalleryModal() {
+      const modal = document.getElementById('galleryModal');
+      if (!modal) return;
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
     }
 
     function closeProductModal() {
