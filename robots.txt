@@ -1,4 +1,23 @@
+# robots.txt · JESHÚA Lifestyle Studio & Atelier
+# https://jeshua-coiffeur.ch/
+
+# KI- und LLM-Crawler ausdrücklich erlaubt
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-Web
+User-agent: PerplexityBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: CCBot
+User-agent: meta-externalagent
+Allow: /
+
 User-agent: *
 Allow: /
 
 Sitemap: https://jeshua-coiffeur.ch/sitemap.xml
+
+# LLM-Übersicht der Website:
+# https://jeshua-coiffeur.ch/llms.txt
