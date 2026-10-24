@@ -1,0 +1,166 @@
+:root {
+      --bg-base: #070709;
+      --gold: #D4AF37;
+      --gold-light: #E8D18D;
+      --crimson: #C8102E;
+      --text-main: #F7F7FA;
+      --text-sub: #A1A1B2;
+    }
+
+    body {
+      background-color: var(--bg-base);
+      color: var(--text-main);
+      font-family: 'Outfit', sans-serif;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+
+        /* Hero Marquee Animation (Smooth Left to Right) */
+    /* impeccable-disable-next-line marquee */
+    .hero-marquee-track {
+      display: flex;
+      width: max-content;
+      animation: heroMarqueeRight 28s linear infinite; /* impeccable-disable-line marquee -- user requested carousel motion */
+      will-change: transform;
+    }
+    .hero-marquee-track:hover {
+      animation-play-state: paused;
+    }
+    @keyframes heroMarqueeRight {
+      0% {
+        transform: translateX(-50%);
+      }
+      100% {
+        transform: translateX(0%);
+      }
+    }
+
+    /* Customer Gallery Strip (Smooth Right to Left) */
+    /* impeccable-disable-next-line marquee */
+    .gallery-strip-track {
+      display: flex;
+      width: max-content;
+      animation: galleryMarqueeLeft 42s linear infinite; /* impeccable-disable-line marquee */
+      will-change: transform;
+    }
+    .gallery-strip-track:hover {
+      animation-play-state: paused;
+    }
+    @keyframes galleryMarqueeLeft {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .gallery-strip-track {
+        animation: none;
+      }
+    }
+
+    /* Refined Typography Measures & Scale */
+    h1 { font-size: 2.75rem; line-height: 1.15; }
+    h2 { font-size: 2rem; line-height: 1.25; }
+    h3 { font-size: 1.5rem; line-height: 1.35; }
+    h4 { font-size: 1.25rem; line-height: 1.4; }
+    p, body { font-size: 1rem; line-height: 1.6; }
+    .lead-text {
+      max-width: 68ch;
+    }
+
+
+    /* Natural Directional Depth (Zero neon glow) */
+    .elevation-1 {
+      box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
+    }
+    .elevation-2 {
+      box-shadow: 0 16px 36px -6px rgba(0, 0, 0, 0.65);
+    }
+    .elevation-3 {
+      box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.85);
+    }
+
+    /* Buttons with Solid High-Contrast Precision */
+    .btn-atelier-gold {
+      background-color: #D4AF37;
+      color: #070709;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+    .btn-atelier-gold:hover {
+      background-color: #E2C256;
+      transform: translateY(-1px);
+    }
+
+    .btn-atelier-crimson {
+      background-color: #C8102E;
+      color: #FFFFFF;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+    .btn-atelier-crimson:hover {
+      background-color: #D91D3C;
+      transform: translateY(-1px);
+    }
+
+    .btn-atelier-whatsapp {
+      background-color: #075E54;
+      color: #FFFFFF;
+      font-weight: 600;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+    .btn-atelier-whatsapp:hover {
+      background-color: #054C44;
+      transform: translateY(-1px);
+    }
+
+    .btn-atelier-outline {
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      color: #E2E2EC;
+      transition: all 0.2s ease;
+    }
+    .btn-atelier-outline:hover {
+      border-color: #D4AF37;
+      color: #D4AF37;
+      background-color: rgba(212, 175, 55, 0.04);
+      transform: translateY(-1px);
+    }
+
+    /* Subtle hair-thin divider */
+    .hairline-gold {
+      height: 1px;
+      background: linear-gradient(90deg, transparent 0%, rgba(212, 175, 55, 0.35) 50%, transparent 100%);
+    }
+
+    /* Card Hover */
+    .gallery-card {
+      transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .gallery-card:hover {
+      border-color: rgba(212, 175, 55, 0.38);
+      transform: translateY(-3px);
+      box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.7);
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 7px; }
+    ::-webkit-scrollbar-track { background: #070709; }
+    ::-webkit-scrollbar-thumb { background: #1C1C24; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #D4AF37; }
+
+    /* Aktiver Navigationspunkt je Unterseite */
+    .nav-item.is-active {
+      color: #D8BC6A;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.45);
+    }
+    .nav-item.is-active:hover {
+      color: #E8D18D;
+    }
+    .mobile-nav-item.is-active {
+      color: #D4AF37;
+    }
