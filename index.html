@@ -356,11 +356,12 @@
       <!-- HERO: Editorial Haute Parfumerie & Atelier Cover -->
       <section class="pt-20 pb-24 px-6 border-b border-white/10 relative overflow-hidden">
         <!-- Atmospheric Studio Background Image -->
-        <div class="absolute inset-0 pointer-events-none z-0">
-          <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1920&q=80" alt="Jeshúa Studio Atmosphere" class="w-full h-full object-cover object-center opacity-30">
-          <div class="absolute inset-0 bg-gradient-to-r from-atelier-black via-atelier-black/95 to-atelier-black/80"></div>
+        <div class="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1920&q=80" alt="Jeshúa Studio Atmosphere" class="w-full h-full object-cover object-center opacity-40">
+          <div class="absolute inset-0 bg-gradient-to-r from-atelier-black/90 via-atelier-black/75 to-atelier-black/85"></div>
           <div class="absolute inset-0 bg-gradient-to-t from-atelier-black via-transparent to-atelier-black/60"></div>
         </div>
+
 
         <div class="max-w-6xl mx-auto relative z-10">
           
@@ -1998,45 +1999,50 @@
             <div class="md:col-span-7">
               <form onsubmit="handleBooking(event)" class="space-y-4">
                 <div>
-                  <label class="block text-xs uppercase font-mono text-slate-400 mb-1">Name *</label>
-                  <input type="text" required placeholder="Vor- und Nachname" class="w-full bg-black/60 border border-white/15 focus:border-atelier-gold text-white text-xs rounded-lg px-4 py-2.5 outline-none">
+                  <label for="bookingName" class="block text-xs uppercase font-mono text-slate-400 mb-1">Name *</label>
+                  <input id="bookingName" name="name" type="text" required placeholder="Vor- und Nachname" class="w-full bg-black/60 border border-white/15 focus:border-atelier-gold text-white text-xs rounded-lg px-4 py-2.5 outline-none">
                 </div>
 
                 <div class="grid grid-cols-2 gap-4">
                   <div>
-                    <label class="block text-xs uppercase font-mono text-slate-400 mb-1">Telefon / WhatsApp *</label>
-                    <input type="tel" required placeholder="+41 79 123 45 67" class="w-full bg-black/60 border border-white/15 focus:border-atelier-gold text-white text-xs rounded-lg px-4 py-2.5 outline-none">
+                    <label for="bookingPhone" class="block text-xs uppercase font-mono text-slate-400 mb-1">Telefon / WhatsApp *</label>
+                    <input id="bookingPhone" name="phone" type="tel" required placeholder="+41 79 123 45 67" class="w-full bg-black/60 border border-white/15 focus:border-atelier-gold text-white text-xs rounded-lg px-4 py-2.5 outline-none">
                   </div>
                   <div>
-                    <label class="block text-xs uppercase font-mono text-slate-400 mb-1">E-Mail</label>
-                    <input type="email" placeholder="name@beispiel.ch" class="w-full bg-black/60 border border-white/15 focus:border-atelier-gold text-white text-xs rounded-lg px-4 py-2.5 outline-none">
+                    <label for="bookingEmail" class="block text-xs uppercase font-mono text-slate-400 mb-1">E-Mail</label>
+                    <input id="bookingEmail" name="email" type="email" placeholder="name@beispiel.ch" class="w-full bg-black/60 border border-white/15 focus:border-atelier-gold text-white text-xs rounded-lg px-4 py-2.5 outline-none">
                   </div>
                 </div>
 
                 <div>
-                  <label class="block text-xs uppercase font-mono text-slate-400 mb-1">Bereich *</label>
-                  <select required class="w-full bg-atelier-surface border border-white/15 focus:border-atelier-gold text-white text-xs rounded-lg px-4 py-2.5 outline-none">
+                  <label for="bookingService" class="block text-xs uppercase font-mono text-slate-400 mb-1">Bereich *</label>
+                  <select id="bookingService" name="service" required class="w-full bg-atelier-surface border border-white/15 focus:border-atelier-gold text-white text-xs rounded-lg px-4 py-2.5 outline-none">
                     <option value="barber">Barber Studio (Haircut, Fade, Beard)</option>
                     <option value="workshop-glow">Beauty Workshop: Skin Glow Masterclass</option>
                     <option value="workshop-makeup">Beauty Workshop: Make-up Artistry</option>
                     <option value="workshop-couples">Beauty Workshop: Couples Experience</option>
                     <option value="workshop-men">Beauty Workshop: Men's Grooming</option>
-                    <option value="mentoring">1:1 Mentoring & Coaching</option>
+                    <option value="mentoring">1:1 Mentoring &amp; Coaching</option>
                     <option value="product">Produktberatung</option>
                   </select>
                 </div>
 
                 <div>
-                  <label class="block text-xs uppercase font-mono text-slate-400 mb-1">Wunschtermin & Anmerkungen</label>
-                  <textarea rows="3" placeholder="Datum, Uhrzeit oder spezielle Wünsche..." class="w-full bg-black/60 border border-white/15 focus:border-atelier-gold text-white text-xs rounded-lg px-4 py-2.5 outline-none"></textarea>
+                  <label for="bookingNotes" class="block text-xs uppercase font-mono text-slate-400 mb-1">Wunschtermin &amp; Anmerkungen</label>
+                  <textarea id="bookingNotes" name="notes" rows="3" placeholder="Datum, Uhrzeit oder spezielle Wünsche..." class="w-full bg-black/60 border border-white/15 focus:border-atelier-gold text-white text-xs rounded-lg px-4 py-2.5 outline-none"></textarea>
                 </div>
 
-                <button type="submit" class="btn-atelier-gold w-full py-3 rounded-lg text-xs uppercase tracking-wider font-semibold">
-                  Anfrage absenden
+                <button type="submit" class="btn-atelier-gold w-full py-3.5 rounded-lg text-xs uppercase tracking-wider font-semibold flex items-center justify-center gap-2 cursor-pointer shadow-lg hover:shadow-xl transition-all">
+                  <i class="fa-solid fa-paper-plane text-xs"></i>
+                  <span>Anfrage per E-Mail senden</span>
                 </button>
 
-                <p id="bookingSuccess" class="hidden p-3.5 text-emerald-300 text-xs text-center font-medium">
-                  Vielen Dank! Wir haben deine Terminanfrage erhalten und kontaktieren dich umgehend.
+                <p class="text-[11px] text-slate-400 font-mono text-center flex items-center justify-center gap-1.5 pt-1">
+                  <i class="fa-regular fa-envelope text-atelier-gold"></i> Öffnet automatisch deine E-Mail App mit vorbereiteter Nachricht an xaviorlando16@gmail.com
+                </p>
+
+                <p id="bookingSuccess" class="hidden p-3 text-emerald-300 text-xs text-center font-medium">
+                  <i class="fa-solid fa-check text-emerald-400 mr-1.5"></i> Deine E-Mail App wurde mit den ausgefüllten Angaben geöffnet.
                 </p>
               </form>
             </div>
@@ -2344,13 +2350,46 @@
 
     function handleBooking(e) {
       e.preventDefault();
+      const name = (document.getElementById('bookingName')?.value || '').trim();
+      const phone = (document.getElementById('bookingPhone')?.value || '').trim();
+      const email = (document.getElementById('bookingEmail')?.value || '').trim();
+      const serviceSelect = document.getElementById('bookingService');
+      const serviceText = serviceSelect ? serviceSelect.options[serviceSelect.selectedIndex].text : 'Terminanfrage';
+      const notes = (document.getElementById('bookingNotes')?.value || '').trim();
+
+      const subject = "Terminanfrage Jeshua Atelier: " + serviceText + " - " + name;
+      const body = "Hallo Orlando,
+
+Ich möchte gerne eine Anfrage für Jeshua Lifestyle Studio & Atelier senden:
+
+" +
+                   "• Name: " + name + "
+" +
+                   "• Telefon / WhatsApp: " + phone + "
+" +
+                   "• E-Mail: " + (email ? email : "Nicht angegeben") + "
+" +
+                   "• Gewählter Bereich: " + serviceText + "
+" +
+                   "• Wunschtermin & Anmerkungen:
+" + (notes ? notes : "Keine weiteren Anmerkungen") + "
+
+" +
+                   "Freundliche Grüsse,
+" + name;
+
+      const mailtoUrl = "mailto:xaviorlando16@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+
+      // Open email app with pre-filled message
+      window.location.href = mailtoUrl;
+
+      // Show confirmation in UI
       const successBox = document.getElementById('bookingSuccess');
       if (successBox) successBox.classList.remove('hidden');
-      e.target.reset();
-      showToast('Terminanfrage versendet', 'Wir kontaktieren dich umgehend.');
+      showToast('E-Mail geöffnet', 'Deine E-Mail App wurde mit den Angaben vorbereitet.');
       setTimeout(() => {
         if (successBox) successBox.classList.add('hidden');
-      }, 7000);
+      }, 9000);
     }
 
     function showToast(title, subtitle) {
