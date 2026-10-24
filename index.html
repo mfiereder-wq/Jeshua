@@ -2358,25 +2358,22 @@
       const notes = (document.getElementById('bookingNotes')?.value || '').trim();
 
       const subject = "Terminanfrage Jeshua Atelier: " + serviceText + " - " + name;
-      const body = "Hallo Orlando,
-
-Ich möchte gerne eine Anfrage für Jeshua Lifestyle Studio & Atelier senden:
-
-" +
-                   "• Name: " + name + "
-" +
-                   "• Telefon / WhatsApp: " + phone + "
-" +
-                   "• E-Mail: " + (email ? email : "Nicht angegeben") + "
-" +
-                   "• Gewählter Bereich: " + serviceText + "
-" +
-                   "• Wunschtermin & Anmerkungen:
-" + (notes ? notes : "Keine weiteren Anmerkungen") + "
-
-" +
-                   "Freundliche Grüsse,
-" + name;
+      const bodyParts = [
+        "Hallo Orlando,",
+        "",
+        "Ich möchte gerne eine Anfrage für Jeshua Lifestyle Studio & Atelier senden:",
+        "",
+        "• Name: " + name,
+        "• Telefon / WhatsApp: " + phone,
+        "• E-Mail: " + (email ? email : "Nicht angegeben"),
+        "• Gewählter Bereich: " + serviceText,
+        "• Wunschtermin & Anmerkungen:",
+        (notes ? notes : "Keine weiteren Anmerkungen"),
+        "",
+        "Freundliche Grüsse,",
+        name
+      ];
+      const body = bodyParts.join('\n');
 
       const mailtoUrl = "mailto:xaviorlando16@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
 
