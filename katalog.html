@@ -10,7 +10,7 @@
   <script type="text/javascript" src="https://payhip.com/payhip.js"></script>
 
   <!-- Favicon -->
-  <link rel="icon" type="image/jpeg" href="https://res.cloudinary.com/dnrvauviq/image/upload/v1792697688/WhatsApp_Image_2026-10-22_at_21.24.16_eo6oou.jpg">
+  <link rel="icon" type="image/jpeg" href="https://res.cloudinary.com/dnrvauviq/image/upload/v1792857060/WhatsApp_Image_2026-10-24_at_16.20.46_rfdtwx.jpg">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -29,17 +29,19 @@
         extend: {
           colors: {
             atelier: {
-              black: '#070709',
-              lacquer: '#0D0D11',
-              surface: '#131318',
-              card: '#18181F',
-              gold: '#D4AF37',
-              goldLight: '#E8D18D',
-              goldDeep: '#9C8022',
-              crimson: '#C8102E',
+              black: '#FFFFFF',
+              lacquer: '#F7F3E8',
+              surface: '#FFFFFF',
+              card: '#FCFAF2',
+              gold: '#C9A227',
+              goldLight: '#A4801F',
+              goldDeep: '#8A6D14',
+              ink: '#221C13',
+              inkSoft: '#5C5442',
+              crimson: '#B00D28',
               crimsonLight: '#E52E4D',
-              border: 'rgba(255, 255, 255, 0.08)',
-              borderGold: 'rgba(212, 175, 55, 0.22)',
+              border: 'rgba(34, 28, 19, 0.12)',
+              borderGold: 'rgba(201, 162, 39, 0.32)',
             }
           },
           fontFamily: {
@@ -55,23 +57,23 @@
   <!-- Gemeinsame Atelier-Styles -->
   <link rel="stylesheet" href="assets/styles.css">
 </head>
-<body class="bg-atelier-black text-slate-100 min-h-screen flex flex-col selection:bg-atelier-crimson selection:text-white">
+<body class="bg-atelier-black text-stone-900 min-h-screen flex flex-col selection:bg-atelier-crimson selection:text-white">
 
   <!-- TOP HEADER UTILITY BAR -->
-  <header class="border-b border-white/5 bg-atelier-lacquer py-2.5 px-6 text-xs text-slate-400">
+  <header class="border-b border-black/5 bg-atelier-lacquer py-2.5 px-6 text-xs text-stone-600">
     <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
       <div class="flex items-center gap-3">
-        <span class="text-atelier-gold text-xs">✦</span>
-        <span class="text-slate-300 font-medium tracking-wide">Jeshúa Lifestyle Studio & Atelier · Bankstrasse 36, 8610 Uster</span>
-        <span class="hidden lg:inline text-slate-600">|</span>
-        <span class="hidden lg:inline text-slate-400 font-light">Schönheit ohne Schubladen · Für Männer, Frauen & Paare</span>
+        <span class="text-atelier-goldDeep text-xs">✦</span>
+        <span class="text-stone-700 font-medium tracking-wide">Jeshúa Lifestyle Studio & Atelier · Bankstrasse 36, 8610 Uster</span>
+        <span class="hidden lg:inline text-stone-400">|</span>
+        <span class="hidden lg:inline text-stone-600 font-light">Schönheit ohne Schubladen · Für Männer, Frauen & Paare</span>
       </div>
-      <div class="flex items-center gap-5 text-slate-300">
+      <div class="flex items-center gap-5 text-stone-700">
         <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Atelier,%20ich%20h%C3%A4tte%20eine%20Anfrage..." target="_blank" class="hover:text-emerald-400 transition-colors flex items-center gap-1.5">
-          <i class="fa-brands fa-whatsapp text-emerald-400"></i> WhatsApp Concierge
+          <i class="fa-brands fa-whatsapp text-emerald-700"></i> WhatsApp Concierge
         </a>
-        <span class="text-slate-700">·</span>
-        <a href="tel:+41779563870" class="hover:text-atelier-gold transition-colors flex items-center gap-1.5">
+        <span class="text-stone-300">·</span>
+        <a href="tel:+41779563870" class="hover:text-atelier-goldDeep transition-colors flex items-center gap-1.5">
           <i class="fa-solid fa-phone text-atelier-crimson text-xs"></i> +41 77 956 38 70
         </a>
       </div>
@@ -79,58 +81,58 @@
   </header>
 
   <!-- MAIN NAVIGATION -->
-  <nav id="mainNav" class="sticky top-0 z-40 bg-atelier-black/95 backdrop-blur-xl border-b border-white/10 transition-all">
+  <nav id="mainNav" class="sticky top-0 z-40 bg-atelier-black/95 backdrop-blur-xl border-b border-black/10 transition-all">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         
         <!-- Brand Identity Logo -->
         <a href="index.html" class="flex items-center gap-4 group cursor-pointer">
-          <div class="w-12 h-12 rounded-full border border-atelier-borderGold overflow-hidden bg-black p-0.5 group-hover:border-atelier-gold transition-colors">
-            <img src="https://res.cloudinary.com/dnrvauviq/image/upload/v1792697688/WhatsApp_Image_2026-10-22_at_21.24.16_eo6oou.jpg" onerror="this.onerror=null; this.src='jeshua_logo.jpg'" alt="Jeshúa Atelier Logo" class="w-full h-full rounded-full object-cover">
+          <div class="w-12 h-12 rounded-full border border-atelier-borderGold overflow-hidden bg-white p-0.5 group-hover:border-atelier-gold transition-colors">
+            <img src="https://res.cloudinary.com/dnrvauviq/image/upload/v1792857060/WhatsApp_Image_2026-10-24_at_16.20.46_rfdtwx.jpg" onerror="this.onerror=null; this.src='jeshua_logo.jpg'" alt="Jeshúa Atelier Logo" class="w-full h-full rounded-full object-cover">
           </div>
           <div class="flex flex-col">
-            <span class="font-cinzel text-xl sm:text-2xl font-bold tracking-widest text-white group-hover:text-atelier-gold transition-colors">JESHÚA</span>
-            <span class="text-[9px] uppercase tracking-[0.24em] text-atelier-gold font-medium">Studio & Atelier</span>
+            <span class="font-cinzel text-xl sm:text-2xl font-bold tracking-widest text-atelier-ink group-hover:text-atelier-gold transition-colors">JESHÚA</span>
+            <span class="text-[9px] uppercase tracking-[0.24em] text-atelier-goldDeep font-medium">Studio & Atelier</span>
           </div>
         </a>
 
         <!-- Desktop Navigation Items -->
         <div class="hidden lg:flex items-center gap-2">
-          <a href="index.html" class="nav-item px-3.5 py-2 text-xs font-medium text-slate-300 hover:text-white transition-colors tracking-wider uppercase">
+          <a href="index.html" class="nav-item px-3.5 py-2 text-xs font-medium text-stone-700 hover:text-atelier-ink transition-colors tracking-wider uppercase">
             Home
           </a>
           
           <!-- Barber Studio -->
-          <a href="barber.html" class="nav-item px-3.5 py-2 text-xs font-semibold text-white hover:text-atelier-crimson transition-colors tracking-wider uppercase flex items-center gap-2">
+          <a href="barber.html" class="nav-item px-3.5 py-2 text-xs font-semibold text-atelier-ink hover:text-atelier-crimson transition-colors tracking-wider uppercase flex items-center gap-2">
             <span class="text-[10px] text-atelier-crimson font-mono font-bold">01</span>
             <span>Barber Studio</span>
             <span class="text-[9px] bg-atelier-crimson/15 text-atelier-crimson border border-atelier-crimson/30 px-1.5 py-0.5 rounded uppercase font-bold tracking-widest">Fokus</span>
           </a>
 
           <!-- Beauty Workshops -->
-          <a href="workshops.html" class="nav-item px-3.5 py-2 text-xs font-semibold text-white hover:text-atelier-gold transition-colors tracking-wider uppercase flex items-center gap-2">
-            <span class="text-[10px] text-atelier-gold font-mono font-bold">02</span>
+          <a href="workshops.html" class="nav-item px-3.5 py-2 text-xs font-semibold text-atelier-ink hover:text-atelier-goldDeep transition-colors tracking-wider uppercase flex items-center gap-2">
+            <span class="text-[10px] text-atelier-goldDeep font-mono font-bold">02</span>
             <span>Beauty Workshops</span>
-            <span class="text-[9px] bg-atelier-gold/15 text-atelier-gold border border-atelier-gold/30 px-1.5 py-0.5 rounded uppercase font-bold tracking-widest">Fokus</span>
+            <span class="text-[9px] bg-atelier-gold/15 text-atelier-goldDeep border border-atelier-gold/30 px-1.5 py-0.5 rounded uppercase font-bold tracking-widest">Fokus</span>
           </a>
 
           <!-- Pillar 3: Mentoring -->
-          <a href="mentoring.html" class="nav-item px-3.5 py-2 text-xs font-medium text-slate-300 hover:text-white transition-colors tracking-wider uppercase flex items-center gap-1.5">
-            <span class="text-[10px] text-slate-500 font-mono">03</span>
+          <a href="mentoring.html" class="nav-item px-3.5 py-2 text-xs font-medium text-stone-700 hover:text-atelier-ink transition-colors tracking-wider uppercase flex items-center gap-1.5">
+            <span class="text-[10px] text-stone-500 font-mono">03</span>
             <span>Mentoring</span>
           </a>
 
           <!-- Katalog Kollektion -->
-          <a href="katalog.html" aria-current="page" class="nav-item is-active px-3.5 py-2 text-xs font-medium text-slate-300 hover:text-white transition-colors tracking-wider uppercase flex items-center gap-1.5">
-            <span class="text-[10px] text-slate-500 font-mono">04</span>
+          <a href="katalog.html" aria-current="page" class="nav-item is-active px-3.5 py-2 text-xs font-medium text-stone-700 hover:text-atelier-ink transition-colors tracking-wider uppercase flex items-center gap-1.5">
+            <span class="text-[10px] text-stone-500 font-mono">04</span>
             <span>Katalog Kollektion</span>
           </a>
         </div>
 
         <!-- Right Quick Actions -->
         <div class="flex items-center gap-3">
-          <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Studio%2C%20ich%20habe%20eine%20Anfrage..." target="_blank" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs font-medium border border-emerald-500/30 bg-emerald-500/10 text-emerald-300 hover:bg-emerald-500/20 transition-all">
-            <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+          <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Studio%2C%20ich%20habe%20eine%20Anfrage..." target="_blank" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs font-medium border border-emerald-500/30 bg-emerald-500/10 text-emerald-700 hover:bg-emerald-500/20 transition-all">
+            <i class="fa-brands fa-whatsapp text-emerald-700"></i>
             <span>WhatsApp</span>
           </a>
 
@@ -139,7 +141,7 @@
           </a>
 
           <!-- Mobile Toggle -->
-          <button onclick="toggleMobileMenu()" class="lg:hidden p-2 text-slate-300 hover:text-white rounded-lg transition-colors" aria-label="Menü">
+          <button onclick="toggleMobileMenu()" class="lg:hidden p-2 text-stone-700 hover:text-atelier-ink rounded-lg transition-colors" aria-label="Menü">
             <i class="fa-solid fa-bars text-lg" id="menuIcon"></i>
           </button>
         </div>
@@ -148,21 +150,21 @@
     </div>
 
     <!-- Mobile Dropdown -->
-    <div id="mobileMenu" class="hidden lg:hidden bg-atelier-lacquer border-b border-white/10 px-6 py-5 space-y-3">
-      <a href="index.html" class="block py-2 text-sm text-slate-200 hover:text-atelier-gold tracking-wide">Home</a>
-      <a href="barber.html" class="flex items-center justify-between py-2 text-sm text-white font-semibold">
+    <div id="mobileMenu" class="hidden lg:hidden bg-atelier-lacquer border-b border-black/10 px-6 py-5 space-y-3">
+      <a href="index.html" class="block py-2 text-sm text-stone-800 hover:text-atelier-goldDeep tracking-wide">Home</a>
+      <a href="barber.html" class="flex items-center justify-between py-2 text-sm text-atelier-ink font-semibold">
         <span class="flex items-center gap-2"><i class="fa-solid fa-scissors text-atelier-crimson text-xs"></i> Barber Studio</span>
         
       </a>
-      <a href="workshops.html" class="flex items-center justify-between py-2 text-sm text-white font-semibold">
-        <span class="flex items-center gap-2"><i class="fa-solid fa-wand-magic-sparkles text-atelier-gold text-xs"></i> Beauty Workshops</span>
+      <a href="workshops.html" class="flex items-center justify-between py-2 text-sm text-atelier-ink font-semibold">
+        <span class="flex items-center gap-2"><i class="fa-solid fa-wand-magic-sparkles text-atelier-goldDeep text-xs"></i> Beauty Workshops</span>
         
       </a>
-      <a href="mentoring.html" class="block py-2 text-sm text-slate-200 hover:text-white">Mentoring & Transformation</a>
-      <a href="katalog.html" aria-current="page" class="mobile-nav-item is-active block py-2 text-sm text-slate-200 hover:text-white">Katalog Kollektion (38 Produkte)</a>
+      <a href="mentoring.html" class="block py-2 text-sm text-stone-800 hover:text-atelier-ink">Mentoring & Transformation</a>
+      <a href="katalog.html" aria-current="page" class="mobile-nav-item is-active block py-2 text-sm text-stone-800 hover:text-atelier-ink">Katalog Kollektion (38 Produkte)</a>
       
-      <div class="pt-4 border-t border-white/10 space-y-2">
-        <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Studio..." target="_blank" class="flex items-center justify-center gap-2 w-full py-2.5 rounded-lg bg-emerald-600/20 border border-emerald-500/40 text-emerald-300 text-xs font-semibold">
+      <div class="pt-4 border-t border-black/10 space-y-2">
+        <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Studio..." target="_blank" class="flex items-center justify-center gap-2 w-full py-2.5 rounded-lg bg-emerald-600/20 border border-emerald-500/40 text-emerald-700 text-xs font-semibold">
           <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp Anfrage
         </a>
         <a href="termin.html" class="block btn-atelier-gold text-center py-2.5 rounded-lg text-xs uppercase font-bold tracking-wider">
@@ -175,23 +177,23 @@
   <!-- HAUPTINHALT -->
   <main class="flex-grow">
 
-    <section class="py-20 px-6 border-b border-white/10">
+    <section class="py-20 px-6 border-b border-black/10">
       <div class="max-w-7xl mx-auto">
         
-        <a href="index.html" class="text-xs uppercase font-mono tracking-wider text-slate-400 hover:text-white transition-colors mb-8 inline-flex items-center gap-2">
+        <a href="index.html" class="text-xs uppercase font-mono tracking-wider text-stone-600 hover:text-atelier-ink transition-colors mb-8 inline-flex items-center gap-2">
           ← Zurück zur Übersicht
         </a>
 
         <!-- Headline & Notice -->
         <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
-          <span class="text-xs font-mono uppercase tracking-[0.25em] text-atelier-gold">Katalog Sommer / Herbst 2026</span>
-          <h1 class="font-serif text-4xl sm:text-6xl text-white font-normal">
+          <span class="text-xs font-mono uppercase tracking-[0.25em] text-atelier-goldDeep">Katalog Sommer / Herbst 2026</span>
+          <h1 class="font-serif text-4xl sm:text-6xl text-atelier-ink font-normal">
             Atelier Produktkollektion
           </h1>
-          <p class="text-slate-300 text-sm font-light leading-relaxed">
+          <p class="text-stone-700 text-sm font-light leading-relaxed">
             Ausgewählte High-End Hautpflege, Devices, Barber Grooming und Artistry Kosmetik.
           </p>
-          <div class="pt-2 flex items-center justify-center gap-2 text-xs text-emerald-400 font-medium">
+          <div class="pt-2 flex items-center justify-center gap-2 text-xs text-emerald-700 font-medium">
             <i class="fa-brands fa-whatsapp text-sm"></i>
             <span>Ohne Preisauszeichnung online — persönliche Beratung und Bestellung unkompliziert über WhatsApp</span>
           </div>
@@ -202,34 +204,34 @@
           
           <!-- Minimalist Search Input -->
           <div class="max-w-md mx-auto relative">
-            <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-500 text-xs"></i>
-            <input type="text" id="productSearch" oninput="filterProducts()" placeholder="Produkt suchen (z.B. Skinvigorate, Shave Cream, Retinol...)" class="w-full bg-atelier-surface border border-white/10 focus:border-atelier-gold text-white text-xs rounded-lg pl-10 pr-4 py-3 outline-none transition-colors">
+            <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-stone-500 text-xs"></i>
+            <input type="text" id="productSearch" oninput="filterProducts()" placeholder="Produkt suchen (z.B. Skinvigorate, Shave Cream, Retinol...)" class="w-full bg-atelier-surface border border-black/10 focus:border-atelier-gold text-atelier-ink text-xs rounded-lg pl-10 pr-4 py-3 outline-none transition-colors">
           </div>
 
           <!-- Filter Buttons -->
           <div class="flex flex-wrap items-center justify-center gap-2 text-xs">
-            <button onclick="setCategoryFilter('all')" class="cat-pill active px-3.5 py-1.5 rounded-lg border border-atelier-gold bg-atelier-gold text-black font-semibold transition-all" data-cat="all">
+            <button onclick="setCategoryFilter('all')" class="cat-pill active px-3.5 py-1.5 rounded-lg border border-atelier-gold bg-atelier-gold text-atelier-ink font-semibold transition-all" data-cat="all">
               Alle Kollektionen (38)
             </button>
-            <button onclick="setCategoryFilter('barber')" class="cat-pill px-3.5 py-1.5 rounded-lg border border-white/10 bg-atelier-surface text-slate-300 hover:text-white transition-all" data-cat="barber">
+            <button onclick="setCategoryFilter('barber')" class="cat-pill px-3.5 py-1.5 rounded-lg border border-black/10 bg-atelier-surface text-stone-700 hover:text-atelier-ink transition-all" data-cat="barber">
               Barber & Men
             </button>
-            <button onclick="setCategoryFilter('devices')" class="cat-pill px-3.5 py-1.5 rounded-lg border border-white/10 bg-atelier-surface text-slate-300 hover:text-white transition-all" data-cat="devices">
+            <button onclick="setCategoryFilter('devices')" class="cat-pill px-3.5 py-1.5 rounded-lg border border-black/10 bg-atelier-surface text-stone-700 hover:text-atelier-ink transition-all" data-cat="devices">
               Devices
             </button>
-            <button onclick="setCategoryFilter('skincare')" class="cat-pill px-3.5 py-1.5 rounded-lg border border-white/10 bg-atelier-surface text-slate-300 hover:text-white transition-all" data-cat="skincare">
+            <button onclick="setCategoryFilter('skincare')" class="cat-pill px-3.5 py-1.5 rounded-lg border border-black/10 bg-atelier-surface text-stone-700 hover:text-atelier-ink transition-all" data-cat="skincare">
               Hautpflege & Anti-Aging
             </button>
-            <button onclick="setCategoryFilter('clinical')" class="cat-pill px-3.5 py-1.5 rounded-lg border border-white/10 bg-atelier-surface text-slate-300 hover:text-white transition-all" data-cat="clinical">
+            <button onclick="setCategoryFilter('clinical')" class="cat-pill px-3.5 py-1.5 rounded-lg border border-black/10 bg-atelier-surface text-stone-700 hover:text-atelier-ink transition-all" data-cat="clinical">
               Clinical Solutions
             </button>
-            <button onclick="setCategoryFilter('makeup')" class="cat-pill px-3.5 py-1.5 rounded-lg border border-white/10 bg-atelier-surface text-slate-300 hover:text-white transition-all" data-cat="makeup">
+            <button onclick="setCategoryFilter('makeup')" class="cat-pill px-3.5 py-1.5 rounded-lg border border-black/10 bg-atelier-surface text-stone-700 hover:text-atelier-ink transition-all" data-cat="makeup">
               Make-up Artistry
             </button>
-            <button onclick="setCategoryFilter('body')" class="cat-pill px-3.5 py-1.5 rounded-lg border border-white/10 bg-atelier-surface text-slate-300 hover:text-white transition-all" data-cat="body">
+            <button onclick="setCategoryFilter('body')" class="cat-pill px-3.5 py-1.5 rounded-lg border border-black/10 bg-atelier-surface text-stone-700 hover:text-atelier-ink transition-all" data-cat="body">
               Lippen & Hände
             </button>
-            <button onclick="setCategoryFilter('perfume')" class="cat-pill px-3.5 py-1.5 rounded-lg border border-white/10 bg-atelier-surface text-slate-300 hover:text-white transition-all" data-cat="perfume">
+            <button onclick="setCategoryFilter('perfume')" class="cat-pill px-3.5 py-1.5 rounded-lg border border-black/10 bg-atelier-surface text-stone-700 hover:text-atelier-ink transition-all" data-cat="perfume">
               Düfte
             </button>
           </div>
@@ -242,8 +244,8 @@
         </div>
 
         <div id="noProductsFound" class="hidden text-center py-20">
-          <h2 class="text-base text-white font-serif mb-1">Kein Produkt gefunden</h2>
-          <p class="text-xs text-slate-400">Bitte ändere deinen Suchbegriff oder Filter.</p>
+          <h2 class="text-base text-atelier-ink font-serif mb-1">Kein Produkt gefunden</h2>
+          <p class="text-xs text-stone-600">Bitte ändere deinen Suchbegriff oder Filter.</p>
         </div>
 
       </div>
@@ -251,44 +253,44 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="border-t border-white/10 bg-atelier-lacquer pt-16 pb-12 px-6">
+  <footer class="border-t border-black/10 bg-atelier-lacquer pt-16 pb-12 px-6">
     <div class="max-w-6xl mx-auto">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
         
         <div class="space-y-3">
-          <span class="font-cinzel text-xl font-bold tracking-widest text-white block">JESHÚA</span>
-          <p class="text-xs text-slate-400 leading-relaxed font-light">
+          <span class="font-cinzel text-xl font-bold tracking-widest text-atelier-ink block">JESHÚA</span>
+          <p class="text-xs text-stone-600 leading-relaxed font-light">
             Lifestyle Studio & Atelier. Schönheit ohne Schubladen, Selbstfürsorge für alle und Wohlbefinden von innen und aussen.
           </p>
-          <span class="text-[10px] font-mono uppercase tracking-widest text-atelier-gold block">
+          <span class="text-[10px] font-mono uppercase tracking-widest text-atelier-goldDeep block">
             Pferd (Stärke) · Schmetterling (Wandel)
           </span>
         </div>
 
         <div>
-          <span class="text-xs font-mono uppercase tracking-wider text-slate-300 font-semibold block mb-3">Bereiche</span>
-          <ul class="space-y-2 text-xs text-slate-400">
+          <span class="text-xs font-mono uppercase tracking-wider text-stone-700 font-semibold block mb-3">Bereiche</span>
+          <ul class="space-y-2 text-xs text-stone-600">
             <li><a href="barber.html" class="hover:text-atelier-crimson transition-colors">Barber Studio</a></li>
-            <li><a href="workshops.html" class="hover:text-atelier-gold transition-colors">Beauty Workshops</a></li>
-            <li><a href="mentoring.html" class="hover:text-white transition-colors">Ganzheitliches Mentoring</a></li>
-            <li><a href="katalog.html" class="hover:text-white transition-colors">Katalog Kollektion (38 Produkte)</a></li>
+            <li><a href="workshops.html" class="hover:text-atelier-goldDeep transition-colors">Beauty Workshops</a></li>
+            <li><a href="mentoring.html" class="hover:text-atelier-ink transition-colors">Ganzheitliches Mentoring</a></li>
+            <li><a href="katalog.html" class="hover:text-atelier-ink transition-colors">Katalog Kollektion (38 Produkte)</a></li>
           </ul>
         </div>
 
         <div>
-          <span class="text-xs font-mono uppercase tracking-wider text-slate-300 font-semibold block mb-3">Atelier Uster</span>
-          <p class="text-xs text-slate-400 leading-relaxed font-light mb-2">
+          <span class="text-xs font-mono uppercase tracking-wider text-stone-700 font-semibold block mb-3">Atelier Uster</span>
+          <p class="text-xs text-stone-600 leading-relaxed font-light mb-2">
             Bankstrasse 36<br>8610 Uster, Schweiz
           </p>
-          <p class="text-xs text-slate-400 leading-relaxed font-light">
+          <p class="text-xs text-stone-600 leading-relaxed font-light">
             Telefon: +41 77 956 38 70<br>
             WhatsApp Concierge täglich
           </p>
         </div>
 
         <div>
-          <span class="text-xs font-mono uppercase tracking-wider text-slate-300 font-semibold block mb-3">Kontakt & Anfragen</span>
-          <p class="text-xs text-slate-400 leading-relaxed font-light mb-3">
+          <span class="text-xs font-mono uppercase tracking-wider text-stone-700 font-semibold block mb-3">Kontakt & Anfragen</span>
+          <p class="text-xs text-stone-600 leading-relaxed font-light mb-3">
             Offen für Männer, Frauen und Paare.
           </p>
           <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Studio%2C%20ich%20m%C3%B6chte%20gerne..." target="_blank" class="btn-atelier-whatsapp w-full py-2.5 rounded-lg text-xs flex items-center justify-center gap-2">
@@ -298,9 +300,9 @@
 
       </div>
 
-      <div class="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 font-light">
+      <div class="pt-8 border-t border-black/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500 font-light">
         <p>© 2026 Jeshúa Lifestyle Studio & Atelier. Alle Rechte vorbehalten.</p>
-        <p>Webseite erstellt von <a href="https://wildwave.ch/" target="_blank" rel="noopener noreferrer" class="hover:text-atelier-gold transition-colors">Wildwave Marketing</a></p>
+        <p>Webseite erstellt von <a href="https://wildwave.ch/" target="_blank" rel="noopener noreferrer" class="hover:text-atelier-goldDeep transition-colors">Wildwave Marketing</a></p>
         <p>Uster · Zürich · Schweiz</p>
       </div>
     </div>

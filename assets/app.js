@@ -11,9 +11,9 @@ const products = [{"id": "skinvigorate_duo", "title": "Skinvigorate® Duo Facial
         }
       });
       document.querySelectorAll('.abo-filter-btn').forEach(b => {
-        b.className = 'abo-filter-btn px-4 py-2 rounded-lg text-xs tracking-wider uppercase font-medium btn-atelier-outline text-slate-300 transition-all';
+        b.className = 'abo-filter-btn px-4 py-2 rounded-lg text-xs tracking-wider uppercase font-medium btn-atelier-outline text-stone-700 transition-all';
       });
-      btn.className = 'abo-filter-btn px-4 py-2 rounded-lg text-xs tracking-wider uppercase font-semibold bg-atelier-gold text-black transition-all';
+      btn.className = 'abo-filter-btn px-4 py-2 rounded-lg text-xs tracking-wider uppercase font-semibold bg-atelier-gold text-atelier-ink transition-all';
     }
 
 
@@ -34,7 +34,7 @@ const products = [{"id": "skinvigorate_duo", "title": "Skinvigorate® Duo Facial
         const waLink = "https://wa.me/41779563870?text=" + waMsg;
 
         return `
-          <div class="rounded-xl border border-white/10 bg-atelier-surface p-4 flex flex-col justify-between gallery-card elevation-1">
+          <div class="rounded-xl border border-black/10 bg-atelier-surface p-4 flex flex-col justify-between gallery-card elevation-1">
             <div>
               <div class="aspect-square overflow-hidden mb-3 relative p-2 flex items-center justify-center cursor-pointer" onclick="openProductModal('${p.id}')">
                 <img src="${p.image}" onerror="this.onerror=null; if(p.localImage) this.src=p.localImage;" alt="${p.title}" class="max-h-full max-w-full object-contain">
@@ -42,17 +42,17 @@ const products = [{"id": "skinvigorate_duo", "title": "Skinvigorate® Duo Facial
                   ${p.badge}
                 </span>
               </div>
-              <span class="text-[10px] font-mono text-atelier-gold uppercase tracking-wider block mb-0.5">${p.catLabel}</span>
-              <h2 class="font-serif text-base text-white font-medium leading-snug mb-1 cursor-pointer hover:text-atelier-gold transition-colors" onclick="openProductModal('${p.id}')">${p.title}</h2>
-              <p class="text-slate-400 text-[11px] font-normal mb-1.5">${p.details}</p>
-              <p class="text-slate-300 text-xs font-light leading-relaxed line-clamp-3 mb-4">${p.desc}</p>
+              <span class="text-[10px] font-mono text-atelier-goldDeep uppercase tracking-wider block mb-0.5">${p.catLabel}</span>
+              <h2 class="font-serif text-base text-atelier-ink font-medium leading-snug mb-1 cursor-pointer hover:text-atelier-goldDeep transition-colors" onclick="openProductModal('${p.id}')">${p.title}</h2>
+              <p class="text-stone-600 text-[11px] font-normal mb-1.5">${p.details}</p>
+              <p class="text-stone-700 text-xs font-light leading-relaxed line-clamp-3 mb-4">${p.desc}</p>
             </div>
 
-            <div class="pt-3 border-t border-white/5 flex flex-col gap-1.5">
+            <div class="pt-3 border-t border-black/5 flex flex-col gap-1.5">
               <a href="${waLink}" target="_blank" class="btn-atelier-whatsapp w-full py-2 rounded-lg text-xs font-medium flex items-center justify-center gap-1.5">
                 <i class="fa-brands fa-whatsapp text-sm"></i> \u00dcber WhatsApp anfragen
               </a>
-              <button onclick="openProductModal('${p.id}')" class="w-full text-center text-[11px] text-slate-400 hover:text-white py-1 transition-colors">
+              <button onclick="openProductModal('${p.id}')" class="w-full text-center text-[11px] text-stone-600 hover:text-atelier-ink py-1 transition-colors">
                 Details anzeigen
               </button>
             </div>
@@ -65,9 +65,9 @@ const products = [{"id": "skinvigorate_duo", "title": "Skinvigorate® Duo Facial
       currentCategory = cat;
       document.querySelectorAll('.cat-pill').forEach(btn => {
         if (btn.getAttribute('data-cat') === cat) {
-          btn.className = 'cat-pill active px-3.5 py-1.5 rounded-lg border border-atelier-gold bg-atelier-gold text-black font-semibold transition-all';
+          btn.className = 'cat-pill active px-3.5 py-1.5 rounded-lg border border-atelier-gold bg-atelier-gold text-atelier-ink font-semibold transition-all';
         } else {
-          btn.className = 'cat-pill px-3.5 py-1.5 rounded-lg border border-white/10 bg-atelier-surface text-slate-300 hover:text-white transition-all';
+          btn.className = 'cat-pill px-3.5 py-1.5 rounded-lg border border-black/10 bg-atelier-surface text-stone-700 hover:text-atelier-ink transition-all';
         }
       });
       filterProducts();

@@ -10,7 +10,7 @@
   <script type="text/javascript" src="https://payhip.com/payhip.js"></script>
 
   <!-- Favicon -->
-  <link rel="icon" type="image/jpeg" href="https://res.cloudinary.com/dnrvauviq/image/upload/v1792697688/WhatsApp_Image_2026-10-22_at_21.24.16_eo6oou.jpg">
+  <link rel="icon" type="image/jpeg" href="https://res.cloudinary.com/dnrvauviq/image/upload/v1792857060/WhatsApp_Image_2026-10-24_at_16.20.46_rfdtwx.jpg">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -29,17 +29,19 @@
         extend: {
           colors: {
             atelier: {
-              black: '#070709',
-              lacquer: '#0D0D11',
-              surface: '#131318',
-              card: '#18181F',
-              gold: '#D4AF37',
-              goldLight: '#E8D18D',
-              goldDeep: '#9C8022',
-              crimson: '#C8102E',
+              black: '#FFFFFF',
+              lacquer: '#F7F3E8',
+              surface: '#FFFFFF',
+              card: '#FCFAF2',
+              gold: '#C9A227',
+              goldLight: '#A4801F',
+              goldDeep: '#8A6D14',
+              ink: '#221C13',
+              inkSoft: '#5C5442',
+              crimson: '#B00D28',
               crimsonLight: '#E52E4D',
-              border: 'rgba(255, 255, 255, 0.08)',
-              borderGold: 'rgba(212, 175, 55, 0.22)',
+              border: 'rgba(34, 28, 19, 0.12)',
+              borderGold: 'rgba(201, 162, 39, 0.32)',
             }
           },
           fontFamily: {
@@ -55,23 +57,23 @@
   <!-- Gemeinsame Atelier-Styles -->
   <link rel="stylesheet" href="assets/styles.css">
 </head>
-<body class="bg-atelier-black text-slate-100 min-h-screen flex flex-col selection:bg-atelier-crimson selection:text-white">
+<body class="bg-atelier-black text-stone-900 min-h-screen flex flex-col selection:bg-atelier-crimson selection:text-white">
 
   <!-- TOP HEADER UTILITY BAR -->
-  <header class="border-b border-white/5 bg-atelier-lacquer py-2.5 px-6 text-xs text-slate-400">
+  <header class="border-b border-black/5 bg-atelier-lacquer py-2.5 px-6 text-xs text-stone-600">
     <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
       <div class="flex items-center gap-3">
-        <span class="text-atelier-gold text-xs">✦</span>
-        <span class="text-slate-300 font-medium tracking-wide">Jeshúa Lifestyle Studio & Atelier · Bankstrasse 36, 8610 Uster</span>
-        <span class="hidden lg:inline text-slate-600">|</span>
-        <span class="hidden lg:inline text-slate-400 font-light">Schönheit ohne Schubladen · Für Männer, Frauen & Paare</span>
+        <span class="text-atelier-goldDeep text-xs">✦</span>
+        <span class="text-stone-700 font-medium tracking-wide">Jeshúa Lifestyle Studio & Atelier · Bankstrasse 36, 8610 Uster</span>
+        <span class="hidden lg:inline text-stone-400">|</span>
+        <span class="hidden lg:inline text-stone-600 font-light">Schönheit ohne Schubladen · Für Männer, Frauen & Paare</span>
       </div>
-      <div class="flex items-center gap-5 text-slate-300">
+      <div class="flex items-center gap-5 text-stone-700">
         <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Atelier,%20ich%20h%C3%A4tte%20eine%20Anfrage..." target="_blank" class="hover:text-emerald-400 transition-colors flex items-center gap-1.5">
-          <i class="fa-brands fa-whatsapp text-emerald-400"></i> WhatsApp Concierge
+          <i class="fa-brands fa-whatsapp text-emerald-700"></i> WhatsApp Concierge
         </a>
-        <span class="text-slate-700">·</span>
-        <a href="tel:+41779563870" class="hover:text-atelier-gold transition-colors flex items-center gap-1.5">
+        <span class="text-stone-300">·</span>
+        <a href="tel:+41779563870" class="hover:text-atelier-goldDeep transition-colors flex items-center gap-1.5">
           <i class="fa-solid fa-phone text-atelier-crimson text-xs"></i> +41 77 956 38 70
         </a>
       </div>
@@ -79,58 +81,58 @@
   </header>
 
   <!-- MAIN NAVIGATION -->
-  <nav id="mainNav" class="sticky top-0 z-40 bg-atelier-black/95 backdrop-blur-xl border-b border-white/10 transition-all">
+  <nav id="mainNav" class="sticky top-0 z-40 bg-atelier-black/95 backdrop-blur-xl border-b border-black/10 transition-all">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         
         <!-- Brand Identity Logo -->
         <a href="index.html" class="flex items-center gap-4 group cursor-pointer">
-          <div class="w-12 h-12 rounded-full border border-atelier-borderGold overflow-hidden bg-black p-0.5 group-hover:border-atelier-gold transition-colors">
-            <img src="https://res.cloudinary.com/dnrvauviq/image/upload/v1792697688/WhatsApp_Image_2026-10-22_at_21.24.16_eo6oou.jpg" onerror="this.onerror=null; this.src='jeshua_logo.jpg'" alt="Jeshúa Atelier Logo" class="w-full h-full rounded-full object-cover">
+          <div class="w-12 h-12 rounded-full border border-atelier-borderGold overflow-hidden bg-white p-0.5 group-hover:border-atelier-gold transition-colors">
+            <img src="https://res.cloudinary.com/dnrvauviq/image/upload/v1792857060/WhatsApp_Image_2026-10-24_at_16.20.46_rfdtwx.jpg" onerror="this.onerror=null; this.src='jeshua_logo.jpg'" alt="Jeshúa Atelier Logo" class="w-full h-full rounded-full object-cover">
           </div>
           <div class="flex flex-col">
-            <span class="font-cinzel text-xl sm:text-2xl font-bold tracking-widest text-white group-hover:text-atelier-gold transition-colors">JESHÚA</span>
-            <span class="text-[9px] uppercase tracking-[0.24em] text-atelier-gold font-medium">Studio & Atelier</span>
+            <span class="font-cinzel text-xl sm:text-2xl font-bold tracking-widest text-atelier-ink group-hover:text-atelier-gold transition-colors">JESHÚA</span>
+            <span class="text-[9px] uppercase tracking-[0.24em] text-atelier-goldDeep font-medium">Studio & Atelier</span>
           </div>
         </a>
 
         <!-- Desktop Navigation Items -->
         <div class="hidden lg:flex items-center gap-2">
-          <a href="index.html" aria-current="page" class="nav-item is-active px-3.5 py-2 text-xs font-medium text-slate-300 hover:text-white transition-colors tracking-wider uppercase">
+          <a href="index.html" aria-current="page" class="nav-item is-active px-3.5 py-2 text-xs font-medium text-stone-700 hover:text-atelier-ink transition-colors tracking-wider uppercase">
             Home
           </a>
           
           <!-- Barber Studio -->
-          <a href="barber.html" class="nav-item px-3.5 py-2 text-xs font-semibold text-white hover:text-atelier-crimson transition-colors tracking-wider uppercase flex items-center gap-2">
+          <a href="barber.html" class="nav-item px-3.5 py-2 text-xs font-semibold text-atelier-ink hover:text-atelier-crimson transition-colors tracking-wider uppercase flex items-center gap-2">
             <span class="text-[10px] text-atelier-crimson font-mono font-bold">01</span>
             <span>Barber Studio</span>
             <span class="text-[9px] bg-atelier-crimson/15 text-atelier-crimson border border-atelier-crimson/30 px-1.5 py-0.5 rounded uppercase font-bold tracking-widest">Fokus</span>
           </a>
 
           <!-- Beauty Workshops -->
-          <a href="workshops.html" class="nav-item px-3.5 py-2 text-xs font-semibold text-white hover:text-atelier-gold transition-colors tracking-wider uppercase flex items-center gap-2">
-            <span class="text-[10px] text-atelier-gold font-mono font-bold">02</span>
+          <a href="workshops.html" class="nav-item px-3.5 py-2 text-xs font-semibold text-atelier-ink hover:text-atelier-goldDeep transition-colors tracking-wider uppercase flex items-center gap-2">
+            <span class="text-[10px] text-atelier-goldDeep font-mono font-bold">02</span>
             <span>Beauty Workshops</span>
-            <span class="text-[9px] bg-atelier-gold/15 text-atelier-gold border border-atelier-gold/30 px-1.5 py-0.5 rounded uppercase font-bold tracking-widest">Fokus</span>
+            <span class="text-[9px] bg-atelier-gold/15 text-atelier-goldDeep border border-atelier-gold/30 px-1.5 py-0.5 rounded uppercase font-bold tracking-widest">Fokus</span>
           </a>
 
           <!-- Pillar 3: Mentoring -->
-          <a href="mentoring.html" class="nav-item px-3.5 py-2 text-xs font-medium text-slate-300 hover:text-white transition-colors tracking-wider uppercase flex items-center gap-1.5">
-            <span class="text-[10px] text-slate-500 font-mono">03</span>
+          <a href="mentoring.html" class="nav-item px-3.5 py-2 text-xs font-medium text-stone-700 hover:text-atelier-ink transition-colors tracking-wider uppercase flex items-center gap-1.5">
+            <span class="text-[10px] text-stone-500 font-mono">03</span>
             <span>Mentoring</span>
           </a>
 
           <!-- Katalog Kollektion -->
-          <a href="katalog.html" class="nav-item px-3.5 py-2 text-xs font-medium text-slate-300 hover:text-white transition-colors tracking-wider uppercase flex items-center gap-1.5">
-            <span class="text-[10px] text-slate-500 font-mono">04</span>
+          <a href="katalog.html" class="nav-item px-3.5 py-2 text-xs font-medium text-stone-700 hover:text-atelier-ink transition-colors tracking-wider uppercase flex items-center gap-1.5">
+            <span class="text-[10px] text-stone-500 font-mono">04</span>
             <span>Katalog Kollektion</span>
           </a>
         </div>
 
         <!-- Right Quick Actions -->
         <div class="flex items-center gap-3">
-          <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Studio%2C%20ich%20habe%20eine%20Anfrage..." target="_blank" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs font-medium border border-emerald-500/30 bg-emerald-500/10 text-emerald-300 hover:bg-emerald-500/20 transition-all">
-            <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+          <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Studio%2C%20ich%20habe%20eine%20Anfrage..." target="_blank" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs font-medium border border-emerald-500/30 bg-emerald-500/10 text-emerald-700 hover:bg-emerald-500/20 transition-all">
+            <i class="fa-brands fa-whatsapp text-emerald-700"></i>
             <span>WhatsApp</span>
           </a>
 
@@ -139,7 +141,7 @@
           </a>
 
           <!-- Mobile Toggle -->
-          <button onclick="toggleMobileMenu()" class="lg:hidden p-2 text-slate-300 hover:text-white rounded-lg transition-colors" aria-label="Menü">
+          <button onclick="toggleMobileMenu()" class="lg:hidden p-2 text-stone-700 hover:text-atelier-ink rounded-lg transition-colors" aria-label="Menü">
             <i class="fa-solid fa-bars text-lg" id="menuIcon"></i>
           </button>
         </div>
@@ -148,21 +150,21 @@
     </div>
 
     <!-- Mobile Dropdown -->
-    <div id="mobileMenu" class="hidden lg:hidden bg-atelier-lacquer border-b border-white/10 px-6 py-5 space-y-3">
-      <a href="index.html" aria-current="page" class="mobile-nav-item is-active block py-2 text-sm text-slate-200 hover:text-atelier-gold tracking-wide">Home</a>
-      <a href="barber.html" class="flex items-center justify-between py-2 text-sm text-white font-semibold">
+    <div id="mobileMenu" class="hidden lg:hidden bg-atelier-lacquer border-b border-black/10 px-6 py-5 space-y-3">
+      <a href="index.html" aria-current="page" class="mobile-nav-item is-active block py-2 text-sm text-stone-800 hover:text-atelier-goldDeep tracking-wide">Home</a>
+      <a href="barber.html" class="flex items-center justify-between py-2 text-sm text-atelier-ink font-semibold">
         <span class="flex items-center gap-2"><i class="fa-solid fa-scissors text-atelier-crimson text-xs"></i> Barber Studio</span>
         
       </a>
-      <a href="workshops.html" class="flex items-center justify-between py-2 text-sm text-white font-semibold">
-        <span class="flex items-center gap-2"><i class="fa-solid fa-wand-magic-sparkles text-atelier-gold text-xs"></i> Beauty Workshops</span>
+      <a href="workshops.html" class="flex items-center justify-between py-2 text-sm text-atelier-ink font-semibold">
+        <span class="flex items-center gap-2"><i class="fa-solid fa-wand-magic-sparkles text-atelier-goldDeep text-xs"></i> Beauty Workshops</span>
         
       </a>
-      <a href="mentoring.html" class="block py-2 text-sm text-slate-200 hover:text-white">Mentoring & Transformation</a>
-      <a href="katalog.html" class="block py-2 text-sm text-slate-200 hover:text-white">Katalog Kollektion (38 Produkte)</a>
+      <a href="mentoring.html" class="block py-2 text-sm text-stone-800 hover:text-atelier-ink">Mentoring & Transformation</a>
+      <a href="katalog.html" class="block py-2 text-sm text-stone-800 hover:text-atelier-ink">Katalog Kollektion (38 Produkte)</a>
       
-      <div class="pt-4 border-t border-white/10 space-y-2">
-        <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Studio..." target="_blank" class="flex items-center justify-center gap-2 w-full py-2.5 rounded-lg bg-emerald-600/20 border border-emerald-500/40 text-emerald-300 text-xs font-semibold">
+      <div class="pt-4 border-t border-black/10 space-y-2">
+        <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Studio..." target="_blank" class="flex items-center justify-center gap-2 w-full py-2.5 rounded-lg bg-emerald-600/20 border border-emerald-500/40 text-emerald-700 text-xs font-semibold">
           <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp Anfrage
         </a>
         <a href="termin.html" class="block btn-atelier-gold text-center py-2.5 rounded-lg text-xs uppercase font-bold tracking-wider">
@@ -177,7 +179,7 @@
 
     
     <!-- HERO: Editorial Haute Parfumerie & Atelier Cover -->
-    <section class="pt-20 pb-24 px-6 border-b border-white/10 relative overflow-hidden">
+    <section class="pt-20 pb-24 px-6 border-b border-black/10 relative overflow-hidden">
       <!-- Atmospheric Studio Background Image -->
       <div class="absolute inset-0 pointer-events-none z-0 overflow-hidden">
         <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1920&q=80" alt="Jeshúa Studio Atmosphere" class="w-full h-full object-cover object-center opacity-40">
@@ -190,8 +192,8 @@
         
         <!-- impeccable-disable marquee -- user requested continuous carousel motion -->
         <!-- Top Tagline & Symbolism Marquee Carousel (Moving Left to Right) -->
-        <div class="relative w-full overflow-hidden mb-10 py-2.5 border-y border-white/5 bg-black/40 backdrop-blur-sm rounded-lg">
-          <div class="hero-marquee-track flex items-center gap-8 text-xs tracking-[0.25em] uppercase text-atelier-gold font-medium whitespace-nowrap">
+        <div class="relative w-full overflow-hidden mb-10 py-2.5 border-y border-black/5 bg-white/70 backdrop-blur-sm rounded-lg">
+          <div class="hero-marquee-track flex items-center gap-8 text-xs tracking-[0.25em] uppercase text-atelier-goldDeep font-medium whitespace-nowrap">
             <span class="flex items-center gap-8">
               <span>Stärke</span>
               <span class="text-atelier-crimson text-[9px]">◆</span>
@@ -243,17 +245,17 @@
               Atelier Uster · Est. Switzerland
             </span>
             
-            <h1 class="font-serif text-5xl sm:text-7xl lg:text-8xl font-normal leading-[0.98] text-white">
+            <h1 class="font-serif text-5xl sm:text-7xl lg:text-8xl font-normal leading-[0.98] text-atelier-ink">
               Schönheit <br>
               <span class="italic text-atelier-goldLight font-normal">ohne Schubladen.</span>
             </h1>
 
-            <p class="text-slate-300 text-base sm:text-lg lead-text font-light leading-relaxed pt-2">
-              Jeshua ist eine inklusive, ganzheitliche Marke für Männer, Frauen und Paare. Wir verbinden die archaische Kraft des <strong class="text-white font-medium">Pferdes</strong> mit dem feinfühligem Wandel des <strong class="text-white font-medium">Schmetterlings</strong>.
+            <p class="text-stone-700 text-base sm:text-lg lead-text font-light leading-relaxed pt-2">
+              Jeshua ist eine inklusive, ganzheitliche Marke für Männer, Frauen und Paare. Wir verbinden die archaische Kraft des <strong class="text-atelier-ink font-medium">Pferdes</strong> mit dem feinfühligem Wandel des <strong class="text-atelier-ink font-medium">Schmetterlings</strong>.
             </p>
 
-            <p class="text-slate-400 text-xs sm:text-sm lead-text font-light leading-relaxed">
-              Kein herkömmlicher Make-up Shop, sondern ein Zufluchtsort für individuellen Ausdruck: Handwerkliche Exzellenz im <span class="text-white font-semibold">Barber Studio</span>, inspirierende <span class="text-white font-semibold">Beauty Workshops</span> mit Influencern und stärkendes <span class="text-white font-semibold">Mentoring</span>.
+            <p class="text-stone-600 text-xs sm:text-sm lead-text font-light leading-relaxed">
+              Kein herkömmlicher Make-up Shop, sondern ein Zufluchtsort für individuellen Ausdruck: Handwerkliche Exzellenz im <span class="text-atelier-ink font-semibold">Barber Studio</span>, inspirierende <span class="text-atelier-ink font-semibold">Beauty Workshops</span> mit Influencern und stärkendes <span class="text-atelier-ink font-semibold">Mentoring</span>.
             </p>
 
             <!-- Hero Call to Actions -->
@@ -267,7 +269,7 @@
                 <span>Beauty Workshops</span>
               </a>
               <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Studio%2C%20ich%20interessiere%20mich%20f%C3%BCr..." target="_blank" class="btn-atelier-outline px-5 py-3.5 rounded-lg text-xs tracking-wider font-medium flex items-center gap-2">
-                <i class="fa-brands fa-whatsapp text-emerald-400 text-sm"></i>
+                <i class="fa-brands fa-whatsapp text-emerald-700 text-sm"></i>
                 <span>WhatsApp Dialog</span>
               </a>
             </div>
@@ -275,48 +277,48 @@
 
           <!-- Right Visual Panel: Authentic Emblem & Studio Card -->
           <div class="lg:col-span-5">
-            <div class="p-8 sm:p-10 rounded-2xl border border-white/10 bg-atelier-surface elevation-2 relative">
+            <div class="p-8 sm:p-10 rounded-2xl border border-black/10 bg-atelier-surface elevation-2 relative">
               <div class="flex justify-center mb-6">
-                <div class="w-32 h-32 rounded-full border border-atelier-borderGold p-1 bg-black">
-                  <img src="https://res.cloudinary.com/dnrvauviq/image/upload/v1792697688/WhatsApp_Image_2026-10-22_at_21.24.16_eo6oou.jpg" onerror="this.onerror=null; this.src='jeshua_logo.jpg'" alt="Jeshua Emblem" class="w-full h-full rounded-full object-cover">
+                <div class="w-32 h-32 rounded-full border border-atelier-borderGold p-1 bg-white">
+                  <img src="https://res.cloudinary.com/dnrvauviq/image/upload/v1792857060/WhatsApp_Image_2026-10-24_at_16.20.46_rfdtwx.jpg" onerror="this.onerror=null; this.src='jeshua_logo.jpg'" alt="Jeshua Emblem" class="w-full h-full rounded-full object-cover">
                 </div>
               </div>
 
               <div class="text-center space-y-3">
-                <span class="text-[11px] font-mono uppercase tracking-[0.2em] text-atelier-gold block">Dein Mehrwert im Atelier</span>
-                <h2 class="font-serif text-2xl text-white font-normal">Ganzheitliche Selbstfürsorge</h2>
-                <p class="text-xs text-slate-300 leading-relaxed font-light">
+                <span class="text-[11px] font-mono uppercase tracking-[0.2em] text-atelier-goldDeep block">Dein Mehrwert im Atelier</span>
+                <h2 class="font-serif text-2xl text-atelier-ink font-normal">Ganzheitliche Selbstfürsorge</h2>
+                <p class="text-xs text-stone-700 leading-relaxed font-light">
                   Meisterhafte Barber-Cuts, hautgesunde Beauty Masterclasses mit Influencern und stärkendes Mentoring. Ein geschützter Raum in Uster für dein persönliches Wohlbefinden, deinen Stil und dein Selbstvertrauen — offen für Männer, Frauen und Paare.
                 </p>
               </div>
 
               <!-- 3 Pillars Overview -->
-              <div class="mt-6 pt-5 border-t border-white/10 grid grid-cols-3 gap-2 text-center">
+              <div class="mt-6 pt-5 border-t border-black/10 grid grid-cols-3 gap-2 text-center">
                 <div class="p-1.5">
                   <span class="text-atelier-crimson text-sm block mb-1"><i class="fa-solid fa-scissors"></i></span>
-                  <span class="text-[11px] text-white font-medium block">Barber Studio</span>
-                  <span class="text-[10px] text-slate-400 font-light block">Cuts & Rasur</span>
+                  <span class="text-[11px] text-atelier-ink font-medium block">Barber Studio</span>
+                  <span class="text-[10px] text-stone-600 font-light block">Cuts & Rasur</span>
                 </div>
-                <div class="p-1.5 border-x border-white/5">
-                  <span class="text-atelier-gold text-sm block mb-1"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
-                  <span class="text-[11px] text-white font-medium block">Workshops</span>
-                  <span class="text-[10px] text-slate-400 font-light block">Glow & Artistry</span>
+                <div class="p-1.5 border-x border-black/5">
+                  <span class="text-atelier-goldDeep text-sm block mb-1"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+                  <span class="text-[11px] text-atelier-ink font-medium block">Workshops</span>
+                  <span class="text-[10px] text-stone-600 font-light block">Glow & Artistry</span>
                 </div>
                 <div class="p-1.5">
-                  <span class="text-emerald-400 text-sm block mb-1"><i class="fa-solid fa-spa"></i></span>
-                  <span class="text-[11px] text-white font-medium block">Mentoring</span>
-                  <span class="text-[10px] text-slate-400 font-light block">Mindset & Care</span>
+                  <span class="text-emerald-700 text-sm block mb-1"><i class="fa-solid fa-spa"></i></span>
+                  <span class="text-[11px] text-atelier-ink font-medium block">Mentoring</span>
+                  <span class="text-[10px] text-stone-600 font-light block">Mindset & Care</span>
                 </div>
               </div>
 
-              <div class="mt-4 pt-4 border-t border-white/10 grid grid-cols-2 gap-4 text-center">
+              <div class="mt-4 pt-4 border-t border-black/10 grid grid-cols-2 gap-4 text-center">
                 <div>
-                  <span class="text-[10px] text-slate-500 uppercase tracking-wider block">Standort</span>
-                  <span class="text-xs text-slate-200 font-medium">8610 Uster</span>
+                  <span class="text-[10px] text-stone-500 uppercase tracking-wider block">Standort</span>
+                  <span class="text-xs text-stone-800 font-medium">8610 Uster</span>
                 </div>
                 <div>
-                  <span class="text-[10px] text-slate-500 uppercase tracking-wider block">Termine</span>
-                  <span class="text-xs text-slate-200 font-medium">Mo – Sa nach Vereinbarung</span>
+                  <span class="text-[10px] text-stone-500 uppercase tracking-wider block">Termine</span>
+                  <span class="text-xs text-stone-800 font-medium">Mo – Sa nach Vereinbarung</span>
                 </div>
               </div>
             </div>
@@ -329,20 +331,20 @@
 
     <!-- CLIENT GALLERY STRIP (Smooth Right to Left) -->
     <!-- impeccable-disable marquee -->
-    <section class="py-8 border-b border-white/10 bg-atelier-lacquer/60 relative overflow-hidden">
+    <section class="py-8 border-b border-black/10 bg-atelier-lacquer/60 relative overflow-hidden">
       
       <!-- Header Bar for Gallery Strip -->
       <div class="max-w-7xl mx-auto px-6 mb-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
         <div class="flex items-center gap-3">
           <span class="w-2 h-2 rounded-full bg-atelier-crimson"></span>
-          <span class="text-xs font-mono uppercase tracking-[0.25em] text-atelier-gold font-semibold">
+          <span class="text-xs font-mono uppercase tracking-[0.25em] text-atelier-goldDeep font-semibold">
             Kunden-Galerie &amp; Resultate
           </span>
-          <span class="hidden sm:inline text-slate-600">|</span>
-          <span class="hidden sm:inline text-xs text-slate-400 font-light">Echte Cuts &amp; Styles direkt vom Barber Chair in Uster</span>
+          <span class="hidden sm:inline text-stone-400">|</span>
+          <span class="hidden sm:inline text-xs text-stone-600 font-light">Echte Cuts &amp; Styles direkt vom Barber Chair in Uster</span>
         </div>
         <div class="flex items-center gap-4 text-xs">
-          <a href="barber.html#barber-gallery" class="text-slate-300 hover:text-white transition-colors flex items-center gap-1.5 font-medium cursor-pointer">
+          <a href="barber.html#barber-gallery" class="text-stone-700 hover:text-atelier-ink transition-colors flex items-center gap-1.5 font-medium cursor-pointer">
             <span>Ganze Galerie im Barber Studio</span>
             <i class="fa-solid fa-arrow-right text-[10px] text-atelier-crimson"></i>
           </a>
@@ -358,8 +360,8 @@
         <!-- Scrolling Track: 2 sets of 10 items for seamless loop (Right to Left) -->
         <div class="gallery-strip-track flex items-center gap-4 py-2">
           <!-- Set 1 (10 Items) -->
-            <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-white/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260606-WA0002_ksp3zm.jpg', 'jeshua_gallery/barber_client_01.jpg', 'Taper Fade & Textured Crop', 'Fade & Texture')">
-              <div class="aspect-[3/4] overflow-hidden bg-black">
+            <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-black/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260606-WA0002_ksp3zm.jpg', 'jeshua_gallery/barber_client_01.jpg', 'Taper Fade & Textured Crop', 'Fade & Texture')">
+              <div class="aspect-[3/4] overflow-hidden bg-white">
                 <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260606-WA0002_ksp3zm.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_01.jpg'" alt="Taper Fade & Textured Crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
               </div>
               <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3.5">
@@ -367,8 +369,8 @@
                 <span class="text-xs text-white font-medium truncate">Taper Fade & Textured Crop</span>
               </div>
             </div>
-            <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-white/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260606-WA0003_iebsif.jpg', 'jeshua_gallery/barber_client_02.jpg', 'Precision Scissor Cut & Styling', 'Classic Style')">
-              <div class="aspect-[3/4] overflow-hidden bg-black">
+            <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-black/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260606-WA0003_iebsif.jpg', 'jeshua_gallery/barber_client_02.jpg', 'Precision Scissor Cut & Styling', 'Classic Style')">
+              <div class="aspect-[3/4] overflow-hidden bg-white">
                 <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260606-WA0003_iebsif.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_02.jpg'" alt="Precision Scissor Cut & Styling" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
               </div>
               <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3.5">
@@ -376,8 +378,8 @@
                 <span class="text-xs text-white font-medium truncate">Precision Scissor Cut & Styling</span>
               </div>
             </div>
-            <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-white/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0018_itnvga.jpg', 'jeshua_gallery/barber_client_03.jpg', 'Clean Skin Fade & Razor Finish', 'Skin Fade')">
-              <div class="aspect-[3/4] overflow-hidden bg-black">
+            <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-black/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0018_itnvga.jpg', 'jeshua_gallery/barber_client_03.jpg', 'Clean Skin Fade & Razor Finish', 'Skin Fade')">
+              <div class="aspect-[3/4] overflow-hidden bg-white">
                 <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0018_itnvga.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_03.jpg'" alt="Clean Skin Fade & Razor Finish" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
               </div>
               <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3.5">
@@ -385,8 +387,8 @@
                 <span class="text-xs text-white font-medium truncate">Clean Skin Fade & Razor Finish</span>
               </div>
             </div>
-            <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-white/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0021_o7gd7t.jpg', 'jeshua_gallery/barber_client_04.jpg', 'Beard Sculpting & Defined Lines', 'Beard Craft')">
-              <div class="aspect-[3/4] overflow-hidden bg-black">
+            <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-black/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0021_o7gd7t.jpg', 'jeshua_gallery/barber_client_04.jpg', 'Beard Sculpting & Defined Lines', 'Beard Craft')">
+              <div class="aspect-[3/4] overflow-hidden bg-white">
                 <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0021_o7gd7t.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_04.jpg'" alt="Beard Sculpting & Defined Lines" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
               </div>
               <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3.5">
@@ -394,8 +396,8 @@
                 <span class="text-xs text-white font-medium truncate">Beard Sculpting & Defined Lines</span>
               </div>
             </div>
-            <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-white/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0013_wprpwu.jpg', 'jeshua_gallery/barber_client_05.jpg', 'Low Drop Fade & Modern Top', 'Drop Fade')">
-              <div class="aspect-[3/4] overflow-hidden bg-black">
+            <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-black/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0013_wprpwu.jpg', 'jeshua_gallery/barber_client_05.jpg', 'Low Drop Fade & Modern Top', 'Drop Fade')">
+              <div class="aspect-[3/4] overflow-hidden bg-white">
                 <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0013_wprpwu.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_05.jpg'" alt="Low Drop Fade & Modern Top" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
               </div>
               <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3.5">
@@ -403,8 +405,8 @@
                 <span class="text-xs text-white font-medium truncate">Low Drop Fade & Modern Top</span>
               </div>
             </div>
-            <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-white/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0008_kgpyqq.jpg', 'jeshua_gallery/barber_client_06.jpg', 'Hot Towel Ritual & Full Grooming', 'Full Ritual')">
-              <div class="aspect-[3/4] overflow-hidden bg-black">
+            <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-black/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0008_kgpyqq.jpg', 'jeshua_gallery/barber_client_06.jpg', 'Hot Towel Ritual & Full Grooming', 'Full Ritual')">
+              <div class="aspect-[3/4] overflow-hidden bg-white">
                 <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0008_kgpyqq.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_06.jpg'" alt="Hot Towel Ritual & Full Grooming" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
               </div>
               <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3.5">
@@ -412,8 +414,8 @@
                 <span class="text-xs text-white font-medium truncate">Hot Towel Ritual & Full Grooming</span>
               </div>
             </div>
-            <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-white/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260515-WA0004_kj3rfb.jpg', 'jeshua_gallery/barber_client_07.jpg', 'Mid Fade & Natural Texture', 'Mid Fade')">
-              <div class="aspect-[3/4] overflow-hidden bg-black">
+            <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-black/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260515-WA0004_kj3rfb.jpg', 'jeshua_gallery/barber_client_07.jpg', 'Mid Fade & Natural Texture', 'Mid Fade')">
+              <div class="aspect-[3/4] overflow-hidden bg-white">
                 <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260515-WA0004_kj3rfb.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_07.jpg'" alt="Mid Fade & Natural Texture" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
               </div>
               <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3.5">
@@ -421,8 +423,8 @@
                 <span class="text-xs text-white font-medium truncate">Mid Fade & Natural Texture</span>
               </div>
             </div>
-            <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-white/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260425-WA0001_itytaa.jpg', 'jeshua_gallery/barber_client_08.jpg', 'Sharp Lineup & Contour Beard', 'Lineup & Beard')">
-              <div class="aspect-[3/4] overflow-hidden bg-black">
+            <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-black/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260425-WA0001_itytaa.jpg', 'jeshua_gallery/barber_client_08.jpg', 'Sharp Lineup & Contour Beard', 'Lineup & Beard')">
+              <div class="aspect-[3/4] overflow-hidden bg-white">
                 <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260425-WA0001_itytaa.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_08.jpg'" alt="Sharp Lineup & Contour Beard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
               </div>
               <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3.5">
@@ -430,8 +432,8 @@
                 <span class="text-xs text-white font-medium truncate">Sharp Lineup & Contour Beard</span>
               </div>
             </div>
-            <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-white/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260412-WA0000_a3aiia.jpg', 'jeshua_gallery/barber_client_09.jpg', 'High Fade & Clean Transitions', 'High Fade')">
-              <div class="aspect-[3/4] overflow-hidden bg-black">
+            <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-black/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260412-WA0000_a3aiia.jpg', 'jeshua_gallery/barber_client_09.jpg', 'High Fade & Clean Transitions', 'High Fade')">
+              <div class="aspect-[3/4] overflow-hidden bg-white">
                 <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260412-WA0000_a3aiia.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_09.jpg'" alt="High Fade & Clean Transitions" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
               </div>
               <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3.5">
@@ -439,8 +441,8 @@
                 <span class="text-xs text-white font-medium truncate">High Fade & Clean Transitions</span>
               </div>
             </div>
-            <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-white/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260328-WA0004_j43tqs.jpg', 'jeshua_gallery/barber_client_10.jpg', 'Signature Jeshua Atelier Cut', 'Signature Look')">
-              <div class="aspect-[3/4] overflow-hidden bg-black">
+            <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-black/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260328-WA0004_j43tqs.jpg', 'jeshua_gallery/barber_client_10.jpg', 'Signature Jeshua Atelier Cut', 'Signature Look')">
+              <div class="aspect-[3/4] overflow-hidden bg-white">
                 <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260328-WA0004_j43tqs.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_10.jpg'" alt="Signature Jeshua Atelier Cut" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
               </div>
               <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3.5">
@@ -449,8 +451,8 @@
               </div>
             </div>
           <!-- Set 2 (10 Items duplicate for seamless loop) -->
-            <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-white/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260606-WA0002_ksp3zm.jpg', 'jeshua_gallery/barber_client_01.jpg', 'Taper Fade & Textured Crop', 'Fade & Texture')">
-              <div class="aspect-[3/4] overflow-hidden bg-black">
+            <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-black/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260606-WA0002_ksp3zm.jpg', 'jeshua_gallery/barber_client_01.jpg', 'Taper Fade & Textured Crop', 'Fade & Texture')">
+              <div class="aspect-[3/4] overflow-hidden bg-white">
                 <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260606-WA0002_ksp3zm.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_01.jpg'" alt="Taper Fade & Textured Crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
               </div>
               <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3.5">
@@ -458,8 +460,8 @@
                 <span class="text-xs text-white font-medium truncate">Taper Fade & Textured Crop</span>
               </div>
             </div>
-            <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-white/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260606-WA0003_iebsif.jpg', 'jeshua_gallery/barber_client_02.jpg', 'Precision Scissor Cut & Styling', 'Classic Style')">
-              <div class="aspect-[3/4] overflow-hidden bg-black">
+            <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-black/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260606-WA0003_iebsif.jpg', 'jeshua_gallery/barber_client_02.jpg', 'Precision Scissor Cut & Styling', 'Classic Style')">
+              <div class="aspect-[3/4] overflow-hidden bg-white">
                 <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260606-WA0003_iebsif.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_02.jpg'" alt="Precision Scissor Cut & Styling" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
               </div>
               <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3.5">
@@ -467,8 +469,8 @@
                 <span class="text-xs text-white font-medium truncate">Precision Scissor Cut & Styling</span>
               </div>
             </div>
-            <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-white/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0018_itnvga.jpg', 'jeshua_gallery/barber_client_03.jpg', 'Clean Skin Fade & Razor Finish', 'Skin Fade')">
-              <div class="aspect-[3/4] overflow-hidden bg-black">
+            <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-black/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0018_itnvga.jpg', 'jeshua_gallery/barber_client_03.jpg', 'Clean Skin Fade & Razor Finish', 'Skin Fade')">
+              <div class="aspect-[3/4] overflow-hidden bg-white">
                 <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0018_itnvga.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_03.jpg'" alt="Clean Skin Fade & Razor Finish" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
               </div>
               <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3.5">
@@ -476,8 +478,8 @@
                 <span class="text-xs text-white font-medium truncate">Clean Skin Fade & Razor Finish</span>
               </div>
             </div>
-            <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-white/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0021_o7gd7t.jpg', 'jeshua_gallery/barber_client_04.jpg', 'Beard Sculpting & Defined Lines', 'Beard Craft')">
-              <div class="aspect-[3/4] overflow-hidden bg-black">
+            <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-black/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0021_o7gd7t.jpg', 'jeshua_gallery/barber_client_04.jpg', 'Beard Sculpting & Defined Lines', 'Beard Craft')">
+              <div class="aspect-[3/4] overflow-hidden bg-white">
                 <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0021_o7gd7t.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_04.jpg'" alt="Beard Sculpting & Defined Lines" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
               </div>
               <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3.5">
@@ -485,8 +487,8 @@
                 <span class="text-xs text-white font-medium truncate">Beard Sculpting & Defined Lines</span>
               </div>
             </div>
-            <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-white/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0013_wprpwu.jpg', 'jeshua_gallery/barber_client_05.jpg', 'Low Drop Fade & Modern Top', 'Drop Fade')">
-              <div class="aspect-[3/4] overflow-hidden bg-black">
+            <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-black/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0013_wprpwu.jpg', 'jeshua_gallery/barber_client_05.jpg', 'Low Drop Fade & Modern Top', 'Drop Fade')">
+              <div class="aspect-[3/4] overflow-hidden bg-white">
                 <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0013_wprpwu.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_05.jpg'" alt="Low Drop Fade & Modern Top" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
               </div>
               <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3.5">
@@ -494,8 +496,8 @@
                 <span class="text-xs text-white font-medium truncate">Low Drop Fade & Modern Top</span>
               </div>
             </div>
-            <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-white/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0008_kgpyqq.jpg', 'jeshua_gallery/barber_client_06.jpg', 'Hot Towel Ritual & Full Grooming', 'Full Ritual')">
-              <div class="aspect-[3/4] overflow-hidden bg-black">
+            <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-black/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0008_kgpyqq.jpg', 'jeshua_gallery/barber_client_06.jpg', 'Hot Towel Ritual & Full Grooming', 'Full Ritual')">
+              <div class="aspect-[3/4] overflow-hidden bg-white">
                 <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0008_kgpyqq.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_06.jpg'" alt="Hot Towel Ritual & Full Grooming" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
               </div>
               <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3.5">
@@ -503,8 +505,8 @@
                 <span class="text-xs text-white font-medium truncate">Hot Towel Ritual & Full Grooming</span>
               </div>
             </div>
-            <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-white/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260515-WA0004_kj3rfb.jpg', 'jeshua_gallery/barber_client_07.jpg', 'Mid Fade & Natural Texture', 'Mid Fade')">
-              <div class="aspect-[3/4] overflow-hidden bg-black">
+            <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-black/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260515-WA0004_kj3rfb.jpg', 'jeshua_gallery/barber_client_07.jpg', 'Mid Fade & Natural Texture', 'Mid Fade')">
+              <div class="aspect-[3/4] overflow-hidden bg-white">
                 <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260515-WA0004_kj3rfb.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_07.jpg'" alt="Mid Fade & Natural Texture" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
               </div>
               <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3.5">
@@ -512,8 +514,8 @@
                 <span class="text-xs text-white font-medium truncate">Mid Fade & Natural Texture</span>
               </div>
             </div>
-            <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-white/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260425-WA0001_itytaa.jpg', 'jeshua_gallery/barber_client_08.jpg', 'Sharp Lineup & Contour Beard', 'Lineup & Beard')">
-              <div class="aspect-[3/4] overflow-hidden bg-black">
+            <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-black/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260425-WA0001_itytaa.jpg', 'jeshua_gallery/barber_client_08.jpg', 'Sharp Lineup & Contour Beard', 'Lineup & Beard')">
+              <div class="aspect-[3/4] overflow-hidden bg-white">
                 <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260425-WA0001_itytaa.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_08.jpg'" alt="Sharp Lineup & Contour Beard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
               </div>
               <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3.5">
@@ -521,8 +523,8 @@
                 <span class="text-xs text-white font-medium truncate">Sharp Lineup & Contour Beard</span>
               </div>
             </div>
-            <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-white/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260412-WA0000_a3aiia.jpg', 'jeshua_gallery/barber_client_09.jpg', 'High Fade & Clean Transitions', 'High Fade')">
-              <div class="aspect-[3/4] overflow-hidden bg-black">
+            <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-black/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260412-WA0000_a3aiia.jpg', 'jeshua_gallery/barber_client_09.jpg', 'High Fade & Clean Transitions', 'High Fade')">
+              <div class="aspect-[3/4] overflow-hidden bg-white">
                 <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260412-WA0000_a3aiia.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_09.jpg'" alt="High Fade & Clean Transitions" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
               </div>
               <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3.5">
@@ -530,8 +532,8 @@
                 <span class="text-xs text-white font-medium truncate">High Fade & Clean Transitions</span>
               </div>
             </div>
-            <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-white/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260328-WA0004_j43tqs.jpg', 'jeshua_gallery/barber_client_10.jpg', 'Signature Jeshua Atelier Cut', 'Signature Look')">
-              <div class="aspect-[3/4] overflow-hidden bg-black">
+            <div class="w-48 sm:w-56 shrink-0 group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-black/10 hover:border-atelier-borderGold transition-all duration-300" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260328-WA0004_j43tqs.jpg', 'jeshua_gallery/barber_client_10.jpg', 'Signature Jeshua Atelier Cut', 'Signature Look')">
+              <div class="aspect-[3/4] overflow-hidden bg-white">
                 <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260328-WA0004_j43tqs.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_10.jpg'" alt="Signature Jeshua Atelier Cut" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
               </div>
               <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3.5">
@@ -543,24 +545,24 @@
       </div>
 
       <!-- Touch/Hover Hint -->
-      <div class="max-w-7xl mx-auto px-6 mt-3 flex items-center justify-between text-[11px] text-slate-500 font-mono">
+      <div class="max-w-7xl mx-auto px-6 mt-3 flex items-center justify-between text-[11px] text-stone-500 font-mono">
         <span class="flex items-center gap-1.5">
-          <i class="fa-solid fa-hand-pointer text-[10px] text-atelier-gold"></i> Foto anklicken zum Vergrössern · Hover pausiert den Strip
+          <i class="fa-solid fa-hand-pointer text-[10px] text-atelier-goldDeep"></i> Foto anklicken zum Vergrössern · Hover pausiert den Strip
         </span>
         <span class="hidden md:inline">100% echte Jeshua Atelier Arbeiten</span>
       </div>
     </section>
 
     <!-- DUAL FOCUS SHOWCASE (Barber Studio & Beauty Workshops) -->
-    <section class="py-24 px-6 border-b border-white/10">
+    <section class="py-24 px-6 border-b border-black/10">
       <div class="max-w-6xl mx-auto">
         
         <div class="text-center mb-16 space-y-3">
-          <span class="text-xs font-mono uppercase tracking-[0.25em] text-slate-400">Architektur des Ateliers</span>
-          <h2 class="font-serif text-3xl sm:text-5xl text-white font-normal">
-            Zwei Schwerpunkte. <span class="italic text-atelier-gold">Ein Ort für alle.</span>
+          <span class="text-xs font-mono uppercase tracking-[0.25em] text-stone-600">Architektur des Ateliers</span>
+          <h2 class="font-serif text-3xl sm:text-5xl text-atelier-ink font-normal">
+            Zwei Schwerpunkte. <span class="italic text-atelier-goldDeep">Ein Ort für alle.</span>
           </h2>
-          <p class="text-slate-400 text-sm max-w-xl mx-auto font-light">
+          <p class="text-stone-600 text-sm max-w-xl mx-auto font-light">
             Hier begegnen sich zeitloses Barbering und moderne Beauty-Masterclasses auf höchstem handwerklichen Niveau.
           </p>
         </div>
@@ -568,24 +570,24 @@
         <div class="grid lg:grid-cols-2 gap-8">
           
           <!-- FOCUS 1: BARBER STUDIO -->
-          <div class="p-8 sm:p-10 rounded-2xl border border-white/10 bg-atelier-surface elevation-1 flex flex-col justify-between gallery-card">
+          <div class="p-8 sm:p-10 rounded-2xl border border-black/10 bg-atelier-surface elevation-1 flex flex-col justify-between gallery-card">
             <div class="space-y-5">
               <div class="flex items-center justify-between">
                 <span class="text-xs font-mono uppercase tracking-widest text-atelier-crimson font-bold">
                   [01] Barber Studio
                 </span>
-                <span class="text-xs text-slate-500 font-mono">Grooming & Style</span>
+                <span class="text-xs text-stone-500 font-mono">Grooming & Style</span>
               </div>
 
-              <h3 class="font-serif text-3xl text-white font-normal">
+              <h3 class="font-serif text-3xl text-atelier-ink font-normal">
                 Barber Studio
               </h3>
 
-              <p class="text-slate-300 text-sm leading-relaxed font-light">
-                Körperpflege, persönliches Erscheinungsbild und meisterhafte Schnittkunst. Vom klassischen Haarschnitt über Präzisions-Fades bis hin zum wohltuenden Hot-Towel Rasurritual mit ausgewählter <strong class="text-white font-medium">MK Men®</strong> Gesichtspflege.
+              <p class="text-stone-700 text-sm leading-relaxed font-light">
+                Körperpflege, persönliches Erscheinungsbild und meisterhafte Schnittkunst. Vom klassischen Haarschnitt über Präzisions-Fades bis hin zum wohltuenden Hot-Towel Rasurritual mit ausgewählter <strong class="text-atelier-ink font-medium">MK Men®</strong> Gesichtspflege.
               </p>
 
-              <ul class="space-y-2.5 text-xs text-slate-400 pt-2 border-t border-white/5">
+              <ul class="space-y-2.5 text-xs text-stone-600 pt-2 border-t border-black/5">
                 <li class="flex items-center gap-2.5">
                   <span class="w-1.5 h-1.5 rounded-full bg-atelier-crimson"></span>
                   <span>Classic Cuts, Skin Fades & Scissors Only</span>
@@ -601,12 +603,12 @@
               </ul>
             </div>
 
-            <div class="pt-8 mt-8 border-t border-white/10 flex flex-wrap items-center gap-4">
+            <div class="pt-8 mt-8 border-t border-black/10 flex flex-wrap items-center gap-4">
               <a href="barber.html" class="btn-atelier-crimson px-5 py-2.5 rounded-lg text-xs uppercase tracking-wider font-semibold inline-block">
                 Barber Menü ansehen
               </a>
-              <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Barber%2C%20ich%20m%C3%B6chte%20einen%20Termin%20anfragen..." target="_blank" class="text-xs text-slate-300 hover:text-emerald-400 flex items-center gap-1.5 transition-colors">
-                <i class="fa-brands fa-whatsapp text-emerald-400 text-sm"></i> Direkt buchen
+              <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Barber%2C%20ich%20m%C3%B6chte%20einen%20Termin%20anfragen..." target="_blank" class="text-xs text-stone-700 hover:text-emerald-400 flex items-center gap-1.5 transition-colors">
+                <i class="fa-brands fa-whatsapp text-emerald-700 text-sm"></i> Direkt buchen
               </a>
             </div>
           </div>
@@ -615,21 +617,21 @@
           <div class="p-8 sm:p-10 rounded-2xl border border-atelier-borderGold bg-atelier-surface elevation-1 flex flex-col justify-between gallery-card">
             <div class="space-y-5">
               <div class="flex items-center justify-between">
-                <span class="text-xs font-mono uppercase tracking-widest text-atelier-gold font-bold">
+                <span class="text-xs font-mono uppercase tracking-widest text-atelier-goldDeep font-bold">
                   [02] Beauty Workshops
                 </span>
-                <span class="text-xs text-slate-500 font-mono">Mit Fachleuten & Influencern</span>
+                <span class="text-xs text-stone-500 font-mono">Mit Fachleuten & Influencern</span>
               </div>
 
-              <h3 class="font-serif text-3xl text-white font-normal">
+              <h3 class="font-serif text-3xl text-atelier-ink font-normal">
                 Beauty Workshops
               </h3>
 
-              <p class="text-slate-300 text-sm leading-relaxed font-light">
+              <p class="text-stone-700 text-sm leading-relaxed font-light">
                 Interaktive Masterclasses für Hautpflege, Make-up Artistry und achtsame Selbstfürsorge. Geleitet von Top-Visagisten und renommierten Beauty-Influencern in intimer Atelier-Atmosphäre.
               </p>
 
-              <ul class="space-y-2.5 text-xs text-slate-400 pt-2 border-t border-white/5">
+              <ul class="space-y-2.5 text-xs text-stone-600 pt-2 border-t border-black/5">
                 <li class="flex items-center gap-2.5">
                   <span class="w-1.5 h-1.5 rounded-full bg-atelier-gold"></span>
                   <span>Skin Glow & Barrier Care (inkl. Skinvigorate® Device)</span>
@@ -645,12 +647,12 @@
               </ul>
             </div>
 
-            <div class="pt-8 mt-8 border-t border-white/10 flex flex-wrap items-center gap-4">
+            <div class="pt-8 mt-8 border-t border-black/10 flex flex-wrap items-center gap-4">
               <a href="workshops.html" class="btn-atelier-gold px-5 py-2.5 rounded-lg text-xs uppercase tracking-wider font-semibold inline-block">
                 Workshop Termine
               </a>
-              <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Studio%2C%20ich%20m%C3%B6chte%20mich%20f%C3%BCr%20einen%20Workshop%20anmelden..." target="_blank" class="text-xs text-slate-300 hover:text-emerald-400 flex items-center gap-1.5 transition-colors">
-                <i class="fa-brands fa-whatsapp text-emerald-400 text-sm"></i> Platz anfragen
+              <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Studio%2C%20ich%20m%C3%B6chte%20mich%20f%C3%BCr%20einen%20Workshop%20anmelden..." target="_blank" class="text-xs text-stone-700 hover:text-emerald-400 flex items-center gap-1.5 transition-colors">
+                <i class="fa-brands fa-whatsapp text-emerald-700 text-sm"></i> Platz anfragen
               </a>
             </div>
           </div>
@@ -658,15 +660,15 @@
         </div>
 
         <!-- THIRD PILLAR: MENTORING BANNER -->
-        <div class="mt-8 p-6 sm:p-8 rounded-2xl border border-white/10 bg-atelier-lacquer flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div class="mt-8 p-6 sm:p-8 rounded-2xl border border-black/10 bg-atelier-lacquer flex flex-col sm:flex-row items-center justify-between gap-6">
           <div class="flex items-center gap-5">
-            <span class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-300 text-lg shrink-0">
+            <span class="w-12 h-12 rounded-xl bg-black/5 border border-black/10 flex items-center justify-center text-stone-700 text-lg shrink-0">
               <i class="fa-solid fa-compass"></i>
             </span>
             <div>
-              <span class="text-[10px] uppercase font-mono tracking-widest text-slate-400 block mb-0.5">Dritte Säule</span>
-              <h4 class="font-serif text-xl text-white">Ganzheitliches Mentoring & Emotionale Selbstfürsorge</h4>
-              <p class="text-slate-400 text-xs font-light mt-1">1:1 Begleitung für Selbstvertrauen, Resilienz und innere Transformation.</p>
+              <span class="text-[10px] uppercase font-mono tracking-widest text-stone-600 block mb-0.5">Dritte Säule</span>
+              <h4 class="font-serif text-xl text-atelier-ink">Ganzheitliches Mentoring & Emotionale Selbstfürsorge</h4>
+              <p class="text-stone-600 text-xs font-light mt-1">1:1 Begleitung für Selbstvertrauen, Resilienz und innere Transformation.</p>
             </div>
           </div>
           <a href="mentoring.html" class="btn-atelier-outline px-5 py-2.5 rounded-lg text-xs tracking-wider uppercase font-semibold shrink-0 inline-block">
@@ -678,16 +680,16 @@
     </section>
 
     <!-- FEATURED REAL PACKSHOTS TEASER (OHNE PREISE) -->
-    <section class="py-24 px-6 border-b border-white/10 bg-atelier-lacquer">
+    <section class="py-24 px-6 border-b border-black/10 bg-atelier-lacquer">
       <div class="max-w-6xl mx-auto">
         
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div class="space-y-2">
-            <span class="text-xs font-mono uppercase tracking-[0.25em] text-atelier-gold">Offizieller Sommer / Herbst 2026 Katalog</span>
-            <h2 class="font-serif text-3xl sm:text-4xl text-white font-normal">
+            <span class="text-xs font-mono uppercase tracking-[0.25em] text-atelier-goldDeep">Offizieller Sommer / Herbst 2026 Katalog</span>
+            <h2 class="font-serif text-3xl sm:text-4xl text-atelier-ink font-normal">
               Ausgewählte Atelier-Kollektion
             </h2>
-            <p class="text-slate-400 text-xs sm:text-sm font-light max-w-xl">
+            <p class="text-stone-600 text-xs sm:text-sm font-light max-w-xl">
               Echte Studio-Packshots direkt vom Hersteller. Alle Produkte sind ohne Preisauszeichnung online einsehbar und können mit 1 Klick per WhatsApp angefragt werden.
             </p>
           </div>
@@ -700,15 +702,15 @@
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           
           <!-- 1. Skinvigorate Duo -->
-          <div class="p-5 rounded-2xl border border-white/10 bg-atelier-surface gallery-card flex flex-col justify-between">
+          <div class="p-5 rounded-2xl border border-black/10 bg-atelier-surface gallery-card flex flex-col justify-between">
             <div>
               <div class="aspect-square p-4 flex items-center justify-center mb-4 relative overflow-hidden">
                 <img src="https://pimg.eur.marykaycdn.com/HeroZoom/10006/J2012935-UNL-GB-135-Skinvigorate-Duo-Facial-Device-Soldier-Front-WT.jpg" onerror="this.onerror=null; this.src='jeshua_products/skinvigorate_duo.png'" alt="Skinvigorate Duo" class="max-h-full max-w-full object-contain">
-                <span class="absolute top-2 left-2 text-[9px] font-mono uppercase tracking-wider bg-atelier-gold text-black px-2 py-0.5 rounded font-bold">Limitierte Edition</span>
+                <span class="absolute top-2 left-2 text-[9px] font-mono uppercase tracking-wider bg-atelier-gold text-atelier-ink px-2 py-0.5 rounded font-bold">Limitierte Edition</span>
               </div>
-              <span class="text-[10px] font-mono text-atelier-gold uppercase tracking-wider block mb-1">Beauty Device</span>
-              <h3 class="font-serif text-lg text-white font-medium mb-1">Skinvigorate® Duo Device</h3>
-              <p class="text-slate-400 text-xs font-light leading-relaxed mb-4">Dual-Head Vibration für porentiefe Reinigung & wärmende Pflegemassage.</p>
+              <span class="text-[10px] font-mono text-atelier-goldDeep uppercase tracking-wider block mb-1">Beauty Device</span>
+              <h3 class="font-serif text-lg text-atelier-ink font-medium mb-1">Skinvigorate® Duo Device</h3>
+              <p class="text-stone-600 text-xs font-light leading-relaxed mb-4">Dual-Head Vibration für porentiefe Reinigung & wärmende Pflegemassage.</p>
             </div>
             <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Studio%2C%20ich%20interessiere%20mich%20f%C3%BCr%20das%20Skinvigorate%20Duo%20Facial%20Device..." target="_blank" class="btn-atelier-whatsapp w-full py-2.5 rounded-lg text-xs flex items-center justify-center gap-2">
               <i class="fa-brands fa-whatsapp"></i> Über WhatsApp anfragen
@@ -716,15 +718,15 @@
           </div>
 
           <!-- 2. MK Men Shave Cream -->
-          <div class="p-5 rounded-2xl border border-white/10 bg-atelier-surface gallery-card flex flex-col justify-between">
+          <div class="p-5 rounded-2xl border border-black/10 bg-atelier-surface gallery-card flex flex-col justify-between">
             <div>
               <div class="aspect-square p-4 flex items-center justify-center mb-4 relative overflow-hidden">
                 <img src="https://www.marykay.com/dw/image/v2/BKGS_PRD/on/demandware.static/-/Sites-us-master-catalog/default/dw434ff301/hi-res/10000/J2010909-UNL-GB-251-MKMen-Shave-Cream-Soldier-HiRes.jpg" onerror="this.onerror=null; this.src='jeshua_products/mkmen_shave_cream.png'" alt="MKMen Shave Cream" class="max-h-full max-w-full object-contain">
                 <span class="absolute top-2 left-2 text-[9px] font-mono uppercase tracking-wider bg-atelier-crimson text-white px-2 py-0.5 rounded font-bold">Barber Tipp</span>
               </div>
               <span class="text-[10px] font-mono text-atelier-crimson uppercase tracking-wider block mb-1">Barber & Men</span>
-              <h3 class="font-serif text-lg text-white font-medium mb-1">MK Men® Shave Cream</h3>
-              <p class="text-slate-400 text-xs font-light leading-relaxed mb-4">Kühlende Rasiercreme für reizfreies Gleiten der Klinge ohne Rasurbrand.</p>
+              <h3 class="font-serif text-lg text-atelier-ink font-medium mb-1">MK Men® Shave Cream</h3>
+              <p class="text-stone-600 text-xs font-light leading-relaxed mb-4">Kühlende Rasiercreme für reizfreies Gleiten der Klinge ohne Rasurbrand.</p>
             </div>
             <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Studio%2C%20ich%20interessiere%20mich%20f%C3%BCr%20die%20MK%20Men%20Shave%20Cream..." target="_blank" class="btn-atelier-whatsapp w-full py-2.5 rounded-lg text-xs flex items-center justify-center gap-2">
               <i class="fa-brands fa-whatsapp"></i> Über WhatsApp anfragen
@@ -732,15 +734,15 @@
           </div>
 
           <!-- 3. TimeWise Repair Day Cream -->
-          <div class="p-5 rounded-2xl border border-white/10 bg-atelier-surface gallery-card flex flex-col justify-between">
+          <div class="p-5 rounded-2xl border border-black/10 bg-atelier-surface gallery-card flex flex-col justify-between">
             <div>
               <div class="aspect-square p-4 flex items-center justify-center mb-4 relative overflow-hidden">
                 <img src="https://www.marykay.com/dw/image/v2/BKGS_PRD/on/demandware.static/-/Sites-us-master-catalog/default/dw83aa24c9/hi-res/10006/J2012933-UNL-US-138-TWR-Collection-HiRes.jpg" onerror="this.onerror=null; this.src='jeshua_products/timewise_repair_daycream.png'" alt="TimeWise Repair Day Cream" class="max-h-full max-w-full object-contain">
-                <span class="absolute top-2 left-2 text-[9px] font-mono uppercase tracking-wider bg-white/15 text-slate-200 px-2 py-0.5 rounded font-bold">LSF 30</span>
+                <span class="absolute top-2 left-2 text-[9px] font-mono uppercase tracking-wider bg-white/85 backdrop-blur-sm border border-black/10 text-atelier-ink px-2 py-0.5 rounded font-bold">LSF 30</span>
               </div>
-              <span class="text-[10px] font-mono text-slate-400 uppercase tracking-wider block mb-1">Hautpflege</span>
-              <h3 class="font-serif text-lg text-white font-medium mb-1">TimeWise Repair® Day Cream</h3>
-              <p class="text-slate-400 text-xs font-light leading-relaxed mb-4">Breitbandschutz gegen vorzeitige Hautalterung & Festigkeitsverlust.</p>
+              <span class="text-[10px] font-mono text-stone-600 uppercase tracking-wider block mb-1">Hautpflege</span>
+              <h3 class="font-serif text-lg text-atelier-ink font-medium mb-1">TimeWise Repair® Day Cream</h3>
+              <p class="text-stone-600 text-xs font-light leading-relaxed mb-4">Breitbandschutz gegen vorzeitige Hautalterung & Festigkeitsverlust.</p>
             </div>
             <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Studio%2C%20ich%20interessiere%20mich%20f%C3%BCr%20die%20TimeWise%20Repair%20Day%20Cream..." target="_blank" class="btn-atelier-whatsapp w-full py-2.5 rounded-lg text-xs flex items-center justify-center gap-2">
               <i class="fa-brands fa-whatsapp"></i> Über WhatsApp anfragen
@@ -748,15 +750,15 @@
           </div>
 
           <!-- 4. Lash Fanorama Mascara -->
-          <div class="p-5 rounded-2xl border border-white/10 bg-atelier-surface gallery-card flex flex-col justify-between">
+          <div class="p-5 rounded-2xl border border-black/10 bg-atelier-surface gallery-card flex flex-col justify-between">
             <div>
               <div class="aspect-square p-4 flex items-center justify-center mb-4 relative overflow-hidden">
                 <img src="https://www.marykay.com/dw/image/v2/BKGS_PRD/on/demandware.static/-/Sites-us-master-catalog/default/dw5219a550/hi-res/10005/J2012933-UNL-GB-020-LL-Fanorama-Define-Lift-Mascara-Soldier-2-HiRes.jpg" onerror="this.onerror=null; this.src='jeshua_products/lash_fanorama_mascara.png'" alt="Lash Fanorama" class="max-h-full max-w-full object-contain">
-                <span class="absolute top-2 left-2 text-[9px] font-mono uppercase tracking-wider bg-atelier-gold text-black px-2 py-0.5 rounded font-bold">Artistry Kult</span>
+                <span class="absolute top-2 left-2 text-[9px] font-mono uppercase tracking-wider bg-atelier-gold text-atelier-ink px-2 py-0.5 rounded font-bold">Artistry Kult</span>
               </div>
-              <span class="text-[10px] font-mono text-atelier-gold uppercase tracking-wider block mb-1">Make-up Artistry</span>
-              <h3 class="font-serif text-lg text-white font-medium mb-1">Lash Fanorama Mascara</h3>
-              <p class="text-slate-400 text-xs font-light leading-relaxed mb-4">Auffächern, Definieren & Anheben für spektakuläre Wimpern.</p>
+              <span class="text-[10px] font-mono text-atelier-goldDeep uppercase tracking-wider block mb-1">Make-up Artistry</span>
+              <h3 class="font-serif text-lg text-atelier-ink font-medium mb-1">Lash Fanorama Mascara</h3>
+              <p class="text-stone-600 text-xs font-light leading-relaxed mb-4">Auffächern, Definieren & Anheben für spektakuläre Wimpern.</p>
             </div>
             <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Studio%2C%20ich%20interessiere%20mich%20f%C3%BCr%20die%20Lash%20Fanorama%20Mascara..." target="_blank" class="btn-atelier-whatsapp w-full py-2.5 rounded-lg text-xs flex items-center justify-center gap-2">
               <i class="fa-brands fa-whatsapp"></i> Über WhatsApp anfragen
@@ -770,44 +772,44 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="border-t border-white/10 bg-atelier-lacquer pt-16 pb-12 px-6">
+  <footer class="border-t border-black/10 bg-atelier-lacquer pt-16 pb-12 px-6">
     <div class="max-w-6xl mx-auto">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
         
         <div class="space-y-3">
-          <span class="font-cinzel text-xl font-bold tracking-widest text-white block">JESHÚA</span>
-          <p class="text-xs text-slate-400 leading-relaxed font-light">
+          <span class="font-cinzel text-xl font-bold tracking-widest text-atelier-ink block">JESHÚA</span>
+          <p class="text-xs text-stone-600 leading-relaxed font-light">
             Lifestyle Studio & Atelier. Schönheit ohne Schubladen, Selbstfürsorge für alle und Wohlbefinden von innen und aussen.
           </p>
-          <span class="text-[10px] font-mono uppercase tracking-widest text-atelier-gold block">
+          <span class="text-[10px] font-mono uppercase tracking-widest text-atelier-goldDeep block">
             Pferd (Stärke) · Schmetterling (Wandel)
           </span>
         </div>
 
         <div>
-          <span class="text-xs font-mono uppercase tracking-wider text-slate-300 font-semibold block mb-3">Bereiche</span>
-          <ul class="space-y-2 text-xs text-slate-400">
+          <span class="text-xs font-mono uppercase tracking-wider text-stone-700 font-semibold block mb-3">Bereiche</span>
+          <ul class="space-y-2 text-xs text-stone-600">
             <li><a href="barber.html" class="hover:text-atelier-crimson transition-colors">Barber Studio</a></li>
-            <li><a href="workshops.html" class="hover:text-atelier-gold transition-colors">Beauty Workshops</a></li>
-            <li><a href="mentoring.html" class="hover:text-white transition-colors">Ganzheitliches Mentoring</a></li>
-            <li><a href="katalog.html" class="hover:text-white transition-colors">Katalog Kollektion (38 Produkte)</a></li>
+            <li><a href="workshops.html" class="hover:text-atelier-goldDeep transition-colors">Beauty Workshops</a></li>
+            <li><a href="mentoring.html" class="hover:text-atelier-ink transition-colors">Ganzheitliches Mentoring</a></li>
+            <li><a href="katalog.html" class="hover:text-atelier-ink transition-colors">Katalog Kollektion (38 Produkte)</a></li>
           </ul>
         </div>
 
         <div>
-          <span class="text-xs font-mono uppercase tracking-wider text-slate-300 font-semibold block mb-3">Atelier Uster</span>
-          <p class="text-xs text-slate-400 leading-relaxed font-light mb-2">
+          <span class="text-xs font-mono uppercase tracking-wider text-stone-700 font-semibold block mb-3">Atelier Uster</span>
+          <p class="text-xs text-stone-600 leading-relaxed font-light mb-2">
             Bankstrasse 36<br>8610 Uster, Schweiz
           </p>
-          <p class="text-xs text-slate-400 leading-relaxed font-light">
+          <p class="text-xs text-stone-600 leading-relaxed font-light">
             Telefon: +41 77 956 38 70<br>
             WhatsApp Concierge täglich
           </p>
         </div>
 
         <div>
-          <span class="text-xs font-mono uppercase tracking-wider text-slate-300 font-semibold block mb-3">Kontakt & Anfragen</span>
-          <p class="text-xs text-slate-400 leading-relaxed font-light mb-3">
+          <span class="text-xs font-mono uppercase tracking-wider text-stone-700 font-semibold block mb-3">Kontakt & Anfragen</span>
+          <p class="text-xs text-stone-600 leading-relaxed font-light mb-3">
             Offen für Männer, Frauen und Paare.
           </p>
           <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Studio%2C%20ich%20m%C3%B6chte%20gerne..." target="_blank" class="btn-atelier-whatsapp w-full py-2.5 rounded-lg text-xs flex items-center justify-center gap-2">
@@ -817,9 +819,9 @@
 
       </div>
 
-      <div class="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 font-light">
+      <div class="pt-8 border-t border-black/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500 font-light">
         <p>© 2026 Jeshúa Lifestyle Studio & Atelier. Alle Rechte vorbehalten.</p>
-        <p>Webseite erstellt von <a href="https://wildwave.ch/" target="_blank" rel="noopener noreferrer" class="hover:text-atelier-gold transition-colors">Wildwave Marketing</a></p>
+        <p>Webseite erstellt von <a href="https://wildwave.ch/" target="_blank" rel="noopener noreferrer" class="hover:text-atelier-goldDeep transition-colors">Wildwave Marketing</a></p>
         <p>Uster · Zürich · Schweiz</p>
       </div>
     </div>
