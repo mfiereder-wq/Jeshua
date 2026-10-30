@@ -1245,3 +1245,140 @@ main > .section:first-child {
     border-radius: 24px 24px 62px 24px;
   }
 }
+
+
+/* ============================================================
+   Mobile pass — reset desktop utility fallbacks below lg
+   ============================================================ */
+
+@media (max-width: 1023px) {
+  /* The offline Tailwind compatibility layer must not activate lg:* utilities on mobile. */
+  .lg\:grid-cols-2,
+  .lg\:grid-cols-4,
+  .lg\:grid-cols-5,
+  .lg\:grid-cols-12 {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .lg\:col-span-4,
+  .lg\:col-span-5,
+  .lg\:col-span-6,
+  .lg\:col-span-7,
+  .lg\:col-span-8 {
+    grid-column: auto !important;
+  }
+
+  .lg\:order-1,
+  .lg\:order-2 {
+    order: initial !important;
+  }
+
+  .lg\:gap-16 {
+    gap: 2.5rem !important;
+  }
+
+  .lg\:gap-20 {
+    gap: 3rem !important;
+  }
+}
+
+@media (max-width: 767px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  .wrap {
+    padding-inline: 18px;
+  }
+
+  .section {
+    padding-block: 64px;
+  }
+
+  .section-tight {
+    padding-block: 48px;
+  }
+
+  .display-2 {
+    font-size: clamp(34px, 11vw, 52px);
+  }
+
+  .display-3 {
+    font-size: clamp(28px, 8vw, 36px);
+  }
+
+  .lede {
+    font-size: 18px;
+    line-height: 1.55;
+  }
+
+  .body {
+    font-size: 16px;
+    line-height: 1.58;
+  }
+
+  .small,
+  .label {
+    font-size: 14px;
+  }
+
+  .grid.gap-10 {
+    gap: 2rem;
+  }
+
+  .hero-media {
+    width: min(100%, 430px);
+    margin-inline: auto;
+  }
+
+  .media-wide {
+    aspect-ratio: 4 / 3;
+  }
+
+  .price-row {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .price-row .price {
+    margin-left: auto;
+  }
+
+  .btn,
+  .btn-atelier-gold,
+  .btn-atelier-crimson,
+  .btn-atelier-whatsapp,
+  .btn-atelier-outline {
+    min-height: 48px;
+  }
+
+  form .btn,
+  .field-grid + .btn,
+  .field-grid ~ .btn {
+    width: 100%;
+  }
+
+  .site-footer {
+    border-radius: 26px 26px 0 0;
+  }
+
+  .foot-name {
+    font-size: clamp(64px, 20vw, 120px);
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .wrap {
+    padding-inline: 24px;
+  }
+
+  .section {
+    padding-block: 80px;
+  }
+
+  .hero-media {
+    width: min(100%, 520px);
+    margin-inline: auto;
+  }
+}
