@@ -234,5 +234,9 @@ const products = [{"id": "skinvigorate_duo", "title": "Skinvigorate® Duo Facial
       const hash = window.location.hash.replace('#', '');
       if (legacyPages[hash]) {
         window.location.replace(legacyPages[hash]);
+        return;
+      }
+      if (products.some(product => product.id === hash)) {
+        openProductModal(hash);
       }
     });
