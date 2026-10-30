@@ -37,7 +37,7 @@ const products = [{"id": "skinvigorate_duo", "title": "Skinvigorate® Duo Facial
           <div class="card flex flex-col justify-between">
             <div>
               <div class="media-square" style="background:#fff" onclick="openProductModal('${p.id}')">
-                <img src="${p.image}" onerror="this.onerror=null; if(p.localImage) this.src=p.localImage;" alt="${p.title}" style="object-fit:contain;padding:10px">
+                <img src="${p.image}" onerror="this.onerror=null; this.src='${p.localImage || p.image}'" alt="${p.title}" style="object-fit:contain;padding:10px">
               </div>
               <p class="label" style="margin-top:14px">${p.catLabel}</p>
               <h2 class="display-3" style="font-size:22px;margin-top:4px;cursor:pointer" onclick="openProductModal('${p.id}')">${p.title}</h2>

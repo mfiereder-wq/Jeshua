@@ -700,3 +700,196 @@ dialog,
     animation: none;
   }
 }
+
+
+/* ============================================================
+   Kompatibilitaets-Schicht: Tailwind-Utilities als Offline-Fallback
+   (identische Werte wie das CDN-JIT — falls das CDN nicht laedt,
+    bleibt das Layout vollstaendig gestylt)
+   ============================================================ */
+
+.flex { display: flex; }
+.inline-flex { display: inline-flex; }
+.grid { display: grid; }
+.hidden { display: none; }
+.flex-col { flex-direction: column; }
+.flex-grow { flex: 1 1 auto; }
+.flex-wrap { flex-wrap: wrap; }
+.grid { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+
+.min-h-svh { min-height: 100svh; }
+
+.absolute { position: absolute; }
+.relative { position: relative; }
+.fixed { position: fixed; }
+.inset-0 { inset: 0; }
+.-top-12 { top: -3rem; }
+.top-4 { top: 1rem; }
+.right-0 { right: 0; }
+.right-4 { right: 1rem; }
+.right-6 { right: 1.5rem; }
+.bottom-20 { bottom: 5rem; }
+.z-50 { z-index: 50; }
+
+.object-contain { object-fit: contain; }
+.overflow-hidden { overflow: hidden; }
+.overflow-y-auto { overflow-y: auto; }
+
+.w-full { width: 100%; }
+.w-auto { width: auto; }
+.w-8 { width: 2rem; }
+.w-9 { width: 2.25rem; }
+.w-48 { width: 12rem; }
+.h-8 { height: 2rem; }
+.h-9 { height: 2.25rem; }
+.h-48 { height: 12rem; }
+
+.max-w-full { max-width: 100%; }
+.max-w-lg { max-width: 32rem; }
+.max-w-xl { max-width: 36rem; }
+.max-h-full { max-height: 100%; }
+.max-h-\[75vh\] { max-height: 75vh; }
+.max-h-\[90vh\] { max-height: 90vh; }
+
+.p-2 { padding: 0.5rem; }
+.p-4 { padding: 1rem; }
+.p-6 { padding: 1.5rem; }
+.p-8 { padding: 2rem; }
+.px-4 { padding-inline: 1rem; }
+.px-5 { padding-inline: 1.25rem; }
+.py-2 { padding-block: 0.5rem; }
+.py-3 { padding-block: 0.75rem; }
+
+.mt-2 { margin-top: 0.5rem; }
+.mt-4 { margin-top: 1rem; }
+.mb-1 { margin-bottom: 0.25rem; }
+.mb-3 { margin-bottom: 0.75rem; }
+.mb-4 { margin-bottom: 1rem; }
+.mb-6 { margin-bottom: 1.5rem; }
+
+.gap-2 { gap: 0.5rem; }
+.gap-3 { gap: 0.75rem; }
+.gap-4 { gap: 1rem; }
+.gap-6 { gap: 1.5rem; }
+.gap-8 { gap: 2rem; }
+.gap-10 { gap: 2.5rem; }
+.gap-12 { gap: 3rem; }
+
+.grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+.grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.lg\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.lg\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.lg\:grid-cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.lg\:grid-cols-12 { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+.lg\:col-span-4 { grid-column: span 4 / span 4; }
+.lg\:col-span-5 { grid-column: span 5 / span 5; }
+.lg\:col-span-6 { grid-column: span 6 / span 6; }
+.lg\:col-span-7 { grid-column: span 7 / span 7; }
+.lg\:col-span-8 { grid-column: span 8 / span 8; }
+.lg\:order-1 { order: 1; }
+.lg\:order-2 { order: 2; }
+.lg\:gap-16 { gap: 4rem; }
+.lg\:gap-20 { gap: 5rem; }
+
+.items-center { align-items: center; }
+.items-start { align-items: flex-start; }
+.items-end { align-items: flex-end; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+
+.font-light { font-weight: 300; }
+.font-normal { font-weight: 400; }
+.font-medium { font-weight: 500; }
+.font-semibold { font-weight: 600; }
+.font-bold { font-weight: 700; }
+.font-serif { font-family: var(--display); }
+
+.text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+.text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+.text-2xl { font-size: 1.5rem; line-height: 2rem; }
+.text-\[11px\] { font-size: 11px; }
+.text-white { color: #FFFFFF; }
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-stone-600 { color: #78706A; }
+.text-slate-300 { color: #CBD5E1; }
+.text-slate-400 { color: #94A3B8; }
+.text-atelier-ink { color: var(--ink); }
+.text-atelier-goldDeep { color: var(--gold-text); }
+.leading-relaxed { line-height: 1.625; }
+
+.space-y-1 > * + * { margin-top: 0.25rem; }
+
+.opacity-0 { opacity: 0; }
+.translate-x-96 { transform: translateX(24rem); }
+.transition-colors {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.duration-300 { transition-duration: 300ms; }
+
+.bg-black { background-color: #000000; }
+.bg-black\/60 { background-color: rgba(0, 0, 0, 0.60); }
+.bg-black\/85 { background-color: rgba(0, 0, 0, 0.85); }
+.bg-black\/90 { background-color: rgba(0, 0, 0, 0.90); }
+.bg-atelier-surface { background-color: var(--surface); }
+
+@media (min-width: 640px) {
+  .sm\:flex-row { flex-direction: row; }
+  .sm\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sm\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .sm\:items-center { align-items: center; }
+  .sm\:p-8 { padding: 2rem; }
+}
+
+@media (min-width: 768px) {
+  .md\:flex-row { flex-direction: row; }
+  .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .md\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .md\:items-end { align-items: flex-end; }
+}
+
+@media (min-width: 1024px) {
+  .lg\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .lg\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .lg\:grid-cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .lg\:grid-cols-12 { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+}
+
+/* ---------- Legacy-Schaltflaechen (Renderer/Modals) passend zum neuen System ---------- */
+
+.btn-atelier-gold,
+.btn-atelier-crimson,
+.btn-atelier-whatsapp,
+.btn-atelier-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 0;
+  font-family: var(--text);
+  font-size: 15px;
+  font-weight: 500;
+  transition: background-color var(--dur) var(--ease), color var(--dur) var(--ease);
+  text-align: center;
+}
+
+.btn-atelier-gold { background: var(--gold-fill); color: var(--ink); }
+.btn-atelier-gold:hover { background: #B08C1E; color: var(--ink); }
+
+.btn-atelier-crimson { background: var(--bronze); color: #FFFFFF; }
+.btn-atelier-crimson:hover { background: #774D23; }
+
+.btn-atelier-whatsapp { background: #14453A; color: #FFFFFF; }
+.btn-atelier-whatsapp:hover { background: #0E3229; }
+
+.btn-atelier-outline { background: var(--field); color: var(--ink); }
+.btn-atelier-outline:hover { background: var(--field-deep); }
+
+/* Galerie-Strip: horizontales Scroll-Snap-Element (bewusst kein Autorun) */
