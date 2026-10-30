@@ -229,25 +229,6 @@ const products = [{"id": "skinvigorate_duo", "title": "Skinvigorate® Duo Facial
       window.addEventListener('scroll', sync, { passive: true });
     })();
 
-    // Inhalte steigen gestaffelt ein, sobald ihre Sektion sichtbar wird
-    (function initRise() {
-      const items = document.querySelectorAll('[data-rise]');
-      if (!items.length) return;
-      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if (reduce || !('IntersectionObserver' in window)) {
-        items.forEach(el => el.classList.add('is-in'));
-        return;
-      }
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (!entry.isIntersecting) return;
-          entry.target.classList.add('is-in');
-          io.unobserve(entry.target);
-        });
-      }, { rootMargin: '0px 0px -12% 0px', threshold: 0.08 });
-      items.forEach(el => io.observe(el));
-    })();
-
     window.addEventListener('DOMContentLoaded', () => {
       renderProducts(products);
       const hash = window.location.hash.replace('#', '');

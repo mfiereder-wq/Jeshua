@@ -567,26 +567,35 @@ b {
 
 /* ---------- Bewegung ---------- */
 
+/* Einsteigen rein per CSS: endet immer sichtbar, auch ohne JavaScript */
 [data-rise] {
-  opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 700ms var(--ease), transform 700ms var(--ease);
-  transition-delay: var(--rise-delay, 0ms);
+  animation: rise-in 720ms var(--ease) both;
+  animation-delay: var(--rise-delay, 0ms);
 }
 
-[data-rise].is-in {
-  opacity: 1;
-  transform: none;
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .hero-media img {
-  transform: scale(1.03);
-  transition: transform 1400ms var(--ease);
+  animation: hero-settle 1400ms var(--ease) both;
+  animation-delay: 120ms;
 }
 
-.hero-media.is-in img,
-.hero-media:hover img {
-  transform: scale(1);
+@keyframes hero-settle {
+  from {
+    transform: scale(1.03);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 /* Laufband der Kundenarbeiten */
@@ -686,12 +695,8 @@ dialog,
     transition-duration: 0.01ms !important;
   }
 
-  [data-rise] {
-    opacity: 1;
-    transform: none;
-  }
-
+  [data-rise],
   .hero-media img {
-    transform: none;
+    animation: none;
   }
 }
