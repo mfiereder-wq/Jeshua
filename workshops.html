@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de" class="scroll-smooth">
+<html lang="de">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,36 +18,44 @@
   <!-- Font Awesome 6 Pro Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <!-- Google Fonts: Cormorant Garamond, Cinzel, Outfit -->
+  <!-- Schriften: Cormorant Garamond (Display) und Jost (Text) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
+            stone: {
+              300: '#E2DED7',
+              400: '#C9C2B8',
+              500: '#9A9288',
+              600: '#78706A',
+              700: '#5A5248',
+              800: '#3A342D',
+              900: '#171310',
+            },
             atelier: {
               black: '#FFFFFF',
-              lacquer: '#F7F3E8',
-              surface: '#FFFFFF',
-              card: '#FCFAF2',
+              lacquer: '#F5F3EF',
+              surface: '#F5F3EF',
+              card: '#F5F3EF',
               gold: '#C9A227',
-              goldLight: '#A4801F',
-              goldDeep: '#8A6D14',
-              ink: '#221C13',
-              inkSoft: '#5C5442',
-              crimson: '#B00D28',
-              crimsonLight: '#E52E4D',
-              border: 'rgba(34, 28, 19, 0.12)',
-              borderGold: 'rgba(201, 162, 39, 0.32)',
+              goldLight: '#7A5F14',
+              goldDeep: '#7A5F14',
+              ink: '#171310',
+              inkSoft: '#5A5248',
+              crimson: '#8A5A2B',
+              crimsonLight: '#A97339',
+              border: 'rgba(23, 19, 16, 0.10)',
+              borderGold: 'rgba(201, 162, 39, 0.38)',
             }
           },
           fontFamily: {
-            sans: ['Outfit', 'sans-serif'],
+            sans: ['Jost', 'sans-serif'],
             serif: ['Cormorant Garamond', 'serif'],
-            cinzel: ['Cinzel', 'serif'],
           }
         }
       }
@@ -57,326 +65,241 @@
   <!-- Gemeinsame Atelier-Styles -->
   <link rel="stylesheet" href="assets/styles.css">
 </head>
-<body class="bg-atelier-black text-stone-900 min-h-screen flex flex-col selection:bg-atelier-crimson selection:text-white">
+<body  class="min-min-h-svh flex flex-col">
 
-  <!-- TOP HEADER UTILITY BAR -->
-  <header class="border-b border-black/5 bg-atelier-lacquer py-2.5 px-6 text-xs text-stone-600">
-    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
-      <div class="flex items-center gap-3">
-        <span class="text-atelier-goldDeep text-xs">✦</span>
-        <span class="text-stone-700 font-medium tracking-wide">Jeshúa Lifestyle Studio & Atelier · Bankstrasse 36, 8610 Uster</span>
-        <span class="hidden lg:inline text-stone-400">|</span>
-        <span class="hidden lg:inline text-stone-600 font-light">Schönheit ohne Schubladen · Für Männer, Frauen & Paare</span>
+    <div  class="utility">
+    <div  class="wrap">
+      <p  class="small">Bankstrasse 36, 8610 Uster · Schönheit ohne Schubladen</p>
+      <p  class="small"><a href="tel:+41779563870">+41 77 956 38 70</a> · Mo bis Sa nach Vereinbarung</p>
+    </div>
+  </div>
+
+  <header  class="site-header" id="mainNav">
+    <div  class="wrap">
+      <a href="index.html"  class="wordmark" aria-label="Jeshúa Atelier, zur Startseite">
+        <img src="https://res.cloudinary.com/dnrvauviq/image/upload/v1792857060/WhatsApp_Image_2026-10-24_at_16.20.46_rfdtwx.jpg" onerror="this.onerror=null; this.src='jeshua_logo.jpg'" alt="">
+        <span>JESHÚA</span>
+      </a>
+
+      <nav  class="nav-links" aria-label="Hauptnavigation">
+          <a href="index.html">Atelier</a>
+          <a href="barber.html">Barber Studio</a>
+          <a href="workshops.html" aria-current="page">Workshops</a>
+          <a href="mentoring.html">Mentoring</a>
+          <a href="katalog.html">Katalog</a>
+      </nav>
+
+      <div  class="nav-actions">
+        <a href="termin.html"  class="btn btn-gold">Termin buchen</a>
+        <button  class="menu-toggle" type="button" onclick="toggleMobileMenu()" aria-expanded="false" aria-controls="mobileMenu" id="menuToggle">Menü</button>
       </div>
-      <div class="flex items-center gap-5 text-stone-700">
-        <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Atelier,%20ich%20h%C3%A4tte%20eine%20Anfrage..." target="_blank" class="hover:text-emerald-400 transition-colors flex items-center gap-1.5">
-          <i class="fa-brands fa-whatsapp text-emerald-700"></i> WhatsApp Concierge
-        </a>
-        <span class="text-stone-300">·</span>
-        <a href="tel:+41779563870" class="hover:text-atelier-goldDeep transition-colors flex items-center gap-1.5">
-          <i class="fa-solid fa-phone text-atelier-crimson text-xs"></i> +41 77 956 38 70
-        </a>
-      </div>
+    </div>
+
+    <div id="mobileMenu"  class="hidden">
+        <a href="index.html">Atelier</a>
+        <a href="barber.html">Barber Studio</a>
+        <a href="workshops.html" aria-current="page">Workshops</a>
+        <a href="mentoring.html">Mentoring</a>
+        <a href="katalog.html">Katalog</a>
+        <a href="termin.html">Termin buchen</a>
+        <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Atelier%2C%20ich%20habe%20eine%20Anfrage..." target="_blank" rel="noopener">WhatsApp schreiben</a>
     </div>
   </header>
 
-  <!-- MAIN NAVIGATION -->
-  <nav id="mainNav" class="sticky top-0 z-40 bg-atelier-black/95 backdrop-blur-xl border-b border-black/10 transition-all">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-20">
-        
-        <!-- Brand Identity Logo -->
-        <a href="index.html" class="flex items-center gap-4 group cursor-pointer">
-          <div class="w-12 h-12 rounded-full border border-atelier-borderGold overflow-hidden bg-white p-0.5 group-hover:border-atelier-gold transition-colors">
-            <img src="https://res.cloudinary.com/dnrvauviq/image/upload/v1792857060/WhatsApp_Image_2026-10-24_at_16.20.46_rfdtwx.jpg" onerror="this.onerror=null; this.src='jeshua_logo.jpg'" alt="Jeshúa Atelier Logo" class="w-full h-full rounded-full object-cover">
-          </div>
-          <div class="flex flex-col">
-            <span class="font-cinzel text-xl sm:text-2xl font-bold tracking-widest text-atelier-ink group-hover:text-atelier-gold transition-colors">JESHÚA</span>
-            <span class="text-[9px] uppercase tracking-[0.24em] text-atelier-goldDeep font-medium">Studio & Atelier</span>
-          </div>
-        </a>
-
-        <!-- Desktop Navigation Items -->
-        <div class="hidden lg:flex items-center gap-2">
-          <a href="index.html" class="nav-item px-3.5 py-2 text-xs font-medium text-stone-700 hover:text-atelier-ink transition-colors tracking-wider uppercase">
-            Home
-          </a>
-          
-          <!-- Barber Studio -->
-          <a href="barber.html" class="nav-item px-3.5 py-2 text-xs font-semibold text-atelier-ink hover:text-atelier-crimson transition-colors tracking-wider uppercase flex items-center gap-2">
-            <span class="text-[10px] text-atelier-crimson font-mono font-bold">01</span>
-            <span>Barber Studio</span>
-            <span class="text-[9px] bg-atelier-crimson/15 text-atelier-crimson border border-atelier-crimson/30 px-1.5 py-0.5 rounded uppercase font-bold tracking-widest">Fokus</span>
-          </a>
-
-          <!-- Beauty Workshops -->
-          <a href="workshops.html" aria-current="page" class="nav-item is-active px-3.5 py-2 text-xs font-semibold text-atelier-ink hover:text-atelier-goldDeep transition-colors tracking-wider uppercase flex items-center gap-2">
-            <span class="text-[10px] text-atelier-goldDeep font-mono font-bold">02</span>
-            <span>Beauty Workshops</span>
-            <span class="text-[9px] bg-atelier-gold/15 text-atelier-goldDeep border border-atelier-gold/30 px-1.5 py-0.5 rounded uppercase font-bold tracking-widest">Fokus</span>
-          </a>
-
-          <!-- Pillar 3: Mentoring -->
-          <a href="mentoring.html" class="nav-item px-3.5 py-2 text-xs font-medium text-stone-700 hover:text-atelier-ink transition-colors tracking-wider uppercase flex items-center gap-1.5">
-            <span class="text-[10px] text-stone-500 font-mono">03</span>
-            <span>Mentoring</span>
-          </a>
-
-          <!-- Katalog Kollektion -->
-          <a href="katalog.html" class="nav-item px-3.5 py-2 text-xs font-medium text-stone-700 hover:text-atelier-ink transition-colors tracking-wider uppercase flex items-center gap-1.5">
-            <span class="text-[10px] text-stone-500 font-mono">04</span>
-            <span>Katalog Kollektion</span>
-          </a>
-        </div>
-
-        <!-- Right Quick Actions -->
-        <div class="flex items-center gap-3">
-          <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Studio%2C%20ich%20habe%20eine%20Anfrage..." target="_blank" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs font-medium border border-emerald-500/30 bg-emerald-500/10 text-emerald-700 hover:bg-emerald-500/20 transition-all">
-            <i class="fa-brands fa-whatsapp text-emerald-700"></i>
-            <span>WhatsApp</span>
-          </a>
-
-          <a href="termin.html" class="btn-atelier-gold px-4 sm:px-5 py-2 rounded-lg text-xs uppercase tracking-wider font-semibold">
-            Termin buchen
-          </a>
-
-          <!-- Mobile Toggle -->
-          <button onclick="toggleMobileMenu()" class="lg:hidden p-2 text-stone-700 hover:text-atelier-ink rounded-lg transition-colors" aria-label="Menü">
-            <i class="fa-solid fa-bars text-lg" id="menuIcon"></i>
-          </button>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- Mobile Dropdown -->
-    <div id="mobileMenu" class="hidden lg:hidden bg-atelier-lacquer border-b border-black/10 px-6 py-5 space-y-3">
-      <a href="index.html" class="block py-2 text-sm text-stone-800 hover:text-atelier-goldDeep tracking-wide">Home</a>
-      <a href="barber.html" class="flex items-center justify-between py-2 text-sm text-atelier-ink font-semibold">
-        <span class="flex items-center gap-2"><i class="fa-solid fa-scissors text-atelier-crimson text-xs"></i> Barber Studio</span>
-        
-      </a>
-      <a href="workshops.html" aria-current="page" class="mobile-nav-item is-active flex items-center justify-between py-2 text-sm text-atelier-ink font-semibold">
-        <span class="flex items-center gap-2"><i class="fa-solid fa-wand-magic-sparkles text-atelier-goldDeep text-xs"></i> Beauty Workshops</span>
-        
-      </a>
-      <a href="mentoring.html" class="block py-2 text-sm text-stone-800 hover:text-atelier-ink">Mentoring & Transformation</a>
-      <a href="katalog.html" class="block py-2 text-sm text-stone-800 hover:text-atelier-ink">Katalog Kollektion (38 Produkte)</a>
-      
-      <div class="pt-4 border-t border-black/10 space-y-2">
-        <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Studio..." target="_blank" class="flex items-center justify-center gap-2 w-full py-2.5 rounded-lg bg-emerald-600/20 border border-emerald-500/40 text-emerald-700 text-xs font-semibold">
-          <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp Anfrage
-        </a>
-        <a href="termin.html" class="block btn-atelier-gold text-center py-2.5 rounded-lg text-xs uppercase font-bold tracking-wider">
-          Termin buchen
-        </a>
-      </div>
-    </div>
-  </nav>
-
   <!-- HAUPTINHALT -->
-  <main class="flex-grow">
+    <main class="flex-grow">
 
-    <section class="py-20 px-6 border-b border-black/10">
-      <div class="max-w-6xl mx-auto">
-        
-        <a href="index.html" class="text-xs uppercase font-mono tracking-wider text-stone-600 hover:text-atelier-ink transition-colors mb-8 inline-flex items-center gap-2">
-          ← Zurück zur Übersicht
-        </a>
-
-        <div class="grid lg:grid-cols-12 gap-12 items-center mb-20">
-          <div class="lg:col-span-7 space-y-6">
-            <span class="text-xs font-mono uppercase tracking-[0.25em] text-atelier-goldDeep font-semibold block">
-              [02] Beauty Workshops · Mit Fachleuten & Influencern
-            </span>
-            <h1 class="font-serif text-4xl sm:text-6xl text-atelier-ink font-normal leading-[1.05]">
-              Hautpflege, Make-up & <br><span class="italic text-atelier-goldDeep">Selbstfürsorge.</span>
-            </h1>
-            <p class="text-stone-700 text-base lead-text font-light leading-relaxed">
-              Workshops für fundiertes Wissen, moderne Techniken und echte Wohlfühlmomente. In Kooperation mit ausgewählten Fachleuten und renommierten Beauty-Influencern in intimen Kleingruppen.
+    <section class="section">
+      <div class="wrap">
+        <div class="grid gap-10 lg:gap-16 lg:grid-cols-12 items-end">
+          <div class="lg:col-span-7">
+            <h1 class="display-1" data-rise style="font-size:clamp(40px,6.4vw,104px)">Hautpflege,<br>Make-up, Wissen.</h1>
+            <p data-rise class="lede" style="margin-top:28px; --rise-delay:80ms">
+              Vier Masterclasses in kleinen Gruppen, mit Fachleuten und Beauty-Influencern.
+              Du gehst mit einer Routine nach Hause, die du wirklich anwendest.
             </p>
-            <div class="flex flex-wrap gap-4 pt-2">
-              <a href="#workshops-schedule" class="btn-atelier-gold px-6 py-3 rounded-lg text-xs uppercase tracking-wider font-semibold">Masterclasses ansehen</a>
-              <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Studio%2C%20ich%20interessiere%20mich%20f%C3%BCr%20einen%20Beauty%20Workshop..." target="_blank" class="btn-atelier-whatsapp px-6 py-3 rounded-lg text-xs uppercase tracking-wider font-semibold flex items-center gap-2">
-                <i class="fa-brands fa-whatsapp"></i> Platz per WhatsApp anfragen
-              </a>
+            <div style="margin-top:34px; display:flex; flex-wrap:wrap; align-items:center; gap:26px" data-rise>
+              <a href="#workshops" class="btn btn-gold">Workshops ansehen</a>
+              <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Atelier%2C%20ich%20m%C3%B6chte%20einen%20Workshop-Platz%20anfragen..." target="_blank" rel="noopener" class="btn-quiet">Platz anfragen</a>
             </div>
           </div>
-
-          <div class="lg:col-span-5">
-            <div class="rounded-2xl overflow-hidden border border-black/10 elevation-2">
-              <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80" alt="Workshops Atelier" class="w-full h-80 object-cover">
+          <div class="lg:col-span-5 hero-media" data-rise style="--rise-delay:120ms">
+            <div class="media-portrait">
+              <img src="https://pimg.eur.marykaycdn.com/HeroZoom/10006/J2012935-UNL-GB-135-Skinvigorate-Duo-Facial-Device-Soldier-Front-WT.jpg" onerror="this.onerror=null; this.src='jeshua_products/skinvigorate_duo.png'" alt="Skinvigorate Duo Gesichtsgerät, Material der Skin-Glow-Masterclass" loading="eager" style="object-fit:contain;background:#F5F3EF;padding:24px">
             </div>
           </div>
         </div>
-
-        <!-- Workshops Detailed Grid -->
-        <div id="workshops-schedule" class="space-y-6 mb-20">
-          <h2 class="font-serif text-2xl sm:text-3xl text-atelier-ink font-normal border-b border-black/10 pb-4">
-            Die 4 Signature Atelier-Workshops
-          </h2>
-
-          <div class="grid md:grid-cols-2 gap-8">
-            
-            <!-- 1. Skin Glow Masterclass -->
-            <div class="p-8 rounded-2xl border border-black/10 bg-atelier-surface gallery-card flex flex-col justify-between">
-              <div class="space-y-4">
-                <div class="flex items-center justify-between text-xs font-mono">
-                  <span class="text-atelier-goldDeep font-bold">Hautpflege & Device</span>
-                  <span class="text-stone-500">2.5 Std. · Kleingruppe</span>
-                </div>
-                <h3 class="font-serif text-2xl text-atelier-ink">Skin Glow & Barrier Care Masterclass</h3>
-                <p class="text-stone-600 text-xs font-light leading-relaxed">
-                  Professionelle Hautanalyse, Erstellung einer typgerechten Pflegeroutine und Einführung in das innovative <strong class="text-atelier-ink">Skinvigorate® Duo Device</strong> mit Retinol- und Ceramid-Schulung.
-                </p>
-                <ul class="text-[11px] text-stone-600 space-y-1.5 pt-2 border-t border-black/5">
-                  <li>✓ Individuelle Hautanalyse & Wirkstoff-Beratung</li>
-                  <li>✓ Testung aller Mary Kay Clinical Solutions Seren</li>
-                  <li>✓ Goodie-Bag & Getränke inklusive</li>
-                </ul>
-              </div>
-              <div class="pt-6 mt-6 border-t border-black/10 flex items-center justify-between">
-                <span class="text-lg font-mono font-semibold text-atelier-ink">CHF 120 <span class="text-xs text-stone-600 font-normal">/ Person</span></span>
-                <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Studio%2C%20ich%20m%C3%B6chte%20mich%20f%C3%BCr%20die%20Skin%20Glow%20Masterclass%20anmelden..." target="_blank" class="btn-atelier-gold px-4 py-2 rounded-lg text-xs font-semibold">Anfragen</a>
-              </div>
-            </div>
-
-            <!-- 2. Makeup Artistry mit Influencern -->
-            <div class="p-8 rounded-2xl border border-black/10 bg-atelier-surface gallery-card flex flex-col justify-between">
-              <div class="space-y-4">
-                <div class="flex items-center justify-between text-xs font-mono">
-                  <span class="text-atelier-crimson font-bold">Make-up Artistry</span>
-                  <span class="text-stone-500">3 Std. · Mit Influencern</span>
-                </div>
-                <h3 class="font-serif text-2xl text-atelier-ink">Make-up Artistry & Selbstfürsorge</h3>
-                <p class="text-stone-600 text-xs font-light leading-relaxed">
-                  Gemeinsam mit Gast-Stylisten und Influencern: Vom mühelos frischen 10-Minuten Natural Glow bis zum Red Carpet Abendlook. Fokus auf Teint-Perfektion und Wimpern-Fächerung.
-                </p>
-                <ul class="text-[11px] text-stone-600 space-y-1.5 pt-2 border-t border-black/5">
-                  <li>✓ Pinsel- & Verblendetechniken für den Alltag</li>
-                  <li>✓ Farbabstimmung für deinen Hautunterton</li>
-                  <li>✓ Prosecco, Mocktails & Fingerfood</li>
-                </ul>
-              </div>
-              <div class="pt-6 mt-6 border-t border-black/10 flex items-center justify-between">
-                <span class="text-lg font-mono font-semibold text-atelier-ink">CHF 145 <span class="text-xs text-stone-600 font-normal">/ Person</span></span>
-                <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Studio%2C%20ich%20m%C3%B6chte%20mich%20f%C3%BCr%20den%20Make-up%20Artistry%20Workshop%20anmelden..." target="_blank" class="btn-atelier-crimson px-4 py-2 rounded-lg text-xs font-semibold">Anfragen</a>
-              </div>
-            </div>
-
-            <!-- 3. Couples & Duo Experience -->
-            <div class="p-8 rounded-2xl border border-black/10 bg-atelier-surface gallery-card flex flex-col justify-between">
-              <div class="space-y-4">
-                <div class="flex items-center justify-between text-xs font-mono">
-                  <span class="text-rose-400 font-bold">Für Paare & Duos</span>
-                  <span class="text-stone-500">2.5 Std. · Exklusiv</span>
-                </div>
-                <h3 class="font-serif text-2xl text-atelier-ink">Couples & Duo Self-Care Experience</h3>
-                <p class="text-stone-600 text-xs font-light leading-relaxed">
-                  Für Paare oder Zweierkonstellationen (Freund:innen, Partner:innen): Gemeinsames Verwöhnritual mit Gesichtsbehandlung, Lippen- & Handpflege und privater Lounge-Zeit.
-                </p>
-                <ul class="text-[11px] text-stone-600 space-y-1.5 pt-2 border-t border-black/5">
-                  <li>✓ Gemeinsame Pflegeroutine für Sie & Ihn</li>
-                  <li>✓ Satin Lips® & Satin Hands® Spa-Rituale</li>
-                  <li>✓ Champagner & Signature Tea</li>
-                </ul>
-              </div>
-              <div class="pt-6 mt-6 border-t border-black/10 flex items-center justify-between">
-                <span class="text-lg font-mono font-semibold text-atelier-ink">CHF 220 <span class="text-xs text-stone-600 font-normal">/ Paar</span></span>
-                <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Studio%2C%20wir%20m%C3%B6chten%20uns%20als%20Paar%20f%C3%BCr%20die%20Couples%20Experience%20anmelden..." target="_blank" class="btn-atelier-whatsapp px-4 py-2 rounded-lg text-xs font-semibold">Als Paar buchen</a>
-              </div>
-            </div>
-
-            <!-- 4. Men's Grooming Masterclass -->
-            <div class="p-8 rounded-2xl border border-black/10 bg-atelier-surface gallery-card flex flex-col justify-between">
-              <div class="space-y-4">
-                <div class="flex items-center justify-between text-xs font-mono">
-                  <span class="text-stone-700 font-bold">Herrenpflege & Bart</span>
-                  <span class="text-stone-500">2 Std. · Praxis</span>
-                </div>
-                <h3 class="font-serif text-2xl text-atelier-ink">Men's Grooming & Beard Masterclass</h3>
-                <p class="text-stone-600 text-xs font-light leading-relaxed">
-                  Vom Meisterbarber geleitet: Bartpflege zu Hause, Rasurtechnik ohne Rasurbrand, Klingenhygiene und die optimale Anwendung von Feuchtigkeit & Bartöl.
-                </p>
-                <ul class="text-[11px] text-stone-600 space-y-1.5 pt-2 border-t border-black/5">
-                  <li>✓ Klingen- & Pflegekunde für den Alltag</li>
-                  <li>✓ MK Men® Produktproben inklusive</li>
-                  <li>✓ Espresso & Craft Beer</li>
-                </ul>
-              </div>
-              <div class="pt-6 mt-6 border-t border-black/10 flex items-center justify-between">
-                <span class="text-lg font-mono font-semibold text-atelier-ink">CHF 110 <span class="text-xs text-stone-600 font-normal">/ Person</span></span>
-                <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Studio%2C%20ich%20interessiere%20mich%20f%C3%BCr%20den%20Men's%20Grooming%20Workshop..." target="_blank" class="btn-atelier-outline px-4 py-2 rounded-lg text-xs font-semibold">Anfragen</a>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
       </div>
     </section>
+
+    <section class="section field" id="workshops">
+      <div class="wrap">
+        <h2 data-rise class="display-2" style="max-width:26ch">Die vier Atelier-Workshops</h2>
+
+        <div class="grid gap-12 lg:gap-16" style="margin-top:56px">
+
+          <article class="grid gap-8 lg:grid-cols-12 items-start">
+            <div class="lg:col-span-5">
+              <div class="media-wide"><img src="https://pimg.eur.marykaycdn.com/HeroZoom/10006/J2012935-UNL-GB-135-Skinvigorate-Duo-Facial-Device-Soldier-Front-WT.jpg" onerror="this.onerror=null; this.src='jeshua_products/skinvigorate_duo.png'" alt="Skinvigorate Duo Device mit Aufsätzen" loading="lazy" style="object-fit:contain;background:#fff;padding:20px"></div>
+            </div>
+            <div class="lg:col-span-7">
+              <h3 data-rise class="display-3">Skin Glow &amp; Barrier Care</h3>
+              <p class="body" style="margin-top:12px">
+                Professionelle Hautanalyse, eine typgerechte Pflegeroutine und die Einführung in das
+                Skinvigorate® Duo Device, mit Retinol- und Ceramid-Schulung.
+              </p>
+              <ul class="plain-list" style="margin-top:14px">
+                <li>Individuelle Hautanalyse und Wirkstoffberatung</li>
+                <li>Testung aller Clinical Solutions Seren</li>
+                <li>Goodie-Bag und Getränke inklusive</li>
+              </ul>
+              <div class="price-row" style="margin-top:20px">
+                <p class="small">2.5 Stunden · Kleingruppe</p>
+                <p class="price">CHF 120 <span class="small">/ Person</span></p>
+              </div>
+              <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Atelier%2C%20ich%20m%C3%B6chte%20die%20Skin%20Glow%20Masterclass%20buchen..." target="_blank" rel="noopener" class="btn btn-gold" style="margin-top:18px">Platz anfragen</a>
+            </div>
+          </article>
+
+          <article class="grid gap-8 lg:grid-cols-12 items-start">
+            <div class="lg:col-span-7 lg:order-2">
+              <h3 data-rise class="display-3">Make-up Artistry &amp; Selbstfürsorge</h3>
+              <p class="body" style="margin-top:12px">
+                Mit Gast-Stylisten und Influencern: vom frischen Zehn-Minuten-Look bis zum Abendauftritt.
+                Schwerpunkt sind Teint, Kontur und aufgefächerte Wimpern.
+              </p>
+              <ul class="plain-list" style="margin-top:14px">
+                <li>Pinsel- und Verblendetechniken für den Alltag</li>
+                <li>Farbabstimmung auf deinen Hautunterton</li>
+                <li>Prosecco, Mocktails und Fingerfood</li>
+              </ul>
+              <div class="price-row" style="margin-top:20px">
+                <p class="small">3 Stunden · mit Influencern</p>
+                <p class="price">CHF 145 <span class="small">/ Person</span></p>
+              </div>
+              <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Atelier%2C%20ich%20m%C3%B6chte%20die%20Make-up%20Masterclass%20buchen..." target="_blank" rel="noopener" class="btn btn-gold" style="margin-top:18px">Platz anfragen</a>
+            </div>
+            <div class="lg:col-span-5 lg:order-1">
+              <div class="media-wide"><img src="https://www.marykay.com/dw/image/v2/BKGS_PRD/on/demandware.static/-/Sites-us-master-catalog/default/dw5219a550/hi-res/10005/J2012933-UNL-GB-020-LL-Fanorama-Define-Lift-Mascara-Soldier-2-HiRes.jpg" onerror="this.onerror=null; this.src='jeshua_products/lash_fanorama_mascara.png'" alt="Lash Fanorama Mascara aus dem Make-up Workshop" loading="lazy" style="object-fit:contain;background:#fff;padding:20px"></div>
+            </div>
+          </article>
+
+          <article class="grid gap-8 lg:grid-cols-12 items-start">
+            <div class="lg:col-span-5">
+              <div class="media-wide"><img src="https://www.marykay.com/dw/image/v2/BKGS_PRD/on/demandware.static/-/Sites-us-master-catalog/default/dw3afdad04/hi-res/10005/J2010552-10098324-WHITE-TEACITRUS-SATIN-LIPS-SET-HiRes.jpg" onerror="this.onerror=null; this.src='jeshua_products/satin_lips_set.png'" alt="Satin Lips Set für das Duo-Ritual" loading="lazy" style="object-fit:contain;background:#fff;padding:20px"></div>
+            </div>
+            <div class="lg:col-span-7">
+              <h3 data-rise class="display-3">Couples &amp; Duo Self-Care</h3>
+              <p class="body" style="margin-top:12px">
+                Für Paare, Freundinnen oder Freunde: ein gemeinsames Verwöhnritual mit Gesichtspflege,
+                Lippen- und Handpflege und Zeit in der Lounge.
+              </p>
+              <ul class="plain-list" style="margin-top:14px">
+                <li>Gemeinsame Pflegeroutine für beide</li>
+                <li>Satin Lips® und Satin Hands® Rituale</li>
+                <li>Champagner und Signature Tea</li>
+              </ul>
+              <div class="price-row" style="margin-top:20px">
+                <p class="small">2.5 Stunden · exklusiv</p>
+                <p class="price">CHF 220 <span class="small">/ Paar</span></p>
+              </div>
+              <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Atelier%2C%20wir%20m%C3%B6chten%20die%20Couples%20Experience%20buchen..." target="_blank" rel="noopener" class="btn btn-gold" style="margin-top:18px">Als Paar buchen</a>
+            </div>
+          </article>
+
+          <article class="grid gap-8 lg:grid-cols-12 items-start">
+            <div class="lg:col-span-7 lg:order-2">
+              <h3 data-rise class="display-3">Men's Grooming &amp; Beard</h3>
+              <p class="body" style="margin-top:12px">
+                Vom Meisterbarber geleitet: Bartpflege zu Hause, Rasurtechnik ohne Rasurbrand,
+                Klingenhygiene und der richtige Umgang mit Feuchtigkeit und Bartöl.
+              </p>
+              <ul class="plain-list" style="margin-top:14px">
+                <li>Klingen- und Pflegekunde für den Alltag</li>
+                <li>MK Men® Produktproben inklusive</li>
+                <li>Espresso und Craft Beer</li>
+              </ul>
+              <div class="price-row" style="margin-top:20px">
+                <p class="small">2 Stunden · Praxis am Stuhl</p>
+                <p class="price">CHF 110 <span class="small">/ Person</span></p>
+              </div>
+              <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Atelier%2C%20ich%20m%C3%B6chte%20die%20Men%27s%20Grooming%20Masterclass%20buchen..." target="_blank" rel="noopener" class="btn btn-gold" style="margin-top:18px">Platz anfragen</a>
+            </div>
+            <div class="lg:col-span-5 lg:order-1">
+              <div class="media-wide"><img src="https://www.marykay.com/dw/image/v2/BKGS_PRD/on/demandware.static/-/Sites-us-master-catalog/default/dwd50c8be0/hi-res/10005/mkmensregimen2.jpg" onerror="this.onerror=null; this.src='jeshua_products/mkmen_basis_set.png'" alt="MK Men Pflegeset für die Herren-Masterclass" loading="lazy" style="object-fit:contain;background:#fff;padding:20px"></div>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="body" style="margin-top:48px; max-width:64ch">
+          Alle Workshops finden in Kleingruppen statt, damit für Fragen Zeit bleibt. Private Termine
+          für Teams oder Junggesellinnen-Abschiede sind auf Anfrage möglich.
+        </p>
+      </div>
+    </section>
+
+    <section class="section field-deep">
+      <div class="wrap">
+        <div class="grid gap-10 lg:grid-cols-12 items-end">
+          <div class="lg:col-span-7">
+            <h2 data-rise class="display-2">Welcher Workshop passt?</h2>
+            <p data-rise class="lede" style="margin-top:20px">
+              Sag uns, wie viel Zeit du hast und was du lernen willst. Wir empfehlen dir den
+              passenden Termin und halten den Platz.
+            </p>
+          </div>
+          <div class="lg:col-span-5" style="display:flex; flex-wrap:wrap; gap:14px">
+            <a href="termin.html" class="btn btn-gold">Termin anfragen</a>
+            <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Atelier%2C%20ich%20interessiere%20mich%20f%C3%BCr%20einen%20Workshop..." target="_blank" rel="noopener" class="btn btn-ink">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <!-- FOOTER -->
-  <footer class="border-t border-black/10 bg-atelier-lacquer pt-16 pb-12 px-6">
-    <div class="max-w-6xl mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
-        
-        <div class="space-y-3">
-          <span class="font-cinzel text-xl font-bold tracking-widest text-atelier-ink block">JESHÚA</span>
-          <p class="text-xs text-stone-600 leading-relaxed font-light">
-            Lifestyle Studio & Atelier. Schönheit ohne Schubladen, Selbstfürsorge für alle und Wohlbefinden von innen und aussen.
-          </p>
-          <span class="text-[10px] font-mono uppercase tracking-widest text-atelier-goldDeep block">
-            Pferd (Stärke) · Schmetterling (Wandel)
-          </span>
-        </div>
-
+    <footer  class="site-footer">
+    <div  class="wrap">
+      <div  class="grid grid-cols-1 md:grid-cols-4 gap-10">
         <div>
-          <span class="text-xs font-mono uppercase tracking-wider text-stone-700 font-semibold block mb-3">Bereiche</span>
-          <ul class="space-y-2 text-xs text-stone-600">
-            <li><a href="barber.html" class="hover:text-atelier-crimson transition-colors">Barber Studio</a></li>
-            <li><a href="workshops.html" class="hover:text-atelier-goldDeep transition-colors">Beauty Workshops</a></li>
-            <li><a href="mentoring.html" class="hover:text-atelier-ink transition-colors">Ganzheitliches Mentoring</a></li>
-            <li><a href="katalog.html" class="hover:text-atelier-ink transition-colors">Katalog Kollektion (38 Produkte)</a></li>
+          <p  class="label" style="color:#B9B1A6">Atelier</p>
+          <p  class="small" style="color:#E9E4DC; margin-top:10px">Bankstrasse 36<br>8610 Uster, Schweiz</p>
+          <p  class="small" style="color:#E9E4DC; margin-top:14px"><a href="tel:+41779563870">+41 77 956 38 70</a></p>
+        </div>
+        <div>
+          <p  class="label" style="color:#B9B1A6">Bereiche</p>
+          <ul  class="plain-list" style="margin-top:8px">
+            <li><a href="barber.html">Barber Studio</a></li>
+            <li><a href="workshops.html">Beauty Workshops</a></li>
+            <li><a href="mentoring.html">Mentoring</a></li>
+            <li><a href="katalog.html">Katalog</a></li>
           </ul>
         </div>
-
         <div>
-          <span class="text-xs font-mono uppercase tracking-wider text-stone-700 font-semibold block mb-3">Atelier Uster</span>
-          <p class="text-xs text-stone-600 leading-relaxed font-light mb-2">
-            Bankstrasse 36<br>8610 Uster, Schweiz
-          </p>
-          <p class="text-xs text-stone-600 leading-relaxed font-light">
-            Telefon: +41 77 956 38 70<br>
-            WhatsApp Concierge täglich
-          </p>
+          <p  class="label" style="color:#B9B1A6">Termine</p>
+          <p  class="small" style="color:#E9E4DC; margin-top:10px">Montag bis Samstag<br>nach Vereinbarung<br>für Männer, Frauen und Paare</p>
         </div>
-
         <div>
-          <span class="text-xs font-mono uppercase tracking-wider text-stone-700 font-semibold block mb-3">Kontakt & Anfragen</span>
-          <p class="text-xs text-stone-600 leading-relaxed font-light mb-3">
-            Offen für Männer, Frauen und Paare.
-          </p>
-          <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Studio%2C%20ich%20m%C3%B6chte%20gerne..." target="_blank" class="btn-atelier-whatsapp w-full py-2.5 rounded-lg text-xs flex items-center justify-center gap-2">
-            <i class="fa-brands fa-whatsapp"></i> WhatsApp Dialog
-          </a>
+          <p  class="label" style="color:#B9B1A6">Kontakt</p>
+          <p  class="small" style="color:#E9E4DC; margin-top:10px"><a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Atelier%2C%20ich%20habe%20eine%20Anfrage..." target="_blank" rel="noopener">WhatsApp</a></p>
+          <p  class="small" style="color:#E9E4DC"><a href="mailto:xaviorlando16@gmail.com">xaviorlando16@gmail.com</a></p>
+          <p  class="small" style="color:#E9E4DC; margin-top:14px"><a href="termin.html">Termin anfragen</a></p>
         </div>
-
       </div>
 
-      <div class="pt-8 border-t border-black/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500 font-light">
-        <p>© 2026 Jeshúa Lifestyle Studio & Atelier. Alle Rechte vorbehalten.</p>
-        <p>Webseite erstellt von <a href="https://wildwave.ch/" target="_blank" rel="noopener noreferrer" class="hover:text-atelier-goldDeep transition-colors">Wildwave Marketing</a></p>
-        <p>Uster · Zürich · Schweiz</p>
+      <p  class="foot-name">JESHÚA</p>
+
+      <div  class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3" style="margin-top:24px">
+        <p  class="small" style="color:#9E968C">© 2026 Jeshúa Lifestyle Studio &amp; Atelier</p>
+        <p  class="small" style="color:#9E968C">Uster · Zürich · Schweiz</p>
+        <p  class="small" style="color:#9E968C">Webseite von <a href="https://wildwave.ch/" target="_blank" rel="noopener noreferrer">Wildwave Marketing</a></p>
       </div>
     </div>
   </footer>
 
   <!-- FLOATING WHATSAPP BUTTON (Discreet, zero glow halo) -->
-  <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Studio%2C%20ich%20habe%20eine%20Anfrage..." target="_blank" class="fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full bg-[#075E54] hover:bg-[#054C44] text-white flex items-center justify-center text-2xl elevation-2 transition-transform duration-200 hover:scale-105" title="WhatsApp Chat">
-    <i class="fa-brands fa-whatsapp"></i>
-  </a>
+  <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Atelier%2C%20ich%20habe%20eine%20Anfrage..." target="_blank" rel="noopener"  class="btn btn-whatsapp" style="position:fixed;bottom:20px;right:20px;z-index:50;width:52px;height:52px;padding:0;font-size:20px" aria-label="WhatsApp schreiben"><i  class="fa-brands fa-whatsapp"></i></a>
 
   <!-- JAVASCRIPT APP LOGIC -->
   <script src="assets/app.js"></script>

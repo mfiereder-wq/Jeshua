@@ -11,9 +11,9 @@ const products = [{"id": "skinvigorate_duo", "title": "Skinvigorate® Duo Facial
         }
       });
       document.querySelectorAll('.abo-filter-btn').forEach(b => {
-        b.className = 'abo-filter-btn px-4 py-2 rounded-lg text-xs tracking-wider uppercase font-medium btn-atelier-outline text-stone-700 transition-all';
+        b.className = 'abo-filter-btn btn btn-outline';
       });
-      btn.className = 'abo-filter-btn px-4 py-2 rounded-lg text-xs tracking-wider uppercase font-semibold bg-atelier-gold text-atelier-ink transition-all';
+      btn.className = 'abo-filter-btn btn btn-gold';
     }
 
 
@@ -34,26 +34,23 @@ const products = [{"id": "skinvigorate_duo", "title": "Skinvigorate® Duo Facial
         const waLink = "https://wa.me/41779563870?text=" + waMsg;
 
         return `
-          <div class="rounded-xl border border-black/10 bg-atelier-surface p-4 flex flex-col justify-between gallery-card elevation-1">
+          <div class="card flex flex-col justify-between">
             <div>
-              <div class="aspect-square overflow-hidden mb-3 relative p-2 flex items-center justify-center cursor-pointer" onclick="openProductModal('${p.id}')">
-                <img src="${p.image}" onerror="this.onerror=null; if(p.localImage) this.src=p.localImage;" alt="${p.title}" class="max-h-full max-w-full object-contain">
-                <span class="absolute top-2 left-2 text-[9px] font-mono font-semibold px-2 py-0.5 rounded uppercase tracking-wider bg-black/80 border border-white/10 text-slate-200">
-                  ${p.badge}
-                </span>
+              <div class="media-square" style="background:#fff" onclick="openProductModal('${p.id}')">
+                <img src="${p.image}" onerror="this.onerror=null; if(p.localImage) this.src=p.localImage;" alt="${p.title}" style="object-fit:contain;padding:10px">
               </div>
-              <span class="text-[10px] font-mono text-atelier-goldDeep uppercase tracking-wider block mb-0.5">${p.catLabel}</span>
-              <h2 class="font-serif text-base text-atelier-ink font-medium leading-snug mb-1 cursor-pointer hover:text-atelier-goldDeep transition-colors" onclick="openProductModal('${p.id}')">${p.title}</h2>
-              <p class="text-stone-600 text-[11px] font-normal mb-1.5">${p.details}</p>
-              <p class="text-stone-700 text-xs font-light leading-relaxed line-clamp-3 mb-4">${p.desc}</p>
+              <p class="label" style="margin-top:14px">${p.catLabel}</p>
+              <h2 class="display-3" style="font-size:22px;margin-top:4px;cursor:pointer" onclick="openProductModal('${p.id}')">${p.title}</h2>
+              <p class="small" style="margin-top:6px">${p.details}</p>
+              <p class="small" style="margin-top:8px;color:#78706A">${p.desc}</p>
             </div>
 
-            <div class="pt-3 border-t border-black/5 flex flex-col gap-1.5">
-              <a href="${waLink}" target="_blank" class="btn-atelier-whatsapp w-full py-2 rounded-lg text-xs font-medium flex items-center justify-center gap-1.5">
-                <i class="fa-brands fa-whatsapp text-sm"></i> \u00dcber WhatsApp anfragen
+            <div style="margin-top:18px">
+              <a href="${waLink}" target="_blank" class="btn btn-whatsapp" style="width:100%">
+                <i class="fa-brands fa-whatsapp"></i> Anfragen
               </a>
-              <button onclick="openProductModal('${p.id}')" class="w-full text-center text-[11px] text-stone-600 hover:text-atelier-ink py-1 transition-colors">
-                Details anzeigen
+              <button onclick="openProductModal('${p.id}')" class="btn-quiet" style="width:100%;margin-top:12px">
+                Details ansehen
               </button>
             </div>
           </div>
@@ -65,9 +62,9 @@ const products = [{"id": "skinvigorate_duo", "title": "Skinvigorate® Duo Facial
       currentCategory = cat;
       document.querySelectorAll('.cat-pill').forEach(btn => {
         if (btn.getAttribute('data-cat') === cat) {
-          btn.className = 'cat-pill active px-3.5 py-1.5 rounded-lg border border-atelier-gold bg-atelier-gold text-atelier-ink font-semibold transition-all';
+          btn.className = 'cat-pill btn btn-gold';
         } else {
-          btn.className = 'cat-pill px-3.5 py-1.5 rounded-lg border border-black/10 bg-atelier-surface text-stone-700 hover:text-atelier-ink transition-all';
+          btn.className = 'cat-pill btn btn-outline';
         }
       });
       filterProducts();
@@ -159,13 +156,12 @@ const products = [{"id": "skinvigorate_duo", "title": "Skinvigorate® Duo Facial
     function toggleMobileMenu() {
       mobileMenuOpen = !mobileMenuOpen;
       const menu = document.getElementById('mobileMenu');
-      const icon = document.getElementById('menuIcon');
-      if (mobileMenuOpen) {
-        menu.classList.remove('hidden');
-        if (icon) icon.className = 'fa-solid fa-xmark text-lg';
-      } else {
-        menu.classList.add('hidden');
-        if (icon) icon.className = 'fa-solid fa-bars text-lg';
+      const toggle = document.getElementById('menuToggle');
+      if (!menu) return;
+      menu.classList.toggle('hidden', !mobileMenuOpen);
+      if (toggle) {
+        toggle.setAttribute('aria-expanded', mobileMenuOpen ? 'true' : 'false');
+        toggle.textContent = mobileMenuOpen ? 'Schliessen' : 'Menü';
       }
     }
 
@@ -223,6 +219,34 @@ const products = [{"id": "skinvigorate_duo", "title": "Skinvigorate® Duo Facial
         }, 3500);
       }
     }
+
+    // Kopfzeile: ruhiger Schatten, sobald gescrollt wird
+    (function initNavScrollState() {
+      const nav = document.getElementById('mainNav');
+      if (!nav) return;
+      const sync = () => nav.classList.toggle('is-scrolled', window.scrollY > 8);
+      sync();
+      window.addEventListener('scroll', sync, { passive: true });
+    })();
+
+    // Inhalte steigen gestaffelt ein, sobald ihre Sektion sichtbar wird
+    (function initRise() {
+      const items = document.querySelectorAll('[data-rise]');
+      if (!items.length) return;
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce || !('IntersectionObserver' in window)) {
+        items.forEach(el => el.classList.add('is-in'));
+        return;
+      }
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('is-in');
+          io.unobserve(entry.target);
+        });
+      }, { rootMargin: '0px 0px -12% 0px', threshold: 0.08 });
+      items.forEach(el => io.observe(el));
+    })();
 
     window.addEventListener('DOMContentLoaded', () => {
       renderProducts(products);

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de" class="scroll-smooth">
+<html lang="de">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,36 +18,44 @@
   <!-- Font Awesome 6 Pro Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <!-- Google Fonts: Cormorant Garamond, Cinzel, Outfit -->
+  <!-- Schriften: Cormorant Garamond (Display) und Jost (Text) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
+            stone: {
+              300: '#E2DED7',
+              400: '#C9C2B8',
+              500: '#9A9288',
+              600: '#78706A',
+              700: '#5A5248',
+              800: '#3A342D',
+              900: '#171310',
+            },
             atelier: {
               black: '#FFFFFF',
-              lacquer: '#F7F3E8',
-              surface: '#FFFFFF',
-              card: '#FCFAF2',
+              lacquer: '#F5F3EF',
+              surface: '#F5F3EF',
+              card: '#F5F3EF',
               gold: '#C9A227',
-              goldLight: '#A4801F',
-              goldDeep: '#8A6D14',
-              ink: '#221C13',
-              inkSoft: '#5C5442',
-              crimson: '#B00D28',
-              crimsonLight: '#E52E4D',
-              border: 'rgba(34, 28, 19, 0.12)',
-              borderGold: 'rgba(201, 162, 39, 0.32)',
+              goldLight: '#7A5F14',
+              goldDeep: '#7A5F14',
+              ink: '#171310',
+              inkSoft: '#5A5248',
+              crimson: '#8A5A2B',
+              crimsonLight: '#A97339',
+              border: 'rgba(23, 19, 16, 0.10)',
+              borderGold: 'rgba(201, 162, 39, 0.38)',
             }
           },
           fontFamily: {
-            sans: ['Outfit', 'sans-serif'],
+            sans: ['Jost', 'sans-serif'],
             serif: ['Cormorant Garamond', 'serif'],
-            cinzel: ['Cinzel', 'serif'],
           }
         }
       }
@@ -57,910 +65,400 @@
   <!-- Gemeinsame Atelier-Styles -->
   <link rel="stylesheet" href="assets/styles.css">
 </head>
-<body class="bg-atelier-black text-stone-900 min-h-screen flex flex-col selection:bg-atelier-crimson selection:text-white">
+<body  class="min-min-h-svh flex flex-col">
 
-  <!-- TOP HEADER UTILITY BAR -->
-  <header class="border-b border-black/5 bg-atelier-lacquer py-2.5 px-6 text-xs text-stone-600">
-    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
-      <div class="flex items-center gap-3">
-        <span class="text-atelier-goldDeep text-xs">✦</span>
-        <span class="text-stone-700 font-medium tracking-wide">Jeshúa Lifestyle Studio & Atelier · Bankstrasse 36, 8610 Uster</span>
-        <span class="hidden lg:inline text-stone-400">|</span>
-        <span class="hidden lg:inline text-stone-600 font-light">Schönheit ohne Schubladen · Für Männer, Frauen & Paare</span>
+    <div  class="utility">
+    <div  class="wrap">
+      <p  class="small">Bankstrasse 36, 8610 Uster · Schönheit ohne Schubladen</p>
+      <p  class="small"><a href="tel:+41779563870">+41 77 956 38 70</a> · Mo bis Sa nach Vereinbarung</p>
+    </div>
+  </div>
+
+  <header  class="site-header" id="mainNav">
+    <div  class="wrap">
+      <a href="index.html"  class="wordmark" aria-label="Jeshúa Atelier, zur Startseite">
+        <img src="https://res.cloudinary.com/dnrvauviq/image/upload/v1792857060/WhatsApp_Image_2026-10-24_at_16.20.46_rfdtwx.jpg" onerror="this.onerror=null; this.src='jeshua_logo.jpg'" alt="">
+        <span>JESHÚA</span>
+      </a>
+
+      <nav  class="nav-links" aria-label="Hauptnavigation">
+          <a href="index.html">Atelier</a>
+          <a href="barber.html" aria-current="page">Barber Studio</a>
+          <a href="workshops.html">Workshops</a>
+          <a href="mentoring.html">Mentoring</a>
+          <a href="katalog.html">Katalog</a>
+      </nav>
+
+      <div  class="nav-actions">
+        <a href="termin.html"  class="btn btn-gold">Termin buchen</a>
+        <button  class="menu-toggle" type="button" onclick="toggleMobileMenu()" aria-expanded="false" aria-controls="mobileMenu" id="menuToggle">Menü</button>
       </div>
-      <div class="flex items-center gap-5 text-stone-700">
-        <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Atelier,%20ich%20h%C3%A4tte%20eine%20Anfrage..." target="_blank" class="hover:text-emerald-400 transition-colors flex items-center gap-1.5">
-          <i class="fa-brands fa-whatsapp text-emerald-700"></i> WhatsApp Concierge
-        </a>
-        <span class="text-stone-300">·</span>
-        <a href="tel:+41779563870" class="hover:text-atelier-goldDeep transition-colors flex items-center gap-1.5">
-          <i class="fa-solid fa-phone text-atelier-crimson text-xs"></i> +41 77 956 38 70
-        </a>
-      </div>
+    </div>
+
+    <div id="mobileMenu"  class="hidden">
+        <a href="index.html">Atelier</a>
+        <a href="barber.html" aria-current="page">Barber Studio</a>
+        <a href="workshops.html">Workshops</a>
+        <a href="mentoring.html">Mentoring</a>
+        <a href="katalog.html">Katalog</a>
+        <a href="termin.html">Termin buchen</a>
+        <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Atelier%2C%20ich%20habe%20eine%20Anfrage..." target="_blank" rel="noopener">WhatsApp schreiben</a>
     </div>
   </header>
 
-  <!-- MAIN NAVIGATION -->
-  <nav id="mainNav" class="sticky top-0 z-40 bg-atelier-black/95 backdrop-blur-xl border-b border-black/10 transition-all">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-20">
-        
-        <!-- Brand Identity Logo -->
-        <a href="index.html" class="flex items-center gap-4 group cursor-pointer">
-          <div class="w-12 h-12 rounded-full border border-atelier-borderGold overflow-hidden bg-white p-0.5 group-hover:border-atelier-gold transition-colors">
-            <img src="https://res.cloudinary.com/dnrvauviq/image/upload/v1792857060/WhatsApp_Image_2026-10-24_at_16.20.46_rfdtwx.jpg" onerror="this.onerror=null; this.src='jeshua_logo.jpg'" alt="Jeshúa Atelier Logo" class="w-full h-full rounded-full object-cover">
-          </div>
-          <div class="flex flex-col">
-            <span class="font-cinzel text-xl sm:text-2xl font-bold tracking-widest text-atelier-ink group-hover:text-atelier-gold transition-colors">JESHÚA</span>
-            <span class="text-[9px] uppercase tracking-[0.24em] text-atelier-goldDeep font-medium">Studio & Atelier</span>
-          </div>
-        </a>
-
-        <!-- Desktop Navigation Items -->
-        <div class="hidden lg:flex items-center gap-2">
-          <a href="index.html" class="nav-item px-3.5 py-2 text-xs font-medium text-stone-700 hover:text-atelier-ink transition-colors tracking-wider uppercase">
-            Home
-          </a>
-          
-          <!-- Barber Studio -->
-          <a href="barber.html" aria-current="page" class="nav-item is-active px-3.5 py-2 text-xs font-semibold text-atelier-ink hover:text-atelier-crimson transition-colors tracking-wider uppercase flex items-center gap-2">
-            <span class="text-[10px] text-atelier-crimson font-mono font-bold">01</span>
-            <span>Barber Studio</span>
-            <span class="text-[9px] bg-atelier-crimson/15 text-atelier-crimson border border-atelier-crimson/30 px-1.5 py-0.5 rounded uppercase font-bold tracking-widest">Fokus</span>
-          </a>
-
-          <!-- Beauty Workshops -->
-          <a href="workshops.html" class="nav-item px-3.5 py-2 text-xs font-semibold text-atelier-ink hover:text-atelier-goldDeep transition-colors tracking-wider uppercase flex items-center gap-2">
-            <span class="text-[10px] text-atelier-goldDeep font-mono font-bold">02</span>
-            <span>Beauty Workshops</span>
-            <span class="text-[9px] bg-atelier-gold/15 text-atelier-goldDeep border border-atelier-gold/30 px-1.5 py-0.5 rounded uppercase font-bold tracking-widest">Fokus</span>
-          </a>
-
-          <!-- Pillar 3: Mentoring -->
-          <a href="mentoring.html" class="nav-item px-3.5 py-2 text-xs font-medium text-stone-700 hover:text-atelier-ink transition-colors tracking-wider uppercase flex items-center gap-1.5">
-            <span class="text-[10px] text-stone-500 font-mono">03</span>
-            <span>Mentoring</span>
-          </a>
-
-          <!-- Katalog Kollektion -->
-          <a href="katalog.html" class="nav-item px-3.5 py-2 text-xs font-medium text-stone-700 hover:text-atelier-ink transition-colors tracking-wider uppercase flex items-center gap-1.5">
-            <span class="text-[10px] text-stone-500 font-mono">04</span>
-            <span>Katalog Kollektion</span>
-          </a>
-        </div>
-
-        <!-- Right Quick Actions -->
-        <div class="flex items-center gap-3">
-          <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Studio%2C%20ich%20habe%20eine%20Anfrage..." target="_blank" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs font-medium border border-emerald-500/30 bg-emerald-500/10 text-emerald-700 hover:bg-emerald-500/20 transition-all">
-            <i class="fa-brands fa-whatsapp text-emerald-700"></i>
-            <span>WhatsApp</span>
-          </a>
-
-          <a href="termin.html" class="btn-atelier-gold px-4 sm:px-5 py-2 rounded-lg text-xs uppercase tracking-wider font-semibold">
-            Termin buchen
-          </a>
-
-          <!-- Mobile Toggle -->
-          <button onclick="toggleMobileMenu()" class="lg:hidden p-2 text-stone-700 hover:text-atelier-ink rounded-lg transition-colors" aria-label="Menü">
-            <i class="fa-solid fa-bars text-lg" id="menuIcon"></i>
-          </button>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- Mobile Dropdown -->
-    <div id="mobileMenu" class="hidden lg:hidden bg-atelier-lacquer border-b border-black/10 px-6 py-5 space-y-3">
-      <a href="index.html" class="block py-2 text-sm text-stone-800 hover:text-atelier-goldDeep tracking-wide">Home</a>
-      <a href="barber.html" aria-current="page" class="mobile-nav-item is-active flex items-center justify-between py-2 text-sm text-atelier-ink font-semibold">
-        <span class="flex items-center gap-2"><i class="fa-solid fa-scissors text-atelier-crimson text-xs"></i> Barber Studio</span>
-        
-      </a>
-      <a href="workshops.html" class="flex items-center justify-between py-2 text-sm text-atelier-ink font-semibold">
-        <span class="flex items-center gap-2"><i class="fa-solid fa-wand-magic-sparkles text-atelier-goldDeep text-xs"></i> Beauty Workshops</span>
-        
-      </a>
-      <a href="mentoring.html" class="block py-2 text-sm text-stone-800 hover:text-atelier-ink">Mentoring & Transformation</a>
-      <a href="katalog.html" class="block py-2 text-sm text-stone-800 hover:text-atelier-ink">Katalog Kollektion (38 Produkte)</a>
-      
-      <div class="pt-4 border-t border-black/10 space-y-2">
-        <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Studio..." target="_blank" class="flex items-center justify-center gap-2 w-full py-2.5 rounded-lg bg-emerald-600/20 border border-emerald-500/40 text-emerald-700 text-xs font-semibold">
-          <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp Anfrage
-        </a>
-        <a href="termin.html" class="block btn-atelier-gold text-center py-2.5 rounded-lg text-xs uppercase font-bold tracking-wider">
-          Termin buchen
-        </a>
-      </div>
-    </div>
-  </nav>
-
   <!-- HAUPTINHALT -->
-  <main class="flex-grow">
+    <main class="flex-grow">
 
-    <section class="py-20 px-6 border-b border-black/10">
-      <div class="max-w-6xl mx-auto">
-        
-        <a href="index.html" class="text-xs uppercase font-mono tracking-wider text-stone-600 hover:text-atelier-ink transition-colors mb-8 inline-flex items-center gap-2">
-          ← Zurück zur Übersicht
-        </a>
-
-        <div class="grid lg:grid-cols-12 gap-12 items-center mb-20">
-          <div class="lg:col-span-7 space-y-6">
-            <span class="text-xs font-mono uppercase tracking-[0.25em] text-atelier-crimson font-semibold block">
-              [01] Barber Studio · Barber Atelier Uster
-            </span>
-            <h1 class="font-serif text-4xl sm:text-6xl text-atelier-ink font-normal leading-[1.05]">
-              Style mit Haltung & <br><span class="italic text-atelier-crimson">Meisterhand.</span>
-            </h1>
-            <p class="text-stone-700 text-base lead-text font-light leading-relaxed">
-              Körperpflege, persönliches Erscheinungsbild und individueller Stil. Hier geht es nicht um schnelle Abfertigung, sondern um Präzision, Ruhe und das gute Gefühl, perfekt gepflegt zu sein.
+    <section class="section">
+      <div class="wrap">
+        <div class="grid gap-10 lg:gap-16 lg:grid-cols-12 items-end">
+          <div class="lg:col-span-6">
+            <h1 class="display-1" data-rise style="font-size:clamp(40px,6.4vw,104px)">Style mit<br>Meisterhand.</h1>
+            <p data-rise class="lede" style="margin-top:28px; --rise-delay:80ms">
+              Kein Schnellverfahren, sondern Präzision, Ruhe und das Gefühl, danach wirklich
+              gepflegt zu sein. Haarschnitt, Bart und Rasur am Barberstuhl in Uster.
             </p>
-            <div class="flex flex-wrap items-center gap-4 pt-2">
-              <a href="https://koalendar.com/e/termin-buchung-jeshua" target="_blank" rel="noopener noreferrer" class="btn-atelier-crimson px-6 py-3 rounded-lg text-xs uppercase tracking-wider font-semibold flex items-center gap-2">
-                <i class="fa-solid fa-calendar-check"></i> Barber Termin online buchen
-              </a>
-              <a href="#barber-flatrate" class="btn-atelier-gold px-5 py-3 rounded-lg text-xs uppercase tracking-wider font-semibold flex items-center gap-2">
-                <i class="fa-solid fa-crown text-amber-950 text-xs"></i> Monatsabos (ab CHF 62/Mt.)
-              </a>
-              <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Barber%2C%20ich%20m%C3%B6chte%20einen%20Termin%20buchen..." target="_blank" class="btn-atelier-whatsapp px-5 py-3 rounded-lg text-xs font-semibold flex items-center gap-2">
-                <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp
-              </a>
+            <div style="margin-top:34px; display:flex; flex-wrap:wrap; align-items:center; gap:26px" data-rise>
+              <a href="https://koalendar.com/e/termin-buchung-jeshua" target="_blank" rel="noopener" class="btn btn-gold">Termin online buchen</a>
+              <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Barber%2C%20ich%20m%C3%B6chte%20einen%20Termin%20anfragen..." target="_blank" rel="noopener" class="btn-quiet">WhatsApp</a>
             </div>
           </div>
-
-          <div class="lg:col-span-5">
-            <div class="rounded-2xl overflow-hidden border border-black/10 elevation-2">
-              <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1200&q=80" alt="Barber Craft" class="w-full h-80 object-cover">
+          <div class="lg:col-span-6 hero-media" data-rise style="--rise-delay:120ms">
+            <div class="media-portrait">
+              <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0008_kgpyqq.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_06.jpg'" alt="Kunde im Barberstuhl beim Hot-Towel-Ritual" loading="eager">
             </div>
           </div>
         </div>
-
-        <!-- Services List -->
-        <div id="barber-rates" class="space-y-6 mb-20">
-          <h2 class="font-serif text-2xl sm:text-3xl text-atelier-ink font-normal border-b border-black/10 pb-4">
-            Barber Einzelservices
-          </h2>
-
-          <div class="divide-y divide-white/5">
-            
-            <div class="py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-              <div>
-                <h3 class="font-serif text-xl text-atelier-ink font-normal">Classic Haircut & Styling</h3>
-                <p class="text-stone-600 text-xs font-light mt-1">Typberatung, Haarwäsche mit Kopfmassage, Scherenschnitt oder Übergang, Föhnen & Finish.</p>
-              </div>
-              <div class="flex items-center gap-6 shrink-0">
-                <span class="text-lg font-mono text-atelier-ink font-semibold">CHF 55</span>
-                <a href="https://koalendar.com/e/termin-buchung-jeshua" target="_blank" rel="noopener noreferrer" class="btn-atelier-outline px-4 py-2 rounded-lg text-xs font-semibold flex items-center gap-1.5"><i class="fa-regular fa-calendar text-[11px]"></i> Buchen</a>
-              </div>
-            </div>
-
-            <div class="py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-              <div>
-                <h3 class="font-serif text-xl text-atelier-ink font-normal">Skin Fade & Beard Sculpting</h3>
-                <p class="text-stone-600 text-xs font-light mt-1">Messerscharfer Fade Übergang, akkurate Bartkonturierung mit dem Rasiermesser & Hot Towel.</p>
-              </div>
-              <div class="flex items-center gap-6 shrink-0">
-                <span class="text-lg font-mono text-atelier-ink font-semibold">CHF 85</span>
-                <a href="https://koalendar.com/e/termin-buchung-jeshua" target="_blank" rel="noopener noreferrer" class="btn-atelier-crimson px-4 py-2 rounded-lg text-xs font-semibold flex items-center gap-1.5"><i class="fa-regular fa-calendar text-[11px]"></i> Buchen</a>
-              </div>
-            </div>
-
-            <div class="py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-              <div>
-                <h3 class="font-serif text-xl text-atelier-ink font-normal">The Royal Treatment</h3>
-                <p class="text-stone-600 text-xs font-light mt-1">Haarschnitt, Bartrasur mit Hot Towels, klärende MK Men® Gesichtsreinigung, Feuchtigkeit & Drink.</p>
-              </div>
-              <div class="flex items-center gap-6 shrink-0">
-                <span class="text-lg font-mono text-atelier-ink font-semibold">CHF 120</span>
-                <a href="https://koalendar.com/e/termin-buchung-jeshua" target="_blank" rel="noopener noreferrer" class="btn-atelier-outline px-4 py-2 rounded-lg text-xs font-semibold flex items-center gap-1.5"><i class="fa-regular fa-calendar text-[11px]"></i> Buchen</a>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-                  <!-- BARBER MONATSABOS & FLATRATES (PAYHIP INTEGRATION) -->
-        <div id="barber-flatrate" class="space-y-8 mb-24">
-          
-          <!-- Section Header & Filter Tabs -->
-          <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-black/10 pb-6">
-            <div class="space-y-2">
-              <div class="flex items-center gap-3">
-                <span class="text-xs font-mono uppercase tracking-[0.25em] text-atelier-crimson font-bold block">
-                  Mitgliedschaften &amp; Monats-Flatrates
-                </span>
-                <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-700 font-medium border border-emerald-500/20">Monatlich kündbar</span>
-              </div>
-              <h2 class="font-serif text-3xl sm:text-4xl text-atelier-ink font-normal">
-                Barber Abonnemente
-              </h2>
-              <p class="text-stone-600 text-sm max-w-2xl font-light">
-                Immer perfekt gepflegt bei voller Kostenkontrolle. Wähle deinen bevorzugten Rhythmus (2 oder 4 Besuche pro Monat) und schliesse dein Abo direkt sicher über Payhip ab.
-              </p>
-            </div>
-
-            <!-- Filter Buttons: All, 2 Besuche, 4 Besuche -->
-            <div class="flex items-center gap-2 shrink-0">
-              <button onclick="filterAbos('all', this)" class="abo-filter-btn px-4 py-2 rounded-lg text-xs tracking-wider uppercase font-semibold bg-atelier-gold text-atelier-ink transition-all">
-                Alle 8 Abos
-              </button>
-              <button onclick="filterAbos('2', this)" class="abo-filter-btn px-4 py-2 rounded-lg text-xs tracking-wider uppercase font-medium btn-atelier-outline text-stone-700 transition-all">
-                2 Besuche / Mt.
-              </button>
-              <button onclick="filterAbos('4', this)" class="abo-filter-btn px-4 py-2 rounded-lg text-xs tracking-wider uppercase font-medium btn-atelier-outline text-stone-700 transition-all">
-                4 Besuche / Mt.
-              </button>
-            </div>
-          </div>
-
-                      <!-- Grid of 8 Subscription Plans in Exact Sequence -->
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            
-            <!-- 1. Fade Abo 2 Besuche/Monat -->
-            <div class="abo-plan-card rounded-2xl border border-black/10 bg-atelier-surface elevation-1 flex flex-col justify-between overflow-hidden transition-all duration-300 hover:border-atelier-borderGold hover:-translate-y-1" data-frequency="2">
-              <div>
-                <div class="relative aspect-square w-full overflow-hidden bg-white">
-                  <img src="https://payhip.com/cdn-cgi/image/format=auto,width=500/https://pe56d.s3.amazonaws.com/o_1k41el6ncv6shq01f991fes1g3tl.jpg" onerror="this.onerror=null; this.src='jeshua_abos/abo_01_fade_2.jpg'" alt="Fade Abo 2 Besuche" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
-                  <div class="absolute inset-0 bg-gradient-to-t from-atelier-surface via-transparent to-black/30 pointer-events-none"></div>
-                  <span class="absolute top-3 left-3 text-[10px] font-mono uppercase tracking-wider px-2.5 py-1 rounded bg-black/80 text-atelier-gold border border-atelier-borderGold font-semibold backdrop-blur-sm">
-                    2 Besuche / Monat
-                  </span>
-                </div>
-                <div class="p-6 space-y-4">
-                  <div>
-                    <span class="text-[10px] font-mono uppercase tracking-widest text-stone-600 block mb-1">Alle 14 Tage fresh</span>
-                    <h3 class="font-serif text-2xl text-atelier-ink font-normal">Fade Abo</h3>
-                    <p class="text-xs text-stone-600 font-light mt-1">2 Besuche pro Monat für saubere Übergänge und stetige Frische.</p>
-                  </div>
-                  <div class="pt-2 border-t border-black/5">
-                    <div class="font-mono text-3xl font-bold text-atelier-ink">
-                      CHF 85 <span class="text-xs text-stone-600 font-normal">/ Monat</span>
-                    </div>
-                    <span class="text-[11px] text-emerald-700 font-mono block mt-0.5">CHF 42.50 pro Besuch</span>
-                  </div>
-                  <ul class="space-y-2 text-xs text-stone-700 pt-1">
-                    <li class="flex items-center gap-2">
-                      <i class="fa-solid fa-check text-atelier-goldDeep text-xs"></i>
-                      <span>2× Fade Schnitt &amp; Konturenrasur</span>
-                    </li>
-                    <li class="flex items-center gap-2">
-                      <i class="fa-solid fa-check text-atelier-goldDeep text-xs"></i>
-                      <span>Haarwäsche &amp; Matt-Wax Finishing</span>
-                    </li>
-                    <li class="flex items-center gap-2">
-                      <i class="fa-solid fa-check text-atelier-goldDeep text-xs"></i>
-                      <span>Priorisierte Termine via Koalendar</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="p-6 pt-0 space-y-2">
-                <a href="https://payhip.com/order?link=cDnlJ" 
-                   target="_blank" 
-                   rel="noopener noreferrer" 
-                   class="payhip-buy-button btn-atelier-crimson w-full py-3 px-4 rounded-lg text-xs uppercase tracking-wider font-semibold flex items-center justify-center gap-2 cursor-pointer shadow-md"
-                   data-product="cDnlJ"
-                   data-theme="none">
-                  <i class="fa-solid fa-crown text-amber-300 text-xs"></i>
-                  <span>Abo buchen · Payhip</span>
-                </a>
-                <p class="text-[10px] text-stone-500 font-mono text-center flex items-center justify-center gap-1.5 pt-1">
-                  <i class="fa-solid fa-shield-halved text-emerald-700"></i> Sichere SSL-Zahlung · Payhip
-                </p>
-              </div>
-            </div>
-
-            <!-- 2. Fade Abo 4 Besuche/Monat -->
-            <div class="abo-plan-card rounded-2xl border border-atelier-borderGold bg-atelier-surface elevation-2 flex flex-col justify-between overflow-hidden transition-all duration-300 hover:border-atelier-gold hover:-translate-y-1 relative" data-frequency="4">
-              <div>
-                <div class="relative aspect-square w-full overflow-hidden bg-white">
-                  <img src="https://payhip.com/cdn-cgi/image/format=auto,width=500/https://pe56d.s3.amazonaws.com/o_1k41em9pqjcg1qaei4h7f11p3mc.jpg" onerror="this.onerror=null; this.src='jeshua_abos/abo_02_fade_4.jpg'" alt="Fade Abo 4 Besuche" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
-                  <div class="absolute inset-0 bg-gradient-to-t from-atelier-surface via-transparent to-black/30 pointer-events-none"></div>
-                  <span class="absolute top-3 left-3 text-[10px] font-mono uppercase tracking-wider px-2.5 py-1 rounded bg-atelier-crimson text-white font-semibold shadow-md">
-                    4 Besuche / Monat (Wöchentlich)
-                  </span>
-                </div>
-                <div class="p-6 space-y-4">
-                  <div>
-                    <span class="text-[10px] font-mono uppercase tracking-widest text-atelier-goldDeep block mb-1">Maximaler Freshness-Standard</span>
-                    <h3 class="font-serif text-2xl text-atelier-ink font-normal">Fade Abo</h3>
-                    <p class="text-xs text-stone-600 font-light mt-1">4 Besuche pro Monat für lückenlose, messerscharfe Konturen 365 Tage im Jahr.</p>
-                  </div>
-                  <div class="pt-2 border-t border-black/5">
-                    <div class="font-mono text-3xl font-bold text-atelier-ink">
-                      CHF 169 <span class="text-xs text-stone-600 font-normal">/ Monat</span>
-                    </div>
-                    <span class="text-[11px] text-emerald-700 font-mono block mt-0.5">CHF 42.25 pro Besuch · Wöchentlich</span>
-                  </div>
-                  <ul class="space-y-2 text-xs text-stone-700 pt-1">
-                    <li class="flex items-center gap-2">
-                      <i class="fa-solid fa-check text-atelier-goldDeep text-xs"></i>
-                      <span>4× Wöchentlicher Skin Fade Schnitt</span>
-                    </li>
-                    <li class="flex items-center gap-2">
-                      <i class="fa-solid fa-check text-atelier-goldDeep text-xs"></i>
-                      <span>Immer akkurate Kanten mit Rasiermesser</span>
-                    </li>
-                    <li class="flex items-center gap-2">
-                      <i class="fa-solid fa-check text-atelier-goldDeep text-xs"></i>
-                      <span>VIP-Buchungspriorität am Wochenende</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="p-6 pt-0 space-y-2">
-                <a href="https://payhip.com/order?link=9hdjM" 
-                   target="_blank" 
-                   rel="noopener noreferrer" 
-                   class="payhip-buy-button btn-atelier-gold w-full py-3 px-4 rounded-lg text-xs uppercase tracking-wider font-semibold flex items-center justify-center gap-2 cursor-pointer shadow-md"
-                   data-product="9hdjM"
-                   data-theme="none">
-                  <i class="fa-solid fa-crown text-amber-950 text-xs"></i>
-                  <span>Abo buchen · Payhip</span>
-                </a>
-                <p class="text-[10px] text-stone-500 font-mono text-center flex items-center justify-center gap-1.5 pt-1">
-                  <i class="fa-solid fa-shield-halved text-emerald-700"></i> Sichere SSL-Zahlung · Payhip
-                </p>
-              </div>
-            </div>
-
-            <!-- 3. Haare & Bart Abo 2 Besuche/Monat -->
-            <div class="abo-plan-card rounded-2xl border border-black/10 bg-atelier-surface elevation-1 flex flex-col justify-between overflow-hidden transition-all duration-300 hover:border-atelier-borderGold hover:-translate-y-1" data-frequency="2">
-              <div>
-                <div class="relative aspect-square w-full overflow-hidden bg-white">
-                  <img src="https://payhip.com/cdn-cgi/image/format=auto,width=500/https://pe56d.s3.amazonaws.com/o_1k41eoq6t1sub1ec51v21g3334nk.jpg" onerror="this.onerror=null; this.src='jeshua_abos/abo_03_haare_bart_2.jpg'" alt="Haare & Bart Abo 2 Besuche" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
-                  <div class="absolute inset-0 bg-gradient-to-t from-atelier-surface via-transparent to-black/30 pointer-events-none"></div>
-                  <span class="absolute top-3 left-3 text-[10px] font-mono uppercase tracking-wider px-2.5 py-1 rounded bg-black/80 text-atelier-gold border border-atelier-borderGold font-semibold backdrop-blur-sm">
-                    2 Besuche / Monat
-                  </span>
-                </div>
-                <div class="p-6 space-y-4">
-                  <div>
-                    <span class="text-[10px] font-mono uppercase tracking-widest text-stone-600 block mb-1">Das Kombi-Paket</span>
-                    <h3 class="font-serif text-2xl text-atelier-ink font-normal">Haare &amp; Bart Abo</h3>
-                    <p class="text-xs text-stone-600 font-light mt-1">2 Besuche pro Monat für den harmonischen Gesamtlook von Kopf und Bart.</p>
-                  </div>
-                  <div class="pt-2 border-t border-black/5">
-                    <div class="font-mono text-3xl font-bold text-atelier-ink">
-                      CHF 139 <span class="text-xs text-stone-600 font-normal">/ Monat</span>
-                    </div>
-                    <span class="text-[11px] text-emerald-700 font-mono block mt-0.5">CHF 69.50 pro Kombi-Session</span>
-                  </div>
-                  <ul class="space-y-2 text-xs text-stone-700 pt-1">
-                    <li class="flex items-center gap-2">
-                      <i class="fa-solid fa-check text-atelier-goldDeep text-xs"></i>
-                      <span>2× Kompletter Haarschnitt nach Wahl</span>
-                    </li>
-                    <li class="flex items-center gap-2">
-                      <i class="fa-solid fa-check text-atelier-goldDeep text-xs"></i>
-                      <span>2× Barttrimmen &amp; Messer-Konturierung</span>
-                    </li>
-                    <li class="flex items-center gap-2">
-                      <i class="fa-solid fa-check text-atelier-goldDeep text-xs"></i>
-                      <span>Hot Towel Kompresse &amp; nährendes Bartöl</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="p-6 pt-0 space-y-2">
-                <a href="https://payhip.com/order?link=U2cSQ" 
-                   target="_blank" 
-                   rel="noopener noreferrer" 
-                   class="payhip-buy-button btn-atelier-crimson w-full py-3 px-4 rounded-lg text-xs uppercase tracking-wider font-semibold flex items-center justify-center gap-2 cursor-pointer shadow-md"
-                   data-product="U2cSQ"
-                   data-theme="none">
-                  <i class="fa-solid fa-crown text-amber-300 text-xs"></i>
-                  <span>Abo buchen · Payhip</span>
-                </a>
-                <p class="text-[10px] text-stone-500 font-mono text-center flex items-center justify-center gap-1.5 pt-1">
-                  <i class="fa-solid fa-shield-halved text-emerald-700"></i> Sichere SSL-Zahlung · Payhip
-                </p>
-              </div>
-            </div>
-
-            <!-- 4. Haare & Bart Abo 4 Besuche/Monat -->
-            <div class="abo-plan-card rounded-2xl border border-atelier-borderGold bg-atelier-surface elevation-2 flex flex-col justify-between overflow-hidden transition-all duration-300 hover:border-atelier-gold hover:-translate-y-1" data-frequency="4">
-              <div>
-                <div class="relative aspect-square w-full overflow-hidden bg-white">
-                  <img src="https://payhip.com/cdn-cgi/image/format=auto,width=500/https://pe56d.s3.amazonaws.com/o_1k41eqaomh4ropq1tlp1n5kj22c.jpg" onerror="this.onerror=null; this.src='jeshua_abos/abo_04_haare_bart_4.jpg'" alt="Haare & Bart Abo 4 Besuche" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
-                  <div class="absolute inset-0 bg-gradient-to-t from-atelier-surface via-transparent to-black/30 pointer-events-none"></div>
-                  <span class="absolute top-3 left-3 text-[10px] font-mono uppercase tracking-wider px-2.5 py-1 rounded bg-atelier-crimson text-white font-semibold shadow-md">
-                    4 Besuche / Monat (Wöchentlich)
-                  </span>
-                </div>
-                <div class="p-6 space-y-4">
-                  <div>
-                    <span class="text-[10px] font-mono uppercase tracking-widest text-atelier-goldDeep block mb-1">Executive Grooming</span>
-                    <h3 class="font-serif text-2xl text-atelier-ink font-normal">Haare &amp; Bart Abo</h3>
-                    <p class="text-xs text-stone-600 font-light mt-1">4 Besuche pro Monat für anspruchsvolle Männer, die jede Woche tadellos auftreten.</p>
-                  </div>
-                  <div class="pt-2 border-t border-black/5">
-                    <div class="font-mono text-3xl font-bold text-atelier-ink">
-                      CHF 277 <span class="text-xs text-stone-600 font-normal">/ Monat</span>
-                    </div>
-                    <span class="text-[11px] text-emerald-700 font-mono block mt-0.5">CHF 69.25 pro Kombi-Session</span>
-                  </div>
-                  <ul class="space-y-2 text-xs text-stone-700 pt-1">
-                    <li class="flex items-center gap-2">
-                      <i class="fa-solid fa-check text-atelier-goldDeep text-xs"></i>
-                      <span>4× Haarschnitt &amp; Bartformung</span>
-                    </li>
-                    <li class="flex items-center gap-2">
-                      <i class="fa-solid fa-check text-atelier-goldDeep text-xs"></i>
-                      <span>Wöchentliches Rasiermesser-Ritual</span>
-                    </li>
-                    <li class="flex items-center gap-2">
-                      <i class="fa-solid fa-check text-atelier-goldDeep text-xs"></i>
-                      <span>Inklusive 10% Rabatt auf Stylingprodukte</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="p-6 pt-0 space-y-2">
-                <a href="https://payhip.com/order?link=kRBa9" 
-                   target="_blank" 
-                   rel="noopener noreferrer" 
-                   class="payhip-buy-button btn-atelier-crimson w-full py-3 px-4 rounded-lg text-xs uppercase tracking-wider font-semibold flex items-center justify-center gap-2 cursor-pointer shadow-md"
-                   data-product="kRBa9"
-                   data-theme="none">
-                  <i class="fa-solid fa-crown text-amber-300 text-xs"></i>
-                  <span>Abo buchen · Payhip</span>
-                </a>
-                <p class="text-[10px] text-stone-500 font-mono text-center flex items-center justify-center gap-1.5 pt-1">
-                  <i class="fa-solid fa-shield-halved text-emerald-700"></i> Sichere SSL-Zahlung · Payhip
-                </p>
-              </div>
-            </div>
-
-            <!-- 5. Maschinenschnitt Abo 2 Besuche/Monat -->
-            <div class="abo-plan-card rounded-2xl border border-black/10 bg-atelier-surface elevation-1 flex flex-col justify-between overflow-hidden transition-all duration-300 hover:border-atelier-borderGold hover:-translate-y-1" data-frequency="2">
-              <div>
-                <div class="relative aspect-square w-full overflow-hidden bg-white">
-                  <img src="https://payhip.com/cdn-cgi/image/format=auto,width=500/https://pe56d.s3.amazonaws.com/o_1k41es4ai1u4qmff9rgo891gh8c.jpg" onerror="this.onerror=null; this.src='jeshua_abos/abo_05_maschinen_2.jpg'" alt="Maschinenschnitt Abo 2 Besuche" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
-                  <div class="absolute inset-0 bg-gradient-to-t from-atelier-surface via-transparent to-black/30 pointer-events-none"></div>
-                  <span class="absolute top-3 left-3 text-[10px] font-mono uppercase tracking-wider px-2.5 py-1 rounded bg-black/80 text-atelier-gold border border-atelier-borderGold font-semibold backdrop-blur-sm">
-                    2 Besuche / Monat
-                  </span>
-                </div>
-                <div class="p-6 space-y-4">
-                  <div>
-                    <span class="text-[10px] font-mono uppercase tracking-widest text-stone-600 block mb-1">Kompakt &amp; Effizient</span>
-                    <h3 class="font-serif text-2xl text-atelier-ink font-normal">Maschinenschnitt Abo</h3>
-                    <p class="text-xs text-stone-600 font-light mt-1">2 Besuche pro Monat für akkurate Buzz Cuts und reine Maschinenhaarschnitte.</p>
-                  </div>
-                  <div class="pt-2 border-t border-black/5">
-                    <div class="font-mono text-3xl font-bold text-atelier-ink">
-                      CHF 62 <span class="text-xs text-stone-600 font-normal">/ Monat</span>
-                    </div>
-                    <span class="text-[11px] text-emerald-700 font-mono block mt-0.5">CHF 31.00 pro Besuch · Best Price</span>
-                  </div>
-                  <ul class="space-y-2 text-xs text-stone-700 pt-1">
-                    <li class="flex items-center gap-2">
-                      <i class="fa-solid fa-check text-atelier-goldDeep text-xs"></i>
-                      <span>2× Maschinenschnitt auf Wunschlänge</span>
-                    </li>
-                    <li class="flex items-center gap-2">
-                      <i class="fa-solid fa-check text-atelier-goldDeep text-xs"></i>
-                      <span>Exakte Nackenausrasur &amp; Konturen</span>
-                    </li>
-                    <li class="flex items-center gap-2">
-                      <i class="fa-solid fa-check text-atelier-goldDeep text-xs"></i>
-                      <span>Erfrischendes Haarwasser &amp; Styling</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="p-6 pt-0 space-y-2">
-                <a href="https://payhip.com/order?link=Q8VOT" 
-                   target="_blank" 
-                   rel="noopener noreferrer" 
-                   class="payhip-buy-button btn-atelier-crimson w-full py-3 px-4 rounded-lg text-xs uppercase tracking-wider font-semibold flex items-center justify-center gap-2 cursor-pointer shadow-md"
-                   data-product="Q8VOT"
-                   data-theme="none">
-                  <i class="fa-solid fa-crown text-amber-300 text-xs"></i>
-                  <span>Abo buchen · Payhip</span>
-                </a>
-                <p class="text-[10px] text-stone-500 font-mono text-center flex items-center justify-center gap-1.5 pt-1">
-                  <i class="fa-solid fa-shield-halved text-emerald-700"></i> Sichere SSL-Zahlung · Payhip
-                </p>
-              </div>
-            </div>
-
-            <!-- 6. Maschinenschnitt Abo 4 Besuche/Monat -->
-            <div class="abo-plan-card rounded-2xl border border-black/10 bg-atelier-surface elevation-1 flex flex-col justify-between overflow-hidden transition-all duration-300 hover:border-atelier-borderGold hover:-translate-y-1" data-frequency="4">
-              <div>
-                <div class="relative aspect-square w-full overflow-hidden bg-white">
-                  <img src="https://payhip.com/cdn-cgi/image/format=auto,width=500/https://pe56d.s3.amazonaws.com/o_1k41et44lvo6i1idjc1nkm1m3vc.jpg" onerror="this.onerror=null; this.src='jeshua_abos/abo_06_maschinen_4.jpg'" alt="Maschinenschnitt Abo 4 Besuche" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
-                  <div class="absolute inset-0 bg-gradient-to-t from-atelier-surface via-transparent to-black/30 pointer-events-none"></div>
-                  <span class="absolute top-3 left-3 text-[10px] font-mono uppercase tracking-wider px-2.5 py-1 rounded bg-black/80 text-atelier-gold border border-atelier-borderGold font-semibold backdrop-blur-sm">
-                    4 Besuche / Monat (Wöchentlich)
-                  </span>
-                </div>
-                <div class="p-6 space-y-4">
-                  <div>
-                    <span class="text-[10px] font-mono uppercase tracking-widest text-stone-600 block mb-1">Dauerhaft Kurzer Schnitt</span>
-                    <h3 class="font-serif text-2xl text-atelier-ink font-normal">Maschinenschnitt Abo</h3>
-                    <p class="text-xs text-stone-600 font-light mt-1">4 Besuche pro Monat für konstant ultrakurze Haare ohne sichtbaren Nachwuchs.</p>
-                  </div>
-                  <div class="pt-2 border-t border-black/5">
-                    <div class="font-mono text-3xl font-bold text-atelier-ink">
-                      CHF 122 <span class="text-xs text-stone-600 font-normal">/ Monat</span>
-                    </div>
-                    <span class="text-[11px] text-emerald-700 font-mono block mt-0.5">CHF 30.50 pro Besuch</span>
-                  </div>
-                  <ul class="space-y-2 text-xs text-stone-700 pt-1">
-                    <li class="flex items-center gap-2">
-                      <i class="fa-solid fa-check text-atelier-goldDeep text-xs"></i>
-                      <span>4× Wöchentlicher Maschinenschnitt</span>
-                    </li>
-                    <li class="flex items-center gap-2">
-                      <i class="fa-solid fa-check text-atelier-goldDeep text-xs"></i>
-                      <span>Nacken- &amp; Konturenfeinschliff</span>
-                    </li>
-                    <li class="flex items-center gap-2">
-                      <i class="fa-solid fa-check text-atelier-goldDeep text-xs"></i>
-                      <span>Haarwäsche vor &amp; nach dem Schnitt</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="p-6 pt-0 space-y-2">
-                <a href="https://payhip.com/order?link=bsrXL" 
-                   target="_blank" 
-                   rel="noopener noreferrer" 
-                   class="payhip-buy-button btn-atelier-crimson w-full py-3 px-4 rounded-lg text-xs uppercase tracking-wider font-semibold flex items-center justify-center gap-2 cursor-pointer shadow-md"
-                   data-product="bsrXL"
-                   data-theme="none">
-                  <i class="fa-solid fa-crown text-amber-300 text-xs"></i>
-                  <span>Abo buchen · Payhip</span>
-                </a>
-                <p class="text-[10px] text-stone-500 font-mono text-center flex items-center justify-center gap-1.5 pt-1">
-                  <i class="fa-solid fa-shield-halved text-emerald-700"></i> Sichere SSL-Zahlung · Payhip
-                </p>
-              </div>
-            </div>
-
-            <!-- 7. Fade + Wellness Abo 2 Besuche/Monat -->
-            <div class="abo-plan-card rounded-2xl border border-black/10 bg-atelier-surface elevation-1 flex flex-col justify-between overflow-hidden transition-all duration-300 hover:border-atelier-borderGold hover:-translate-y-1" data-frequency="2">
-              <div>
-                <div class="relative aspect-square w-full overflow-hidden bg-white">
-                  <img src="https://payhip.com/cdn-cgi/image/format=auto,width=500/https://pe56d.s3.amazonaws.com/o_1k41eu69r1qi61jn0dd514r8417c.jpg" onerror="this.onerror=null; this.src='jeshua_abos/abo_07_wellness_2.jpg'" alt="Fade + Wellness Abo 2 Besuche" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
-                  <div class="absolute inset-0 bg-gradient-to-t from-atelier-surface via-transparent to-black/30 pointer-events-none"></div>
-                  <span class="absolute top-3 left-3 text-[10px] font-mono uppercase tracking-wider px-2.5 py-1 rounded bg-black/80 text-atelier-gold border border-atelier-borderGold font-semibold backdrop-blur-sm">
-                    2 Besuche / Monat
-                  </span>
-                </div>
-                <div class="p-6 space-y-4">
-                  <div>
-                    <span class="text-[10px] font-mono uppercase tracking-widest text-stone-600 block mb-1">Schnitt &amp; Entspannung</span>
-                    <h3 class="font-serif text-2xl text-atelier-ink font-normal">Fade + Wellness Abo</h3>
-                    <p class="text-xs text-stone-600 font-light mt-1">2 Besuche pro Monat inklusive wohltuendem Hot Towel Ritual und Gesichtspflege.</p>
-                  </div>
-                  <div class="pt-2 border-t border-black/5">
-                    <div class="font-mono text-3xl font-bold text-atelier-ink">
-                      CHF 126 <span class="text-xs text-stone-600 font-normal">/ Monat</span>
-                    </div>
-                    <span class="text-[11px] text-emerald-700 font-mono block mt-0.5">CHF 63.00 pro Spa &amp; Cut Session</span>
-                  </div>
-                  <ul class="space-y-2 text-xs text-stone-700 pt-1">
-                    <li class="flex items-center gap-2">
-                      <i class="fa-solid fa-check text-atelier-goldDeep text-xs"></i>
-                      <span>2× Skin Fade oder Klassik-Schnitt</span>
-                    </li>
-                    <li class="flex items-center gap-2">
-                      <i class="fa-solid fa-check text-atelier-goldDeep text-xs"></i>
-                      <span>Hot Towel Kompresse &amp; Gesichtsreinigung</span>
-                    </li>
-                    <li class="flex items-center gap-2">
-                      <i class="fa-solid fa-check text-atelier-goldDeep text-xs"></i>
-                      <span>MK Men® Gesichtsfluid &amp; Nackenmassage</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="p-6 pt-0 space-y-2">
-                <a href="https://payhip.com/order?link=LX12E" 
-                   target="_blank" 
-                   rel="noopener noreferrer" 
-                   class="payhip-buy-button btn-atelier-crimson w-full py-3 px-4 rounded-lg text-xs uppercase tracking-wider font-semibold flex items-center justify-center gap-2 cursor-pointer shadow-md"
-                   data-product="LX12E"
-                   data-theme="none">
-                  <i class="fa-solid fa-crown text-amber-300 text-xs"></i>
-                  <span>Abo buchen · Payhip</span>
-                </a>
-                <p class="text-[10px] text-stone-500 font-mono text-center flex items-center justify-center gap-1.5 pt-1">
-                  <i class="fa-solid fa-shield-halved text-emerald-700"></i> Sichere SSL-Zahlung · Payhip
-                </p>
-              </div>
-            </div>
-
-            <!-- 8. Fade + Wellness Abo 4 Besuche/Monat -->
-            <div class="abo-plan-card rounded-2xl border border-atelier-borderGold bg-atelier-surface elevation-2 flex flex-col justify-between overflow-hidden transition-all duration-300 hover:border-atelier-gold hover:-translate-y-1 relative" data-frequency="4">
-              <div>
-                <div class="relative aspect-square w-full overflow-hidden bg-white">
-                  <img src="https://payhip.com/cdn-cgi/image/format=auto,width=500/https://pe56d.s3.amazonaws.com/o_1k41evvco1ut1fkn7ku1036g70c.jpg" onerror="this.onerror=null; this.src='jeshua_abos/abo_08_wellness_4.jpg'" alt="Fade + Wellness Abo 4 Besuche" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
-                  <div class="absolute inset-0 bg-gradient-to-t from-atelier-surface via-transparent to-black/30 pointer-events-none"></div>
-                  <span class="absolute top-3 left-3 text-[10px] font-mono uppercase tracking-wider px-2.5 py-1 rounded bg-atelier-crimson text-white font-semibold shadow-md">
-                    4 Besuche / Monat (Wöchentlich)
-                  </span>
-                </div>
-                <div class="p-6 space-y-4">
-                  <div>
-                    <span class="text-[10px] font-mono uppercase tracking-widest text-atelier-goldDeep block mb-1">Das ultimative VIP-Abo</span>
-                    <h3 class="font-serif text-2xl text-atelier-ink font-normal">Fade + Wellness Abo</h3>
-                    <p class="text-xs text-stone-600 font-light mt-1">4 Besuche pro Monat für maximales Wohlbefinden, wöchentliche Frische und totale Regeneration.</p>
-                  </div>
-                  <div class="pt-2 border-t border-black/5">
-                    <div class="font-mono text-3xl font-bold text-atelier-ink">
-                      CHF 249 <span class="text-xs text-stone-600 font-normal">/ Monat</span>
-                    </div>
-                    <span class="text-[11px] text-emerald-700 font-mono block mt-0.5">CHF 62.25 pro Spa &amp; Cut Session</span>
-                  </div>
-                  <ul class="space-y-2 text-xs text-stone-700 pt-1">
-                    <li class="flex items-center gap-2">
-                      <i class="fa-solid fa-check text-atelier-goldDeep text-xs"></i>
-                      <span>4× Wöchentlicher Fade &amp; Wellness-Service</span>
-                    </li>
-                    <li class="flex items-center gap-2">
-                      <i class="fa-solid fa-check text-atelier-goldDeep text-xs"></i>
-                      <span>Hot Towels, Gesichtsbehandlung &amp; Massage</span>
-                    </li>
-                    <li class="flex items-center gap-2">
-                      <i class="fa-solid fa-check text-atelier-goldDeep text-xs"></i>
-                      <span>15% VIP-Rabatt auf alle Atelier-Produkte</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="p-6 pt-0 space-y-2">
-                <a href="https://payhip.com/order?link=cNxWQ" 
-                   target="_blank" 
-                   rel="noopener noreferrer" 
-                   class="payhip-buy-button btn-atelier-gold w-full py-3 px-4 rounded-lg text-xs uppercase tracking-wider font-semibold flex items-center justify-center gap-2 cursor-pointer shadow-md"
-                   data-product="cNxWQ"
-                   data-theme="none">
-                  <i class="fa-solid fa-crown text-amber-950 text-xs"></i>
-                  <span>Abo buchen · Payhip</span>
-                </a>
-                <p class="text-[10px] text-stone-500 font-mono text-center flex items-center justify-center gap-1.5 pt-1">
-                  <i class="fa-solid fa-shield-halved text-emerald-700"></i> Sichere SSL-Zahlung · Payhip
-                </p>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Trust Banner: Payhip Integration & Atelier Guarantee -->
-          <div class="p-6 rounded-2xl border border-black/10 bg-atelier-lacquer flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-stone-600">
-            <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-xl bg-atelier-card border border-black/10 flex items-center justify-center text-atelier-goldDeep text-base shrink-0">
-                <i class="fa-solid fa-shield-halved"></i>
-              </div>
-              <div>
-                <span class="text-atelier-ink font-medium block">Sicherer Checkout via Payhip &amp; flexible Mitgliedschaft</span>
-                <span class="text-stone-600 text-[11px]">Monatlich abbuchbar, jederzeit mit 1 Klick online pausieren oder kündigen. Termine flexibel über Koalendar oder WhatsApp buchen.</span>
-              </div>
-            </div>
-            <div class="flex items-center gap-4 shrink-0 text-stone-700 font-mono text-[11px]">
-              <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-emerald-700"></i> Keine Mindestlaufzeit</span>
-              <span class="flex items-center gap-1.5"><i class="fa-solid fa-location-dot text-atelier-crimson"></i> Atelier Uster</span>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- KUNDEN-FOTOGALERIE (AUTHENTISCHE CUTS & STYLES) -->
-        <div id="barber-gallery" class="space-y-8">
-          <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-black/10 pb-6">
-            <div class="space-y-2">
-              <span class="text-xs font-mono uppercase tracking-[0.25em] text-atelier-crimson font-semibold block">
-                Portfolio & Resultate
-              </span>
-              <h2 class="font-serif text-3xl sm:text-4xl text-atelier-ink font-normal">
-                Kunden-Galerie · Handwerkskunst
-              </h2>
-              <p class="text-stone-600 text-xs sm:text-sm font-light max-w-xl">
-                Echte Arbeiten direkt von unserem Barber Chair in Uster: Präzise Skin Fades, scharfe Bartkonturen und individueller Stil.
-              </p>
-            </div>
-            <div class="shrink-0 flex items-center gap-3">
-              <a href="https://koalendar.com/e/termin-buchung-jeshua" target="_blank" rel="noopener noreferrer" class="btn-atelier-crimson px-5 py-2.5 rounded-lg text-xs uppercase tracking-wider font-semibold flex items-center gap-2">
-                <i class="fa-solid fa-calendar-check"></i> Termin online buchen
-              </a>
-            </div>
-          </div>
-
-          <!-- 10 Customer Photos Grid -->
-          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-          <div class="group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-black/10" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260606-WA0002_ksp3zm.jpg', 'jeshua_gallery/barber_client_01.jpg', 'Taper Fade & Textured Crop', 'Fade & Texture')">
-            <div class="aspect-[3/4] overflow-hidden bg-white">
-              <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260606-WA0002_ksp3zm.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_01.jpg'" alt="Taper Fade & Textured Crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-              <span class="text-[9px] font-mono uppercase tracking-widest text-atelier-crimson font-bold">Fade & Texture</span>
-              <span class="text-xs text-white font-medium">Taper Fade & Textured Crop</span>
-            </div>
-          </div>
-          <div class="group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-black/10" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260606-WA0003_iebsif.jpg', 'jeshua_gallery/barber_client_02.jpg', 'Precision Scissor Cut & Styling', 'Classic Style')">
-            <div class="aspect-[3/4] overflow-hidden bg-white">
-              <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260606-WA0003_iebsif.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_02.jpg'" alt="Precision Scissor Cut & Styling" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-              <span class="text-[9px] font-mono uppercase tracking-widest text-atelier-crimson font-bold">Classic Style</span>
-              <span class="text-xs text-white font-medium">Precision Scissor Cut & Styling</span>
-            </div>
-          </div>
-          <div class="group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-black/10" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0018_itnvga.jpg', 'jeshua_gallery/barber_client_03.jpg', 'Clean Skin Fade & Razor Finish', 'Skin Fade')">
-            <div class="aspect-[3/4] overflow-hidden bg-white">
-              <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0018_itnvga.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_03.jpg'" alt="Clean Skin Fade & Razor Finish" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-              <span class="text-[9px] font-mono uppercase tracking-widest text-atelier-crimson font-bold">Skin Fade</span>
-              <span class="text-xs text-white font-medium">Clean Skin Fade & Razor Finish</span>
-            </div>
-          </div>
-          <div class="group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-black/10" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0021_o7gd7t.jpg', 'jeshua_gallery/barber_client_04.jpg', 'Beard Sculpting & Defined Lines', 'Beard Craft')">
-            <div class="aspect-[3/4] overflow-hidden bg-white">
-              <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0021_o7gd7t.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_04.jpg'" alt="Beard Sculpting & Defined Lines" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-              <span class="text-[9px] font-mono uppercase tracking-widest text-atelier-crimson font-bold">Beard Craft</span>
-              <span class="text-xs text-white font-medium">Beard Sculpting & Defined Lines</span>
-            </div>
-          </div>
-          <div class="group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-black/10" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0013_wprpwu.jpg', 'jeshua_gallery/barber_client_05.jpg', 'Low Drop Fade & Modern Top', 'Drop Fade')">
-            <div class="aspect-[3/4] overflow-hidden bg-white">
-              <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0013_wprpwu.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_05.jpg'" alt="Low Drop Fade & Modern Top" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-              <span class="text-[9px] font-mono uppercase tracking-widest text-atelier-crimson font-bold">Drop Fade</span>
-              <span class="text-xs text-white font-medium">Low Drop Fade & Modern Top</span>
-            </div>
-          </div>
-          <div class="group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-black/10" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0008_kgpyqq.jpg', 'jeshua_gallery/barber_client_06.jpg', 'Hot Towel Ritual & Full Grooming', 'Full Ritual')">
-            <div class="aspect-[3/4] overflow-hidden bg-white">
-              <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0008_kgpyqq.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_06.jpg'" alt="Hot Towel Ritual & Full Grooming" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-              <span class="text-[9px] font-mono uppercase tracking-widest text-atelier-crimson font-bold">Full Ritual</span>
-              <span class="text-xs text-white font-medium">Hot Towel Ritual & Full Grooming</span>
-            </div>
-          </div>
-          <div class="group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-black/10" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260515-WA0004_kj3rfb.jpg', 'jeshua_gallery/barber_client_07.jpg', 'Mid Fade & Natural Texture', 'Mid Fade')">
-            <div class="aspect-[3/4] overflow-hidden bg-white">
-              <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260515-WA0004_kj3rfb.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_07.jpg'" alt="Mid Fade & Natural Texture" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-              <span class="text-[9px] font-mono uppercase tracking-widest text-atelier-crimson font-bold">Mid Fade</span>
-              <span class="text-xs text-white font-medium">Mid Fade & Natural Texture</span>
-            </div>
-          </div>
-          <div class="group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-black/10" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260425-WA0001_itytaa.jpg', 'jeshua_gallery/barber_client_08.jpg', 'Sharp Lineup & Contour Beard', 'Lineup & Beard')">
-            <div class="aspect-[3/4] overflow-hidden bg-white">
-              <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260425-WA0001_itytaa.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_08.jpg'" alt="Sharp Lineup & Contour Beard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-              <span class="text-[9px] font-mono uppercase tracking-widest text-atelier-crimson font-bold">Lineup & Beard</span>
-              <span class="text-xs text-white font-medium">Sharp Lineup & Contour Beard</span>
-            </div>
-          </div>
-          <div class="group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-black/10" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260412-WA0000_a3aiia.jpg', 'jeshua_gallery/barber_client_09.jpg', 'High Fade & Clean Transitions', 'High Fade')">
-            <div class="aspect-[3/4] overflow-hidden bg-white">
-              <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260412-WA0000_a3aiia.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_09.jpg'" alt="High Fade & Clean Transitions" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-              <span class="text-[9px] font-mono uppercase tracking-widest text-atelier-crimson font-bold">High Fade</span>
-              <span class="text-xs text-white font-medium">High Fade & Clean Transitions</span>
-            </div>
-          </div>
-          <div class="group relative rounded-xl overflow-hidden cursor-pointer elevation-1 border border-black/10" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260328-WA0004_j43tqs.jpg', 'jeshua_gallery/barber_client_10.jpg', 'Signature Jeshua Atelier Cut', 'Signature Look')">
-            <div class="aspect-[3/4] overflow-hidden bg-white">
-              <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260328-WA0004_j43tqs.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_10.jpg'" alt="Signature Jeshua Atelier Cut" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-              <span class="text-[9px] font-mono uppercase tracking-widest text-atelier-crimson font-bold">Signature Look</span>
-              <span class="text-xs text-white font-medium">Signature Jeshua Atelier Cut</span>
-            </div>
-          </div>
-          </div>
-
-          <!-- Gallery Bottom Action Banner -->
-          <div class="p-6 rounded-2xl border border-black/10 bg-atelier-surface flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div>
-              <h3 class="font-serif text-lg text-atelier-ink font-normal">Möchtest du auch deinen Signature-Look?</h3>
-              <p class="text-xs text-stone-600 font-light">Sichere dir deinen Wunschtermin bequem online oder kontaktiere uns direkt via WhatsApp.</p>
-            </div>
-            <div class="flex items-center gap-3 shrink-0">
-              <a href="https://koalendar.com/e/termin-buchung-jeshua" target="_blank" rel="noopener noreferrer" class="btn-atelier-gold px-4 py-2.5 rounded-lg text-xs font-semibold flex items-center gap-1.5">
-                <i class="fa-solid fa-calendar-check"></i> Koalendar Buchung
-              </a>
-              <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Barber%2C%20ich%20habe%20eure%20Kunden-Galerie%20gesehen%20und%20m%C3%B6chte%20einen%20Termin..." target="_blank" class="btn-atelier-whatsapp px-4 py-2.5 rounded-lg text-xs font-semibold flex items-center gap-1.5">
-                <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp
-              </a>
-            </div>
-          </div>
-
-        </div>
-
       </div>
     </section>
-  </main>
 
-  <!-- FOOTER -->
-  <footer class="border-t border-black/10 bg-atelier-lacquer pt-16 pb-12 px-6">
-    <div class="max-w-6xl mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
-        
-        <div class="space-y-3">
-          <span class="font-cinzel text-xl font-bold tracking-widest text-atelier-ink block">JESHÚA</span>
-          <p class="text-xs text-stone-600 leading-relaxed font-light">
-            Lifestyle Studio & Atelier. Schönheit ohne Schubladen, Selbstfürsorge für alle und Wohlbefinden von innen und aussen.
-          </p>
-          <span class="text-[10px] font-mono uppercase tracking-widest text-atelier-goldDeep block">
-            Pferd (Stärke) · Schmetterling (Wandel)
-          </span>
-        </div>
+    <section class="section field">
+      <div class="wrap">
+        <div class="grid gap-8 lg:grid-cols-12">
+          <div class="lg:col-span-4">
+            <h2 data-rise class="display-2">Einzelservices</h2>
+            <p class="body" style="margin-top:18px">
+              Jeder Termin beginnt mit einem kurzen Gespräch über Haarstruktur, Wuchsrichtung und
+              das, was du im Alltag selbst stylen kannst.
+            </p>
+          </div>
 
-        <div>
-          <span class="text-xs font-mono uppercase tracking-wider text-stone-700 font-semibold block mb-3">Bereiche</span>
-          <ul class="space-y-2 text-xs text-stone-600">
-            <li><a href="barber.html" class="hover:text-atelier-crimson transition-colors">Barber Studio</a></li>
-            <li><a href="workshops.html" class="hover:text-atelier-goldDeep transition-colors">Beauty Workshops</a></li>
-            <li><a href="mentoring.html" class="hover:text-atelier-ink transition-colors">Ganzheitliches Mentoring</a></li>
-            <li><a href="katalog.html" class="hover:text-atelier-ink transition-colors">Katalog Kollektion (38 Produkte)</a></li>
+          <ul class="row-list lg:col-span-8">
+            <li>
+              <div class="price-row">
+                <h3 data-rise class="display-3">Classic Haircut &amp; Styling</h3>
+                <span class="price">CHF 55</span>
+              </div>
+              <p class="body" style="margin-top:10px">
+                Typberatung, Haarwäsche mit Kopfmassage, Scherenschnitt oder Übergang, Föhnen und Finish.
+              </p>
+              <a href="https://koalendar.com/e/termin-buchung-jeshua" target="_blank" rel="noopener" class="btn-quiet" style="margin-top:12px; display:inline-block">Diesen Termin buchen</a>
+            </li>
+            <li>
+              <div class="price-row">
+                <h3 data-rise class="display-3">Skin Fade &amp; Beard Sculpting</h3>
+                <span class="price">CHF 85</span>
+              </div>
+              <p class="body" style="margin-top:10px">
+                Messerscharfer Fade bis auf die Haut, Bartkontur mit dem Rasiermesser und heisses Tuch.
+              </p>
+              <a href="https://koalendar.com/e/termin-buchung-jeshua" target="_blank" rel="noopener" class="btn-quiet" style="margin-top:12px; display:inline-block">Diesen Termin buchen</a>
+            </li>
+            <li>
+              <div class="price-row">
+                <h3 data-rise class="display-3">The Royal Treatment</h3>
+                <span class="price">CHF 120</span>
+              </div>
+              <p class="body" style="margin-top:10px">
+                Haarschnitt, Bartrasur mit heissen Tüchern, klärende Gesichtsreinigung von MK Men®,
+                Feuchtigkeitspflege und ein Drink.
+              </p>
+              <a href="https://koalendar.com/e/termin-buchung-jeshua" target="_blank" rel="noopener" class="btn-quiet" style="margin-top:12px; display:inline-block">Diesen Termin buchen</a>
+            </li>
           </ul>
         </div>
+      </div>
+    </section>
 
-        <div>
-          <span class="text-xs font-mono uppercase tracking-wider text-stone-700 font-semibold block mb-3">Atelier Uster</span>
-          <p class="text-xs text-stone-600 leading-relaxed font-light mb-2">
-            Bankstrasse 36<br>8610 Uster, Schweiz
-          </p>
-          <p class="text-xs text-stone-600 leading-relaxed font-light">
-            Telefon: +41 77 956 38 70<br>
-            WhatsApp Concierge täglich
-          </p>
+    <section class="section">
+      <div class="wrap">
+        <div class="grid gap-8 lg:grid-cols-12 items-end">
+          <div class="lg:col-span-8">
+            <h2 data-rise class="display-2">Monatsabos</h2>
+            <p class="body" style="margin-top:18px">
+              Immer gepflegt, mit voller Kostenkontrolle. Monatlich kündbar, Termine flexibel über
+              Koalendar oder WhatsApp. Die Buchung läuft sicher über Payhip.
+            </p>
+          </div>
+          <div class="lg:col-span-4" style="display:flex; gap:10px; flex-wrap:wrap">
+            <button type="button" class="abo-filter-btn btn btn-gold" onclick="filterAbos('all', this)">Alle acht</button>
+            <button type="button" class="abo-filter-btn btn btn-outline" onclick="filterAbos('2', this)">2 Besuche</button>
+            <button type="button" class="abo-filter-btn btn btn-outline" onclick="filterAbos('4', this)">4 Besuche</button>
+          </div>
         </div>
 
-        <div>
-          <span class="text-xs font-mono uppercase tracking-wider text-stone-700 font-semibold block mb-3">Kontakt & Anfragen</span>
-          <p class="text-xs text-stone-600 leading-relaxed font-light mb-3">
-            Offen für Männer, Frauen und Paare.
-          </p>
-          <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Studio%2C%20ich%20m%C3%B6chte%20gerne..." target="_blank" class="btn-atelier-whatsapp w-full py-2.5 rounded-lg text-xs flex items-center justify-center gap-2">
-            <i class="fa-brands fa-whatsapp"></i> WhatsApp Dialog
-          </a>
+        <div id="aboGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" style="margin-top:44px">
+          <article class="abo-plan-card card" data-frequency="2" style="display:flex; flex-direction:column; justify-content:space-between">
+            <div>
+              <p class="small">2 Besuche im Monat</p>
+              <h3 data-rise class="display-3" style="margin-top:6px">Fade Abo</h3>
+              <p class="price" style="margin-top:16px">CHF 85</p>
+              <p class="small">pro Monat, CHF 42.50 pro Besuch</p>
+              <ul class="plain-list" style="margin-top:14px">
+                <li>Zwei Fade-Schnitte mit Konturenrasur</li>
+                <li>Haarwäsche und Matt-Wax-Finish</li>
+                <li>Bevorzugte Termine über Koalendar</li>
+              </ul>
+            </div>
+            <a href="https://payhip.com" target="_blank" rel="noopener" class="btn btn-ink" style="width:100%;margin-top:20px">Abo buchen</a>
+          </article>
+
+          <article class="abo-plan-card card" data-frequency="4" style="display:flex; flex-direction:column; justify-content:space-between">
+            <div>
+              <p class="small">4 Besuche im Monat</p>
+              <h3 data-rise class="display-3" style="margin-top:6px">Fade Abo</h3>
+              <p class="price" style="margin-top:16px">CHF 169</p>
+              <p class="small">pro Monat, CHF 42.25 pro Besuch</p>
+              <ul class="plain-list" style="margin-top:14px">
+                <li>Wöchentlicher Skin Fade Schnitt</li>
+                <li>Kanten jede Woche mit dem Rasiermesser</li>
+                <li>VIP-Buchung am Wochenende</li>
+              </ul>
+            </div>
+            <a href="https://payhip.com" target="_blank" rel="noopener" class="btn btn-ink" style="width:100%;margin-top:20px">Abo buchen</a>
+          </article>
+
+          <article class="abo-plan-card card" data-frequency="2" style="display:flex; flex-direction:column; justify-content:space-between">
+            <div>
+              <p class="small">2 Besuche im Monat</p>
+              <h3 data-rise class="display-3" style="margin-top:6px">Haare &amp; Bart</h3>
+              <p class="price" style="margin-top:16px">CHF 139</p>
+              <p class="small">pro Monat, CHF 69.50 pro Session</p>
+              <ul class="plain-list" style="margin-top:14px">
+                <li>Kompletter Haarschnitt nach Wahl</li>
+                <li>Barttrimmen und Messerkontur</li>
+                <li>Hot Towel und nährendes Bartöl</li>
+              </ul>
+            </div>
+            <a href="https://payhip.com" target="_blank" rel="noopener" class="btn btn-ink" style="width:100%;margin-top:20px">Abo buchen</a>
+          </article>
+
+          <article class="abo-plan-card card" data-frequency="4" style="display:flex; flex-direction:column; justify-content:space-between">
+            <div>
+              <p class="small">4 Besuche im Monat</p>
+              <h3 data-rise class="display-3" style="margin-top:6px">Haare &amp; Bart</h3>
+              <p class="price" style="margin-top:16px">CHF 277</p>
+              <p class="small">pro Monat, CHF 69.25 pro Session</p>
+              <ul class="plain-list" style="margin-top:14px">
+                <li>Wöchentlich Haarschnitt und Bartform</li>
+                <li>Rasiermesser-Ritual jede Woche</li>
+                <li>10 Prozent auf Stylingprodukte</li>
+              </ul>
+            </div>
+            <a href="https://payhip.com" target="_blank" rel="noopener" class="btn btn-ink" style="width:100%;margin-top:20px">Abo buchen</a>
+          </article>
+
+          <article class="abo-plan-card card" data-frequency="2" style="display:flex; flex-direction:column; justify-content:space-between">
+            <div>
+              <p class="small">2 Besuche im Monat</p>
+              <h3 data-rise class="display-3" style="margin-top:6px">Maschinenschnitt</h3>
+              <p class="price" style="margin-top:16px">CHF 62</p>
+              <p class="small">pro Monat, CHF 31.00 pro Besuch</p>
+              <ul class="plain-list" style="margin-top:14px">
+                <li>Maschinenschnitt auf Wunschlänge</li>
+                <li>Nackenausrasur und Konturen</li>
+                <li>Haarwasser und Styling</li>
+              </ul>
+            </div>
+            <a href="https://payhip.com" target="_blank" rel="noopener" class="btn btn-ink" style="width:100%;margin-top:20px">Abo buchen</a>
+          </article>
+
+          <article class="abo-plan-card card" data-frequency="4" style="display:flex; flex-direction:column; justify-content:space-between">
+            <div>
+              <p class="small">4 Besuche im Monat</p>
+              <h3 data-rise class="display-3" style="margin-top:6px">Maschinenschnitt</h3>
+              <p class="price" style="margin-top:16px">CHF 122</p>
+              <p class="small">pro Monat, CHF 30.50 pro Besuch</p>
+              <ul class="plain-list" style="margin-top:14px">
+                <li>Wöchentlicher Maschinenschnitt</li>
+                <li>Feinschliff an Nacken und Konturen</li>
+                <li>Haarwäsche vor und nach dem Schnitt</li>
+              </ul>
+            </div>
+            <a href="https://payhip.com" target="_blank" rel="noopener" class="btn btn-ink" style="width:100%;margin-top:20px">Abo buchen</a>
+          </article>
+
+          <article class="abo-plan-card card" data-frequency="2" style="display:flex; flex-direction:column; justify-content:space-between">
+            <div>
+              <p class="small">2 Besuche im Monat</p>
+              <h3 data-rise class="display-3" style="margin-top:6px">Fade &amp; Wellness</h3>
+              <p class="price" style="margin-top:16px">CHF 126</p>
+              <p class="small">pro Monat, CHF 63.00 pro Session</p>
+              <ul class="plain-list" style="margin-top:14px">
+                <li>Skin Fade oder klassischer Schnitt</li>
+                <li>Hot Towel und Gesichtsreinigung</li>
+                <li>Gesichtsfluid und Nackenmassage</li>
+              </ul>
+            </div>
+            <a href="https://payhip.com" target="_blank" rel="noopener" class="btn btn-ink" style="width:100%;margin-top:20px">Abo buchen</a>
+          </article>
+
+          <article class="abo-plan-card card" data-frequency="4" style="display:flex; flex-direction:column; justify-content:space-between">
+            <div>
+              <p class="small">4 Besuche im Monat</p>
+              <h3 data-rise class="display-3" style="margin-top:6px">Fade &amp; Wellness</h3>
+              <p class="price" style="margin-top:16px">CHF 249</p>
+              <p class="small">pro Monat, CHF 62.25 pro Session</p>
+              <ul class="plain-list" style="margin-top:14px">
+                <li>Wöchentlich Fade und Wellness</li>
+                <li>Hot Towels, Gesichtspflege und Massage</li>
+                <li>15 Prozent auf Atelier-Produkte</li>
+              </ul>
+            </div>
+            <a href="https://payhip.com" target="_blank" rel="noopener" class="btn btn-ink" style="width:100%;margin-top:20px">Abo buchen</a>
+          </article>
         </div>
 
+        <p class="body" style="margin-top:32px; max-width:64ch">
+          Monatlich kündbar, jederzeit mit einem Klick pausierbar. Keine Mindestlaufzeit,
+          Zahlung über Payhip, Termine über Koalendar oder WhatsApp.
+        </p>
+      </div>
+    </section>
+
+    <section class="section field" id="barber-gallery">
+      <div class="wrap">
+        <div class="grid gap-8 lg:grid-cols-12 items-end">
+          <div class="lg:col-span-7">
+            <h2 data-rise class="display-2">Kunden-Galerie</h2>
+            <p class="body" style="margin-top:18px">
+              Echte Arbeiten vom Barberstuhl in Uster: Skin Fades, scharfe Bartkonturen und
+              individuelle Schnitte. Ein Foto öffnet die grosse Ansicht mit Buchungsoption.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4" style="margin-top:40px">
+          <figure class="tile" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260606-WA0002_ksp3zm.jpg', 'jeshua_gallery/barber_client_01.jpg', 'Taper Fade &amp; Textured Crop', 'Fade &amp; Texture')">
+            <div class="media-portrait"><img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260606-WA0002_ksp3zm.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_01.jpg'" alt="Taper Fade mit strukturiertem Deckhaar" loading="lazy"></div>
+            <figcaption><b>Taper Fade</b>Fade &amp; Texture</figcaption>
+          </figure>
+          <figure class="tile" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260606-WA0003_iebsif.jpg', 'jeshua_gallery/barber_client_02.jpg', 'Precision Scissor Cut &amp; Styling', 'Classic Style')">
+            <div class="media-portrait"><img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260606-WA0003_iebsif.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_02.jpg'" alt="Scherenschnitt mit klassischem Styling" loading="lazy"></div>
+            <figcaption><b>Scissor Cut</b>Classic Style</figcaption>
+          </figure>
+          <figure class="tile" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0018_itnvga.jpg', 'jeshua_gallery/barber_client_03.jpg', 'Clean Skin Fade &amp; Razor Finish', 'Skin Fade')">
+            <div class="media-portrait"><img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0018_itnvga.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_03.jpg'" alt="Skin Fade mit Rasiermesser-Finish" loading="lazy"></div>
+            <figcaption><b>Skin Fade</b>Razor Finish</figcaption>
+          </figure>
+          <figure class="tile" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0021_o7gd7t.jpg', 'jeshua_gallery/barber_client_04.jpg', 'Beard Sculpting &amp; Defined Lines', 'Beard Craft')">
+            <div class="media-portrait"><img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0021_o7gd7t.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_04.jpg'" alt="Bartformung mit definierten Konturen" loading="lazy"></div>
+            <figcaption><b>Beard Craft</b>Definierte Linien</figcaption>
+          </figure>
+          <figure class="tile" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0013_wprpwu.jpg', 'jeshua_gallery/barber_client_05.jpg', 'Low Drop Fade &amp; Modern Top', 'Drop Fade')">
+            <div class="media-portrait"><img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0013_wprpwu.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_05.jpg'" alt="Low Drop Fade mit modernem Deckhaar" loading="lazy"></div>
+            <figcaption><b>Drop Fade</b>Modern Top</figcaption>
+          </figure>
+          <figure class="tile" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0008_kgpyqq.jpg', 'jeshua_gallery/barber_client_06.jpg', 'Hot Towel Ritual &amp; Full Grooming', 'Full Ritual')">
+            <div class="media-portrait"><img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0008_kgpyqq.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_06.jpg'" alt="Hot Towel Ritual mit Full Grooming" loading="lazy"></div>
+            <figcaption><b>Full Ritual</b>Hot Towel</figcaption>
+          </figure>
+          <figure class="tile" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260515-WA0004_kj3rfb.jpg', 'jeshua_gallery/barber_client_07.jpg', 'Mid Fade &amp; Natural Texture', 'Mid Fade')">
+            <div class="media-portrait"><img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260515-WA0004_kj3rfb.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_07.jpg'" alt="Mid Fade mit natürlicher Textur" loading="lazy"></div>
+            <figcaption><b>Mid Fade</b>Natural Texture</figcaption>
+          </figure>
+          <figure class="tile" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260425-WA0001_itytaa.jpg', 'jeshua_gallery/barber_client_08.jpg', 'Sharp Lineup &amp; Contour Beard', 'Lineup &amp; Beard')">
+            <div class="media-portrait"><img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260425-WA0001_itytaa.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_08.jpg'" alt="Scharfe Lineup mit Konturbart" loading="lazy"></div>
+            <figcaption><b>Lineup</b>Contour Beard</figcaption>
+          </figure>
+          <figure class="tile" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260412-WA0000_a3aiia.jpg', 'jeshua_gallery/barber_client_09.jpg', 'High Fade &amp; Clean Transitions', 'High Fade')">
+            <div class="media-portrait"><img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260412-WA0000_a3aiia.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_09.jpg'" alt="High Fade mit sauberen Übergängen" loading="lazy"></div>
+            <figcaption><b>High Fade</b>Clean Transitions</figcaption>
+          </figure>
+          <figure class="tile" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260328-WA0004_j43tqs.jpg', 'jeshua_gallery/barber_client_10.jpg', 'Signature Jeshua Atelier Cut', 'Signature Look')">
+            <div class="media-portrait"><img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260328-WA0004_j43tqs.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_10.jpg'" alt="Signature Schnitt aus dem Jeshúa Atelier" loading="lazy"></div>
+            <figcaption><b>Signature</b>Atelier Cut</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section field-deep">
+      <div class="wrap">
+        <div class="grid gap-10 lg:grid-cols-12 items-end">
+          <div class="lg:col-span-7">
+            <h2 data-rise class="display-2">Dein Signature-Look</h2>
+            <p data-rise class="lede" style="margin-top:20px">
+              Sicher dir deinen Wunschtermin online oder schreib uns direkt. Für Stammkunden
+              halten wir die gleiche Zeit jede Woche frei.
+            </p>
+          </div>
+          <div class="lg:col-span-5" style="display:flex; flex-wrap:wrap; gap:14px">
+            <a href="https://koalendar.com/e/termin-buchung-jeshua" target="_blank" rel="noopener" class="btn btn-gold">Online buchen</a>
+            <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Barber%2C%20ich%20m%C3%B6chte%20einen%20Termin%20anfragen..." target="_blank" rel="noopener" class="btn btn-ink">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+    <footer  class="site-footer">
+    <div  class="wrap">
+      <div  class="grid grid-cols-1 md:grid-cols-4 gap-10">
+        <div>
+          <p  class="label" style="color:#B9B1A6">Atelier</p>
+          <p  class="small" style="color:#E9E4DC; margin-top:10px">Bankstrasse 36<br>8610 Uster, Schweiz</p>
+          <p  class="small" style="color:#E9E4DC; margin-top:14px"><a href="tel:+41779563870">+41 77 956 38 70</a></p>
+        </div>
+        <div>
+          <p  class="label" style="color:#B9B1A6">Bereiche</p>
+          <ul  class="plain-list" style="margin-top:8px">
+            <li><a href="barber.html">Barber Studio</a></li>
+            <li><a href="workshops.html">Beauty Workshops</a></li>
+            <li><a href="mentoring.html">Mentoring</a></li>
+            <li><a href="katalog.html">Katalog</a></li>
+          </ul>
+        </div>
+        <div>
+          <p  class="label" style="color:#B9B1A6">Termine</p>
+          <p  class="small" style="color:#E9E4DC; margin-top:10px">Montag bis Samstag<br>nach Vereinbarung<br>für Männer, Frauen und Paare</p>
+        </div>
+        <div>
+          <p  class="label" style="color:#B9B1A6">Kontakt</p>
+          <p  class="small" style="color:#E9E4DC; margin-top:10px"><a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Atelier%2C%20ich%20habe%20eine%20Anfrage..." target="_blank" rel="noopener">WhatsApp</a></p>
+          <p  class="small" style="color:#E9E4DC"><a href="mailto:xaviorlando16@gmail.com">xaviorlando16@gmail.com</a></p>
+          <p  class="small" style="color:#E9E4DC; margin-top:14px"><a href="termin.html">Termin anfragen</a></p>
+        </div>
       </div>
 
-      <div class="pt-8 border-t border-black/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500 font-light">
-        <p>© 2026 Jeshúa Lifestyle Studio & Atelier. Alle Rechte vorbehalten.</p>
-        <p>Webseite erstellt von <a href="https://wildwave.ch/" target="_blank" rel="noopener noreferrer" class="hover:text-atelier-goldDeep transition-colors">Wildwave Marketing</a></p>
-        <p>Uster · Zürich · Schweiz</p>
+      <p  class="foot-name">JESHÚA</p>
+
+      <div  class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3" style="margin-top:24px">
+        <p  class="small" style="color:#9E968C">© 2026 Jeshúa Lifestyle Studio &amp; Atelier</p>
+        <p  class="small" style="color:#9E968C">Uster · Zürich · Schweiz</p>
+        <p  class="small" style="color:#9E968C">Webseite von <a href="https://wildwave.ch/" target="_blank" rel="noopener noreferrer">Wildwave Marketing</a></p>
       </div>
     </div>
   </footer>
 
   <!-- FLOATING WHATSAPP BUTTON (Discreet, zero glow halo) -->
-  <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Studio%2C%20ich%20habe%20eine%20Anfrage..." target="_blank" class="fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full bg-[#075E54] hover:bg-[#054C44] text-white flex items-center justify-center text-2xl elevation-2 transition-transform duration-200 hover:scale-105" title="WhatsApp Chat">
-    <i class="fa-brands fa-whatsapp"></i>
-  </a>
+  <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Atelier%2C%20ich%20habe%20eine%20Anfrage..." target="_blank" rel="noopener"  class="btn btn-whatsapp" style="position:fixed;bottom:20px;right:20px;z-index:50;width:52px;height:52px;padding:0;font-size:20px" aria-label="WhatsApp schreiben"><i  class="fa-brands fa-whatsapp"></i></a>
 
   <!-- GALLERY LIGHTBOX MODAL -->
-  <div id="galleryModal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-4" onclick="closeGalleryModal()">
-    <div class="relative max-w-xl w-full flex flex-col items-center" onclick="event.stopPropagation()">
-      <button onclick="closeGalleryModal()" class="absolute -top-12 right-0 w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center text-sm transition-colors" aria-label="Schliessen">
-        <i class="fa-solid fa-xmark"></i>
+  <div id="galleryModal"  class="fixed inset-0 z-50 hidden items-center justify-center p-4" onclick="closeGalleryModal()">
+    <div  class="relative max-w-xl w-full flex flex-col items-center" onclick="event.stopPropagation()">
+      <button onclick="closeGalleryModal()"  class="absolute -top-12 right-0 w-9 h-9 hover: text-white flex items-center justify-center text-sm transition-colors" aria-label="Schliessen">
+        <i  class="fa-solid fa-xmark"></i>
       </button>
-      <div class="rounded-2xl overflow-hidden border border-white/15 elevation-3 max-h-[75vh] bg-black">
-        <img id="galleryModalImg" src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260606-WA0002_ksp3zm.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_01.jpg'" alt="Kundenfoto" class="max-h-[75vh] w-auto object-contain">
+      <div  class="overflow-hidden max-h-[75vh] bg-black">
+        <img id="galleryModalImg" src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260606-WA0002_ksp3zm.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_01.jpg'" alt="Kundenfoto"  class="max-h-[75vh] w-auto object-contain">
       </div>
-      <div class="mt-4 text-center space-y-1">
-        <span id="galleryModalTag" class="text-[10px] font-mono uppercase tracking-widest text-atelier-crimson font-bold block"></span>
-        <h3 id="galleryModalTitle" class="font-serif text-xl text-white"></h3>
-        <a href="https://koalendar.com/e/termin-buchung-jeshua" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 btn-atelier-crimson px-5 py-2 rounded-lg text-xs font-semibold mt-2">
-          <i class="fa-solid fa-calendar-check"></i> Diesen Style buchen
+      <div  class="mt-4 text-center space-y-1">
+        <span id="galleryModalTag"  style="font-size:15px;color:#C9A227;font-weight:500"></span>
+        <h3 id="galleryModalTitle"  class="font-serif text-xl text-white"></h3>
+        <a href="https://koalendar.com/e/termin-buchung-jeshua" target="_blank" rel="noopener noreferrer"  class="inline-flex items-center gap-2 btn-atelier-crimson px-5 py-2 font-semibold mt-2">
+          <i  class="fa-solid fa-calendar-check"></i> Diesen Style buchen
         </a>
       </div>
     </div>
