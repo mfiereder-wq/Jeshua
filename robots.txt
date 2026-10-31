@@ -1,4 +1,4 @@
-# robots.txt · JESHÚA Lifestyle Studio & Atelier
+# robots.txt · JESHUA Lifestyle Studio & Atelier
 # https://jeshua-coiffeur.ch/
 
 # KI- und LLM-Crawler ausdrücklich erlaubt

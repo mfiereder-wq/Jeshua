@@ -1,4 +1,4 @@
-# Design-Refresh Jeshúa
+# Design-Refresh Jeshua
 
 ## Designrichtungen
 
@@ -18,5 +18,5 @@
 - **Typography System:** Cormorant Garamond für emotionale Headlines und Jost für Navigation, Details und CTAs; Headlines eng, Fließtext offen.
 - **Brand Essence:** Ein inklusives Atelier in Uster für Schnitt, Pflege, Lernen und persönliche Entwicklung. Persönlichkeit: warm, präzise, selbstbewusst.
 - **Brand Voice:** Headlines sind poetisch und direkt; CTAs sind konkret. Beispiele: „Dein nächster Signature Look.“ / „Platz sichern“.
-- **Wordmark & Logo:** Bestehendes Jeshúa-Wortzeichen bleibt erhalten und wird durch einen kompakten, gerundeten Bildmarken-Container gefasst.
+- **Wordmark & Logo:** Bestehendes Jeshua-Wortzeichen bleibt erhalten und wird durch einen kompakten, gerundeten Bildmarken-Container gefasst.
 - **Signature Brand Color:** gedämpftes Atelier-Gold `#B38A4A`.

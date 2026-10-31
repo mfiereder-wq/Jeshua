@@ -1,5 +1,5 @@
 /* ============================================================
-   Jeshúa Atelier — Designsystem
+   Jeshua Atelier — Designsystem
    Weiß und Gold, warme Steintöne. Flache Flächen, harte Kanten.
    Keine Linien, keine Schatten, keine Verläufe.
    ============================================================ */
@@ -816,6 +816,7 @@ dialog,
 .text-slate-300 { color: #CBD5E1; }
 .text-slate-400 { color: #94A3B8; }
 .text-atelier-ink { color: var(--ink); }
+.text-stone-700 { color: #5A5248; }
 .text-atelier-goldDeep { color: var(--gold-text); }
 .leading-relaxed { line-height: 1.625; }
 
@@ -896,7 +897,7 @@ dialog,
 
 
 /* ============================================================
-   Jeshúa Atelier — Editorial Refresh
+   Jeshua Atelier — Editorial Refresh
    Layered override: modern boutique editorial, warm, tactile, inclusive.
    ============================================================ */
 
