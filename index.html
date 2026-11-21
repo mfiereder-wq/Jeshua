@@ -1,13 +1,10 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JESHUA · Lifestyle Studio & Atelier | Barber · Beauty Workshops · Mentoring</title>
-  <meta name="description" content="Jeshua Lifestyle Studio & Atelier in Uster. Schönheit ohne Schubladen — Meisterhaftes Barber Studio, inspirierende Beauty Workshops mit Fachleuten & Influencern sowie ganzheitliches Mentoring.">
-
-  <!-- Payhip Integration Script -->
-  <script type="text/javascript" src="https://payhip.com/payhip.js"></script>
+  <title>JESHUA · Lifestyle Studio &amp; Atelier Uster · Vorübergehend geschlossen</title>
+  <meta name="description" content="Jeshua Lifestyle Studio &amp; Atelier an der Bankstrasse 36 in Uster. Aus gesundheitlichen Gründen vorübergehend geschlossen. Online-Reservierungen sind aktuell pausiert.">
 
   <!-- Favicon -->
   <link rel="icon" type="image/jpeg" href="https://res.cloudinary.com/dnrvauviq/image/upload/v1792857060/WhatsApp_Image_2026-10-24_at_16.20.46_rfdtwx.jpg">
@@ -15,42 +12,28 @@
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Font Awesome 6 Pro Icons -->
+  <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <!-- Schriften: Cormorant Garamond (Display) und Jost (Text) -->
+  <!-- Google Fonts: Cormorant Garamond & Jost -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            stone: {
-              300: '#E2DED7',
-              400: '#C9C2B8',
-              500: '#9A9288',
-              600: '#78706A',
-              700: '#5A5248',
-              800: '#3A342D',
-              900: '#171310',
-            },
             atelier: {
-              black: '#FFFFFF',
-              lacquer: '#F5F3EF',
-              surface: '#F5F3EF',
-              card: '#F5F3EF',
+              ivory: '#FAF9F6',
+              sand: '#F3EFE8',
+              sandDark: '#E6DFD3',
               gold: '#C9A227',
-              goldLight: '#7A5F14',
-              goldDeep: '#7A5F14',
+              goldDark: '#856614',
               ink: '#171310',
-              inkSoft: '#5A5248',
-              crimson: '#8A5A2B',
-              crimsonLight: '#A97339',
-              border: 'rgba(23, 19, 16, 0.10)',
-              borderGold: 'rgba(201, 162, 39, 0.38)',
+              inkMuted: '#5A5248',
+              inkSoft: '#7D7469',
             }
           },
           fontFamily: {
@@ -62,243 +45,500 @@
     }
   </script>
 
-  <!-- Gemeinsame Atelier-Styles -->
-  <link rel="stylesheet" href="assets/styles.css?v=ab91bb9">
-</head>
-<body  class="min-h-svh flex flex-col">
+  <style>
+    /* Eigenständige Atelier-Stile für maximale Konsistenz */
+    :root {
+      --bg-ivory: #FAF9F6;
+      --bg-sand: #F3EFE8;
+      --ink-primary: #171310;
+      --ink-muted: #5A5248;
+      --gold-accent: #C9A227;
+      --gold-deep: #856614;
+    }
 
-    <div  class="utility">
-    <div  class="wrap">
-      <p  class="small">Bankstrasse 36, 8610 Uster · Schönheit ohne Schubladen</p>
-      <p  class="small"><a href="tel:+41779563870">+41 77 956 38 70</a> · Mo bis Sa nach Vereinbarung</p>
+    body {
+      background-color: var(--bg-ivory);
+      color: var(--ink-primary);
+      font-family: 'Jost', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    /* Sanfte Einblend-Animation beim Scrollen */
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+                  transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Dezentes Pulsieren für den Status-Punkt */
+    @keyframes softPulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.45; transform: scale(0.88); }
+    }
+
+    .status-dot {
+      animation: softPulse 2.8s ease-in-out infinite;
+    }
+
+    /* Feiner goldener Rahmen-Effekt für Bilder */
+    .editorial-frame {
+      position: relative;
+    }
+
+    .editorial-frame::after {
+      content: '';
+      position: absolute;
+      inset: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.45);
+      border-radius: 0.75rem;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body class="min-h-svh flex flex-col selection:bg-[#C9A227]/20 selection:text-[#171310]">
+
+  <!-- OBERE STATUSLEISTE -->
+  <div class="bg-[#171310] text-[#E9E4DC] text-xs sm:text-[13px] tracking-wide border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 py-2.5 flex flex-col sm:flex-row items-center justify-between gap-1.5 text-center sm:text-left">
+      <p class="text-[#C9C2B8] font-light">
+        Bankstrasse 36, 8610 Uster <span class="mx-2 text-[#C9A227]">·</span> Schönheit ohne Schubladen
+      </p>
+      <div class="inline-flex items-center gap-2 font-medium text-[#E8C868]">
+        <span class="w-2 h-2 rounded-full bg-[#C9A227] status-dot"></span>
+        <span>Aktuell vorübergehend geschlossen</span>
+      </div>
     </div>
   </div>
 
-  <header  class="site-header" id="mainNav">
-    <div  class="wrap">
-      <a href="index.html"  class="wordmark" aria-label="Jeshua Atelier, zur Startseite">
-        <img src="https://res.cloudinary.com/dnrvauviq/image/upload/v1792857060/WhatsApp_Image_2026-10-24_at_16.20.46_rfdtwx.jpg" onerror="this.onerror=null; this.src='jeshua_logo.jpg'" alt="">
-        <span>JESHUA</span>
+  <!-- HEADER -->
+  <header class="sticky top-0 z-40 bg-[#FAF9F6]/90 backdrop-blur-md border-b border-[#171310]/10">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 h-20 flex items-center justify-between gap-4">
+      <!-- Marke / Logo -->
+      <a href="#top" class="inline-flex items-center gap-3.5 group" aria-label="Jeshua Atelier Startseite">
+        <div class="w-11 h-11 rounded-full overflow-hidden border border-[#C9A227]/50 bg-[#F3EFE8] flex items-center justify-center shrink-0 shadow-sm">
+          <img
+            src="https://res.cloudinary.com/dnrvauviq/image/upload/v1792857060/WhatsApp_Image_2026-10-24_at_16.20.46_rfdtwx.jpg"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            alt="JESHUA Logo"
+            class="w-full h-full object-cover"
+          >
+          <span style="display:none" class="font-serif text-lg font-semibold text-[#171310] tracking-wider">J</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-serif text-2xl sm:text-[26px] tracking-[0.22em] font-medium text-[#171310] leading-none">
+            JESHUA
+          </span>
+          <span class="text-[10px] uppercase tracking-[0.24em] text-[#7D7469] mt-1">
+            Lifestyle Studio &amp; Atelier
+          </span>
+        </div>
       </a>
 
-      <nav  class="nav-links" aria-label="Hauptnavigation">
-          <a href="index.html" aria-current="page">Atelier</a>
-          <a href="barber.html">Barber Studio</a>
-          <a href="workshops.html">Workshops</a>
-          <a href="mentoring.html">Mentoring</a>
-          <a href="katalog.html">Katalog</a>
-      </nav>
+      <!-- Rechte Header-Aktionen (Reine Navigation auf der Seite & Status-Badge) -->
+      <div class="flex items-center gap-3 sm:gap-6">
+        <nav class="hidden md:flex items-center gap-6 text-sm text-[#5A5248]">
+          <a href="#mitteilung" class="hover:text-[#171310] transition-colors">Mitteilung</a>
+          <a href="#kollektion" class="hover:text-[#171310] transition-colors">Produktkatalog</a>
+          <a href="#atelier" class="hover:text-[#171310] transition-colors">Atelier</a>
+          <a href="#kontakt" class="hover:text-[#171310] transition-colors">Kontakt</a>
+        </nav>
 
-      <div  class="nav-actions">
-        <a href="termin.html"  class="btn btn-gold">Termin buchen</a>
-        <button  class="menu-toggle" type="button" onclick="toggleMobileMenu()" aria-expanded="false" aria-controls="mobileMenu" id="menuToggle">Menü</button>
+        <a
+          href="katalog.html"
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#171310] text-[#FAF9F6] hover:bg-[#856614] text-xs font-medium tracking-wide transition-colors shadow-sm"
+        >
+          <span>Katalog</span>
+          <i class="fa-solid fa-arrow-right text-[10px]"></i>
+        </a>
       </div>
-    </div>
-
-    <div id="mobileMenu"  class="hidden">
-        <a href="index.html" aria-current="page">Atelier</a>
-        <a href="barber.html">Barber Studio</a>
-        <a href="workshops.html">Workshops</a>
-        <a href="mentoring.html">Mentoring</a>
-        <a href="katalog.html">Katalog</a>
-        <a href="termin.html">Termin buchen</a>
-        <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Atelier%2C%20ich%20habe%20eine%20Anfrage..." target="_blank" rel="noopener">WhatsApp schreiben</a>
     </div>
   </header>
 
   <!-- HAUPTINHALT -->
-    <main class="flex-grow">
+  <main id="top" class="flex-grow">
 
-    <section class="section">
-      <div class="wrap">
-        <div class="grid gap-10 lg:gap-16 lg:grid-cols-12 items-end">
-          <div class="lg:col-span-7">
-            <h1 class="display-1" data-rise>Schönheit<br>ohne Schubladen.</h1>
-            <p data-rise class="lede" style="margin-top:30px; --rise-delay:80ms">
-              Ein Atelier an der Bankstrasse in Uster: Barbering, Beauty-Workshops und Mentoring
-              unter einem Dach, für Männer, Frauen und Paare.
-            </p>
-            <div style="margin-top:38px; display:flex; flex-wrap:wrap; align-items:center; gap:26px; --rise-delay:160ms" data-rise>
-              <a href="termin.html" class="btn btn-gold">Termin buchen</a>
-              <a href="barber.html" class="btn-quiet">Barber Studio ansehen</a>
+    <!-- HERO SECTION: MITTEILUNG ZUR VORÜBERGEHENDEN SCHLIESSUNG -->
+    <section id="mitteilung" class="relative py-14 sm:py-20 lg:py-24 overflow-hidden">
+      <!-- Dezenter Hintergrund-Akzent -->
+      <div class="absolute top-0 right-0 w-[34rem] h-[34rem] bg-[#C9A227]/[0.05] rounded-full blur-3xl -translate-y-1/3 translate-x-1/4 pointer-events-none"></div>
+
+      <div class="max-w-6xl mx-auto px-5 sm:px-8 relative">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+
+          <!-- Linke Spalte: Botschaft -->
+          <div class="lg:col-span-7 reveal is-visible">
+            <div class="inline-flex items-center gap-3 mb-5">
+              <span class="w-8 h-[1px] bg-[#C9A227]"></span>
+              <span class="text-xs uppercase tracking-[0.22em] font-medium text-[#856614]">
+                Wichtige Information · Uster
+              </span>
+            </div>
+
+            <h1 class="font-serif text-4xl sm:text-6xl lg:text-[68px] font-normal text-[#171310] leading-[1.06] tracking-tight">
+              Wir legen eine<br>
+              <span class="italic text-[#856614]">ruhige Pause</span> ein.
+            </h1>
+
+            <div class="mt-7 space-y-4 text-base sm:text-[17px] text-[#3A342D] leading-relaxed font-light max-w-2xl">
+              <p class="font-normal text-[#171310]">
+                Liebe Kundinnen, liebe Kunden,
+              </p>
+              <p>
+                aus gesundheitlichen Gründen bleibt das <strong class="font-medium text-[#171310]">JESHUA Lifestyle Studio &amp; Atelier</strong>
+                an der Bankstrasse 36 in Uster vorübergehend geschlossen. Die vollständige Genesung und Erholung
+                stehen momentan an oberster Stelle.
+              </p>
+              <p>
+                Für die Dauer dieser Pause sind sämtliche Online-Terminbuchungen sowie laufende
+                Monatsabos deaktiviert. <strong class="font-medium text-[#171310]">Unser Produktkatalog bleibt jedoch weiterhin für euch geöffnet</strong> –
+                ihr könnt eure Pflege- und Stylingprodukte wie gewohnt entdecken und bequem für die Lieferung innerhalb der Schweiz anfragen.
+              </p>
+            </div>
+
+            <!-- Direkter CTA zum verfügbaren Produktkatalog -->
+            <div class="mt-8 flex flex-wrap items-center gap-4">
+              <a
+                href="katalog.html"
+                class="inline-flex items-center gap-3 px-6 py-3.5 rounded-full bg-[#171310] text-[#FAF9F6] hover:bg-[#856614] text-sm font-medium tracking-wide transition-all shadow-md"
+              >
+                <span>Produktkatalog entdecken (38 Produkte)</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+              </a>
+              <a
+                href="#kontakt"
+                class="inline-flex items-center gap-2 px-5 py-3.5 rounded-full bg-[#F3EFE8] border border-[#171310]/15 text-[#171310] hover:border-[#C9A227] text-sm font-normal transition-colors"
+              >
+                <span>Standort &amp; Infos</span>
+              </a>
+            </div>
+
+            <!-- Strukturierte Status-Box -->
+            <div class="mt-9 rounded-2xl bg-[#F3EFE8] border border-[#C9A227]/35 p-6 sm:p-7 shadow-[0_10px_30px_-15px_rgba(23,19,16,0.08)]">
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+                <div class="flex items-start gap-3">
+                  <div class="w-9 h-9 rounded-xl bg-white border border-[#171310]/10 flex items-center justify-center text-[#7D7469] shrink-0 mt-0.5">
+                    <i class="fa-regular fa-calendar-xmark text-sm"></i>
+                  </div>
+                  <div>
+                    <h2 class="text-sm font-semibold text-[#171310]">Studio &amp; Termine</h2>
+                    <p class="text-xs text-[#5A5248] mt-1 leading-relaxed">
+                      Vorübergehend pausiert. Aktuell keine Terminvergabe.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <div class="w-9 h-9 rounded-xl bg-white border border-[#171310]/10 flex items-center justify-center text-[#7D7469] shrink-0 mt-0.5">
+                    <i class="fa-solid fa-pause text-xs"></i>
+                  </div>
+                  <div>
+                    <h2 class="text-sm font-semibold text-[#171310]">Monatsabos</h2>
+                    <p class="text-xs text-[#5A5248] mt-1 leading-relaxed">
+                      Bestehende Abos ruhen während der Schliessung automatisch.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <div class="w-9 h-9 rounded-xl bg-[#171310] text-[#E8C868] flex items-center justify-center shrink-0 mt-0.5">
+                    <i class="fa-solid fa-bag-shopping text-xs"></i>
+                  </div>
+                  <div>
+                    <h2 class="text-sm font-semibold text-[#171310]">Produktkatalog</h2>
+                    <p class="text-xs text-[#5A5248] mt-1 leading-relaxed">
+                      <a href="katalog.html" class="font-medium text-[#856614] underline underline-offset-2 hover:text-[#171310]">Weiterhin verfügbar</a> · Versand in der ganzen Schweiz.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="lg:col-span-5 hero-media" data-rise style="--rise-delay:120ms">
-            <div class="media-portrait">
-              <video class="hero-video" autoplay muted loop playsinline preload="metadata" aria-label="Jeshua Atelier im Barber- und Beauty-Alltag">
-                <source src="assets/hero/jeshua-hero.mp4" type="video/mp4">
-              </video>
-            </div>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-8" style="margin-top:64px" data-rise>
-          <p class="body"><strong>Bankstrasse 36</strong><br>8610 Uster, Schweiz</p>
-          <p class="body"><strong>Montag bis Samstag</strong><br>nach Vereinbarung, auch abends</p>
-          <p class="body"><strong>Drei Bereiche</strong><br>Barber Studio, Workshops, Mentoring</p>
         </div>
       </div>
     </section>
 
-    <section class="section field">
-      <div class="wrap">
-        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
-          <h2 data-rise class="display-2">Arbeiten aus dem Atelier</h2>
-          <p class="body" style="max-width:38ch">
-            Skin Fades, Scherenschnitte und Bartkonturen, fotografiert direkt am Barberstuhl.
-            Ein Foto öffnet die grosse Ansicht.
+    <!-- SEKTION 2: DAS ATELIER IM ÜBERBLICK (REIN INFORMATIV) -->
+    <section id="atelier" class="py-16 sm:py-24 bg-[#F3EFE8] border-y border-[#171310]/10">
+      <div class="max-w-6xl mx-auto px-5 sm:px-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 reveal">
+          <div>
+            <p class="text-xs uppercase tracking-[0.22em] font-medium text-[#856614]">
+              Unser Haus in Uster
+            </p>
+            <h2 class="font-serif text-3xl sm:text-5xl font-normal text-[#171310] mt-2">
+              Drei Bereiche unter einem Dach
+            </h2>
+          </div>
+          <p class="text-sm sm:text-base text-[#5A5248] font-light max-w-md leading-relaxed">
+            Schönheit ohne Schubladen – nach unserer Wiedereröffnung sind wir in all unseren Bereichen wieder wie gewohnt für Männer, Frauen und Paare da.
           </p>
         </div>
-      </div>
 
-      <div class="strip" style="margin-top:44px">
-        <div class="strip-track">
-          <figure class="tile" style="width:240px;flex:none" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260606-WA0002_ksp3zm.jpg', 'jeshua_gallery/barber_client_01.jpg', 'Taper Fade &amp; Textured Crop', 'Fade &amp; Texture')">
-            <div class="media-portrait"><img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260606-WA0002_ksp3zm.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_01.jpg'" alt="Taper Fade mit strukturiertem Deckhaar" loading="lazy"></div>
-            <figcaption><b>Taper Fade</b>Fade &amp; Texture</figcaption>
-          </figure>
-          <figure class="tile" style="width:240px;flex:none" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260606-WA0003_iebsif.jpg', 'jeshua_gallery/barber_client_02.jpg', 'Precision Scissor Cut &amp; Styling', 'Classic Style')">
-            <div class="media-portrait"><img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260606-WA0003_iebsif.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_02.jpg'" alt="Scherenschnitt mit klassischem Styling" loading="lazy"></div>
-            <figcaption><b>Scissor Cut</b>Classic Style</figcaption>
-          </figure>
-          <figure class="tile" style="width:240px;flex:none" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0018_itnvga.jpg', 'jeshua_gallery/barber_client_03.jpg', 'Clean Skin Fade &amp; Razor Finish', 'Skin Fade')">
-            <div class="media-portrait"><img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0018_itnvga.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_03.jpg'" alt="Skin Fade mit Rasiermesser-Finish" loading="lazy"></div>
-            <figcaption><b>Skin Fade</b>Razor Finish</figcaption>
-          </figure>
-          <figure class="tile" style="width:240px;flex:none" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0021_o7gd7t.jpg', 'jeshua_gallery/barber_client_04.jpg', 'Beard Sculpting &amp; Defined Lines', 'Beard Craft')">
-            <div class="media-portrait"><img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0021_o7gd7t.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_04.jpg'" alt="Bartformung mit definierten Konturen" loading="lazy"></div>
-            <figcaption><b>Beard Craft</b>Definierte Linien</figcaption>
-          </figure>
-          <figure class="tile" style="width:240px;flex:none" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0013_wprpwu.jpg', 'jeshua_gallery/barber_client_05.jpg', 'Low Drop Fade &amp; Modern Top', 'Drop Fade')">
-            <div class="media-portrait"><img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0013_wprpwu.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_05.jpg'" alt="Low Drop Fade mit modernem Deckhaar" loading="lazy"></div>
-            <figcaption><b>Drop Fade</b>Modern Top</figcaption>
-          </figure>
-          <figure class="tile" style="width:240px;flex:none" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0008_kgpyqq.jpg', 'jeshua_gallery/barber_client_06.jpg', 'Hot Towel Ritual &amp; Full Grooming', 'Full Ritual')">
-            <div class="media-portrait"><img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0008_kgpyqq.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_06.jpg'" alt="Hot Towel Ritual mit Full Grooming" loading="lazy"></div>
-            <figcaption><b>Full Ritual</b>Hot Towel</figcaption>
-          </figure>
-          <figure class="tile" style="width:240px;flex:none" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260515-WA0004_kj3rfb.jpg', 'jeshua_gallery/barber_client_07.jpg', 'Mid Fade &amp; Natural Texture', 'Mid Fade')">
-            <div class="media-portrait"><img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260515-WA0004_kj3rfb.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_07.jpg'" alt="Mid Fade mit natürlicher Textur" loading="lazy"></div>
-            <figcaption><b>Mid Fade</b>Natural Texture</figcaption>
-          </figure>
-          <figure class="tile" style="width:240px;flex:none" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260425-WA0001_itytaa.jpg', 'jeshua_gallery/barber_client_08.jpg', 'Sharp Lineup &amp; Contour Beard', 'Lineup &amp; Beard')">
-            <div class="media-portrait"><img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260425-WA0001_itytaa.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_08.jpg'" alt="Scharfe Lineup mit Konturbart" loading="lazy"></div>
-            <figcaption><b>Lineup</b>Contour Beard</figcaption>
-          </figure>
-          <figure class="tile" style="width:240px;flex:none" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260412-WA0000_a3aiia.jpg', 'jeshua_gallery/barber_client_09.jpg', 'High Fade &amp; Clean Transitions', 'High Fade')">
-            <div class="media-portrait"><img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260412-WA0000_a3aiia.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_09.jpg'" alt="High Fade mit sauberen Übergängen" loading="lazy"></div>
-            <figcaption><b>High Fade</b>Clean Transitions</figcaption>
-          </figure>
-          <figure class="tile" style="width:240px;flex:none" onclick="openGalleryModal('https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260328-WA0004_j43tqs.jpg', 'jeshua_gallery/barber_client_10.jpg', 'Signature Jeshua Atelier Cut', 'Signature Look')">
-            <div class="media-portrait"><img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210388/IMG-20260328-WA0004_j43tqs.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_10.jpg'" alt="Signature Schnitt aus dem Jeshua Atelier" loading="lazy"></div>
-            <figcaption><b>Signature</b>Atelier Cut</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="wrap">
-        <h2 data-rise class="display-2" style="max-width:22ch">Zwei Handwerke, ein Haus</h2>
-
-        <div class="grid gap-12 lg:gap-20 lg:grid-cols-2" style="margin-top:56px">
-          <article data-rise>
-            <div class="media-wide">
-              <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260516-WA0008_kgpyqq.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_06.jpg'" alt="Barberstuhl mit Kunde während des Hot-Towel-Rituals" loading="lazy">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mt-12">
+          <!-- Karte 1: Barber Studio -->
+          <article class="reveal rounded-2xl bg-[#FAF9F6] border border-[#171310]/10 p-7 sm:p-8 flex flex-col justify-between shadow-sm">
+            <div>
+              <div class="flex items-center justify-between">
+                <span class="font-serif italic text-2xl text-[#856614]">I.</span>
+                <span class="text-[11px] uppercase tracking-[0.18em] text-[#7D7469]">Handwerk</span>
+              </div>
+              <h3 class="font-serif text-2xl sm:text-[28px] text-[#171310] mt-4">
+                Barber Studio
+              </h3>
+              <p class="text-sm sm:text-[15px] text-[#5A5248] font-light leading-relaxed mt-3">
+                Präzisions-Haarschnitte, Skin Fades, definierte Bartkonturen und traditionelle Klingenrasur mit heissem Tuch und MK Men® Pflege.
+              </p>
             </div>
-            <h3 data-rise class="display-3" style="margin-top:24px">Barber Studio</h3>
-            <p class="body" style="margin-top:12px">
-              Klassische Haarschnitte, Präzisions-Fades und die traditionelle Klingenrasur mit heissem Tuch.
-              Dazu die Gesichtspflege von MK Men®, die den Schnitt abschliesst.
-            </p>
-            <p class="body" style="margin-top:14px"><strong>Ab CHF 55</strong> pro Termin · Monatsabos ab CHF 62</p>
-            <a href="barber.html" class="btn-quiet" style="margin-top:18px; display:inline-block">Barber Menü ansehen</a>
+            <div class="mt-6 pt-4 border-t border-[#171310]/10 flex items-center justify-between text-xs text-[#7D7469]">
+              <span>Einzeltermine &amp; Monatsabos</span>
+              <span class="text-[#856614] font-medium">Pausiert</span>
+            </div>
           </article>
 
-          <article data-rise style="--rise-delay:100ms">
-            <div class="media-wide">
-              <img src="assets/workshops/workshop-makeup.jpg" onerror="this.onerror=null; this.src='assets/workshops/workshop-makeup.jpg'" alt="Beauty-Workshop mit professioneller Make-up-Anleitung" loading="lazy">
+          <!-- Karte 2: Beauty Workshops -->
+          <article class="reveal rounded-2xl bg-[#FAF9F6] border border-[#171310]/10 p-7 sm:p-8 flex flex-col justify-between shadow-sm">
+            <div>
+              <div class="flex items-center justify-between">
+                <span class="font-serif italic text-2xl text-[#856614]">II.</span>
+                <span class="text-[11px] uppercase tracking-[0.18em] text-[#7D7469]">Wissen</span>
+              </div>
+              <h3 class="font-serif text-2xl sm:text-[28px] text-[#171310] mt-4">
+                Beauty Workshops
+              </h3>
+              <p class="text-sm sm:text-[15px] text-[#5A5248] font-light leading-relaxed mt-3">
+                Persönliche Masterclasses in kleinen Gruppen rund um Hautpflege, Make-up Artistry, Duo-Rituale für Paare und Bartpflege.
+              </p>
             </div>
-            <h3 data-rise class="display-3" style="margin-top:24px">Beauty Workshops</h3>
-            <p class="body" style="margin-top:12px">
-              Vier Masterclasses in kleinen Gruppen: Hautpflege mit dem Skinvigorate® Duo, Make-up Artistry,
-              ein Duo-Ritual für Paare und Bartpflege für zu Hause.
-            </p>
-            <p class="body" style="margin-top:14px"><strong>Ab CHF 110</strong> pro Person · inklusive Goodie-Bag</p>
-            <a href="workshops.html" class="btn-quiet" style="margin-top:18px; display:inline-block">Workshop Termine ansehen</a>
+            <div class="mt-6 pt-4 border-t border-[#171310]/10 flex items-center justify-between text-xs text-[#7D7469]">
+              <span>Kleine Gruppen &amp; Paare</span>
+              <span class="text-[#856614] font-medium">Pausiert</span>
+            </div>
+          </article>
+
+          <!-- Karte 3: Mentoring -->
+          <article class="reveal rounded-2xl bg-[#FAF9F6] border border-[#171310]/10 p-7 sm:p-8 flex flex-col justify-between shadow-sm">
+            <div>
+              <div class="flex items-center justify-between">
+                <span class="font-serif italic text-2xl text-[#856614]">III.</span>
+                <span class="text-[11px] uppercase tracking-[0.18em] text-[#7D7469]">Haltung</span>
+              </div>
+              <h3 class="font-serif text-2xl sm:text-[28px] text-[#171310] mt-4">
+                Mentoring
+              </h3>
+              <p class="text-sm sm:text-[15px] text-[#5A5248] font-light leading-relaxed mt-3">
+                Vertrauliche 1:1-Gespräche für Selbstwert, achtsame Alltagsrituale und einen persönlichen Ausdruck ohne Schablonen.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-[#171310]/10 flex items-center justify-between text-xs text-[#7D7469]">
+              <span>1:1 Begleitung in Uster</span>
+              <span class="text-[#856614] font-medium">Pausiert</span>
+            </div>
           </article>
         </div>
+      </div>
+    </section>
 
-        <div class="grid gap-10 lg:grid-cols-12" style="margin-top:72px" data-rise>
-          <div class="lg:col-span-5">
-            <h3 data-rise class="display-3">Mentoring</h3>
+    <!-- SEKTION 3: PRODUKTKATALOG HIGHLIGHT (WEITERHIN VERFÜGBAR) -->
+    <section id="kollektion" class="py-16 sm:py-24 border-b border-[#171310]/10">
+      <div class="max-w-6xl mx-auto px-5 sm:px-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 reveal">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F3EFE8] border border-[#C9A227]/40 text-[11px] uppercase tracking-[0.18em] font-medium text-[#856614] mb-3">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#C9A227]"></span>
+              <span>Weiterhin geöffnet</span>
+            </div>
+            <h2 class="font-serif text-3xl sm:text-5xl font-normal text-[#171310]">
+              Aus der Atelier-Kollektion
+            </h2>
           </div>
-          <div class="lg:col-span-7">
-            <p class="body">
-              Äussere Pflege und innere Haltung gehören zusammen. In Einzelgesprächen geht es um
-              Selbstwert, Rituale für den Alltag und einen Stil, der zu dir passt, nicht zur Schablone.
-            </p>
-            <a href="mentoring.html" class="btn-quiet" style="margin-top:16px; display:inline-block">Mentoring kennenlernen</a>
-          </div>
+          <a
+            href="katalog.html"
+            class="inline-flex items-center gap-2.5 text-sm font-medium text-[#856614] hover:text-[#171310] underline underline-offset-4 transition-colors shrink-0"
+          >
+            <span>Alle 38 Produkte im Katalog ansehen</span>
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+          <!-- Produkt 1 -->
+          <a href="katalog.html#skinvigorate_duo" class="reveal group rounded-2xl bg-white border border-[#171310]/10 p-5 hover:border-[#C9A227] transition-all shadow-sm flex flex-col justify-between">
+            <div class="aspect-square rounded-xl bg-[#FAF9F6] p-4 flex items-center justify-center overflow-hidden">
+              <img
+                src="https://pimg.eur.marykaycdn.com/HeroZoom/10006/J2012935-UNL-GB-135-Skinvigorate-Duo-Facial-Device-Soldier-Front-WT.jpg"
+                onerror="this.onerror=null; this.src='https://placehold.co/400x400/FAF9F6/856614?text=Skinvigorate+Duo'"
+                alt="Skinvigorate Duo Facial Device"
+                class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              >
+            </div>
+            <div class="mt-4">
+              <p class="text-[11px] uppercase tracking-[0.16em] text-[#856614]">Beauty Device</p>
+              <h3 class="font-serif text-xl text-[#171310] mt-1 group-hover:text-[#856614] transition-colors">Skinvigorate® Duo</h3>
+              <p class="text-xs text-[#5A5248] mt-1 font-light">Limitierte Edition für tiefenreine Haut</p>
+            </div>
+          </a>
+
+          <!-- Produkt 2 -->
+          <a href="katalog.html#mkmen_shave_cream" class="reveal group rounded-2xl bg-white border border-[#171310]/10 p-5 hover:border-[#C9A227] transition-all shadow-sm flex flex-col justify-between">
+            <div class="aspect-square rounded-xl bg-[#FAF9F6] p-4 flex items-center justify-center overflow-hidden">
+              <img
+                src="https://www.marykay.com/dw/image/v2/BKGS_PRD/on/demandware.static/-/Sites-us-master-catalog/default/dw434ff301/hi-res/10000/J2010909-UNL-GB-251-MKMen-Shave-Cream-Soldier-HiRes.jpg"
+                onerror="this.onerror=null; this.src='https://placehold.co/400x400/FAF9F6/856614?text=MK+Men+Shave'"
+                alt="MK Men Shave Cream"
+                class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              >
+            </div>
+            <div class="mt-4">
+              <p class="text-[11px] uppercase tracking-[0.16em] text-[#856614]">Barber &amp; Men</p>
+              <h3 class="font-serif text-xl text-[#171310] mt-1 group-hover:text-[#856614] transition-colors">MK Men® Shave Cream</h3>
+              <p class="text-xs text-[#5A5248] mt-1 font-light">Kühlende Rasiercreme für präzise Konturen</p>
+            </div>
+          </a>
+
+          <!-- Produkt 3 -->
+          <a href="katalog.html#timewise_repair_daycream" class="reveal group rounded-2xl bg-white border border-[#171310]/10 p-5 hover:border-[#C9A227] transition-all shadow-sm flex flex-col justify-between">
+            <div class="aspect-square rounded-xl bg-[#FAF9F6] p-4 flex items-center justify-center overflow-hidden">
+              <img
+                src="https://www.marykay.com/dw/image/v2/BKGS_PRD/on/demandware.static/-/Sites-us-master-catalog/default/dw83aa24c9/hi-res/10006/J2012933-UNL-US-138-TWR-Collection-HiRes.jpg"
+                onerror="this.onerror=null; this.src='https://placehold.co/400x400/FAF9F6/856614?text=TimeWise+Repair'"
+                alt="TimeWise Repair Tagescreme"
+                class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              >
+            </div>
+            <div class="mt-4">
+              <p class="text-[11px] uppercase tracking-[0.16em] text-[#856614]">Hautpflege</p>
+              <h3 class="font-serif text-xl text-[#171310] mt-1 group-hover:text-[#856614] transition-colors">TimeWise Repair®</h3>
+              <p class="text-xs text-[#5A5248] mt-1 font-light">Tagescreme mit Lichtschutzfaktor 30</p>
+            </div>
+          </a>
+
+          <!-- Produkt 4 -->
+          <a href="katalog.html#lash_fanorama_mascara" class="reveal group rounded-2xl bg-white border border-[#171310]/10 p-5 hover:border-[#C9A227] transition-all shadow-sm flex flex-col justify-between">
+            <div class="aspect-square rounded-xl bg-[#FAF9F6] p-4 flex items-center justify-center overflow-hidden">
+              <img
+                src="https://www.marykay.com/dw/image/v2/BKGS_PRD/on/demandware.static/-/Sites-us-master-catalog/default/dw5219a550/hi-res/10005/J2012933-UNL-GB-020-LL-Fanorama-Define-Lift-Mascara-Soldier-2-HiRes.jpg"
+                onerror="this.onerror=null; this.src='https://placehold.co/400x400/FAF9F6/856614?text=Lash+Fanorama'"
+                alt="Lash Fanorama Mascara"
+                class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              >
+            </div>
+            <div class="mt-4">
+              <p class="text-[11px] uppercase tracking-[0.16em] text-[#856614]">Make-up</p>
+              <h3 class="font-serif text-xl text-[#171310] mt-1 group-hover:text-[#856614] transition-colors">Lash Fanorama</h3>
+              <p class="text-xs text-[#5A5248] mt-1 font-light">Mascara aus dem Make-up Workshop</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="mt-10 rounded-2xl bg-[#F3EFE8] border border-[#171310]/10 p-6 sm:p-7 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 reveal">
+          <p class="text-sm text-[#5A5248] font-light max-w-2xl">
+            Alle 38 Produkte für Hautpflege, Barber Grooming, Make-up und Düfte sind weiterhin bestellbar. Lieferung bequem innerhalb der ganzen Schweiz.
+          </p>
+          <a
+            href="katalog.html"
+            class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#171310] text-[#FAF9F6] hover:bg-[#856614] text-xs font-medium tracking-wide transition-colors shrink-0"
+          >
+            <span>Zum Katalog</span>
+            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
         </div>
       </div>
     </section>
 
-    <section class="section field">
-      <div class="wrap">
-        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
-          <h2 data-rise class="display-2">Aus der Kollektion</h2>
-          <a href="katalog.html" class="btn-quiet">Alle 38 Produkte ansehen</a>
+    <!-- SEKTION 4: GESCHÄFTSINFORMATIONEN, STANDORT & KONTAKT -->
+    <section id="kontakt" class="py-16 sm:py-24">
+      <div class="max-w-6xl mx-auto px-5 sm:px-8">
+        <div class="max-w-2xl reveal">
+          <p class="text-xs uppercase tracking-[0.22em] font-medium text-[#856614]">
+            Geschäftsinformationen
+          </p>
+          <h2 class="font-serif text-3xl sm:text-5xl font-normal text-[#171310] mt-2">
+            Standort &amp; Erreichbarkeit
+          </h2>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" style="margin-top:48px">
-          <a href="katalog.html#skinvigorate_duo" class="collection-card" aria-label="Skinvigorate Duo im Katalog ansehen">
-          <figure class="tile">
-            <div class="media-square" style="background:#fff"><img src="https://pimg.eur.marykaycdn.com/HeroZoom/10006/J2012935-UNL-GB-135-Skinvigorate-Duo-Facial-Device-Soldier-Front-WT.jpg" onerror="this.onerror=null; this.src='jeshua_products/skinvigorate_duo.png'" alt="Skinvigorate Duo Facial Device" style="object-fit:contain;padding:16px" loading="lazy"></div>
-            <figcaption><b>Skinvigorate® Duo</b>Beauty Device, limitierte Edition</figcaption>
-          </figure>
-          </a>
-          <a href="katalog.html#mkmen_shave_cream" class="collection-card" aria-label="MK Men Shave Cream im Katalog ansehen">
-          <figure class="tile">
-            <div class="media-square" style="background:#fff"><img src="https://www.marykay.com/dw/image/v2/BKGS_PRD/on/demandware.static/-/Sites-us-master-catalog/default/dw434ff301/hi-res/10000/J2010909-UNL-GB-251-MKMen-Shave-Cream-Soldier-HiRes.jpg" onerror="this.onerror=null; this.src='jeshua_products/mkmen_shave_cream.png'" alt="MK Men Rasiercreme" style="object-fit:contain;padding:16px" loading="lazy"></div>
-            <figcaption><b>MK Men® Shave Cream</b>Kühlende Rasiercreme für den Bart</figcaption>
-          </figure>
-          </a>
-          <a href="katalog.html#timewise_repair_daycream" class="collection-card" aria-label="TimeWise Repair im Katalog ansehen">
-          <figure class="tile">
-            <div class="media-square" style="background:#fff"><img src="https://www.marykay.com/dw/image/v2/BKGS_PRD/on/demandware.static/-/Sites-us-master-catalog/default/dw83aa24c9/hi-res/10006/J2012933-UNL-US-138-TWR-Collection-HiRes.jpg" onerror="this.onerror=null; this.src='jeshua_products/timewise_repair_daycream.png'" alt="TimeWise Repair Tagescreme mit LSF 30" style="object-fit:contain;padding:16px" loading="lazy"></div>
-            <figcaption><b>TimeWise Repair®</b>Tagescreme mit Lichtschutz 30</figcaption>
-          </figure>
-          </a>
-          <a href="katalog.html#lash_fanorama_mascara" class="collection-card" aria-label="Lash Fanorama im Katalog ansehen">
-          <figure class="tile">
-            <div class="media-square" style="background:#fff"><img src="https://www.marykay.com/dw/image/v2/BKGS_PRD/on/demandware.static/-/Sites-us-master-catalog/default/dw5219a550/hi-res/10005/J2012933-UNL-GB-020-LL-Fanorama-Define-Lift-Mascara-Soldier-2-HiRes.jpg" onerror="this.onerror=null; this.src='jeshua_products/lash_fanorama_mascara.png'" alt="Lash Fanorama Mascara" style="object-fit:contain;padding:16px" loading="lazy"></div>
-            <figcaption><b>Lash Fanorama</b>Mascara aus dem Make-up Workshop</figcaption>
-          </figure>
-          </a>
-        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mt-10">
+          <!-- Adresse -->
+          <div class="reveal rounded-2xl bg-[#F3EFE8]/70 border border-[#171310]/10 p-7">
+            <div class="w-10 h-10 rounded-full bg-white border border-[#C9A227]/40 flex items-center justify-center text-[#856614] mb-5">
+              <i class="fa-solid fa-location-dot text-sm"></i>
+            </div>
+            <p class="text-xs uppercase tracking-[0.18em] text-[#7D7469]">Adresse</p>
+            <p class="font-serif text-2xl text-[#171310] mt-1.5">Bankstrasse 36</p>
+            <p class="text-sm text-[#5A5248] mt-1">8610 Uster, Schweiz</p>
 
-        <p class="body" style="margin-top:36px; max-width:60ch">
-          Alle Produkte sind ohne Preisauszeichnung online. Die Beratung und Bestellung läuft über
-          WhatsApp, damit du vor dem Kauf weisst, was zu deiner Haut passt.
-        </p>
-      </div>
-    </section>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Bankstrasse+36,+8610+Uster"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 text-xs font-medium text-[#856614] hover:text-[#171310] mt-5 transition-colors"
+            >
+              <span>Auf Karte ansehen</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
 
-    <section class="section field-deep">
-      <div class="wrap">
-        <div class="grid gap-10 lg:grid-cols-12 items-end">
-          <div class="lg:col-span-7">
-            <h2 data-rise class="display-2">Termin im Atelier</h2>
-            <p data-rise class="lede" style="margin-top:20px">
-              Barber, Workshop oder Mentoring: sag uns, was du brauchst. Wir antworten per WhatsApp
-              oder Telefon, meist noch am selben Tag.
+          <!-- Öffnungszeiten -->
+          <div class="reveal rounded-2xl bg-[#F3EFE8]/70 border border-[#171310]/10 p-7">
+            <div class="w-10 h-10 rounded-full bg-white border border-[#C9A227]/40 flex items-center justify-center text-[#856614] mb-5">
+              <i class="fa-regular fa-clock text-sm"></i>
+            </div>
+            <p class="text-xs uppercase tracking-[0.18em] text-[#7D7469]">Öffnungszeiten</p>
+            <p class="font-serif text-2xl text-[#171310] mt-1.5">Vorübergehend geschlossen</p>
+            <p class="text-sm text-[#5A5248] mt-2 leading-relaxed">
+              Regulär Montag bis Samstag nach Vereinbarung. Derzeit findet kein Studio-Betrieb statt.
             </p>
           </div>
-          <div class="lg:col-span-5" style="display:flex; flex-wrap:wrap; gap:14px; justify-content:flex-start">
-            <a href="termin.html" class="btn btn-gold">Termin anfragen</a>
-            <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Atelier%2C%20ich%20m%C3%B6chte%20einen%20Termin%20anfragen..." target="_blank" rel="noopener" class="btn btn-ink">WhatsApp</a>
+
+          <!-- Schriftlicher Kontakt -->
+          <div class="reveal rounded-2xl bg-[#F3EFE8]/70 border border-[#171310]/10 p-7">
+            <div class="w-10 h-10 rounded-full bg-white border border-[#C9A227]/40 flex items-center justify-center text-[#856614] mb-5">
+              <i class="fa-regular fa-envelope text-sm"></i>
+            </div>
+            <p class="text-xs uppercase tracking-[0.18em] text-[#7D7469]">Kontakt</p>
+            <div class="mt-2 space-y-1.5">
+              <p class="text-sm text-[#171310]">
+                <a href="mailto:xaviorlando16@gmail.com" class="hover:text-[#856614] underline underline-offset-4 transition-colors">
+                  xaviorlando16@gmail.com
+                </a>
+              </p>
+              <p class="text-sm text-[#5A5248]">
+                <a href="tel:+41779563870" class="hover:text-[#171310] transition-colors">
+                  +41 77 956 38 70
+                </a>
+              </p>
+            </div>
+
+            <div class="mt-4 flex items-center gap-3">
+              <button
+                type="button"
+                onclick="copyEmailAddress()"
+                class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white border border-[#171310]/15 text-xs font-medium text-[#171310] hover:border-[#C9A227] transition-colors"
+              >
+                <i class="fa-regular fa-copy text-[11px] text-[#856614]"></i>
+                <span>E-Mail kopieren</span>
+              </button>
+              <span id="copyFeedback" class="text-xs font-medium text-[#856614] opacity-0 transition-opacity duration-300">
+                Kopiert!
+              </span>
+            </div>
+
+            <p class="text-xs text-[#7D7469] mt-3 leading-relaxed">
+              Bitte habt Verständnis, dass Anfragen aktuell nur verzögert beantwortet werden können.
+            </p>
           </div>
         </div>
       </div>
@@ -306,69 +546,103 @@
 
   </main>
 
-    <footer  class="site-footer">
-    <div  class="wrap">
-      <div  class="grid grid-cols-1 md:grid-cols-4 gap-10">
+  <!-- FOOTER -->
+  <footer class="bg-[#171310] text-[#E9E4DC] pt-16 pb-10 border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 pb-12 border-b border-white/10">
         <div>
-          <p  class="label" style="color:#B9B1A6">Atelier</p>
-          <p  class="small" style="color:#E9E4DC; margin-top:10px">Bankstrasse 36<br>8610 Uster, Schweiz</p>
-          <p  class="small" style="color:#E9E4DC; margin-top:14px"><a href="tel:+41779563870">+41 77 956 38 70</a></p>
+          <p class="text-xs uppercase tracking-[0.2em] text-[#9E968C]">Atelier</p>
+          <p class="text-sm text-[#E9E4DC] mt-3 leading-relaxed font-light">
+            JESHUA Lifestyle Studio &amp; Atelier<br>
+            Bankstrasse 36<br>
+            8610 Uster, Schweiz
+          </p>
         </div>
+
         <div>
-          <p  class="label" style="color:#B9B1A6">Bereiche</p>
-          <ul  class="plain-list" style="margin-top:8px">
-            <li><a href="barber.html">Barber Studio</a></li>
-            <li><a href="workshops.html">Beauty Workshops</a></li>
-            <li><a href="mentoring.html">Mentoring</a></li>
-            <li><a href="katalog.html">Katalog</a></li>
-          </ul>
+          <p class="text-xs uppercase tracking-[0.2em] text-[#9E968C]">Aktueller Status</p>
+          <p class="text-sm text-[#E9E4DC] mt-3 leading-relaxed font-light">
+            Studio &amp; Termine vorübergehend pausiert.<br>
+            <a href="katalog.html" class="text-[#E8C868] hover:underline underline-offset-4">Produktkatalog (38 Produkte)</a> weiterhin geöffnet.
+          </p>
         </div>
+
         <div>
-          <p  class="label" style="color:#B9B1A6">Termine</p>
-          <p  class="small" style="color:#E9E4DC; margin-top:10px">Montag bis Samstag<br>nach Vereinbarung<br>für Männer, Frauen und Paare</p>
-        </div>
-        <div>
-          <p  class="label" style="color:#B9B1A6">Kontakt</p>
-          <p  class="small" style="color:#E9E4DC; margin-top:10px"><a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Atelier%2C%20ich%20habe%20eine%20Anfrage..." target="_blank" rel="noopener">WhatsApp</a></p>
-          <p  class="small" style="color:#E9E4DC"><a href="mailto:xaviorlando16@gmail.com">xaviorlando16@gmail.com</a></p>
-          <p  class="small" style="color:#E9E4DC; margin-top:14px"><a href="termin.html">Termin anfragen</a></p>
+          <p class="text-xs uppercase tracking-[0.2em] text-[#9E968C]">Kontakt</p>
+          <p class="text-sm text-[#E9E4DC] mt-3 font-light">
+            <a href="mailto:xaviorlando16@gmail.com" class="hover:text-[#E8C868] transition-colors">xaviorlando16@gmail.com</a>
+          </p>
+          <p class="text-sm text-[#E9E4DC] mt-1.5 font-light">
+            <a href="tel:+41779563870" class="hover:text-[#E8C868] transition-colors">+41 77 956 38 70</a>
+          </p>
         </div>
       </div>
 
-      <p  class="foot-name">JESHUA</p>
+      <!-- Grosse Signatur-Wortmarke -->
+      <div class="py-6 select-none overflow-hidden">
+        <p class="font-serif text-[clamp(3.2rem,13vw,9.5rem)] leading-none tracking-[0.18em] text-white/[0.08] font-normal">
+          JESHUA
+        </p>
+      </div>
 
-      <div  class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3" style="margin-top:24px">
-        <p  class="small" style="color:#9E968C">© 2026 Jeshua Lifestyle Studio &amp; Atelier</p>
-        <p  class="small" style="color:#9E968C">Uster · Zürich · Schweiz</p>
-        <p  class="small" style="color:#9E968C">Webseite von <a href="https://wildwave.ch/" target="_blank" rel="noopener noreferrer">Wildwave Marketing</a></p>
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pt-4 border-t border-white/10 text-xs text-[#9E968C] font-light">
+        <p>© 2026 Jeshua Lifestyle Studio &amp; Atelier</p>
+        <p>Uster · Zürich · Schweiz</p>
+        <p>
+          Webseite von <a href="https://wildwave.ch/" target="_blank" rel="noopener noreferrer" class="text-[#C9C2B8] hover:text-white underline underline-offset-4 transition-colors">Wildwave Marketing</a>
+        </p>
       </div>
     </div>
   </footer>
 
-  <!-- FLOATING WHATSAPP BUTTON (Discreet, zero glow halo) -->
-  <a href="https://wa.me/41779563870?text=Hallo%20Jeshua%20Atelier%2C%20ich%20habe%20eine%20Anfrage..." target="_blank" rel="noopener"  class="btn btn-whatsapp" style="position:fixed;bottom:20px;right:20px;z-index:50;width:52px;height:52px;padding:0;font-size:20px" aria-label="WhatsApp schreiben"><i  class="fa-brands fa-whatsapp"></i></a>
+  <!-- JAVASCRIPT FÜR SANFTE ANIMATIONEN & KOPIERFUNKTION -->
+  <script>
+    // E-Mail-Adresse ohne alert() in die Zwischenablage kopieren
+    function copyEmailAddress() {
+      const email = 'xaviorlando16@gmail.com';
+      const feedback = document.getElementById('copyFeedback');
 
-  <!-- GALLERY LIGHTBOX MODAL -->
-  <div id="galleryModal"  class="fixed inset-0 z-50 hidden items-center justify-center p-4" onclick="closeGalleryModal()">
-    <div  class="relative max-w-xl w-full flex flex-col items-center" onclick="event.stopPropagation()">
-      <button onclick="closeGalleryModal()"  class="absolute -top-12 right-0 w-9 h-9 hover: text-white flex items-center justify-center text-sm transition-colors" aria-label="Schliessen">
-        <i  class="fa-solid fa-xmark"></i>
-      </button>
-      <div  class="overflow-hidden max-h-[75vh] bg-black">
-        <img id="galleryModalImg" src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1781210387/IMG-20260606-WA0002_ksp3zm.jpg" onerror="this.onerror=null; this.src='jeshua_gallery/barber_client_01.jpg'" alt="Kundenfoto"  class="max-h-[75vh] w-auto object-contain">
-      </div>
-      <div  class="mt-4 text-center space-y-1">
-        <span id="galleryModalTag"  style="font-size:15px;color:#C9A227;font-weight:500"></span>
-        <h3 id="galleryModalTitle"  class="font-serif text-xl text-white"></h3>
-        <a href="https://koalendar.com/e/termin-buchung-jeshua" target="_blank" rel="noopener noreferrer"  class="inline-flex items-center gap-2 btn-atelier-crimson px-5 py-2 font-semibold mt-2">
-          <i  class="fa-solid fa-calendar-check"></i> Diesen Style buchen
-        </a>
-      </div>
-    </div>
-  </div>
+      const tempInput = document.createElement('input');
+      tempInput.value = email;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      tempInput.setSelectionRange(0, 99999);
 
-  <!-- JAVASCRIPT APP LOGIC -->
-  <script src="assets/app.js"></script>
+      try {
+        document.execCommand('copy');
+        if (feedback) {
+          feedback.classList.remove('opacity-0');
+          setTimeout(() => {
+            feedback.classList.add('opacity-0');
+          }, 2200);
+        }
+      } catch (err) {
+        // Stiller Fallback, falls Kopieren blockiert ist
+      }
+
+      document.body.removeChild(tempInput);
+    }
+
+    // IntersectionObserver für sanftes Einblenden beim Scrollen
+    document.addEventListener('DOMContentLoaded', () => {
+      const revealElements = document.querySelectorAll('.reveal');
+
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+
+        revealElements.forEach((el) => observer.observe(el));
+      } else {
+        revealElements.forEach((el) => el.classList.add('is-visible'));
+      }
+    });
+  </script>
 
 </body>
 </html>
